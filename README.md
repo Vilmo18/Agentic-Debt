@@ -1,4 +1,4 @@
-# Report — Temporal Technical Debt Accumulation in LLM Multi‑Agent Workflows (ChatDev Traces)
+# Temporal Technical Debt Accumulation in LLM Multi‑Agent Workflows (ChatDev Traces)
 
 ## Research Question (Q1)
 **How does technical debt accumulate in LLM‑MA workflows for software development tasks?**
