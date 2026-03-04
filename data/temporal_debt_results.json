@@ -16,6 +16,16 @@
         "q3": 85121.25,
         "max": 145032.0
       },
+      "code_review_tokens_nonzero": {
+        "n": 28.0,
+        "mean": 72982.32142857143,
+        "median": 67044.5,
+        "stdev": 23016.0279886504,
+        "min": 36247.0,
+        "q1": 61370.5,
+        "q3": 85121.25,
+        "max": 145032.0
+      },
       "testing_tokens": {
         "n": 28.0,
         "mean": 5862.857142857143,
@@ -24,6 +34,16 @@
         "min": 0.0,
         "q1": 0.0,
         "q3": 10023.0,
+        "max": 28561.0
+      },
+      "testing_tokens_nonzero": {
+        "n": 12.0,
+        "mean": 13680.0,
+        "median": 10822.5,
+        "stdev": 6827.878919946848,
+        "min": 6399.0,
+        "q1": 9184.25,
+        "q3": 17183.25,
         "max": 28561.0
       },
       "correlations": {
@@ -519,6 +539,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 65538,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -636,6 +661,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 84999,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -780,6 +810,11 @@
       "python_supported": false,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 77831,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": null,
         "post_review": null,
@@ -807,6 +842,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 83918,
+        "testing_total_tokens": 10710
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -936,6 +976,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 110653,
+        "testing_total_tokens": 19656
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -1124,6 +1169,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 48092,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -1225,6 +1275,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 67023,
+        "testing_total_tokens": 9794
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -1342,6 +1397,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 62109,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -1451,6 +1511,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 145032,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -1607,6 +1672,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 73240,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -1712,6 +1782,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 36247,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -1820,6 +1895,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 61876,
+        "testing_total_tokens": 12145
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -1937,6 +2017,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 69538,
+        "testing_total_tokens": 10935
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -2062,6 +2147,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 66926,
+        "testing_total_tokens": 8433
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -2167,6 +2257,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 43283,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -2276,6 +2371,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 61582,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -2369,6 +2469,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 102882,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -2513,6 +2618,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 55452,
+        "testing_total_tokens": 9369
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -2630,6 +2740,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 60736,
+        "testing_total_tokens": 8630
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -2735,6 +2850,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 3,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 61655,
+        "testing_total_tokens": 16359
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -2887,6 +3007,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 98286,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -3031,6 +3156,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 2,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 95263,
+        "testing_total_tokens": 28561
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -3171,6 +3301,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 87149,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -3300,6 +3435,11 @@
       "python_supported": false,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 102013,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": null,
         "post_review": null,
@@ -3327,6 +3467,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 56402,
+        "testing_total_tokens": 6399
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -3432,6 +3577,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 74258,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -3565,6 +3715,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 45036,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -3658,6 +3813,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 73776,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -3778,6 +3938,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 85488,
+        "testing_total_tokens": 23169
+      },
       "counts": {
         "post_coding": {
           "arch": 0,
@@ -3910,6 +4075,11 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
+      "verification_tokens": {
+        "available": true,
+        "code_review_total_tokens": 67066,
+        "testing_total_tokens": 0
+      },
       "counts": {
         "post_coding": {
           "arch": 0,

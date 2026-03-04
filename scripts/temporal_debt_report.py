@@ -416,6 +416,7 @@ def main() -> int:
                 "code_review_total_tokens": 0,
                 "testing_total_tokens": 0,
             }
+        verification_tokens = token_totals_by_project[project_name]
 
         review_cycles = sum(1 for m in messages if "on : CodeReviewModification" in m.header)
         test_cycles = sum(1 for m in messages if "on : TestModification" in m.header)
@@ -459,6 +460,7 @@ def main() -> int:
                 "python_supported": False,
                 "review_cycles": review_cycles,
                 "test_cycles": test_cycles,
+                "verification_tokens": verification_tokens,
                 "counts": counts,
                 "deltas": deltas,
             }
@@ -621,6 +623,7 @@ def main() -> int:
                 "python_supported": True,
                 "review_cycles": review_cycles,
                 "test_cycles": test_cycles,
+                "verification_tokens": verification_tokens,
                 "counts": counts,
                 "deltas": {
                     "impl_post_review_minus_post_coding": delta_review,
@@ -761,7 +764,13 @@ def main() -> int:
             "code_review_tokens": describe_distribution(
                 [float(p["code_review_total_tokens"]) for p in token_pairs]
             ),
+            "code_review_tokens_nonzero": describe_distribution(
+                [float(p["code_review_total_tokens"]) for p in review_token_pairs]
+            ),
             "testing_tokens": describe_distribution([float(p["testing_total_tokens"]) for p in token_pairs]),
+            "testing_tokens_nonzero": describe_distribution(
+                [float(p["testing_total_tokens"]) for p in testing_token_pairs]
+            ),
             "correlations": {
                 "pearson(code_review_tokens, delta_review_impl_smells)": pearson(
                     [float(p["code_review_total_tokens"]) for p in review_token_pairs],

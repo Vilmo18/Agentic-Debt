@@ -7,17 +7,17 @@ This report shifts analysis from “final-state” evaluation to **temporal** ev
 
 ## Data & Method
 
-### Inputs 
+### Inputs
 - **Traces**: `agent_debt/traces/*/*.log` (multi‑phase chat + embedded code blocks).
 - **Token usage (proxy)**: `agent_debt/data/ChatDev_GPT-5_Trace_Analysis_Results.json` (used only to proxy verification effort; see Discussion §4).
 - **Smell detector**: **DPy (DesignitePython)** run on reconstructed snapshots.
 
-### Snapshots (per project) 
+### Snapshots (per project)
 - **post_coding**: Python files reconstructed from code blocks after the Coding phase.
 - **post_review**: post_coding + updates from CodeReviewModification messages.
 - **final**: Python files from the final on-disk project directory.
 
-### Smell layers and derived metrics 
+### Smell layers and derived metrics
 DPy smell layers used in this analysis:
 - **Architecture smells** (DPy)
 - **Design smells** (DPy)
@@ -272,6 +272,13 @@ Two smell types dominate:
 ### 4) Verification effort (tokens) weakly–moderately correlates with debt change
 Because review cycles are fixed, we use token volume as a proxy for verification effort.
 
+Token statistics (per project):
+| Token metric | n | Mean | Median | Q1 | Q3 | Min | Max |
+| :-- | --: | --: | --: | --: | --: | --: | --: |
+| Code review tokens | 28 | 72982.3 | 67044.5 | 61370.5 | 85121.2 | 36247 | 145032 |
+| Testing tokens | 28 | 5862.9 | 0 | 0 | 10023 | 0 | 28561 |
+| Testing tokens (non-zero) | 12 | 13680 | 10822.5 | 9184.2 | 17183.2 | 6399 | 28561 |
+
 Two dataset-level correlations (Pearson):
 - `corr(code_review_tokens, Δreview implementation smells) = 0.319` (n=28)
 - `corr(testing_tokens, Δfinal implementation smells) = -0.210` (n=12; projects with non‑zero testing tokens)
@@ -280,19 +287,19 @@ Interpretation:
 - More code‑review activity tends to coincide with slightly more fine‑grained debt introduced during review (possibly because more review time leads to more incremental patches).
 - More testing activity weakly coincides with slightly less fine‑grained debt introduced during final, but the testing signal is sparse (median testing tokens = 0), so this should be treated as a weak indicator.
 
-### 5) What “accumulation” looks like in LLM‑MA pipelines (mechanistic summary)
+<!-- ### 5) What “accumulation” looks like in LLM‑MA pipelines (mechanistic summary)
 In these traces, technical debt accumulation is best described as:
 - **Front‑loaded** by the initial coding step (large baseline smell volume),
 - **Mutated** during verification (review introduces or removes fine smells),
 - **Often not structurally addressed** (coarse smells stay constant; architecture smells absent),
-- **Heavy‑tailed** across projects (a few traces become extreme outliers by smell count).
+- **Heavy‑tailed** across projects (a few traces become extreme outliers by smell count). -->
 
-## Limitations / Threats to Validity
+<!-- ## Limitations / Threats to Validity
 - **Detector scope**: DPy may under-detect architectural issues in small projects; architecture smells are 0 here, which could reflect tool sensitivity rather than true absence.
 - **Smell meaning**: some “magic numbers” are expected in games (screen sizes, colors). Counts still reflect maintainability risk, but not every instance is equally harmful.
 - **Snapshot reconstruction**: code is reconstructed from chat logs and a heuristic replacement threshold; missing/partial code blocks could affect counts.
 - **No size normalization**: because “density” is treated as **smell count**, cross-project comparisons may partially reflect differences in codebase size.
-- **Testing sparsity**: most traces have 0 test cycles and median testing tokens = 0, limiting inference about the Testing phase’s role.
+- **Testing sparsity**: most traces have 0 test cycles and median testing tokens = 0, limiting inference about the Testing phase’s role. -->
 
 ## Conclusion
 In this ChatDev trace dataset (28 Python projects), technical debt accumulation is **not uniform across phases**:
@@ -302,33 +309,33 @@ In this ChatDev trace dataset (28 Python projects), technical debt accumulation 
 - Coarse (architecture+design) debt signals remain **stable**, suggesting verification prioritizes correctness over structural improvements (or that coarse signals are not captured by the detector for these traces).
 
 ## Appendix A — Per-project table (Python projects, sorted by Total@Final)
-| Project | Fine@Coding | Fine@Review | Fine@Final | Coarse@Final | Total@Final | Δreview(fine) | Δfinal(fine) | Δtotal(fine) | Unique@Final |
-| :-- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
-| Sudoku | 139 | 139 | 139 | 0 | 139 | 0 | 0 | 0 | 5 |
-| DouDizhuPoker | 107 | 113 | 113 | 1 | 114 | 6 | 0 | 6 | 7 |
-| Chess | 105 | 106 | 96 | 3 | 99 | 1 | -10 | -9 | 9 |
-| StrandsNYT | 45 | 48 | 50 | 1 | 51 | 3 | 2 | 5 | 6 |
-| Tiny Rouge | 44 | 42 | 47 | 1 | 48 | -2 | 5 | 3 | 4 |
-| Checkers | 42 | 41 | 47 | 0 | 47 | -1 | 6 | 5 | 6 |
-| StrandsGame | 46 | 46 | 46 | 1 | 47 | 0 | 0 | 0 | 6 |
-| Gomoku | 45 | 45 | 46 | 0 | 46 | 0 | 1 | 1 | 3 |
-| Pong | 44 | 24 | 45 | 0 | 45 | -20 | 21 | 1 | 4 |
-| GoldMiner | 35 | 42 | 42 | 0 | 42 | 7 | 0 | 7 | 5 |
-| SnakeGame | 25 | 29 | 29 | 1 | 30 | 4 | 0 | 4 | 7 |
-| FlappyBird | 24 | 25 | 29 | 0 | 29 | 1 | 4 | 5 | 4 |
-| ConnectFour | 26 | 28 | 28 | 0 | 28 | 2 | 0 | 2 | 3 |
-| MonopolyGo | 28 | 27 | 27 | 1 | 28 | -1 | 0 | -1 | 6 |
-| TheCrossword | 15 | 24 | 24 | 0 | 24 | 9 | 0 | 9 | 6 |
-| Wordle | 19 | 23 | 23 | 0 | 23 | 4 | 0 | 4 | 3 |
-| DetectPalindromes | 17 | 22 | 22 | 0 | 22 | 5 | 0 | 5 | 4 |
-| BudgetTracker | 17 | 20 | 20 | 1 | 21 | 3 | 0 | 3 | 6 |
-| TextBasedSpaceInvaders | 25 | 20 | 21 | 0 | 21 | -5 | 1 | -4 | 3 |
-| TriviaQuiz | 15 | 17 | 17 | 1 | 18 | 2 | 0 | 2 | 5 |
-| 2048 | 16 | 16 | 16 | 0 | 16 | 0 | 0 | 0 | 4 |
-| ReversiOthello | 16 | 16 | 16 | 0 | 16 | 0 | 0 | 0 | 3 |
-| EpisodeChooseYourStory | 10 | 13 | 13 | 0 | 13 | 3 | 0 | 3 | 3 |
-| TicTacToe | 10 | 13 | 13 | 0 | 13 | 3 | 0 | 3 | 2 |
-| Mastermind | 29 | 12 | 12 | 0 | 12 | -17 | 0 | -17 | 3 |
-| ConnectionsNYT | 26 | 19 | 10 | 0 | 10 | -7 | -9 | -16 | 4 |
-| FibonacciNumbers | 9 | 9 | 9 | 1 | 10 | 0 | 0 | 0 | 3 |
-| Minesweeper | 8 | 10 | 10 | 0 | 10 | 2 | 0 | 2 | 2 |
+| Project | Fine@Coding | Fine@Review | Fine@Final | Coarse@Final | Total@Final | Δreview(fine) | Δfinal(fine) | Δtotal(fine) | Unique@Final | ReviewTokens | TestTokens |
+| :-- | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: | --: |
+| Sudoku | 139 | 139 | 139 | 0 | 139 | 0 | 0 | 0 | 5 | 87149 | 0 |
+| DouDizhuPoker | 107 | 113 | 113 | 1 | 114 | 6 | 0 | 6 | 7 | 145032 | 0 |
+| Chess | 105 | 106 | 96 | 3 | 99 | 1 | -10 | -9 | 9 | 110653 | 19656 |
+| StrandsNYT | 45 | 48 | 50 | 1 | 51 | 3 | 2 | 5 | 6 | 95263 | 28561 |
+| Tiny Rouge | 44 | 42 | 47 | 1 | 48 | -2 | 5 | 3 | 4 | 73776 | 0 |
+| Checkers | 42 | 41 | 47 | 0 | 47 | -1 | 6 | 5 | 6 | 83918 | 10710 |
+| StrandsGame | 46 | 46 | 46 | 1 | 47 | 0 | 0 | 0 | 6 | 98286 | 0 |
+| Gomoku | 45 | 45 | 46 | 0 | 46 | 0 | 1 | 1 | 3 | 66926 | 8433 |
+| Pong | 44 | 24 | 45 | 0 | 45 | -20 | 21 | 1 | 4 | 55452 | 9369 |
+| GoldMiner | 35 | 42 | 42 | 0 | 42 | 7 | 0 | 7 | 5 | 69538 | 10935 |
+| SnakeGame | 25 | 29 | 29 | 1 | 30 | 4 | 0 | 4 | 7 | 61655 | 16359 |
+| FlappyBird | 24 | 25 | 29 | 0 | 29 | 1 | 4 | 5 | 4 | 61876 | 12145 |
+| ConnectFour | 26 | 28 | 28 | 0 | 28 | 2 | 0 | 2 | 3 | 48092 | 0 |
+| MonopolyGo | 28 | 27 | 27 | 1 | 28 | -1 | 0 | -1 | 6 | 102882 | 0 |
+| TheCrossword | 15 | 24 | 24 | 0 | 24 | 9 | 0 | 9 | 6 | 74258 | 0 |
+| Wordle | 19 | 23 | 23 | 0 | 23 | 4 | 0 | 4 | 3 | 67066 | 0 |
+| DetectPalindromes | 17 | 22 | 22 | 0 | 22 | 5 | 0 | 5 | 4 | 62109 | 0 |
+| BudgetTracker | 17 | 20 | 20 | 1 | 21 | 3 | 0 | 3 | 6 | 84999 | 0 |
+| TextBasedSpaceInvaders | 25 | 20 | 21 | 0 | 21 | -5 | 1 | -4 | 3 | 56402 | 6399 |
+| TriviaQuiz | 15 | 17 | 17 | 1 | 18 | 2 | 0 | 2 | 5 | 85488 | 23169 |
+| 2048 | 16 | 16 | 16 | 0 | 16 | 0 | 0 | 0 | 4 | 65538 | 0 |
+| ReversiOthello | 16 | 16 | 16 | 0 | 16 | 0 | 0 | 0 | 3 | 60736 | 8630 |
+| EpisodeChooseYourStory | 10 | 13 | 13 | 0 | 13 | 3 | 0 | 3 | 3 | 73240 | 0 |
+| TicTacToe | 10 | 13 | 13 | 0 | 13 | 3 | 0 | 3 | 2 | 45036 | 0 |
+| Mastermind | 29 | 12 | 12 | 0 | 12 | -17 | 0 | -17 | 3 | 43283 | 0 |
+| ConnectionsNYT | 26 | 19 | 10 | 0 | 10 | -7 | -9 | -16 | 4 | 67023 | 9794 |
+| FibonacciNumbers | 9 | 9 | 9 | 1 | 10 | 0 | 0 | 0 | 3 | 36247 | 0 |
+| Minesweeper | 8 | 10 | 10 | 0 | 10 | 2 | 0 | 2 | 2 | 61582 | 0 |
