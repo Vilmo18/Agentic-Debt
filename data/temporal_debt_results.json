@@ -2,6 +2,39 @@
   "summary": {
     "n_projects_total": 30,
     "n_projects_python": 28,
+    "verification_effort_proxy": {
+      "available": true,
+      "token_json": "agent_debt/data/ChatDev_GPT-5_Trace_Analysis_Results.json",
+      "n_projects_with_token_data": 28,
+      "code_review_tokens": {
+        "n": 28.0,
+        "mean": 72982.32142857143,
+        "median": 67044.5,
+        "stdev": 23016.0279886504,
+        "min": 36247.0,
+        "q1": 61370.5,
+        "q3": 85121.25,
+        "max": 145032.0
+      },
+      "testing_tokens": {
+        "n": 28.0,
+        "mean": 5862.857142857143,
+        "median": 0.0,
+        "stdev": 8156.0734185308565,
+        "min": 0.0,
+        "q1": 0.0,
+        "q3": 10023.0,
+        "max": 28561.0
+      },
+      "correlations": {
+        "pearson(code_review_tokens, delta_review_impl_smells)": 0.3193665596636279,
+        "pearson(testing_tokens, delta_final_impl_smells)": -0.2099896444820084
+      },
+      "correlation_n": {
+        "code_review_tokens": 28,
+        "testing_tokens": 12
+      }
+    },
     "implementation_smells": {
       "post_coding_mean": 35.25,
       "post_review_mean": 35.32142857142857,
@@ -93,7 +126,7 @@
     "granularity": {
       "definitions": {
         "coarse": "architecture_smells + design_smells",
-        "fine": "implementation_smells + ml_smells"
+        "fine": "implementation_smells"
       },
       "coarse_mean": {
         "post_coding": 0.42857142857142855,
@@ -264,20 +297,21 @@
       }
     },
     "density": {
-      "coarse_per_kloc_mean": {
-        "post_coding": 0.7541825465704811,
-        "post_review": 0.7143282469715949,
-        "final": 0.741607992845846
+      "definition": "density := smell count (not normalized)",
+      "coarse_mean": {
+        "post_coding": 0.42857142857142855,
+        "post_review": 0.42857142857142855,
+        "final": 0.42857142857142855
       },
-      "fine_per_kloc_mean": {
-        "post_coding": 71.53121060602267,
-        "post_review": 68.79991430746563,
-        "final": 70.11391099898378
+      "fine_mean": {
+        "post_coding": 35.25,
+        "post_review": 35.32142857142857,
+        "final": 36.07142857142857
       },
-      "total_per_kloc_mean": {
-        "post_coding": 72.28539315259316,
-        "post_review": 69.51424255443723,
-        "final": 70.85551899182963
+      "total_mean": {
+        "post_coding": 35.67857142857143,
+        "post_review": 35.75,
+        "final": 36.5
       }
     },
     "distributions": {
@@ -411,36 +445,36 @@
           }
         }
       },
-      "density_per_kloc": {
+      "density_smell_count": {
         "coarse_final": {
           "n": 28.0,
-          "mean": 0.741607992845846,
+          "mean": 0.42857142857142855,
           "median": 0.0,
-          "stdev": 1.2204941500512756,
+          "stdev": 0.6900655593423543,
           "min": 0.0,
           "q1": 0.0,
-          "q3": 1.2972321081020963,
-          "max": 4.385964912280702
+          "q3": 1.0,
+          "max": 3.0
         },
         "fine_final": {
           "n": 28.0,
-          "mean": 70.11391099898378,
-          "median": 55.22964087253047,
-          "stdev": 68.6398072813007,
-          "min": 16.709511568123393,
-          "q1": 35.19501330471472,
-          "q3": 86.95118759405877,
-          "max": 383.9779005524862
+          "mean": 36.07142857142857,
+          "median": 25.5,
+          "stdev": 31.623864138792133,
+          "min": 9.0,
+          "q1": 16.0,
+          "q3": 46.0,
+          "max": 139.0
         },
         "total_final": {
           "n": 28.0,
-          "mean": 70.85551899182963,
-          "median": 56.2356770898343,
-          "stdev": 68.71381526005504,
-          "min": 16.709511568123393,
-          "q1": 35.61839635016849,
-          "q3": 88.7186743440424,
-          "max": 383.9779005524862
+          "mean": 36.5,
+          "median": 26.0,
+          "stdev": 31.879983270593687,
+          "min": 10.0,
+          "q1": 16.0,
+          "q3": 46.25,
+          "max": 139.0
         }
       },
       "diversity_unique": {
@@ -475,10 +509,6 @@
           "max": 9.0
         }
       }
-    },
-    "correlations": {
-      "pearson(code_review_tokens, delta_review_impl_smells)": 0.3193665596636279,
-      "pearson(testing_tokens, delta_final_impl_smells)": -0.2099896444820084
     }
   },
   "projects": [
@@ -489,35 +519,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2857,
-          "Coding": 9267,
-          "Code Review": 65538,
-          "Documentation": 20805
-        },
-        "code_review_total_tokens": 65538,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 16,
-          "ml": 0,
           "coarse": 0,
           "fine": 16,
           "total": 16,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 260,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 61.53846153846154,
-          "total_per_kloc": 61.53846153846154,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 8.0,
-          "total_per_file": 8.0,
           "impl_top": [
             [
               "Long statement",
@@ -543,20 +555,12 @@
           "arch": 0,
           "design": 0,
           "impl": 16,
-          "ml": 0,
           "coarse": 0,
           "fine": 16,
           "total": 16,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 260,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 61.53846153846154,
-          "total_per_kloc": 61.53846153846154,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 8.0,
-          "total_per_file": 8.0,
           "impl_top": [
             [
               "Long statement",
@@ -582,20 +586,12 @@
           "arch": 0,
           "design": 0,
           "impl": 16,
-          "ml": 0,
           "coarse": 0,
           "fine": 16,
           "total": 16,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 260,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 61.53846153846154,
-          "total_per_kloc": 61.53846153846154,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 8.0,
-          "total_per_file": 8.0,
           "impl_top": [
             [
               "Long statement",
@@ -631,18 +627,6 @@
         "total_post_review_minus_post_coding": 0,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 0
-      },
-      "software_info": {
-        "cost": 0.528585,
-        "num_code_files": 2,
-        "code_lines": 260,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 52124,
-        "num_completion_tokens": 46343,
-        "num_total_tokens": 98467,
-        "num_reasoning_tokens": 23360,
-        "duration": "745.00s"
       }
     },
     {
@@ -652,36 +636,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 3036,
-          "Coding": 10717,
-          "Code Completion": 50503,
-          "Code Review": 84999,
-          "Documentation": 30139
-        },
-        "code_review_total_tokens": 84999,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 1,
           "impl": 17,
-          "ml": 0,
           "coarse": 1,
           "fine": 17,
           "total": 18,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 705,
-          "coarse_per_kloc": 1.4184397163120568,
-          "fine_per_kloc": 24.113475177304963,
-          "total_per_kloc": 25.53191489361702,
-          "coarse_per_file": 0.2,
-          "fine_per_file": 3.4,
-          "total_per_file": 3.6,
           "impl_top": [
             [
               "Long statement",
@@ -716,20 +681,12 @@
           "arch": 0,
           "design": 1,
           "impl": 20,
-          "ml": 0,
           "coarse": 1,
           "fine": 20,
           "total": 21,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 734,
-          "coarse_per_kloc": 1.3623978201634876,
-          "fine_per_kloc": 27.247956403269754,
-          "total_per_kloc": 28.61035422343324,
-          "coarse_per_file": 0.2,
-          "fine_per_file": 4.0,
-          "total_per_file": 4.2,
           "impl_top": [
             [
               "Long statement",
@@ -764,20 +721,12 @@
           "arch": 0,
           "design": 1,
           "impl": 20,
-          "ml": 0,
           "coarse": 1,
           "fine": 20,
           "total": 21,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 734,
-          "coarse_per_kloc": 1.3623978201634876,
-          "fine_per_kloc": 27.247956403269754,
-          "total_per_kloc": 28.61035422343324,
-          "coarse_per_file": 0.2,
-          "fine_per_file": 4.0,
-          "total_per_file": 4.2,
           "impl_top": [
             [
               "Long statement",
@@ -822,18 +771,6 @@
         "total_post_review_minus_post_coding": 3,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 3
-      },
-      "software_info": {
-        "cost": 0.922247,
-        "num_code_files": 5,
-        "code_lines": 734,
-        "num_utterances": 31,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 99622,
-        "num_completion_tokens": 79772,
-        "num_total_tokens": 179394,
-        "num_reasoning_tokens": 22976,
-        "duration": "1491.00s"
       }
     },
     {
@@ -843,16 +780,6 @@
       "python_supported": false,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 3505,
-          "Coding": 11525,
-          "Code Review": 77831,
-          "Documentation": 26210
-        },
-        "code_review_total_tokens": 77831,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": null,
         "post_review": null,
@@ -871,18 +798,6 @@
         "total_post_review_minus_post_coding": null,
         "total_final_minus_post_review": null,
         "total_final_minus_post_coding": null
-      },
-      "software_info": {
-        "cost": 0.610139,
-        "num_code_files": 0,
-        "code_lines": 0,
-        "num_utterances": 26,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 66351,
-        "num_completion_tokens": 52720,
-        "num_total_tokens": 119071,
-        "num_reasoning_tokens": 23296,
-        "duration": "1264.00s"
       }
     },
     {
@@ -892,37 +807,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2555,
-          "Coding": 11103,
-          "Code Completion": 39244,
-          "Code Review": 83918,
-          "Testing": 10710,
-          "Documentation": 27223
-        },
-        "code_review_total_tokens": 83918,
-        "testing_total_tokens": 10710
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 42,
-          "ml": 0,
           "coarse": 0,
           "fine": 42,
           "total": 42,
           "coarse_unique": 0,
           "fine_unique": 5,
           "total_unique": 5,
-          "loc": 515,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 81.55339805825243,
-          "total_per_kloc": 81.55339805825243,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 6.0,
-          "total_per_file": 6.0,
           "impl_top": [
             [
               "Magic number",
@@ -952,20 +847,12 @@
           "arch": 0,
           "design": 0,
           "impl": 41,
-          "ml": 0,
           "coarse": 0,
           "fine": 41,
           "total": 41,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 531,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 77.21280602636534,
-          "total_per_kloc": 77.21280602636534,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 5.857142857142857,
-          "total_per_file": 5.857142857142857,
           "impl_top": [
             [
               "Magic number",
@@ -991,20 +878,12 @@
           "arch": 0,
           "design": 0,
           "impl": 47,
-          "ml": 0,
           "coarse": 0,
           "fine": 47,
           "total": 47,
           "coarse_unique": 0,
           "fine_unique": 6,
           "total_unique": 6,
-          "loc": 654,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 71.86544342507645,
-          "total_per_kloc": 71.86544342507645,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 6.714285714285714,
-          "total_per_file": 6.714285714285714,
           "impl_top": [
             [
               "Magic number",
@@ -1048,18 +927,6 @@
         "total_post_review_minus_post_coding": -1,
         "total_final_minus_post_review": 6,
         "total_final_minus_post_coding": 5
-      },
-      "software_info": {
-        "cost": 0.941253,
-        "num_code_files": 7,
-        "code_lines": 654,
-        "num_utterances": 33,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 92146,
-        "num_completion_tokens": 82607,
-        "num_total_tokens": 174753,
-        "num_reasoning_tokens": 37952,
-        "duration": "1942.00s"
       }
     },
     {
@@ -1069,36 +936,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2653,
-          "Coding": 16243,
-          "Code Review": 110653,
-          "Testing": 19656,
-          "Documentation": 30600
-        },
-        "code_review_total_tokens": 110653,
-        "testing_total_tokens": 19656
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 3,
           "impl": 105,
-          "ml": 0,
           "coarse": 3,
           "fine": 105,
           "total": 108,
           "coarse_unique": 2,
           "fine_unique": 8,
           "total_unique": 10,
-          "loc": 828,
-          "coarse_per_kloc": 3.6231884057971016,
-          "fine_per_kloc": 126.81159420289855,
-          "total_per_kloc": 130.43478260869566,
-          "coarse_per_file": 0.42857142857142855,
-          "fine_per_file": 15.0,
-          "total_per_file": 15.428571428571429,
           "impl_top": [
             [
               "Magic number",
@@ -1149,20 +997,12 @@
           "arch": 0,
           "design": 3,
           "impl": 106,
-          "ml": 0,
           "coarse": 3,
           "fine": 106,
           "total": 109,
           "coarse_unique": 2,
           "fine_unique": 8,
           "total_unique": 10,
-          "loc": 838,
-          "coarse_per_kloc": 3.579952267303103,
-          "fine_per_kloc": 126.49164677804296,
-          "total_per_kloc": 130.07159904534606,
-          "coarse_per_file": 0.42857142857142855,
-          "fine_per_file": 15.142857142857142,
-          "total_per_file": 15.571428571428571,
           "impl_top": [
             [
               "Magic number",
@@ -1213,20 +1053,12 @@
           "arch": 0,
           "design": 3,
           "impl": 96,
-          "ml": 0,
           "coarse": 3,
           "fine": 96,
           "total": 99,
           "coarse_unique": 2,
           "fine_unique": 7,
           "total_unique": 9,
-          "loc": 684,
-          "coarse_per_kloc": 4.385964912280702,
-          "fine_per_kloc": 140.35087719298247,
-          "total_per_kloc": 144.73684210526315,
-          "coarse_per_file": 0.5,
-          "fine_per_file": 16.0,
-          "total_per_file": 16.5,
           "impl_top": [
             [
               "Magic number",
@@ -1283,18 +1115,6 @@
         "total_post_review_minus_post_coding": 1,
         "total_final_minus_post_review": -10,
         "total_final_minus_post_coding": -9
-      },
-      "software_info": {
-        "cost": 0.910161,
-        "num_code_files": 6,
-        "code_lines": 684,
-        "num_utterances": 27,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 101473,
-        "num_completion_tokens": 78332,
-        "num_total_tokens": 179805,
-        "num_reasoning_tokens": 29120,
-        "duration": "1794.00s"
       }
     },
     {
@@ -1304,35 +1124,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2643,
-          "Coding": 7324,
-          "Code Review": 48092,
-          "Documentation": 16759
-        },
-        "code_review_total_tokens": 48092,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 26,
-          "ml": 0,
           "coarse": 0,
           "fine": 26,
           "total": 26,
           "coarse_unique": 0,
           "fine_unique": 2,
           "total_unique": 2,
-          "loc": 339,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 76.69616519174042,
-          "total_per_kloc": 76.69616519174042,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 8.666666666666666,
-          "total_per_file": 8.666666666666666,
           "impl_top": [
             [
               "Magic number",
@@ -1350,20 +1152,12 @@
           "arch": 0,
           "design": 0,
           "impl": 28,
-          "ml": 0,
           "coarse": 0,
           "fine": 28,
           "total": 28,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 362,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 77.34806629834254,
-          "total_per_kloc": 77.34806629834254,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 9.333333333333334,
-          "total_per_file": 9.333333333333334,
           "impl_top": [
             [
               "Magic number",
@@ -1385,20 +1179,12 @@
           "arch": 0,
           "design": 0,
           "impl": 28,
-          "ml": 0,
           "coarse": 0,
           "fine": 28,
           "total": 28,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 362,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 77.34806629834254,
-          "total_per_kloc": 77.34806629834254,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 9.333333333333334,
-          "total_per_file": 9.333333333333334,
           "impl_top": [
             [
               "Magic number",
@@ -1430,18 +1216,6 @@
         "total_post_review_minus_post_coding": 2,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 2
-      },
-      "software_info": {
-        "cost": 0.407647,
-        "num_code_files": 3,
-        "code_lines": 362,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 38918,
-        "num_completion_tokens": 35900,
-        "num_total_tokens": 74818,
-        "num_reasoning_tokens": 19328,
-        "duration": "664.00s"
       }
     },
     {
@@ -1451,36 +1225,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 3177,
-          "Coding": 12265,
-          "Code Review": 67023,
-          "Testing": 9794,
-          "Documentation": 22958
-        },
-        "code_review_total_tokens": 67023,
-        "testing_total_tokens": 9794
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 26,
-          "ml": 0,
           "coarse": 0,
           "fine": 26,
           "total": 26,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 480,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 54.166666666666664,
-          "total_per_kloc": 54.166666666666664,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 6.5,
-          "total_per_file": 6.5,
           "impl_top": [
             [
               "Long statement",
@@ -1506,20 +1261,12 @@
           "arch": 0,
           "design": 0,
           "impl": 19,
-          "ml": 0,
           "coarse": 0,
           "fine": 19,
           "total": 19,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 399,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 47.61904761904762,
-          "total_per_kloc": 47.61904761904762,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.75,
-          "total_per_file": 4.75,
           "impl_top": [
             [
               "Long statement",
@@ -1545,20 +1292,12 @@
           "arch": 0,
           "design": 0,
           "impl": 10,
-          "ml": 0,
           "coarse": 0,
           "fine": 10,
           "total": 10,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 478,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 20.92050209205021,
-          "total_per_kloc": 20.92050209205021,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 2.5,
-          "total_per_file": 2.5,
           "impl_top": [
             [
               "Long statement",
@@ -1594,18 +1333,6 @@
         "total_post_review_minus_post_coding": -7,
         "total_final_minus_post_review": -9,
         "total_final_minus_post_coding": -16
-      },
-      "software_info": {
-        "cost": 0.647295,
-        "num_code_files": 4,
-        "code_lines": 478,
-        "num_utterances": 27,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 57700,
-        "num_completion_tokens": 57517,
-        "num_total_tokens": 115217,
-        "num_reasoning_tokens": 30080,
-        "duration": "1153.00s"
       }
     },
     {
@@ -1615,35 +1342,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2434,
-          "Coding": 9251,
-          "Code Review": 62109,
-          "Documentation": 20944
-        },
-        "code_review_total_tokens": 62109,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 17,
-          "ml": 0,
           "coarse": 0,
           "fine": 17,
           "total": 17,
           "coarse_unique": 0,
           "fine_unique": 2,
           "total_unique": 2,
-          "loc": 477,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 35.63941299790356,
-          "total_per_kloc": 35.63941299790356,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 3.4,
-          "total_per_file": 3.4,
           "impl_top": [
             [
               "Long statement",
@@ -1661,20 +1370,12 @@
           "arch": 0,
           "design": 0,
           "impl": 22,
-          "ml": 0,
           "coarse": 0,
           "fine": 22,
           "total": 22,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 486,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 45.267489711934154,
-          "total_per_kloc": 45.267489711934154,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.4,
-          "total_per_file": 4.4,
           "impl_top": [
             [
               "Long statement",
@@ -1700,20 +1401,12 @@
           "arch": 0,
           "design": 0,
           "impl": 22,
-          "ml": 0,
           "coarse": 0,
           "fine": 22,
           "total": 22,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 486,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 45.267489711934154,
-          "total_per_kloc": 45.267489711934154,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.4,
-          "total_per_file": 4.4,
           "impl_top": [
             [
               "Long statement",
@@ -1749,18 +1442,6 @@
         "total_post_review_minus_post_coding": 5,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 5
-      },
-      "software_info": {
-        "cost": 0.543375,
-        "num_code_files": 5,
-        "code_lines": 486,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 46172,
-        "num_completion_tokens": 48566,
-        "num_total_tokens": 94738,
-        "num_reasoning_tokens": 25344,
-        "duration": "974.00s"
       }
     },
     {
@@ -1770,35 +1451,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2625,
-          "Coding": 18896,
-          "Code Review": 145032,
-          "Documentation": 45930
-        },
-        "code_review_total_tokens": 145032,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 1,
           "impl": 107,
-          "ml": 0,
           "coarse": 1,
           "fine": 107,
           "total": 108,
           "coarse_unique": 1,
           "fine_unique": 6,
           "total_unique": 7,
-          "loc": 1139,
-          "coarse_per_kloc": 0.8779631255487269,
-          "fine_per_kloc": 93.94205443371378,
-          "total_per_kloc": 94.82001755926251,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 17.833333333333332,
-          "total_per_file": 18.0,
           "impl_top": [
             [
               "Magic number",
@@ -1837,20 +1500,12 @@
           "arch": 0,
           "design": 1,
           "impl": 113,
-          "ml": 0,
           "coarse": 1,
           "fine": 113,
           "total": 114,
           "coarse_unique": 1,
           "fine_unique": 6,
           "total_unique": 7,
-          "loc": 1173,
-          "coarse_per_kloc": 0.8525149190110827,
-          "fine_per_kloc": 96.33418584825235,
-          "total_per_kloc": 97.18670076726343,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 18.833333333333332,
-          "total_per_file": 19.0,
           "impl_top": [
             [
               "Magic number",
@@ -1889,20 +1544,12 @@
           "arch": 0,
           "design": 1,
           "impl": 113,
-          "ml": 0,
           "coarse": 1,
           "fine": 113,
           "total": 114,
           "coarse_unique": 1,
           "fine_unique": 6,
           "total_unique": 7,
-          "loc": 1173,
-          "coarse_per_kloc": 0.8525149190110827,
-          "fine_per_kloc": 96.33418584825235,
-          "total_per_kloc": 97.18670076726343,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 18.833333333333332,
-          "total_per_file": 19.0,
           "impl_top": [
             [
               "Magic number",
@@ -1951,18 +1598,6 @@
         "total_post_review_minus_post_coding": 6,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 6
-      },
-      "software_info": {
-        "cost": 1.03857,
-        "num_code_files": 6,
-        "code_lines": 1173,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 124144,
-        "num_completion_tokens": 88339,
-        "num_total_tokens": 212483,
-        "num_reasoning_tokens": 32896,
-        "duration": "1687.00s"
       }
     },
     {
@@ -1972,36 +1607,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2939,
-          "Coding": 11090,
-          "Code Completion": 43779,
-          "Code Review": 73240,
-          "Documentation": 27703
-        },
-        "code_review_total_tokens": 73240,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 10,
-          "ml": 0,
           "coarse": 0,
           "fine": 10,
           "total": 10,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 760,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 13.157894736842104,
-          "total_per_kloc": 13.157894736842104,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 2.0,
-          "total_per_file": 2.0,
           "impl_top": [
             [
               "Long statement",
@@ -2023,20 +1639,12 @@
           "arch": 0,
           "design": 0,
           "impl": 13,
-          "ml": 0,
           "coarse": 0,
           "fine": 13,
           "total": 13,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 778,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 16.709511568123393,
-          "total_per_kloc": 16.709511568123393,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 2.6,
-          "total_per_file": 2.6,
           "impl_top": [
             [
               "Long statement",
@@ -2058,20 +1666,12 @@
           "arch": 0,
           "design": 0,
           "impl": 13,
-          "ml": 0,
           "coarse": 0,
           "fine": 13,
           "total": 13,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 778,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 16.709511568123393,
-          "total_per_kloc": 16.709511568123393,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 2.6,
-          "total_per_file": 2.6,
           "impl_top": [
             [
               "Long statement",
@@ -2103,18 +1703,6 @@
         "total_post_review_minus_post_coding": 3,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 3
-      },
-      "software_info": {
-        "cost": 0.811849,
-        "num_code_files": 5,
-        "code_lines": 778,
-        "num_utterances": 31,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 88647,
-        "num_completion_tokens": 70104,
-        "num_total_tokens": 158751,
-        "num_reasoning_tokens": 20032,
-        "duration": "1025.00s"
       }
     },
     {
@@ -2124,36 +1712,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2346,
-          "Coding": 5301,
-          "Code Completion": 21426,
-          "Code Review": 36247,
-          "Documentation": 13798
-        },
-        "code_review_total_tokens": 36247,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 1,
           "impl": 9,
-          "ml": 0,
           "coarse": 1,
           "fine": 9,
           "total": 10,
           "coarse_unique": 1,
           "fine_unique": 2,
           "total_unique": 3,
-          "loc": 245,
-          "coarse_per_kloc": 4.081632653061225,
-          "fine_per_kloc": 36.734693877551024,
-          "total_per_kloc": 40.816326530612244,
-          "coarse_per_file": 0.3333333333333333,
-          "fine_per_file": 3.0,
-          "total_per_file": 3.3333333333333335,
           "impl_top": [
             [
               "Long statement",
@@ -2176,20 +1745,12 @@
           "arch": 0,
           "design": 1,
           "impl": 9,
-          "ml": 0,
           "coarse": 1,
           "fine": 9,
           "total": 10,
           "coarse_unique": 1,
           "fine_unique": 2,
           "total_unique": 3,
-          "loc": 251,
-          "coarse_per_kloc": 3.9840637450199203,
-          "fine_per_kloc": 35.85657370517928,
-          "total_per_kloc": 39.8406374501992,
-          "coarse_per_file": 0.3333333333333333,
-          "fine_per_file": 3.0,
-          "total_per_file": 3.3333333333333335,
           "impl_top": [
             [
               "Long statement",
@@ -2212,20 +1773,12 @@
           "arch": 0,
           "design": 1,
           "impl": 9,
-          "ml": 0,
           "coarse": 1,
           "fine": 9,
           "total": 10,
           "coarse_unique": 1,
           "fine_unique": 2,
           "total_unique": 3,
-          "loc": 251,
-          "coarse_per_kloc": 3.9840637450199203,
-          "fine_per_kloc": 35.85657370517928,
-          "total_per_kloc": 39.8406374501992,
-          "coarse_per_file": 0.3333333333333333,
-          "fine_per_file": 3.0,
-          "total_per_file": 3.3333333333333335,
           "impl_top": [
             [
               "Long statement",
@@ -2258,18 +1811,6 @@
         "total_post_review_minus_post_coding": 0,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 0
-      },
-      "software_info": {
-        "cost": 0.443175,
-        "num_code_files": 3,
-        "code_lines": 251,
-        "num_utterances": 31,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 39772,
-        "num_completion_tokens": 39346,
-        "num_total_tokens": 79118,
-        "num_reasoning_tokens": 19456,
-        "duration": "781.00s"
       }
     },
     {
@@ -2279,37 +1820,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2685,
-          "Coding": 7463,
-          "Code Completion": 27891,
-          "Code Review": 61876,
-          "Testing": 12145,
-          "Documentation": 18846
-        },
-        "code_review_total_tokens": 61876,
-        "testing_total_tokens": 12145
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 24,
-          "ml": 0,
           "coarse": 0,
           "fine": 24,
           "total": 24,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 408,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 58.8235294117647,
-          "total_per_kloc": 58.8235294117647,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 6.0,
-          "total_per_file": 6.0,
           "impl_top": [
             [
               "Magic number",
@@ -2335,20 +1856,12 @@
           "arch": 0,
           "design": 0,
           "impl": 25,
-          "ml": 0,
           "coarse": 0,
           "fine": 25,
           "total": 25,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 419,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 59.665871121718375,
-          "total_per_kloc": 59.665871121718375,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 6.25,
-          "total_per_file": 6.25,
           "impl_top": [
             [
               "Magic number",
@@ -2374,20 +1887,12 @@
           "arch": 0,
           "design": 0,
           "impl": 29,
-          "ml": 0,
           "coarse": 0,
           "fine": 29,
           "total": 29,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 454,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 63.87665198237885,
-          "total_per_kloc": 63.87665198237885,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 7.25,
-          "total_per_file": 7.25,
           "impl_top": [
             [
               "Magic number",
@@ -2423,18 +1928,6 @@
         "total_post_review_minus_post_coding": 1,
         "total_final_minus_post_review": 4,
         "total_final_minus_post_coding": 5
-      },
-      "software_info": {
-        "cost": 0.729635,
-        "num_code_files": 4,
-        "code_lines": 454,
-        "num_utterances": 33,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 66220,
-        "num_completion_tokens": 64686,
-        "num_total_tokens": 130906,
-        "num_reasoning_tokens": 30336,
-        "duration": "1537.00s"
       }
     },
     {
@@ -2444,36 +1937,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 3378,
-          "Coding": 10376,
-          "Code Review": 69538,
-          "Testing": 10935,
-          "Documentation": 23613
-        },
-        "code_review_total_tokens": 69538,
-        "testing_total_tokens": 10935
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 35,
-          "ml": 0,
           "coarse": 0,
           "fine": 35,
           "total": 35,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 424,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 82.54716981132076,
-          "total_per_kloc": 82.54716981132076,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 11.666666666666666,
-          "total_per_file": 11.666666666666666,
           "impl_top": [
             [
               "Magic number",
@@ -2499,20 +1973,12 @@
           "arch": 0,
           "design": 0,
           "impl": 42,
-          "ml": 0,
           "coarse": 0,
           "fine": 42,
           "total": 42,
           "coarse_unique": 0,
           "fine_unique": 5,
           "total_unique": 5,
-          "loc": 486,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 86.41975308641975,
-          "total_per_kloc": 86.41975308641975,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 14.0,
-          "total_per_file": 14.0,
           "impl_top": [
             [
               "Magic number",
@@ -2542,20 +2008,12 @@
           "arch": 0,
           "design": 0,
           "impl": 42,
-          "ml": 0,
           "coarse": 0,
           "fine": 42,
           "total": 42,
           "coarse_unique": 0,
           "fine_unique": 5,
           "total_unique": 5,
-          "loc": 505,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 83.16831683168317,
-          "total_per_kloc": 83.16831683168317,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 14.0,
-          "total_per_file": 14.0,
           "impl_top": [
             [
               "Magic number",
@@ -2595,18 +2053,6 @@
         "total_post_review_minus_post_coding": 7,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 7
-      },
-      "software_info": {
-        "cost": 0.626056,
-        "num_code_files": 3,
-        "code_lines": 505,
-        "num_utterances": 28,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 63125,
-        "num_completion_tokens": 54715,
-        "num_total_tokens": 117840,
-        "num_reasoning_tokens": 27968,
-        "duration": "931.00s"
       }
     },
     {
@@ -2616,36 +2062,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2463,
-          "Coding": 8904,
-          "Code Review": 66926,
-          "Testing": 8433,
-          "Documentation": 19770
-        },
-        "code_review_total_tokens": 66926,
-        "testing_total_tokens": 8433
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 45,
-          "ml": 0,
           "coarse": 0,
           "fine": 45,
           "total": 45,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 468,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 96.15384615384616,
-          "total_per_kloc": 96.15384615384616,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 9.0,
-          "total_per_file": 9.0,
           "impl_top": [
             [
               "Magic number",
@@ -2667,20 +2094,12 @@
           "arch": 0,
           "design": 0,
           "impl": 45,
-          "ml": 0,
           "coarse": 0,
           "fine": 45,
           "total": 45,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 468,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 96.15384615384616,
-          "total_per_kloc": 96.15384615384616,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 9.0,
-          "total_per_file": 9.0,
           "impl_top": [
             [
               "Magic number",
@@ -2702,20 +2121,12 @@
           "arch": 0,
           "design": 0,
           "impl": 46,
-          "ml": 0,
           "coarse": 0,
           "fine": 46,
           "total": 46,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 478,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 96.23430962343096,
-          "total_per_kloc": 96.23430962343096,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 9.2,
-          "total_per_file": 9.2,
           "impl_top": [
             [
               "Magic number",
@@ -2747,18 +2158,6 @@
         "total_post_review_minus_post_coding": 0,
         "total_final_minus_post_review": 1,
         "total_final_minus_post_coding": 1
-      },
-      "software_info": {
-        "cost": 0.595181,
-        "num_code_files": 5,
-        "code_lines": 478,
-        "num_utterances": 27,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 53689,
-        "num_completion_tokens": 52807,
-        "num_total_tokens": 106496,
-        "num_reasoning_tokens": 30656,
-        "duration": "943.00s"
       }
     },
     {
@@ -2768,35 +2167,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2633,
-          "Coding": 8606,
-          "Code Review": 43283,
-          "Documentation": 19578
-        },
-        "code_review_total_tokens": 43283,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 29,
-          "ml": 0,
           "coarse": 0,
           "fine": 29,
           "total": 29,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 428,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 67.75700934579439,
-          "total_per_kloc": 67.75700934579439,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 9.666666666666666,
-          "total_per_file": 9.666666666666666,
           "impl_top": [
             [
               "Magic number",
@@ -2822,20 +2203,12 @@
           "arch": 0,
           "design": 0,
           "impl": 12,
-          "ml": 0,
           "coarse": 0,
           "fine": 12,
           "total": 12,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 409,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 29.339853300733495,
-          "total_per_kloc": 29.339853300733495,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.0,
-          "total_per_file": 4.0,
           "impl_top": [
             [
               "Long statement",
@@ -2857,20 +2230,12 @@
           "arch": 0,
           "design": 0,
           "impl": 12,
-          "ml": 0,
           "coarse": 0,
           "fine": 12,
           "total": 12,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 409,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 29.339853300733495,
-          "total_per_kloc": 29.339853300733495,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.0,
-          "total_per_file": 4.0,
           "impl_top": [
             [
               "Long statement",
@@ -2902,18 +2267,6 @@
         "total_post_review_minus_post_coding": -17,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": -17
-      },
-      "software_info": {
-        "cost": 0.425064,
-        "num_code_files": 3,
-        "code_lines": 409,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 36107,
-        "num_completion_tokens": 37993,
-        "num_total_tokens": 74100,
-        "num_reasoning_tokens": 18944,
-        "duration": "666.00s"
       }
     },
     {
@@ -2923,35 +2276,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2707,
-          "Coding": 7106,
-          "Code Review": 61582,
-          "Documentation": 19809
-        },
-        "code_review_total_tokens": 61582,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 8,
-          "ml": 0,
           "coarse": 0,
           "fine": 8,
           "total": 8,
           "coarse_unique": 0,
           "fine_unique": 2,
           "total_unique": 2,
-          "loc": 418,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 19.138755980861244,
-          "total_per_kloc": 19.138755980861244,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 2.6666666666666665,
-          "total_per_file": 2.6666666666666665,
           "impl_top": [
             [
               "Long statement",
@@ -2969,20 +2304,12 @@
           "arch": 0,
           "design": 0,
           "impl": 10,
-          "ml": 0,
           "coarse": 0,
           "fine": 10,
           "total": 10,
           "coarse_unique": 0,
           "fine_unique": 2,
           "total_unique": 2,
-          "loc": 429,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 23.31002331002331,
-          "total_per_kloc": 23.31002331002331,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 3.3333333333333335,
-          "total_per_file": 3.3333333333333335,
           "impl_top": [
             [
               "Long statement",
@@ -3000,20 +2327,12 @@
           "arch": 0,
           "design": 0,
           "impl": 10,
-          "ml": 0,
           "coarse": 0,
           "fine": 10,
           "total": 10,
           "coarse_unique": 0,
           "fine_unique": 2,
           "total_unique": 2,
-          "loc": 429,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 23.31002331002331,
-          "total_per_kloc": 23.31002331002331,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 3.3333333333333335,
-          "total_per_file": 3.3333333333333335,
           "impl_top": [
             [
               "Long statement",
@@ -3041,18 +2360,6 @@
         "total_post_review_minus_post_coding": 2,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 2
-      },
-      "software_info": {
-        "cost": 0.499889,
-        "num_code_files": 3,
-        "code_lines": 429,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 47103,
-        "num_completion_tokens": 44101,
-        "num_total_tokens": 91204,
-        "num_reasoning_tokens": 23872,
-        "duration": "854.00s"
       }
     },
     {
@@ -3062,35 +2369,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2479,
-          "Coding": 13232,
-          "Code Review": 102882,
-          "Documentation": 34508
-        },
-        "code_review_total_tokens": 102882,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 1,
           "impl": 28,
-          "ml": 0,
           "coarse": 1,
           "fine": 28,
           "total": 29,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 738,
-          "coarse_per_kloc": 1.3550135501355014,
-          "fine_per_kloc": 37.94037940379404,
-          "total_per_kloc": 39.295392953929536,
-          "coarse_per_file": 0.25,
-          "fine_per_file": 7.0,
-          "total_per_file": 7.25,
           "impl_top": [
             [
               "Magic number",
@@ -3125,20 +2414,12 @@
           "arch": 0,
           "design": 1,
           "impl": 27,
-          "ml": 0,
           "coarse": 1,
           "fine": 27,
           "total": 28,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 813,
-          "coarse_per_kloc": 1.2300123001230012,
-          "fine_per_kloc": 33.210332103321036,
-          "total_per_kloc": 34.44034440344404,
-          "coarse_per_file": 0.25,
-          "fine_per_file": 6.75,
-          "total_per_file": 7.0,
           "impl_top": [
             [
               "Magic number",
@@ -3173,20 +2454,12 @@
           "arch": 0,
           "design": 1,
           "impl": 27,
-          "ml": 0,
           "coarse": 1,
           "fine": 27,
           "total": 28,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 813,
-          "coarse_per_kloc": 1.2300123001230012,
-          "fine_per_kloc": 33.210332103321036,
-          "total_per_kloc": 34.44034440344404,
-          "coarse_per_file": 0.25,
-          "fine_per_file": 6.75,
-          "total_per_file": 7.0,
           "impl_top": [
             [
               "Magic number",
@@ -3231,18 +2504,6 @@
         "total_post_review_minus_post_coding": -1,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": -1
-      },
-      "software_info": {
-        "cost": 0.784854,
-        "num_code_files": 4,
-        "code_lines": 813,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 85275,
-        "num_completion_tokens": 67826,
-        "num_total_tokens": 153101,
-        "num_reasoning_tokens": 29696,
-        "duration": "1623.00s"
       }
     },
     {
@@ -3252,36 +2513,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2429,
-          "Coding": 8340,
-          "Code Review": 55452,
-          "Testing": 9369,
-          "Documentation": 20762
-        },
-        "code_review_total_tokens": 55452,
-        "testing_total_tokens": 9369
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 44,
-          "ml": 0,
           "coarse": 0,
           "fine": 44,
           "total": 44,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 486,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 90.53497942386831,
-          "total_per_kloc": 90.53497942386831,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 11.0,
-          "total_per_file": 11.0,
           "impl_top": [
             [
               "Magic number",
@@ -3307,20 +2549,12 @@
           "arch": 0,
           "design": 0,
           "impl": 24,
-          "ml": 0,
           "coarse": 0,
           "fine": 24,
           "total": 24,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 483,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 49.68944099378882,
-          "total_per_kloc": 49.68944099378882,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 6.0,
-          "total_per_file": 6.0,
           "impl_top": [
             [
               "Magic number",
@@ -3346,20 +2580,12 @@
           "arch": 0,
           "design": 0,
           "impl": 45,
-          "ml": 0,
           "coarse": 0,
           "fine": 45,
           "total": 45,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 491,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 91.64969450101833,
-          "total_per_kloc": 91.64969450101833,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 11.25,
-          "total_per_file": 11.25,
           "impl_top": [
             [
               "Magic number",
@@ -3395,18 +2621,6 @@
         "total_post_review_minus_post_coding": -20,
         "total_final_minus_post_review": 21,
         "total_final_minus_post_coding": 1
-      },
-      "software_info": {
-        "cost": 0.482637,
-        "num_code_files": 4,
-        "code_lines": 491,
-        "num_utterances": 27,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 54958,
-        "num_completion_tokens": 41394,
-        "num_total_tokens": 96352,
-        "num_reasoning_tokens": 17280,
-        "duration": "826.00s"
       }
     },
     {
@@ -3416,36 +2630,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2467,
-          "Coding": 8354,
-          "Code Review": 60736,
-          "Testing": 8630,
-          "Documentation": 20110
-        },
-        "code_review_total_tokens": 60736,
-        "testing_total_tokens": 8630
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 16,
-          "ml": 0,
           "coarse": 0,
           "fine": 16,
           "total": 16,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 390,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 41.02564102564103,
-          "total_per_kloc": 41.02564102564103,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.0,
-          "total_per_file": 4.0,
           "impl_top": [
             [
               "Long statement",
@@ -3467,20 +2662,12 @@
           "arch": 0,
           "design": 0,
           "impl": 16,
-          "ml": 0,
           "coarse": 0,
           "fine": 16,
           "total": 16,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 397,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 40.30226700251889,
-          "total_per_kloc": 40.30226700251889,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.0,
-          "total_per_file": 4.0,
           "impl_top": [
             [
               "Long statement",
@@ -3502,20 +2689,12 @@
           "arch": 0,
           "design": 0,
           "impl": 16,
-          "ml": 0,
           "coarse": 0,
           "fine": 16,
           "total": 16,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 397,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 40.30226700251889,
-          "total_per_kloc": 40.30226700251889,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.0,
-          "total_per_file": 4.0,
           "impl_top": [
             [
               "Long statement",
@@ -3547,18 +2726,6 @@
         "total_post_review_minus_post_coding": 0,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 0
-      },
-      "software_info": {
-        "cost": 0.54279,
-        "num_code_files": 4,
-        "code_lines": 397,
-        "num_utterances": 27,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 52592,
-        "num_completion_tokens": 47705,
-        "num_total_tokens": 100297,
-        "num_reasoning_tokens": 24064,
-        "duration": "664.00s"
       }
     },
     {
@@ -3568,36 +2735,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 3,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2495,
-          "Coding": 7250,
-          "Code Review": 61655,
-          "Testing": 16359,
-          "Documentation": 19018
-        },
-        "code_review_total_tokens": 61655,
-        "testing_total_tokens": 16359
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 1,
           "impl": 25,
-          "ml": 0,
           "coarse": 1,
           "fine": 25,
           "total": 26,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 452,
-          "coarse_per_kloc": 2.2123893805309733,
-          "fine_per_kloc": 55.309734513274336,
-          "total_per_kloc": 57.52212389380531,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 4.166666666666667,
-          "total_per_file": 4.333333333333333,
           "impl_top": [
             [
               "Magic number",
@@ -3632,20 +2780,12 @@
           "arch": 0,
           "design": 1,
           "impl": 29,
-          "ml": 0,
           "coarse": 1,
           "fine": 29,
           "total": 30,
           "coarse_unique": 1,
           "fine_unique": 6,
           "total_unique": 7,
-          "loc": 497,
-          "coarse_per_kloc": 2.0120724346076457,
-          "fine_per_kloc": 58.35010060362173,
-          "total_per_kloc": 60.36217303822938,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 4.833333333333333,
-          "total_per_file": 5.0,
           "impl_top": [
             [
               "Long statement",
@@ -3684,20 +2824,12 @@
           "arch": 0,
           "design": 1,
           "impl": 29,
-          "ml": 0,
           "coarse": 1,
           "fine": 29,
           "total": 30,
           "coarse_unique": 1,
           "fine_unique": 6,
           "total_unique": 7,
-          "loc": 497,
-          "coarse_per_kloc": 2.0120724346076457,
-          "fine_per_kloc": 58.35010060362173,
-          "total_per_kloc": 60.36217303822938,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 4.833333333333333,
-          "total_per_file": 5.0,
           "impl_top": [
             [
               "Long statement",
@@ -3746,18 +2878,6 @@
         "total_post_review_minus_post_coding": 4,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 4
-      },
-      "software_info": {
-        "cost": 0.538614,
-        "num_code_files": 6,
-        "code_lines": 497,
-        "num_utterances": 31,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 60475,
-        "num_completion_tokens": 46302,
-        "num_total_tokens": 106777,
-        "num_reasoning_tokens": 27136,
-        "duration": "1273.00s"
       }
     },
     {
@@ -3767,35 +2887,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2317,
-          "Coding": 13111,
-          "Code Review": 98286,
-          "Documentation": 32992
-        },
-        "code_review_total_tokens": 98286,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 1,
           "impl": 46,
-          "ml": 0,
           "coarse": 1,
           "fine": 46,
           "total": 47,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 483,
-          "coarse_per_kloc": 2.070393374741201,
-          "fine_per_kloc": 95.23809523809524,
-          "total_per_kloc": 97.30848861283644,
-          "coarse_per_file": 0.5,
-          "fine_per_file": 23.0,
-          "total_per_file": 23.5,
           "impl_top": [
             [
               "Magic number",
@@ -3830,20 +2932,12 @@
           "arch": 0,
           "design": 1,
           "impl": 46,
-          "ml": 0,
           "coarse": 1,
           "fine": 46,
           "total": 47,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 490,
-          "coarse_per_kloc": 2.0408163265306123,
-          "fine_per_kloc": 93.87755102040816,
-          "total_per_kloc": 95.91836734693878,
-          "coarse_per_file": 0.5,
-          "fine_per_file": 23.0,
-          "total_per_file": 23.5,
           "impl_top": [
             [
               "Magic number",
@@ -3878,20 +2972,12 @@
           "arch": 0,
           "design": 1,
           "impl": 46,
-          "ml": 0,
           "coarse": 1,
           "fine": 46,
           "total": 47,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 490,
-          "coarse_per_kloc": 2.0408163265306123,
-          "fine_per_kloc": 93.87755102040816,
-          "total_per_kloc": 95.91836734693878,
-          "coarse_per_file": 0.5,
-          "fine_per_file": 23.0,
-          "total_per_file": 23.5,
           "impl_top": [
             [
               "Magic number",
@@ -3936,18 +3022,6 @@
         "total_post_review_minus_post_coding": 0,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 0
-      },
-      "software_info": {
-        "cost": 0.719766,
-        "num_code_files": 2,
-        "code_lines": 490,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 85405,
-        "num_completion_tokens": 61301,
-        "num_total_tokens": 146706,
-        "num_reasoning_tokens": 23744,
-        "duration": "1479.00s"
       }
     },
     {
@@ -3957,36 +3031,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 2,
-      "tokens": {
-        "by_bucket": {
-          "Design": 3205,
-          "Coding": 18638,
-          "Code Review": 95263,
-          "Testing": 28561,
-          "Documentation": 38771
-        },
-        "code_review_total_tokens": 95263,
-        "testing_total_tokens": 28561
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 1,
           "impl": 45,
-          "ml": 0,
           "coarse": 1,
           "fine": 45,
           "total": 46,
           "coarse_unique": 1,
           "fine_unique": 4,
           "total_unique": 5,
-          "loc": 472,
-          "coarse_per_kloc": 2.1186440677966103,
-          "fine_per_kloc": 95.33898305084746,
-          "total_per_kloc": 97.45762711864407,
-          "coarse_per_file": 0.2,
-          "fine_per_file": 9.0,
-          "total_per_file": 9.2,
           "impl_top": [
             [
               "Magic number",
@@ -4017,20 +3072,12 @@
           "arch": 0,
           "design": 1,
           "impl": 48,
-          "ml": 0,
           "coarse": 1,
           "fine": 48,
           "total": 49,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 565,
-          "coarse_per_kloc": 1.7699115044247788,
-          "fine_per_kloc": 84.95575221238938,
-          "total_per_kloc": 86.72566371681415,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 8.0,
-          "total_per_file": 8.166666666666666,
           "impl_top": [
             [
               "Magic number",
@@ -4065,20 +3112,12 @@
           "arch": 0,
           "design": 1,
           "impl": 50,
-          "ml": 0,
           "coarse": 1,
           "fine": 50,
           "total": 51,
           "coarse_unique": 1,
           "fine_unique": 5,
           "total_unique": 6,
-          "loc": 580,
-          "coarse_per_kloc": 1.7241379310344827,
-          "fine_per_kloc": 86.20689655172414,
-          "total_per_kloc": 87.93103448275862,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 8.333333333333334,
-          "total_per_file": 8.5,
           "impl_top": [
             [
               "Magic number",
@@ -4123,18 +3162,6 @@
         "total_post_review_minus_post_coding": 3,
         "total_final_minus_post_review": 2,
         "total_final_minus_post_coding": 5
-      },
-      "software_info": {
-        "cost": 0.900482,
-        "num_code_files": 6,
-        "code_lines": 580,
-        "num_utterances": 29,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 107874,
-        "num_completion_tokens": 76564,
-        "num_total_tokens": 184438,
-        "num_reasoning_tokens": 37696,
-        "duration": "1210.00s"
       }
     },
     {
@@ -4144,35 +3171,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 3366,
-          "Coding": 11697,
-          "Code Review": 87149,
-          "Documentation": 28839
-        },
-        "code_review_total_tokens": 87149,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 139,
-          "ml": 0,
           "coarse": 0,
           "fine": 139,
           "total": 139,
           "coarse_unique": 0,
           "fine_unique": 5,
           "total_unique": 5,
-          "loc": 362,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 383.9779005524862,
-          "total_per_kloc": 383.9779005524862,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 69.5,
-          "total_per_file": 69.5,
           "impl_top": [
             [
               "Magic number",
@@ -4202,20 +3211,12 @@
           "arch": 0,
           "design": 0,
           "impl": 139,
-          "ml": 0,
           "coarse": 0,
           "fine": 139,
           "total": 139,
           "coarse_unique": 0,
           "fine_unique": 5,
           "total_unique": 5,
-          "loc": 362,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 383.9779005524862,
-          "total_per_kloc": 383.9779005524862,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 69.5,
-          "total_per_file": 69.5,
           "impl_top": [
             [
               "Magic number",
@@ -4245,20 +3246,12 @@
           "arch": 0,
           "design": 0,
           "impl": 139,
-          "ml": 0,
           "coarse": 0,
           "fine": 139,
           "total": 139,
           "coarse_unique": 0,
           "fine_unique": 5,
           "total_unique": 5,
-          "loc": 362,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 383.9779005524862,
-          "total_per_kloc": 383.9779005524862,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 69.5,
-          "total_per_file": 69.5,
           "impl_top": [
             [
               "Magic number",
@@ -4298,18 +3291,6 @@
         "total_post_review_minus_post_coding": 0,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 0
-      },
-      "software_info": {
-        "cost": 0.650121,
-        "num_code_files": 2,
-        "code_lines": 362,
-        "num_utterances": 26,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 75473,
-        "num_completion_tokens": 55578,
-        "num_total_tokens": 131051,
-        "num_reasoning_tokens": 22144,
-        "duration": "1071.00s"
       }
     },
     {
@@ -4319,16 +3300,6 @@
       "python_supported": false,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 3870,
-          "Coding": 12481,
-          "Code Review": 102013,
-          "Documentation": 33808
-        },
-        "code_review_total_tokens": 102013,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": null,
         "post_review": null,
@@ -4347,18 +3318,6 @@
         "total_post_review_minus_post_coding": null,
         "total_final_minus_post_review": null,
         "total_final_minus_post_coding": null
-      },
-      "software_info": {
-        "cost": 0.722346,
-        "num_code_files": 0,
-        "code_lines": 0,
-        "num_utterances": 26,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 91357,
-        "num_completion_tokens": 60815,
-        "num_total_tokens": 152172,
-        "num_reasoning_tokens": 20480,
-        "duration": "2468.00s"
       }
     },
     {
@@ -4368,36 +3327,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2685,
-          "Coding": 8545,
-          "Code Review": 56402,
-          "Testing": 6399,
-          "Documentation": 18028
-        },
-        "code_review_total_tokens": 56402,
-        "testing_total_tokens": 6399
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 25,
-          "ml": 0,
           "coarse": 0,
           "fine": 25,
           "total": 25,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 389,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 64.26735218508998,
-          "total_per_kloc": 64.26735218508998,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 6.25,
-          "total_per_file": 6.25,
           "impl_top": [
             [
               "Magic number",
@@ -4419,20 +3359,12 @@
           "arch": 0,
           "design": 0,
           "impl": 20,
-          "ml": 0,
           "coarse": 0,
           "fine": 20,
           "total": 20,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 392,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 51.02040816326531,
-          "total_per_kloc": 51.02040816326531,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 5.0,
-          "total_per_file": 5.0,
           "impl_top": [
             [
               "Magic number",
@@ -4454,20 +3386,12 @@
           "arch": 0,
           "design": 0,
           "impl": 21,
-          "ml": 0,
           "coarse": 0,
           "fine": 21,
           "total": 21,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 403,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 52.10918114143921,
-          "total_per_kloc": 52.10918114143921,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 5.25,
-          "total_per_file": 5.25,
           "impl_top": [
             [
               "Magic number",
@@ -4499,18 +3423,6 @@
         "total_post_review_minus_post_coding": -5,
         "total_final_minus_post_review": 1,
         "total_final_minus_post_coding": -4
-      },
-      "software_info": {
-        "cost": 0.493581,
-        "num_code_files": 4,
-        "code_lines": 403,
-        "num_utterances": 27,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 48801,
-        "num_completion_tokens": 43258,
-        "num_total_tokens": 92059,
-        "num_reasoning_tokens": 23872,
-        "duration": "715.00s"
       }
     },
     {
@@ -4520,36 +3432,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2379,
-          "Coding": 14508,
-          "Code Completion": 60942,
-          "Code Review": 74258,
-          "Documentation": 24550
-        },
-        "code_review_total_tokens": 74258,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 15,
-          "ml": 0,
           "coarse": 0,
           "fine": 15,
           "total": 15,
           "coarse_unique": 0,
           "fine_unique": 4,
           "total_unique": 4,
-          "loc": 522,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 28.735632183908045,
-          "total_per_kloc": 28.735632183908045,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 3.0,
-          "total_per_file": 3.0,
           "impl_top": [
             [
               "Long statement",
@@ -4575,20 +3468,12 @@
           "arch": 0,
           "design": 0,
           "impl": 24,
-          "ml": 0,
           "coarse": 0,
           "fine": 24,
           "total": 24,
           "coarse_unique": 0,
           "fine_unique": 6,
           "total_unique": 6,
-          "loc": 601,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 39.93344425956739,
-          "total_per_kloc": 39.93344425956739,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.8,
-          "total_per_file": 4.8,
           "impl_top": [
             [
               "Long statement",
@@ -4622,20 +3507,12 @@
           "arch": 0,
           "design": 0,
           "impl": 24,
-          "ml": 0,
           "coarse": 0,
           "fine": 24,
           "total": 24,
           "coarse_unique": 0,
           "fine_unique": 6,
           "total_unique": 6,
-          "loc": 601,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 39.93344425956739,
-          "total_per_kloc": 39.93344425956739,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.8,
-          "total_per_file": 4.8,
           "impl_top": [
             [
               "Long statement",
@@ -4679,18 +3556,6 @@
         "total_post_review_minus_post_coding": 9,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 9
-      },
-      "software_info": {
-        "cost": 1.013371,
-        "num_code_files": 5,
-        "code_lines": 601,
-        "num_utterances": 35,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 86057,
-        "num_completion_tokens": 90580,
-        "num_total_tokens": 176637,
-        "num_reasoning_tokens": 40000,
-        "duration": "1664.00s"
       }
     },
     {
@@ -4700,35 +3565,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2435,
-          "Coding": 6760,
-          "Code Review": 45036,
-          "Documentation": 16807
-        },
-        "code_review_total_tokens": 45036,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 10,
-          "ml": 0,
           "coarse": 0,
           "fine": 10,
           "total": 10,
           "coarse_unique": 0,
           "fine_unique": 2,
           "total_unique": 2,
-          "loc": 307,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 32.57328990228013,
-          "total_per_kloc": 32.57328990228013,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 2.5,
-          "total_per_file": 2.5,
           "impl_top": [
             [
               "Long statement",
@@ -4746,20 +3593,12 @@
           "arch": 0,
           "design": 0,
           "impl": 13,
-          "ml": 0,
           "coarse": 0,
           "fine": 13,
           "total": 13,
           "coarse_unique": 0,
           "fine_unique": 2,
           "total_unique": 2,
-          "loc": 361,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 36.011080332409975,
-          "total_per_kloc": 36.011080332409975,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 3.25,
-          "total_per_file": 3.25,
           "impl_top": [
             [
               "Long statement",
@@ -4777,20 +3616,12 @@
           "arch": 0,
           "design": 0,
           "impl": 13,
-          "ml": 0,
           "coarse": 0,
           "fine": 13,
           "total": 13,
           "coarse_unique": 0,
           "fine_unique": 2,
           "total_unique": 2,
-          "loc": 361,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 36.011080332409975,
-          "total_per_kloc": 36.011080332409975,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 3.25,
-          "total_per_file": 3.25,
           "impl_top": [
             [
               "Long statement",
@@ -4818,18 +3649,6 @@
         "total_post_review_minus_post_coding": 3,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 3
-      },
-      "software_info": {
-        "cost": 0.396054,
-        "num_code_files": 4,
-        "code_lines": 361,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 35923,
-        "num_completion_tokens": 35115,
-        "num_total_tokens": 71038,
-        "num_reasoning_tokens": 20352,
-        "duration": "537.00s"
       }
     },
     {
@@ -4839,35 +3658,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 3017,
-          "Coding": 10402,
-          "Code Review": 73776,
-          "Documentation": 23375
-        },
-        "code_review_total_tokens": 73776,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 1,
           "impl": 44,
-          "ml": 0,
           "coarse": 1,
           "fine": 44,
           "total": 45,
           "coarse_unique": 1,
           "fine_unique": 3,
           "total_unique": 4,
-          "loc": 519,
-          "coarse_per_kloc": 1.9267822736030829,
-          "fine_per_kloc": 84.77842003853564,
-          "total_per_kloc": 86.70520231213872,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 7.333333333333333,
-          "total_per_file": 7.5,
           "impl_top": [
             [
               "Magic number",
@@ -4894,20 +3695,12 @@
           "arch": 0,
           "design": 1,
           "impl": 42,
-          "ml": 0,
           "coarse": 1,
           "fine": 42,
           "total": 43,
           "coarse_unique": 1,
           "fine_unique": 3,
           "total_unique": 4,
-          "loc": 528,
-          "coarse_per_kloc": 1.893939393939394,
-          "fine_per_kloc": 79.54545454545455,
-          "total_per_kloc": 81.43939393939394,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 7.0,
-          "total_per_file": 7.166666666666667,
           "impl_top": [
             [
               "Magic number",
@@ -4934,20 +3727,12 @@
           "arch": 0,
           "design": 1,
           "impl": 47,
-          "ml": 0,
           "coarse": 1,
           "fine": 47,
           "total": 48,
           "coarse_unique": 1,
           "fine_unique": 3,
           "total_unique": 4,
-          "loc": 527,
-          "coarse_per_kloc": 1.8975332068311195,
-          "fine_per_kloc": 89.18406072106262,
-          "total_per_kloc": 91.08159392789373,
-          "coarse_per_file": 0.16666666666666666,
-          "fine_per_file": 7.833333333333333,
-          "total_per_file": 8.0,
           "impl_top": [
             [
               "Magic number",
@@ -4984,18 +3769,6 @@
         "total_post_review_minus_post_coding": -2,
         "total_final_minus_post_review": 5,
         "total_final_minus_post_coding": 3
-      },
-      "software_info": {
-        "cost": 0.589957,
-        "num_code_files": 6,
-        "code_lines": 528,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 58942,
-        "num_completion_tokens": 51628,
-        "num_total_tokens": 110570,
-        "num_reasoning_tokens": 26496,
-        "duration": "830.00s"
       }
     },
     {
@@ -5005,36 +3778,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 1,
-      "tokens": {
-        "by_bucket": {
-          "Design": 3639,
-          "Coding": 10505,
-          "Code Review": 85488,
-          "Testing": 23169,
-          "Documentation": 29073
-        },
-        "code_review_total_tokens": 85488,
-        "testing_total_tokens": 23169
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 1,
           "impl": 15,
-          "ml": 0,
           "coarse": 1,
           "fine": 15,
           "total": 16,
           "coarse_unique": 1,
           "fine_unique": 4,
           "total_unique": 5,
-          "loc": 698,
-          "coarse_per_kloc": 1.4326647564469914,
-          "fine_per_kloc": 21.48997134670487,
-          "total_per_kloc": 22.922636103151863,
-          "coarse_per_file": 0.25,
-          "fine_per_file": 3.75,
-          "total_per_file": 4.0,
           "impl_top": [
             [
               "Long statement",
@@ -5065,20 +3819,12 @@
           "arch": 0,
           "design": 1,
           "impl": 17,
-          "ml": 0,
           "coarse": 1,
           "fine": 17,
           "total": 18,
           "coarse_unique": 1,
           "fine_unique": 4,
           "total_unique": 5,
-          "loc": 784,
-          "coarse_per_kloc": 1.2755102040816326,
-          "fine_per_kloc": 21.683673469387756,
-          "total_per_kloc": 22.959183673469386,
-          "coarse_per_file": 0.25,
-          "fine_per_file": 4.25,
-          "total_per_file": 4.5,
           "impl_top": [
             [
               "Long statement",
@@ -5109,20 +3855,12 @@
           "arch": 0,
           "design": 1,
           "impl": 17,
-          "ml": 0,
           "coarse": 1,
           "fine": 17,
           "total": 18,
           "coarse_unique": 1,
           "fine_unique": 4,
           "total_unique": 5,
-          "loc": 784,
-          "coarse_per_kloc": 1.2755102040816326,
-          "fine_per_kloc": 21.683673469387756,
-          "total_per_kloc": 22.959183673469386,
-          "coarse_per_file": 0.25,
-          "fine_per_file": 4.25,
-          "total_per_file": 4.5,
           "impl_top": [
             [
               "Long statement",
@@ -5163,18 +3901,6 @@
         "total_post_review_minus_post_coding": 2,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 2
-      },
-      "software_info": {
-        "cost": 0.747051,
-        "num_code_files": 4,
-        "code_lines": 784,
-        "num_utterances": 30,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 88193,
-        "num_completion_tokens": 63681,
-        "num_total_tokens": 151874,
-        "num_reasoning_tokens": 27008,
-        "duration": "930.00s"
       }
     },
     {
@@ -5184,35 +3910,17 @@
       "python_supported": true,
       "review_cycles": 3,
       "test_cycles": 0,
-      "tokens": {
-        "by_bucket": {
-          "Design": 2385,
-          "Coding": 9293,
-          "Code Review": 67066,
-          "Documentation": 22521
-        },
-        "code_review_total_tokens": 67066,
-        "testing_total_tokens": 0
-      },
       "counts": {
         "post_coding": {
           "arch": 0,
           "design": 0,
           "impl": 19,
-          "ml": 0,
           "coarse": 0,
           "fine": 19,
           "total": 19,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 443,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 42.88939051918736,
-          "total_per_kloc": 42.88939051918736,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 3.8,
-          "total_per_file": 3.8,
           "impl_top": [
             [
               "Long statement",
@@ -5234,20 +3942,12 @@
           "arch": 0,
           "design": 0,
           "impl": 23,
-          "ml": 0,
           "coarse": 0,
           "fine": 23,
           "total": 23,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 486,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 47.325102880658434,
-          "total_per_kloc": 47.325102880658434,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.6,
-          "total_per_file": 4.6,
           "impl_top": [
             [
               "Long statement",
@@ -5269,20 +3969,12 @@
           "arch": 0,
           "design": 0,
           "impl": 23,
-          "ml": 0,
           "coarse": 0,
           "fine": 23,
           "total": 23,
           "coarse_unique": 0,
           "fine_unique": 3,
           "total_unique": 3,
-          "loc": 486,
-          "coarse_per_kloc": 0.0,
-          "fine_per_kloc": 47.325102880658434,
-          "total_per_kloc": 47.325102880658434,
-          "coarse_per_file": 0.0,
-          "fine_per_file": 4.6,
-          "total_per_file": 4.6,
           "impl_top": [
             [
               "Long statement",
@@ -5314,18 +4006,6 @@
         "total_post_review_minus_post_coding": 4,
         "total_final_minus_post_review": 0,
         "total_final_minus_post_coding": 4
-      },
-      "software_info": {
-        "cost": 0.537122,
-        "num_code_files": 5,
-        "code_lines": 486,
-        "num_utterances": 25,
-        "num_self_reflections": 1,
-        "num_prompt_tokens": 54346,
-        "num_completion_tokens": 46919,
-        "num_total_tokens": 101265,
-        "num_reasoning_tokens": 24192,
-        "duration": "1536.00s"
       }
     }
   ]

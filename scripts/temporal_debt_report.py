@@ -110,15 +110,6 @@ def load_final_python_snapshot(project_dir: Path) -> dict[str, str]:
     return files
 
 
-def count_nonempty_loc(files: dict[str, str]) -> int:
-    loc = 0
-    for code in files.values():
-        for line in code.splitlines():
-            if line.strip():
-                loc += 1
-    return loc
-
-
 def smell_type_counts(items: list[dict[str, Any]]) -> Counter[str]:
     c: Counter[str] = Counter()
     for d in items:
@@ -126,14 +117,6 @@ def smell_type_counts(items: list[dict[str, Any]]) -> Counter[str]:
         if isinstance(smell, str) and smell:
             c[smell] += 1
     return c
-
-
-def per_kloc(count: int, loc: int) -> float:
-    return (count * 1000.0 / loc) if loc > 0 else 0.0
-
-
-def per_file(count: int, n_files: int) -> float:
-    return (count / n_files) if n_files > 0 else 0.0
 
 
 def apply_updates(
@@ -167,17 +150,14 @@ def find_dpy_binary(explicit: Optional[str]) -> Path:
     return script_candidate
 
 
-def run_dpy(dpy_path: Path, input_dir: Path, output_dir: Path) -> dict[str, list[dict[str, Any]]]:
+def run_dpy(
+    dpy_path: Path,
+    input_dir: Path,
+    output_dir: Path,
+    *,
+    force: bool,
+) -> dict[str, list[dict[str, Any]]]:
     output_dir.mkdir(parents=True, exist_ok=True)
-    cmd = [str(dpy_path), "analyze", "-i", str(input_dir), "-o", str(output_dir), "-f", "json"]
-    res = subprocess.run(cmd, capture_output=True, text=True)
-    if res.returncode != 0:
-        raise RuntimeError(
-            "DPy failed\n"
-            f"cmd: {' '.join(cmd)}\n"
-            f"stdout:\n{res.stdout}\n"
-            f"stderr:\n{res.stderr}\n"
-        )
 
     def read_smells(suffix: str) -> list[dict[str, Any]]:
         matches = list(output_dir.glob(f"*_{suffix}.json"))
@@ -194,11 +174,33 @@ def run_dpy(dpy_path: Path, input_dir: Path, output_dir: Path) -> dict[str, list
                 out.extend([d for d in data if isinstance(d, dict)])
         return out
 
+    if not force:
+        has_outputs = bool(
+            list(output_dir.glob("*_implementation_smells.json"))
+            or list(output_dir.glob("*_design_smells.json"))
+            or list(output_dir.glob("*_architecture_smells.json"))
+        )
+        if has_outputs:
+            return {
+                "architecture_smells": read_smells("architecture_smells"),
+                "design_smells": read_smells("design_smells"),
+                "implementation_smells": read_smells("implementation_smells"),
+            }
+
+    cmd = [str(dpy_path), "analyze", "-i", str(input_dir), "-o", str(output_dir), "-f", "json"]
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    if res.returncode != 0:
+        raise RuntimeError(
+            "DPy failed\n"
+            f"cmd: {' '.join(cmd)}\n"
+            f"stdout:\n{res.stdout}\n"
+            f"stderr:\n{res.stderr}\n"
+        )
+
     return {
         "architecture_smells": read_smells("architecture_smells"),
         "design_smells": read_smells("design_smells"),
         "implementation_smells": read_smells("implementation_smells"),
-        "ml_smells": read_smells("ml_smells"),
     }
 
 
@@ -313,9 +315,14 @@ def main() -> int:
         "--token-json",
         type=Path,
         default=Path("agent_debt/data/ChatDev_GPT-5_Trace_Analysis_Results.json"),
-        help="Token usage summary JSON (produced by token_usage_extractor_chatdev_gpt_5.py).",
+        help="Optional token-usage summary JSON. Used only for summary-level correlations.",
     )
     parser.add_argument("--dpy", type=str, default=None, help="Path to the DPy binary.")
+    parser.add_argument(
+        "--force-dpy",
+        action="store_true",
+        help="Re-run DPy even if cached outputs already exist in --artifacts-dir.",
+    )
     parser.add_argument(
         "--out-json",
         type=Path,
@@ -385,6 +392,7 @@ def main() -> int:
         "post_review": Counter(),
         "final": Counter(),
     }
+    token_totals_by_project: dict[str, dict[str, Any]] = {}
 
     log_files = sorted(traces_dir.rglob("*.log"))
     for log_path in log_files:
@@ -394,11 +402,20 @@ def main() -> int:
         log_lines = _read_text(log_path).splitlines()
         messages = parse_log_messages(log_lines)
 
-        # Token + meta are always collected when available, even for non-Python projects.
-        token_project = token_projects.get(project_name, {})
-        bucketed_tokens = bucket_token_totals(token_project) if token_project else {}
-        review_tokens = int(bucketed_tokens.get("Code Review", 0))
-        test_tokens = int(bucketed_tokens.get("Testing", 0))
+        token_project = token_projects.get(project_name)
+        if token_project:
+            bucketed_tokens = bucket_token_totals(token_project)
+            token_totals_by_project[project_name] = {
+                "available": True,
+                "code_review_total_tokens": int(bucketed_tokens.get("Code Review", 0)),
+                "testing_total_tokens": int(bucketed_tokens.get("Testing", 0)),
+            }
+        else:
+            token_totals_by_project[project_name] = {
+                "available": False,
+                "code_review_total_tokens": 0,
+                "testing_total_tokens": 0,
+            }
 
         review_cycles = sum(1 for m in messages if "on : CodeReviewModification" in m.header)
         test_cycles = sum(1 for m in messages if "on : TestModification" in m.header)
@@ -442,14 +459,8 @@ def main() -> int:
                 "python_supported": False,
                 "review_cycles": review_cycles,
                 "test_cycles": test_cycles,
-                "tokens": {
-                    "by_bucket": bucketed_tokens,
-                    "code_review_total_tokens": review_tokens,
-                    "testing_total_tokens": test_tokens,
-                },
                 "counts": counts,
                 "deltas": deltas,
-                "software_info": token_project.get("software_info", {}),
             }
             if include_excerpts:
                 row["excerpts"] = {
@@ -483,37 +494,46 @@ def main() -> int:
         write_snapshot(final_dir, final_snapshot_files)
 
         # Run DPy.
-        smells_coding = run_dpy(dpy_path, post_coding_dir, dpy_dir / project_name / "post_coding")
-        smells_review = run_dpy(dpy_path, post_review_dir, dpy_dir / project_name / "post_review")
-        smells_final = run_dpy(dpy_path, final_dir, dpy_dir / project_name / "final")
+        smells_coding = run_dpy(
+            dpy_path,
+            post_coding_dir,
+            dpy_dir / project_name / "post_coding",
+            force=bool(args.force_dpy),
+        )
+        smells_review = run_dpy(
+            dpy_path,
+            post_review_dir,
+            dpy_dir / project_name / "post_review",
+            force=bool(args.force_dpy),
+        )
+        smells_final = run_dpy(
+            dpy_path,
+            final_dir,
+            dpy_dir / project_name / "final",
+            force=bool(args.force_dpy),
+        )
         coding_arch = smell_type_counts(smells_coding["architecture_smells"])
         coding_design = smell_type_counts(smells_coding["design_smells"])
         coding_impl = smell_type_counts(smells_coding["implementation_smells"])
-        coding_ml = smell_type_counts(smells_coding["ml_smells"])
         coding_coarse = coding_arch + coding_design
-        coding_fine = coding_impl + coding_ml
+        coding_fine = coding_impl
         coding_total = coding_coarse + coding_fine
-        coding_loc = count_nonempty_loc(post_coding_files)
         coding_files_n = len(post_coding_files)
 
         review_arch = smell_type_counts(smells_review["architecture_smells"])
         review_design = smell_type_counts(smells_review["design_smells"])
         review_impl = smell_type_counts(smells_review["implementation_smells"])
-        review_ml = smell_type_counts(smells_review["ml_smells"])
         review_coarse = review_arch + review_design
-        review_fine = review_impl + review_ml
+        review_fine = review_impl
         review_total = review_coarse + review_fine
-        review_loc = count_nonempty_loc(post_review_files)
         review_files_n = len(post_review_files)
 
         final_arch = smell_type_counts(smells_final["architecture_smells"])
         final_design = smell_type_counts(smells_final["design_smells"])
         final_impl = smell_type_counts(smells_final["implementation_smells"])
-        final_ml = smell_type_counts(smells_final["ml_smells"])
         final_coarse = final_arch + final_design
-        final_fine = final_impl + final_ml
+        final_fine = final_impl
         final_total = final_coarse + final_fine
-        final_loc = count_nonempty_loc(final_snapshot_files)
         final_files_n = len(final_snapshot_files)
 
         counts = {
@@ -522,23 +542,14 @@ def main() -> int:
                 "arch": sum(coding_arch.values()),
                 "design": sum(coding_design.values()),
                 "impl": sum(coding_impl.values()),
-                "ml": sum(coding_ml.values()),
                 # Granularity (coarse vs fine)
                 "coarse": sum(coding_coarse.values()),  # architecture + design
-                "fine": sum(coding_fine.values()),  # implementation + ml
+                "fine": sum(coding_fine.values()),  # implementation
                 "total": sum(coding_total.values()),
                 # Diversity (distinct smell types)
                 "coarse_unique": len(coding_coarse),
                 "fine_unique": len(coding_fine),
                 "total_unique": len(coding_total),
-                # Density
-                "loc": coding_loc,
-                "coarse_per_kloc": per_kloc(sum(coding_coarse.values()), coding_loc),
-                "fine_per_kloc": per_kloc(sum(coding_fine.values()), coding_loc),
-                "total_per_kloc": per_kloc(sum(coding_total.values()), coding_loc),
-                "coarse_per_file": per_file(sum(coding_coarse.values()), coding_files_n),
-                "fine_per_file": per_file(sum(coding_fine.values()), coding_files_n),
-                "total_per_file": per_file(sum(coding_total.values()), coding_files_n),
                 # Representative smell types
                 "impl_top": coding_impl.most_common(10),
                 "coarse_top": coding_coarse.most_common(10),
@@ -548,20 +559,12 @@ def main() -> int:
                 "arch": sum(review_arch.values()),
                 "design": sum(review_design.values()),
                 "impl": sum(review_impl.values()),
-                "ml": sum(review_ml.values()),
                 "coarse": sum(review_coarse.values()),
                 "fine": sum(review_fine.values()),
                 "total": sum(review_total.values()),
                 "coarse_unique": len(review_coarse),
                 "fine_unique": len(review_fine),
                 "total_unique": len(review_total),
-                "loc": review_loc,
-                "coarse_per_kloc": per_kloc(sum(review_coarse.values()), review_loc),
-                "fine_per_kloc": per_kloc(sum(review_fine.values()), review_loc),
-                "total_per_kloc": per_kloc(sum(review_total.values()), review_loc),
-                "coarse_per_file": per_file(sum(review_coarse.values()), review_files_n),
-                "fine_per_file": per_file(sum(review_fine.values()), review_files_n),
-                "total_per_file": per_file(sum(review_total.values()), review_files_n),
                 "impl_top": review_impl.most_common(10),
                 "coarse_top": review_coarse.most_common(10),
                 "n_files": review_files_n,
@@ -570,20 +573,12 @@ def main() -> int:
                 "arch": sum(final_arch.values()),
                 "design": sum(final_design.values()),
                 "impl": sum(final_impl.values()),
-                "ml": sum(final_ml.values()),
                 "coarse": sum(final_coarse.values()),
                 "fine": sum(final_fine.values()),
                 "total": sum(final_total.values()),
                 "coarse_unique": len(final_coarse),
                 "fine_unique": len(final_fine),
                 "total_unique": len(final_total),
-                "loc": final_loc,
-                "coarse_per_kloc": per_kloc(sum(final_coarse.values()), final_loc),
-                "fine_per_kloc": per_kloc(sum(final_fine.values()), final_loc),
-                "total_per_kloc": per_kloc(sum(final_total.values()), final_loc),
-                "coarse_per_file": per_file(sum(final_coarse.values()), final_files_n),
-                "fine_per_file": per_file(sum(final_fine.values()), final_files_n),
-                "total_per_file": per_file(sum(final_total.values()), final_files_n),
                 "impl_top": final_impl.most_common(10),
                 "coarse_top": final_coarse.most_common(10),
                 "n_files": final_files_n,
@@ -626,11 +621,6 @@ def main() -> int:
                 "python_supported": True,
                 "review_cycles": review_cycles,
                 "test_cycles": test_cycles,
-                "tokens": {
-                    "by_bucket": bucketed_tokens,
-                    "code_review_total_tokens": review_tokens,
-                    "testing_total_tokens": test_tokens,
-                },
                 "counts": counts,
                 "deltas": {
                     "impl_post_review_minus_post_coding": delta_review,
@@ -646,7 +636,6 @@ def main() -> int:
                     "total_final_minus_post_review": delta_final_total,
                     "total_final_minus_post_coding": delta_total_total,
                 },
-                "software_info": token_project.get("software_info", {}),
             }
         )
         if include_excerpts:
@@ -697,18 +686,6 @@ def main() -> int:
     total_unique_review = [r["counts"]["post_review"]["total_unique"] for r in python_rows]
     total_unique_final = [r["counts"]["final"]["total_unique"] for r in python_rows]
 
-    coarse_per_kloc_coding = [r["counts"]["post_coding"]["coarse_per_kloc"] for r in python_rows]
-    coarse_per_kloc_review = [r["counts"]["post_review"]["coarse_per_kloc"] for r in python_rows]
-    coarse_per_kloc_final = [r["counts"]["final"]["coarse_per_kloc"] for r in python_rows]
-
-    fine_per_kloc_coding = [r["counts"]["post_coding"]["fine_per_kloc"] for r in python_rows]
-    fine_per_kloc_review = [r["counts"]["post_review"]["fine_per_kloc"] for r in python_rows]
-    fine_per_kloc_final = [r["counts"]["final"]["fine_per_kloc"] for r in python_rows]
-
-    total_per_kloc_coding = [r["counts"]["post_coding"]["total_per_kloc"] for r in python_rows]
-    total_per_kloc_review = [r["counts"]["post_review"]["total_per_kloc"] for r in python_rows]
-    total_per_kloc_final = [r["counts"]["final"]["total_per_kloc"] for r in python_rows]
-
     delta_review_pos_frac = (
         sum(1 for d in deltas_review if d > 0) / len(deltas_review) if deltas_review else 0
     )
@@ -749,18 +726,6 @@ def main() -> int:
         sum(1 for d in total_deltas_total if d > 0) / len(total_deltas_total) if total_deltas_total else 0
     )
 
-    # Token correlations (only where token data exists).
-    rows_with_tokens = [r for r in python_rows if r["tokens"]["code_review_total_tokens"] > 0]
-    review_token_corr = pearson(
-        [float(r["tokens"]["code_review_total_tokens"]) for r in rows_with_tokens],
-        [float(r["deltas"]["impl_post_review_minus_post_coding"]) for r in rows_with_tokens],
-    )
-    rows_with_test_tokens = [r for r in python_rows if r["tokens"]["testing_total_tokens"] > 0]
-    test_token_corr = pearson(
-        [float(r["tokens"]["testing_total_tokens"]) for r in rows_with_test_tokens],
-        [float(r["deltas"]["impl_final_minus_post_review"]) for r in rows_with_test_tokens],
-    )
-
     delta_smells_review = agg_impl_smells["post_review"] - agg_impl_smells["post_coding"]
     delta_smells_final = agg_impl_smells["final"] - agg_impl_smells["post_review"]
 
@@ -770,9 +735,59 @@ def main() -> int:
     delta_fine_smells_review = agg_fine_smells["post_review"] - agg_fine_smells["post_coding"]
     delta_fine_smells_final = agg_fine_smells["final"] - agg_fine_smells["post_review"]
 
+    token_pairs: list[dict[str, Any]] = []
+    for r in python_rows:
+        t = token_totals_by_project.get(r["project"])
+        if not t or (not t.get("available")):
+            continue
+        token_pairs.append(
+            {
+                "code_review_total_tokens": int(t.get("code_review_total_tokens", 0)),
+                "testing_total_tokens": int(t.get("testing_total_tokens", 0)),
+                "delta_review_impl": int(r["deltas"]["impl_post_review_minus_post_coding"]),
+                "delta_final_impl": int(r["deltas"]["impl_final_minus_post_review"]),
+            }
+        )
+
+    review_token_pairs = [p for p in token_pairs if p["code_review_total_tokens"] > 0]
+    testing_token_pairs = [p for p in token_pairs if p["testing_total_tokens"] > 0]
+
+    verification_effort_proxy: dict[str, Any]
+    if token_pairs:
+        verification_effort_proxy = {
+            "available": True,
+            "token_json": str(args.token_json) if args.token_json else "",
+            "n_projects_with_token_data": len(token_pairs),
+            "code_review_tokens": describe_distribution(
+                [float(p["code_review_total_tokens"]) for p in token_pairs]
+            ),
+            "testing_tokens": describe_distribution([float(p["testing_total_tokens"]) for p in token_pairs]),
+            "correlations": {
+                "pearson(code_review_tokens, delta_review_impl_smells)": pearson(
+                    [float(p["code_review_total_tokens"]) for p in review_token_pairs],
+                    [float(p["delta_review_impl"]) for p in review_token_pairs],
+                ),
+                "pearson(testing_tokens, delta_final_impl_smells)": pearson(
+                    [float(p["testing_total_tokens"]) for p in testing_token_pairs],
+                    [float(p["delta_final_impl"]) for p in testing_token_pairs],
+                ),
+            },
+            "correlation_n": {
+                "code_review_tokens": len(review_token_pairs),
+                "testing_tokens": len(testing_token_pairs),
+            },
+        }
+    else:
+        verification_effort_proxy = {
+            "available": False,
+            "token_json": str(args.token_json) if args.token_json else "",
+            "n_projects_with_token_data": 0,
+        }
+
     summary = {
         "n_projects_total": len(results),
         "n_projects_python": len(python_rows),
+        "verification_effort_proxy": verification_effort_proxy,
         "implementation_smells": {
             "post_coding_mean": statistics.mean(impl_coding) if impl_coding else 0,
             "post_review_mean": statistics.mean(impl_review) if impl_review else 0,
@@ -793,7 +808,7 @@ def main() -> int:
         "granularity": {
             "definitions": {
                 "coarse": "architecture_smells + design_smells",
-                "fine": "implementation_smells + ml_smells",
+                "fine": "implementation_smells",
             },
             "coarse_mean": {
                 "post_coding": statistics.mean(coarse_coding) if coarse_coding else 0,
@@ -868,20 +883,21 @@ def main() -> int:
             },
         },
         "density": {
-            "coarse_per_kloc_mean": {
-                "post_coding": statistics.mean(coarse_per_kloc_coding) if coarse_per_kloc_coding else 0,
-                "post_review": statistics.mean(coarse_per_kloc_review) if coarse_per_kloc_review else 0,
-                "final": statistics.mean(coarse_per_kloc_final) if coarse_per_kloc_final else 0,
+            "definition": "density := smell count (not normalized)",
+            "coarse_mean": {
+                "post_coding": statistics.mean(coarse_coding) if coarse_coding else 0,
+                "post_review": statistics.mean(coarse_review) if coarse_review else 0,
+                "final": statistics.mean(coarse_final) if coarse_final else 0,
             },
-            "fine_per_kloc_mean": {
-                "post_coding": statistics.mean(fine_per_kloc_coding) if fine_per_kloc_coding else 0,
-                "post_review": statistics.mean(fine_per_kloc_review) if fine_per_kloc_review else 0,
-                "final": statistics.mean(fine_per_kloc_final) if fine_per_kloc_final else 0,
+            "fine_mean": {
+                "post_coding": statistics.mean(fine_coding) if fine_coding else 0,
+                "post_review": statistics.mean(fine_review) if fine_review else 0,
+                "final": statistics.mean(fine_final) if fine_final else 0,
             },
-            "total_per_kloc_mean": {
-                "post_coding": statistics.mean(total_per_kloc_coding) if total_per_kloc_coding else 0,
-                "post_review": statistics.mean(total_per_kloc_review) if total_per_kloc_review else 0,
-                "final": statistics.mean(total_per_kloc_final) if total_per_kloc_final else 0,
+            "total_mean": {
+                "post_coding": statistics.mean(total_coding) if total_coding else 0,
+                "post_review": statistics.mean(total_review) if total_review else 0,
+                "final": statistics.mean(total_final) if total_final else 0,
             },
         },
         "distributions": {
@@ -907,20 +923,16 @@ def main() -> int:
                     "total": describe_distribution([float(x) for x in total_deltas_total]),
                 },
             },
-            "density_per_kloc": {
-                "coarse_final": describe_distribution([float(x) for x in coarse_per_kloc_final]),
-                "fine_final": describe_distribution([float(x) for x in fine_per_kloc_final]),
-                "total_final": describe_distribution([float(x) for x in total_per_kloc_final]),
+            "density_smell_count": {
+                "coarse_final": describe_distribution([float(x) for x in coarse_final]),
+                "fine_final": describe_distribution([float(x) for x in fine_final]),
+                "total_final": describe_distribution([float(x) for x in total_final]),
             },
             "diversity_unique": {
                 "coarse_final": describe_distribution([float(x) for x in coarse_unique_final]),
                 "fine_final": describe_distribution([float(x) for x in fine_unique_final]),
                 "total_final": describe_distribution([float(x) for x in total_unique_final]),
             },
-        },
-        "correlations": {
-            "pearson(code_review_tokens, delta_review_impl_smells)": review_token_corr,
-            "pearson(testing_tokens, delta_final_impl_smells)": test_token_corr,
         },
     }
 
