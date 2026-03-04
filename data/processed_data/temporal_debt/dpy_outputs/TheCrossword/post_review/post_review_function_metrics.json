@@ -1,0 +1,352 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "data",
+        "Class": "",
+        "Method": "get_puzzle",
+        "LOC": 46,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "__init__",
+        "LOC": 36,
+        "CC": 12,
+        "PC": 6
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "_compute_entries",
+        "LOC": 43,
+        "CC": 10,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "_resolve_clue",
+        "LOC": 14,
+        "CC": 1,
+        "PC": 4
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "_read_across",
+        "LOC": 10,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "_read_down",
+        "LOC": 10,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "get_entries",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "get_entry",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "place_answer",
+        "LOC": 36,
+        "CC": 5,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "is_block",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "get_cell",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "get_dimensions",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "min_number",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "max_number",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "is_complete",
+        "LOC": 10,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "reset",
+        "LOC": 9,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "entry_is_filled",
+        "LOC": 11,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_model",
+        "Class": "CrosswordModel",
+        "Method": "refresh_entry_flags",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "__init__",
+        "LOC": 68,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "_on_submit_enter",
+        "LOC": 3,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "set_number_range",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "build_grid",
+        "LOC": 26,
+        "CC": 6,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "update_grid",
+        "LOC": 9,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "render_clues",
+        "LOC": 11,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "_set_text",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "get_input",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "clear_answer_field",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "set_status",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "bind_submit",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_view",
+        "Class": "CrosswordView",
+        "Method": "bind_reset",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_controller",
+        "Class": "CrosswordController",
+        "Method": "__init__",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_controller",
+        "Class": "CrosswordController",
+        "Method": "_refresh_all",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_controller",
+        "Class": "CrosswordController",
+        "Method": "on_submit",
+        "LOC": 21,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "crossword_controller",
+        "Class": "CrosswordController",
+        "Method": "on_reset",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 14,
+        "CC": 1,
+        "PC": 0
+    }
+]

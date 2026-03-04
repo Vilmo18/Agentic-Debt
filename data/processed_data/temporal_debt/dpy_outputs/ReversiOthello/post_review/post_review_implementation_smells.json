@@ -1,0 +1,178 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/main.py",
+        "Description": "A line with 132 chars in main exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Smell": "Complex method",
+        "Method": "draw_board",
+        "Line no": "145 - 190",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/gui.py",
+        "Description": "Method 'draw_board' has a cyclomatic complexity of 9, exceeding the max of 6."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Smell": "Long statement",
+        "Method": "__init__",
+        "Line no": "34",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/gui.py",
+        "Description": "A line with 128 chars in __init__ exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "gui",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/gui.py",
+        "Description": "A line with 176 chars in gui exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Smell": "Magic number",
+        "Method": "draw_board",
+        "Line no": "162",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/gui.py",
+        "Description": "Magic number 6 used in draw_board."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Smell": "Magic number",
+        "Method": "draw_board",
+        "Line no": "184",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/gui.py",
+        "Description": "Magic number 2 used in draw_board."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Smell": "Magic number",
+        "Method": "draw_board",
+        "Line no": "185",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/gui.py",
+        "Description": "Magic number 2 used in draw_board."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Smell": "Magic number",
+        "Method": "draw_board",
+        "Line no": "186",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/gui.py",
+        "Description": "Magic number 0.18 used in draw_board."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Smell": "Complex method",
+        "Method": "_discs_to_flip",
+        "Line no": "76 - 100",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/game.py",
+        "Description": "Method '_discs_to_flip' has a cyclomatic complexity of 9, exceeding the max of 6."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Smell": "Long statement",
+        "Method": "_discs_to_flip",
+        "Line no": "77",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/game.py",
+        "Description": "A line with 190 chars in _discs_to_flip exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Smell": "Long statement",
+        "Method": "apply_move",
+        "Line no": "122",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/game.py",
+        "Description": "A line with 425 chars in apply_move exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Smell": "Long statement",
+        "Method": "has_valid_move",
+        "Line no": "183",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/game.py",
+        "Description": "A line with 134 chars in has_valid_move exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Smell": "Long statement",
+        "Method": "get_winner",
+        "Line no": "205",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/game.py",
+        "Description": "A line with 159 chars in get_winner exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "game",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/game.py",
+        "Description": "A line with 138 chars in game exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Smell": "Magic number",
+        "Method": "__init__",
+        "Line no": "23",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/game.py",
+        "Description": "Magic number 8 used in __init__."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.reversi",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Smell": "Magic number",
+        "Method": "initialize_board",
+        "Line no": "41",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_review/reversi/game.py",
+        "Description": "Magic number 2 used in initialize_board."
+    }
+]

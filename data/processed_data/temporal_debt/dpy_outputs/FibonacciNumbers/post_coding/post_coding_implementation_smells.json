@@ -1,0 +1,101 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Smell": "Empty catch block",
+        "Method": "__init__",
+        "Line no": "42",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/gui.py",
+        "Description": "Empty catch block found in __init__."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Smell": "Long statement",
+        "Method": "on_save",
+        "Line no": "158",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/gui.py",
+        "Description": "A line with 202 chars in on_save exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/gui.py",
+        "Description": "A line with 304 chars in gui exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "fibonacci",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "parse_limit",
+        "Line no": "16",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/fibonacci.py",
+        "Description": "A line with 309 chars in parse_limit exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "fibonacci",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "generate_fibonacci_up_to",
+        "Line no": "41",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/fibonacci.py",
+        "Description": "A line with 359 chars in generate_fibonacci_up_to exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "fibonacci",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "format_sequence",
+        "Line no": "66",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/fibonacci.py",
+        "Description": "A line with 235 chars in format_sequence exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "fibonacci",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "sequence_stats",
+        "Line no": "80",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/fibonacci.py",
+        "Description": "A line with 237 chars in sequence_stats exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "fibonacci",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/fibonacci.py",
+        "Description": "A line with 304 chars in fibonacci exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/main.py",
+        "Description": "A line with 208 chars in main exceeds the maximum length of 120 characters."
+    }
+]

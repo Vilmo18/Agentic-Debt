@@ -1,0 +1,262 @@
+[
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "entities",
+        "Class": "Player",
+        "Method": "__init__",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "entities",
+        "Class": "Player",
+        "Method": "_draw_ship",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "entities",
+        "Class": "Player",
+        "Method": "update",
+        "LOC": 11,
+        "CC": 7,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "entities",
+        "Class": "Player",
+        "Method": "shoot",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "entities",
+        "Class": "Bullet",
+        "Method": "__init__",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "entities",
+        "Class": "Bullet",
+        "Method": "update",
+        "LOC": 4,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "entities",
+        "Class": "Alien",
+        "Method": "__init__",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "entities",
+        "Class": "Alien",
+        "Method": "_draw_alien",
+        "LOC": 16,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "entities",
+        "Class": "Alien",
+        "Method": "update",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "AlienFleet",
+        "Method": "__init__",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "AlienFleet",
+        "Method": "reset_speed",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "AlienFleet",
+        "Method": "bounds",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "AlienFleet",
+        "Method": "update",
+        "LOC": 14,
+        "CC": 8,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "AlienFleet",
+        "Method": "reached_bottom",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "__init__",
+        "LOC": 25,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "new_game",
+        "LOC": 15,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "spawn_aliens",
+        "LOC": 12,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "handle_events",
+        "LOC": 25,
+        "CC": 9,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "update",
+        "LOC": 17,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "resolve_collisions",
+        "LOC": 11,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "lose_life",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "draw",
+        "LOC": 11,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_draw_hud",
+        "LOC": 16,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_draw_centered_message",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "run",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 19,
+        "CC": 2,
+        "PC": 0
+    }
+]

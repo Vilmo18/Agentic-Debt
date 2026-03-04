@@ -1,0 +1,112 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "entities",
+        "Class": "Player",
+        "Method": "move",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "UI",
+        "Method": "__init__",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "UI",
+        "Method": "_draw_text",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 4
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "UI",
+        "Method": "draw",
+        "LOC": 57,
+        "CC": 6,
+        "PC": 5
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "mapgen",
+        "Class": "MapData",
+        "Method": "__init__",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 5
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "_neighbors",
+        "LOC": 9,
+        "CC": 5,
+        "PC": 4
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "_bfs_has_path",
+        "LOC": 18,
+        "CC": 5,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "_carve_path",
+        "LOC": 36,
+        "CC": 13,
+        "PC": 4
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "_add_random_open_areas",
+        "LOC": 11,
+        "CC": 7,
+        "PC": 4
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "generate_map",
+        "LOC": 53,
+        "CC": 15,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    }
+]

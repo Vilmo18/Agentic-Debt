@@ -1,0 +1,222 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Smell": "Complex method",
+        "Method": "filtered_transactions",
+        "Line no": "139 - 167",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/models.py",
+        "Description": "Method 'filtered_transactions' has a cyclomatic complexity of 15, exceeding the max of 6."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Smell": "Long parameter list",
+        "Method": "edit_transaction",
+        "Line no": "96 - 110",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/models.py",
+        "Description": "edit_transaction has 6 parameters, exceeding the max of 5."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Smell": "Long statement",
+        "Method": "add_transaction",
+        "Line no": "83",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/models.py",
+        "Description": "A line with 136 chars in add_transaction exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Transaction",
+        "Smell": "Magic number",
+        "Method": "from_row",
+        "Line no": "36",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/models.py",
+        "Description": "Magic number 3 used in from_row."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Transaction",
+        "Smell": "Magic number",
+        "Method": "from_row",
+        "Line no": "37",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/models.py",
+        "Description": "Magic number 4 used in from_row."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Transaction",
+        "Smell": "Magic number",
+        "Method": "from_row",
+        "Line no": "38",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/models.py",
+        "Description": "Magic number 5 used in from_row."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Smell": "Complex method",
+        "Method": "load_model",
+        "Line no": "77 - 129",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/storage.py",
+        "Description": "Method 'load_model' has a cyclomatic complexity of 18, exceeding the max of 6."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Smell": "Long statement",
+        "Method": "_build_workbook",
+        "Line no": "132",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/storage.py",
+        "Description": "A line with 174 chars in _build_workbook exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Smell": "Long statement",
+        "Method": "export_copy",
+        "Line no": "169",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/storage.py",
+        "Description": "A line with 139 chars in export_copy exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "storage",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/storage.py",
+        "Description": "A line with 135 chars in storage exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "storage",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "9",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/storage.py",
+        "Description": "A line with 270 chars in storage exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Smell": "Magic number",
+        "Method": "_build_workbook",
+        "Line no": "144",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/storage.py",
+        "Description": "Magic number 5 used in _build_workbook."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Smell": "Complex method",
+        "Method": "_on_submit",
+        "Line no": "299 - 328",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/ui.py",
+        "Description": "Method '_on_submit' has a cyclomatic complexity of 7, exceeding the max of 6."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Smell": "Empty catch block",
+        "Method": "_to_int_or_none",
+        "Line no": "269",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/ui.py",
+        "Description": "Empty catch block found in _to_int_or_none."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Smell": "Empty catch block",
+        "Method": "_on_close",
+        "Line no": "421",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/ui.py",
+        "Description": "Empty catch block found in _on_close."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Smell": "Long statement",
+        "Method": "_build_filter_frame",
+        "Line no": "149",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/ui.py",
+        "Description": "A line with 128 chars in _build_filter_frame exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Smell": "Long statement",
+        "Method": "_refresh_table",
+        "Line no": "258",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/ui.py",
+        "Description": "A line with 136 chars in _refresh_table exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Smell": "Long statement",
+        "Method": "_on_export_copy",
+        "Line no": "392",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/ui.py",
+        "Description": "A line with 181 chars in _on_export_copy exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/ui.py",
+        "Description": "A line with 138 chars in ui exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "utils",
+        "Class": "",
+        "Smell": "Empty catch block",
+        "Method": "parse_float",
+        "Line no": "26",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_review/utils.py",
+        "Description": "Empty catch block found in parse_float."
+    }
+]

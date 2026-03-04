@@ -1,0 +1,382 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Piece",
+        "Method": "__init__",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Piece",
+        "Method": "clone",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "__init__",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "setup_initial",
+        "LOC": 9,
+        "CC": 7,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "copy",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "in_bounds",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "get",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "set",
+        "LOC": 3,
+        "CC": 2,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "move_piece",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "remove_piece",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "draw",
+        "LOC": 34,
+        "CC": 12,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "move_parser",
+        "Class": "MoveParser",
+        "Method": "parse",
+        "LOC": 26,
+        "CC": 9,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "app",
+        "Class": "GameApp",
+        "Method": "__init__",
+        "LOC": 16,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "app",
+        "Class": "GameApp",
+        "Method": "reset",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "app",
+        "Class": "GameApp",
+        "Method": "run",
+        "LOC": 21,
+        "CC": 10,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "app",
+        "Class": "GameApp",
+        "Method": "_show_help_popup",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "app",
+        "Class": "GameApp",
+        "Method": "handle_move_input",
+        "LOC": 18,
+        "CC": 7,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "app",
+        "Class": "GameApp",
+        "Method": "_set_status",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "app",
+        "Class": "GameApp",
+        "Method": "draw",
+        "LOC": 15,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "__init__",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_opponent",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "get_legal_moves",
+        "LOC": 15,
+        "CC": 6,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_normal_moves_from",
+        "LOC": 16,
+        "CC": 6,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_capture_sequences_from",
+        "LOC": 47,
+        "CC": 16,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "try_move",
+        "LOC": 31,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_is_valid_capture_sequence",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_same_path",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_apply_capture_sequence",
+        "LOC": 11,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_is_valid_normal_move",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_apply_normal_move",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_post_move_kinging",
+        "LOC": 8,
+        "CC": 7,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_end_turn",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "is_game_over",
+        "LOC": 14,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "rules",
+        "Class": "GameState",
+        "Method": "_count_pieces",
+        "LOC": 8,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "InputBox",
+        "Method": "__init__",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 6
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "InputBox",
+        "Method": "handle_event",
+        "LOC": 17,
+        "CC": 8,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "ui",
+        "Class": "InputBox",
+        "Method": "draw",
+        "LOC": 13,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    }
+]

@@ -1,0 +1,145 @@
+[
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "save_game_dialog",
+        "Line no": "13",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/storage.py",
+        "Description": "A line with 145 chars in save_game_dialog exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "load_game_dialog",
+        "Line no": "28",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/storage.py",
+        "Description": "A line with 196 chars in load_game_dialog exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "load_game_dialog",
+        "Line no": "33",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/storage.py",
+        "Description": "A line with 143 chars in load_game_dialog exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/storage.py",
+        "Description": "A line with 188 chars in storage exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "engine",
+        "Class": "",
+        "Smell": "Complex method",
+        "Method": "check_conditions",
+        "Line no": "57 - 114",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/engine.py",
+        "Description": "Method 'check_conditions' has a cyclomatic complexity of 11, exceeding the max of 6."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "engine",
+        "Class": "",
+        "Smell": "Complex method",
+        "Method": "apply_effects",
+        "Line no": "115 - 139",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/engine.py",
+        "Description": "Method 'apply_effects' has a cyclomatic complexity of 8, exceeding the max of 6."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "engine",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "check_conditions",
+        "Line no": "58",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/engine.py",
+        "Description": "A line with 453 chars in check_conditions exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "engine",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "apply_effects",
+        "Line no": "116",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/engine.py",
+        "Description": "A line with 268 chars in apply_effects exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "engine",
+        "Class": "GameState",
+        "Smell": "Long statement",
+        "Method": "to_dict",
+        "Line no": "44",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/engine.py",
+        "Description": "A line with 190 chars in to_dict exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "engine",
+        "Class": "StoryEngine",
+        "Smell": "Long statement",
+        "Method": "choose",
+        "Line no": "205",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/engine.py",
+        "Description": "A line with 181 chars in choose exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "StoryApp",
+        "Smell": "Empty catch block",
+        "Method": "__init__",
+        "Line no": "139",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/gui.py",
+        "Description": "Empty catch block found in __init__."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "StoryApp",
+        "Smell": "Long statement",
+        "Method": "switch_to_game",
+        "Line no": "159",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/gui.py",
+        "Description": "A line with 155 chars in switch_to_game exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_test/gui.py",
+        "Description": "A line with 197 chars in gui exceeds the maximum length of 120 characters."
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "get_color_for_difficulty",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "generate_daily_puzzle",
+        "LOC": 59,
+        "CC": 15,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "category_bank",
+        "Class": "",
+        "Method": "get_category_bank",
+        "LOC": 68,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "utils",
+        "Class": "",
+        "Method": "today_date_str",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "utils",
+        "Class": "",
+        "Method": "days_since_epoch",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "utils",
+        "Class": "",
+        "Method": "get_seeded_random",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    }
+]

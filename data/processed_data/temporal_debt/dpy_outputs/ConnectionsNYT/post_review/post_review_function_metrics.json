@@ -1,0 +1,182 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "get_color_for_difficulty",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "generate_daily_puzzle",
+        "LOC": 63,
+        "CC": 15,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "category_bank",
+        "Class": "",
+        "Method": "get_category_bank",
+        "LOC": 71,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "utils",
+        "Class": "",
+        "Method": "today_date_str",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "utils",
+        "Class": "",
+        "Method": "days_since_epoch",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "utils",
+        "Class": "",
+        "Method": "get_seeded_random",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "reset_daily",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "set_feedback",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "init_state",
+        "LOC": 22,
+        "CC": 9,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "toggle_word",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "submit_guess",
+        "LOC": 40,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "shuffle_remaining",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "render_header",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "render_solved",
+        "LOC": 13,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "render_status",
+        "LOC": 14,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "render_grid",
+        "LOC": 34,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "render_footer",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    }
+]

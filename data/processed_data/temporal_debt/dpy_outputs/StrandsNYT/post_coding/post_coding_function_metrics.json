@@ -1,0 +1,302 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "puzzle",
+        "Class": "Puzzle",
+        "Method": "__init__",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 7
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "puzzle",
+        "Class": "Puzzle",
+        "Method": "get_letter",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "puzzle",
+        "Class": "Puzzle",
+        "Method": "all_solution_cells",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "puzzle",
+        "Class": "Puzzle",
+        "Method": "validate_integrity",
+        "LOC": 26,
+        "CC": 10,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "default_puzzle",
+        "LOC": 48,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "__init__",
+        "LOC": 15,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "_build_ui",
+        "LOC": 25,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "_populate_grid",
+        "LOC": 14,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "on_hint",
+        "LOC": 13,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "on_reset",
+        "LOC": 11,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "on_show_remaining",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "start_drag",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "enter_cell",
+        "LOC": 16,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "end_drag",
+        "LOC": 25,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "_global_mouse_up",
+        "LOC": 3,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "_color_cell",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "_flash_cells",
+        "LOC": 5,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "_restore_temp_colors",
+        "LOC": 4,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "apply_claim",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "update_status",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "ui",
+        "Class": "StrandsApp",
+        "Method": "_show_completion",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "game",
+        "Class": "GameState",
+        "Method": "__init__",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "game",
+        "Class": "GameState",
+        "Method": "is_adjacent",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "game",
+        "Class": "GameState",
+        "Method": "can_select_cell",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "game",
+        "Class": "GameState",
+        "Method": "selection_to_word",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "game",
+        "Class": "GameState",
+        "Method": "_claim_word",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "game",
+        "Class": "GameState",
+        "Method": "is_completed",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "game",
+        "Class": "GameState",
+        "Method": "try_commit_selection",
+        "LOC": 34,
+        "CC": 10,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding.strands",
+        "Module": "game",
+        "Class": "GameState",
+        "Method": "reveal_hint",
+        "LOC": 21,
+        "CC": 3,
+        "PC": 0
+    }
+]

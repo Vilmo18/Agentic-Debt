@@ -1,0 +1,232 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "food",
+        "Class": "Food",
+        "Method": "__init__",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "food",
+        "Class": "Food",
+        "Method": "spawn",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "food",
+        "Class": "Food",
+        "Method": "draw",
+        "LOC": 8,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "snake",
+        "Class": "Snake",
+        "Method": "__init__",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "snake",
+        "Class": "Snake",
+        "Method": "head",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "snake",
+        "Class": "Snake",
+        "Method": "set_direction",
+        "LOC": 10,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "snake",
+        "Class": "Snake",
+        "Method": "move",
+        "LOC": 10,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "snake",
+        "Class": "Snake",
+        "Method": "collides_with_self",
+        "LOC": 8,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ui",
+        "Class": "Button",
+        "Method": "__init__",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 6
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ui",
+        "Class": "Button",
+        "Method": "is_hovered",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ui",
+        "Class": "Button",
+        "Method": "draw",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ui",
+        "Class": "Button",
+        "Method": "was_clicked",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ui",
+        "Class": "",
+        "Method": "draw_text",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 5
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "__init__",
+        "LOC": 29,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "reset",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "handle_input",
+        "LOC": 14,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "step",
+        "LOC": 21,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_next_head_pos",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "draw_grid",
+        "LOC": 19,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "draw",
+        "LOC": 29,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "run",
+        "LOC": 21,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "",
+        "Method": "choose_difficulty",
+        "LOC": 69,
+        "CC": 9,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 20,
+        "CC": 4,
+        "PC": 0
+    }
+]

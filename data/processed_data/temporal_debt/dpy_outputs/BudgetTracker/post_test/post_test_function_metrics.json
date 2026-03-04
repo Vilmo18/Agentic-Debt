@@ -1,0 +1,482 @@
+[
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "Transaction",
+        "Method": "to_row",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "Transaction",
+        "Method": "from_row",
+        "LOC": 17,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "__init__",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "load",
+        "LOC": 14,
+        "CC": 5,
+        "PC": 3
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "ensure_category",
+        "LOC": 4,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "generate_next_id",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "add_transaction",
+        "LOC": 16,
+        "CC": 2,
+        "PC": 5
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "edit_transaction",
+        "LOC": 15,
+        "CC": 2,
+        "PC": 6
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "delete_transaction",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "get_transaction",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "set_savings_goal",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "totals",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "category_totals",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "models",
+        "Class": "BudgetModel",
+        "Method": "filtered_transactions",
+        "LOC": 22,
+        "CC": 15,
+        "PC": 5
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Method": "__init__",
+        "LOC": 7,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Method": "_initialize_empty_file",
+        "LOC": 27,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Method": "_write_transactions_header",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Method": "_autosize_columns",
+        "LOC": 8,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Method": "load_model",
+        "LOC": 46,
+        "CC": 18,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Method": "_build_workbook",
+        "LOC": 23,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Method": "save_model",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "storage",
+        "Class": "ExcelStorage",
+        "Method": "export_copy",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "__init__",
+        "LOC": 23,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_build_ui",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_build_summary_frame",
+        "LOC": 24,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_build_form_frame",
+        "LOC": 32,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_build_filter_frame",
+        "LOC": 30,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_build_table_frame",
+        "LOC": 26,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_build_bottom_frame",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_refresh_summary",
+        "LOC": 13,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_refresh_filters",
+        "LOC": 17,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_refresh_table",
+        "LOC": 17,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_to_int_or_none",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_on_set_goal",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_on_add_category",
+        "LOC": 15,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_on_submit",
+        "LOC": 27,
+        "CC": 7,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_on_edit_selected",
+        "LOC": 23,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_on_delete_selected",
+        "LOC": 22,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_on_apply_filters",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_on_reset_filters",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_on_export_copy",
+        "LOC": 15,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_clear_form",
+        "LOC": 10,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "ui",
+        "Class": "BudgetApp",
+        "Method": "_on_close",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "utils",
+        "Class": "",
+        "Method": "format_currency",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "utils",
+        "Class": "",
+        "Method": "parse_float",
+        "LOC": 11,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "utils",
+        "Class": "",
+        "Method": "parse_date",
+        "LOC": 13,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "utils",
+        "Class": "",
+        "Method": "date_to_str",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 23,
+        "CC": 3,
+        "PC": 0
+    }
+]

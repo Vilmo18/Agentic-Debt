@@ -1,0 +1,232 @@
+[
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "__init__",
+        "LOC": 17,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "_build_widgets",
+        "LOC": 33,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "focus_column_entry",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "update_status",
+        "LOC": 17,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "draw_board",
+        "LOC": 30,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "on_submit",
+        "LOC": 18,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "attempt_move",
+        "LOC": 33,
+        "CC": 7,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "on_canvas_click",
+        "LOC": 16,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "end_game_feedback",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ConnectFourGUI",
+        "Method": "reset_game",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "__init__",
+        "LOC": 12,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "reset",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "get_board",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "get_current_player",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "get_winner",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "is_valid_move",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "_find_available_row",
+        "LOC": 5,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "drop_disc",
+        "LOC": 21,
+        "CC": 6,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "check_draw",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "switch_player",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "count_in_direction",
+        "LOC": 15,
+        "CC": 5,
+        "PC": 5
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ConnectFourGame",
+        "Method": "check_win",
+        "LOC": 14,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    }
+]

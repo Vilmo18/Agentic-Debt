@@ -1,0 +1,382 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Question",
+        "Method": "is_correct",
+        "LOC": 15,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Question",
+        "Method": "get_correct_answer_text",
+        "LOC": 13,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Question",
+        "Method": "get_user_answer_text",
+        "LOC": 11,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Question",
+        "Method": "_mcq_correct_indices",
+        "LOC": 32,
+        "CC": 11,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Question",
+        "Method": "_short_acceptable_answers",
+        "LOC": 20,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "",
+        "Method": "normalize_text",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "",
+        "Method": "question_from_dict",
+        "LOC": 24,
+        "CC": 11,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "quiz_manager",
+        "Class": "QuizSession",
+        "Method": "__init__",
+        "LOC": 8,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "quiz_manager",
+        "Class": "QuizSession",
+        "Method": "current_question",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "quiz_manager",
+        "Class": "QuizSession",
+        "Method": "submit_answer",
+        "LOC": 13,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "quiz_manager",
+        "Class": "QuizSession",
+        "Method": "has_next",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "quiz_manager",
+        "Class": "QuizSession",
+        "Method": "results",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "question_bank",
+        "Class": "",
+        "Method": "get_builtin_banks",
+        "LOC": 91,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "question_bank",
+        "Class": "",
+        "Method": "load_bank_from_json",
+        "LOC": 19,
+        "CC": 6,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizApp",
+        "Method": "__init__",
+        "LOC": 19,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizApp",
+        "Method": "show_frame",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizApp",
+        "Method": "get_bank_names",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizApp",
+        "Method": "add_custom_bank",
+        "LOC": 9,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizApp",
+        "Method": "start_quiz",
+        "LOC": 19,
+        "CC": 5,
+        "PC": 4
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizApp",
+        "Method": "finish_quiz",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizApp",
+        "Method": "restart",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "StartFrame",
+        "Method": "__init__",
+        "LOC": 40,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "StartFrame",
+        "Method": "refresh_banks",
+        "LOC": 6,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "StartFrame",
+        "Method": "on_bank_change",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "StartFrame",
+        "Method": "on_load_json",
+        "LOC": 19,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "StartFrame",
+        "Method": "update_bank_size",
+        "LOC": 13,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "StartFrame",
+        "Method": "on_start",
+        "LOC": 21,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizFrame",
+        "Method": "__init__",
+        "LOC": 23,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizFrame",
+        "Method": "reset",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizFrame",
+        "Method": "load_question",
+        "LOC": 20,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizFrame",
+        "Method": "render_mcq",
+        "LOC": 5,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizFrame",
+        "Method": "render_short",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "QuizFrame",
+        "Method": "on_submit",
+        "LOC": 24,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "ResultFrame",
+        "Method": "__init__",
+        "LOC": 27,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "ResultFrame",
+        "Method": "_on_resize",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "ResultFrame",
+        "Method": "clear_review",
+        "LOC": 3,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "ResultFrame",
+        "Method": "render_results",
+        "LOC": 40,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "ResultFrame",
+        "Method": "retake",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 0
+    }
+]

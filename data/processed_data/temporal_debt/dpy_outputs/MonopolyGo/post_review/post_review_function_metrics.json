@@ -1,0 +1,602 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "chance_cards",
+        "Class": "ChanceCard",
+        "Method": "__init__",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "chance_cards",
+        "Class": "ChanceCard",
+        "Method": "apply",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "chance_cards",
+        "Class": "ChanceDeck",
+        "Method": "__init__",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "chance_cards",
+        "Class": "ChanceDeck",
+        "Method": "_build_cards",
+        "LOC": 75,
+        "CC": -5,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "chance_cards",
+        "Class": "ChanceDeck",
+        "Method": "shuffle",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "chance_cards",
+        "Class": "ChanceDeck",
+        "Method": "draw",
+        "LOC": 20,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "chance_cards",
+        "Class": "ChanceDeck",
+        "Method": "return_get_out_of_jail_card",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "SetupDialog",
+        "Method": "__init__",
+        "LOC": 18,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "SetupDialog",
+        "Method": "on_start",
+        "LOC": 8,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "BoardFrame",
+        "Method": "__init__",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "BoardFrame",
+        "Method": "_index_to_grid",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "BoardFrame",
+        "Method": "_build_board",
+        "LOC": 14,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "BoardFrame",
+        "Method": "update_board",
+        "LOC": 22,
+        "CC": 9,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "InfoPanel",
+        "Method": "__init__",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "InfoPanel",
+        "Method": "refresh",
+        "LOC": 22,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "ControlPanel",
+        "Method": "__init__",
+        "LOC": 19,
+        "CC": 1,
+        "PC": 4
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "ControlPanel",
+        "Method": "prompt_purchase_if_needed",
+        "LOC": 18,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "ControlPanel",
+        "Method": "on_roll",
+        "LOC": 20,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "ControlPanel",
+        "Method": "on_end_turn",
+        "LOC": 16,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "ControlPanel",
+        "Method": "on_pay_jail",
+        "LOC": 15,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "ControlPanel",
+        "Method": "on_attempt_doubles",
+        "LOC": 17,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "ControlPanel",
+        "Method": "on_use_goojf",
+        "LOC": 15,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "ControlPanel",
+        "Method": "update_buttons",
+        "LOC": 20,
+        "CC": 9,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MonopolyApp",
+        "Method": "__init__",
+        "LOC": 20,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MonopolyApp",
+        "Method": "_prompt_players",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Dice",
+        "Method": "roll",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Tile",
+        "Method": "__init__",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Tile",
+        "Method": "land",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "GoTile",
+        "Method": "__init__",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "GoTile",
+        "Method": "land",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "PropertyTile",
+        "Method": "__init__",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 5
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "PropertyTile",
+        "Method": "land",
+        "LOC": 16,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "ChanceTile",
+        "Method": "__init__",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "ChanceTile",
+        "Method": "land",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "FreeParkingTile",
+        "Method": "__init__",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "FreeParkingTile",
+        "Method": "land",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "JailTile",
+        "Method": "__init__",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "JailTile",
+        "Method": "land",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "GoToJailTile",
+        "Method": "__init__",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "GoToJailTile",
+        "Method": "land",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "TaxTile",
+        "Method": "__init__",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "TaxTile",
+        "Method": "land",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "__init__",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "_build",
+        "LOC": 21,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "__init__",
+        "LOC": 16,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "current_player",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "log_message",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "check_bankruptcy",
+        "LOC": 10,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "move_player_steps",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "move_player_to",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "process_current_tile",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "attempt_purchase_current_tile",
+        "LOC": 12,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "send_to_jail",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "pay_jail_fine",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "use_get_out_of_jail_card",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "attempt_jail_roll",
+        "LOC": 42,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "roll_and_move",
+        "LOC": 32,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "end_turn",
+        "LOC": 17,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "return_get_out_of_jail_card_to_deck",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    }
+]

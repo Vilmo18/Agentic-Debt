@@ -1,0 +1,472 @@
+[
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "storage",
+        "Class": "",
+        "Method": "save_game_dialog",
+        "LOC": 17,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "storage",
+        "Class": "",
+        "Method": "load_game_dialog",
+        "LOC": 19,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "__init__",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "add_item",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "remove_item",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "has_item",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "adjust_var",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "set_var",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "get_var",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "adjust_relationship",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "get_relationship",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "set_flag",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "is_flag",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "mark_visited",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "to_dict",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "GameState",
+        "Method": "from_dict",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "Choice",
+        "Method": "__init__",
+        "LOC": 5,
+        "CC": 3,
+        "PC": 4
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "Choice",
+        "Method": "from_dict",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "Choice",
+        "Method": "is_available",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "Choice",
+        "Method": "apply_effects",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryNode",
+        "Method": "__init__",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryNode",
+        "Method": "from_dict",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryNode",
+        "Method": "available_choices",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryEngine",
+        "Method": "__init__",
+        "LOC": 12,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryEngine",
+        "Method": "reset",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryEngine",
+        "Method": "get_current_node",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryEngine",
+        "Method": "get_available_choices",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryEngine",
+        "Method": "choose",
+        "LOC": 13,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryEngine",
+        "Method": "is_end",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryEngine",
+        "Method": "to_dict",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "StoryEngine",
+        "Method": "from_dict",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "",
+        "Method": "check_conditions",
+        "LOC": 36,
+        "CC": 11,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "engine",
+        "Class": "",
+        "Method": "apply_effects",
+        "LOC": 17,
+        "CC": 8,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "StartFrame",
+        "Method": "__init__",
+        "LOC": 11,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "GameFrame",
+        "Method": "__init__",
+        "LOC": 46,
+        "CC": 1,
+        "PC": 5
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "GameFrame",
+        "Method": "set_story_text",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "GameFrame",
+        "Method": "build_choices",
+        "LOC": 17,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "GameFrame",
+        "Method": "on_choice_clicked",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "GameFrame",
+        "Method": "update_sidebar",
+        "LOC": 10,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "GameFrame",
+        "Method": "update_ui",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "StoryApp",
+        "Method": "__init__",
+        "LOC": 22,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "StoryApp",
+        "Method": "switch_to_game",
+        "LOC": 15,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "StoryApp",
+        "Method": "new_game",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "StoryApp",
+        "Method": "restart_game",
+        "LOC": 7,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "StoryApp",
+        "Method": "save_game_dialog",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "StoryApp",
+        "Method": "load_game_dialog",
+        "LOC": 8,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    }
+]

@@ -1,0 +1,189 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "",
+        "Smell": "Complex method",
+        "Method": "question_from_dict",
+        "Line no": "196 - 234",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/models.py",
+        "Description": "Method 'question_from_dict' has a cyclomatic complexity of 11, exceeding the max of 6."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Question",
+        "Smell": "Complex method",
+        "Method": "_mcq_correct_indices",
+        "Line no": "115 - 150",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/models.py",
+        "Description": "Method '_mcq_correct_indices' has a cyclomatic complexity of 11, exceeding the max of 6."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Question",
+        "Smell": "Empty catch block",
+        "Method": "is_correct",
+        "Line no": "56",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/models.py",
+        "Description": "Empty catch block found in is_correct."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Question",
+        "Smell": "Empty catch block",
+        "Method": "get_user_answer_text",
+        "Line no": "92",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/models.py",
+        "Description": "Empty catch block found in get_user_answer_text."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "question_from_dict",
+        "Line no": "197",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/models.py",
+        "Description": "A line with 447 chars in question_from_dict exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Question",
+        "Smell": "Long statement",
+        "Method": "mcq_correct_indices",
+        "Line no": "102",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/models.py",
+        "Description": "A line with 183 chars in mcq_correct_indices exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Question",
+        "Smell": "Long statement",
+        "Method": "_mcq_correct_indices",
+        "Line no": "116",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/models.py",
+        "Description": "A line with 156 chars in _mcq_correct_indices exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Question",
+        "Smell": "Long statement",
+        "Method": "_short_acceptable_answers",
+        "Line no": "153",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/models.py",
+        "Description": "A line with 179 chars in _short_acceptable_answers exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "question_bank",
+        "Class": "",
+        "Smell": "Long method",
+        "Method": "get_builtin_banks",
+        "Line no": "9 - 103",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/question_bank.py",
+        "Description": "Method 'get_builtin_banks' is too long (91 lines)."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "question_bank",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "get_builtin_banks",
+        "Line no": "15",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/question_bank.py",
+        "Description": "A line with 1187 chars in get_builtin_banks exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "question_bank",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "get_builtin_banks",
+        "Line no": "65",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/question_bank.py",
+        "Description": "A line with 1028 chars in get_builtin_banks exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "question_bank",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "load_bank_from_json",
+        "Line no": "107",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/question_bank.py",
+        "Description": "A line with 401 chars in load_bank_from_json exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "StartFrame",
+        "Smell": "Long statement",
+        "Method": "on_load_json",
+        "Line no": "162",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/main.py",
+        "Description": "A line with 128 chars in on_load_json exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "StartFrame",
+        "Smell": "Long statement",
+        "Method": "on_start",
+        "Line no": "212",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/main.py",
+        "Description": "A line with 134 chars in on_start exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "QuizFrame",
+        "Smell": "Long statement",
+        "Method": "render_mcq",
+        "Line no": "287",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/main.py",
+        "Description": "A line with 135 chars in render_mcq exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "ResultFrame",
+        "Smell": "Long statement",
+        "Method": "render_results",
+        "Line no": "436",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/main.py",
+        "Description": "A line with 124 chars in render_results exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_review/main.py",
+        "Description": "A line with 160 chars in main exceeds the maximum length of 120 characters."
+    }
+]

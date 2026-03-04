@@ -1,0 +1,178 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Smell": "Empty catch block",
+        "Method": "get_game_from_session",
+        "Line no": "23",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/app.py",
+        "Description": "Empty catch block found in get_game_from_session."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "init_game",
+        "Line no": "54",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/app.py",
+        "Description": "A line with 163 chars in init_game exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "state",
+        "Line no": "69",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/app.py",
+        "Description": "A line with 163 chars in state exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "move",
+        "Line no": "93",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/app.py",
+        "Description": "A line with 164 chars in move exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Smell": "Long statement",
+        "Method": "move",
+        "Line no": "111",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/app.py",
+        "Description": "A line with 201 chars in move exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Smell": "Magic number",
+        "Method": "move",
+        "Line no": "86",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/app.py",
+        "Description": "Magic number 400 used in move."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Complex method",
+        "Method": "move",
+        "Line no": "55 - 106",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "Method 'move' has a cyclomatic complexity of 14, exceeding the max of 6."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Complex method",
+        "Method": "can_move",
+        "Line no": "134 - 154",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "Method 'can_move' has a cyclomatic complexity of 7, exceeding the max of 6."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Long statement",
+        "Method": "add_random_tile",
+        "Line no": "41",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "A line with 175 chars in add_random_tile exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Long statement",
+        "Method": "move",
+        "Line no": "56",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "A line with 133 chars in move exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Long statement",
+        "Method": "move_line",
+        "Line no": "109",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "A line with 195 chars in move_line exceeds the maximum length of 120 characters."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Magic number",
+        "Method": "__init__",
+        "Line no": "16",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "Magic number 4 used in __init__."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Magic number",
+        "Method": "add_random_tile",
+        "Line no": "49",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "Magic number 4 used in add_random_tile."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Magic number",
+        "Method": "add_random_tile",
+        "Line no": "49",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "Magic number 2 used in add_random_tile."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Magic number",
+        "Method": "add_random_tile",
+        "Line no": "49",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "Magic number 0.1 used in add_random_tile."
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Smell": "Magic number",
+        "Method": "move_line",
+        "Line no": "124",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_coding/game.py",
+        "Description": "Magic number 2 used in move_line."
+    }
+]

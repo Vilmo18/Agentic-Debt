@@ -1,0 +1,8 @@
+[
+    {
+        "Project": "final",
+        "Package": "final",
+        "Smell": "Feature concentration",
+        "Description": "The component realizes more than one architectural concern/feature. Independent sets of related modules within this component are: [models]; [ai]; [gui; main]; [rules]; [game]. LCC (Lack of Component Cohesion) = 0.83"
+    }
+]

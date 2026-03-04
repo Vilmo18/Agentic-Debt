@@ -1,0 +1,162 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Method": "get_game_from_session",
+        "LOC": 12,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Method": "save_game_to_session",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Method": "new_game",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Method": "index",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Method": "init_game",
+        "LOC": 12,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Method": "state",
+        "LOC": 12,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "Method": "move",
+        "LOC": 36,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Method": "__init__",
+        "LOC": 14,
+        "CC": 2,
+        "PC": 4
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Method": "reset",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Method": "add_random_tile",
+        "LOC": 12,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Method": "move",
+        "LOC": 46,
+        "CC": 14,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Method": "move_line",
+        "LOC": 21,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Method": "can_move",
+        "LOC": 16,
+        "CC": 7,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Method": "get_max_tile",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Method": "to_state",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game2048",
+        "Method": "from_state",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 1
+    }
+]

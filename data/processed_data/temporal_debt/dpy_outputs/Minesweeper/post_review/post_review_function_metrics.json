@@ -1,0 +1,282 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "__init__",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "_build_controls",
+        "LOC": 29,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "_new_game",
+        "LOC": 35,
+        "CC": 7,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "_on_left_click",
+        "LOC": 14,
+        "CC": 6,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "_on_right_click",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "_refresh_cells",
+        "LOC": 26,
+        "CC": 7,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "_reveal_all",
+        "LOC": 11,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "_update_mines_label",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "_schedule_timer_tick",
+        "LOC": 9,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "MinesweeperApp",
+        "Method": "_update_timer_label",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "__init__",
+        "LOC": 11,
+        "CC": 4,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "reset",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "in_bounds",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "neighbors",
+        "LOC": 8,
+        "CC": 6,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "place_mines",
+        "LOC": 13,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "_compute_adjacents",
+        "LOC": 11,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "reveal",
+        "LOC": 19,
+        "CC": 4,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "_flood_reveal",
+        "LOC": 18,
+        "CC": 10,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "toggle_flag",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "reveal_all_mines",
+        "LOC": 11,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "all_safe_cells_revealed",
+        "LOC": 9,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "get_cell",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Board",
+        "Method": "flag_count",
+        "LOC": 9,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "MinesweeperGame",
+        "Method": "__init__",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "MinesweeperGame",
+        "Method": "left_click",
+        "LOC": 25,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "MinesweeperGame",
+        "Method": "right_click",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "MinesweeperGame",
+        "Method": "elapsed_time",
+        "LOC": 7,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    }
+]

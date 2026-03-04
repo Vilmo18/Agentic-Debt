@@ -1,0 +1,53 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "",
+        "LOC": 136,
+        "WMC": 34,
+        "NOM": 0,
+        "NOPM": 0,
+        "NOF": 0,
+        "NOPF": 0,
+        "LCOM": -1,
+        "Fan-In": 1,
+        "Fan-Out": 0,
+        "DIT": 0,
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_review/game.py"
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game",
+        "Class": "Game2048",
+        "LOC": 136,
+        "WMC": 34,
+        "NOM": 9,
+        "NOPM": 8,
+        "NOF": 4,
+        "NOPF": 4,
+        "LCOM": 0.11,
+        "Fan-In": 0,
+        "Fan-Out": 0,
+        "DIT": 0,
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_review/game.py"
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "LOC": 84,
+        "WMC": 9,
+        "NOM": 7,
+        "NOPM": 7,
+        "NOF": 2,
+        "NOPF": 2,
+        "LCOM": 0.14,
+        "Fan-In": 0,
+        "Fan-Out": 1,
+        "DIT": 0,
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/2048/post_review/main.py"
+    }
+]

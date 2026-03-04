@@ -1,0 +1,262 @@
+[
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Method": "__init__",
+        "LOC": 33,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Method": "new_game",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Method": "undo_move",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Method": "on_canvas_click",
+        "LOC": 21,
+        "CC": 6,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Method": "update_all",
+        "LOC": 19,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Method": "draw_board",
+        "LOC": 39,
+        "CC": 9,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Method": "board_to_canvas_coords",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Method": "show_pass_message",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "ReversiGUI",
+        "Method": "show_game_over",
+        "LOC": 13,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "__init__",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "reset",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "initialize_board",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "snapshot",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "can_undo",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "undo",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "in_bounds",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "opponent",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "_discs_to_flip",
+        "LOC": 22,
+        "CC": 9,
+        "PC": 3
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "get_valid_moves",
+        "LOC": 11,
+        "CC": 6,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "is_valid_move",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 3
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "apply_move",
+        "LOC": 40,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "has_valid_move",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "is_game_over",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "get_score",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "game",
+        "Class": "ReversiGame",
+        "Method": "get_winner",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    }
+]

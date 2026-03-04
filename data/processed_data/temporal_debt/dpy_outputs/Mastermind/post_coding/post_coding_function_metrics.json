@@ -1,0 +1,282 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "__init__",
+        "LOC": 16,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "build_menu",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "build_status_bar",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "build_current_guess_area",
+        "LOC": 20,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "build_palette",
+        "LOC": 18,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "build_board",
+        "LOC": 15,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "refresh_ui",
+        "LOC": 10,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "update_status",
+        "LOC": 8,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "draw_guess_slots",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_draw_disc",
+        "LOC": 13,
+        "CC": 2,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_clear_slot",
+        "LOC": 7,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "on_color_select",
+        "LOC": 6,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "on_submit",
+        "LOC": 13,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "on_clear",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "on_undo",
+        "LOC": 6,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "add_history_row",
+        "LOC": 16,
+        "CC": 2,
+        "PC": 4
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "draw_pegs",
+        "LOC": 12,
+        "CC": 3,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "end_game",
+        "LOC": 11,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "start_new_game",
+        "LOC": 8,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "__init__",
+        "LOC": 21,
+        "CC": 7,
+        "PC": 5
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "new_game",
+        "LOC": 10,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "remaining_attempts",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "is_over",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "has_won",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "reveal_secret",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "get_history",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "evaluate_guess",
+        "LOC": 32,
+        "CC": 7,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    }
+]

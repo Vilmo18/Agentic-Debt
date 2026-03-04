@@ -1,0 +1,202 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "__init__",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "build_ui",
+        "LOC": 42,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "_build_menu",
+        "LOC": 11,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "_build_grid_buttons",
+        "LOC": 26,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "on_cell_click",
+        "LOC": 22,
+        "CC": 5,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "update_status",
+        "LOC": 14,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "highlight_winning_line",
+        "LOC": 6,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "_apply_symbol_style",
+        "LOC": 7,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "disable_board",
+        "LOC": 4,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "enable_board",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "reset_game",
+        "LOC": 6,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "gui",
+        "Class": "TicTacToeGUI",
+        "Method": "show_about",
+        "LOC": 11,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game_logic",
+        "Class": "TicTacToeGame",
+        "Method": "__init__",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game_logic",
+        "Class": "TicTacToeGame",
+        "Method": "reset",
+        "LOC": 11,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game_logic",
+        "Class": "TicTacToeGame",
+        "Method": "make_move",
+        "LOC": 21,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game_logic",
+        "Class": "TicTacToeGame",
+        "Method": "get_cell",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game_logic",
+        "Class": "TicTacToeGame",
+        "Method": "available_moves",
+        "LOC": 7,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game_logic",
+        "Class": "TicTacToeGame",
+        "Method": "is_draw",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "game_logic",
+        "Class": "TicTacToeGame",
+        "Method": "check_winner",
+        "LOC": 16,
+        "CC": 7,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 0
+    }
+]

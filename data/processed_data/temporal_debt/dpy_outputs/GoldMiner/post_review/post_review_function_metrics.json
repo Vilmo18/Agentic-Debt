@@ -1,0 +1,272 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "MineObject",
+        "Method": "__init__",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 7
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "MineObject",
+        "Method": "__repr__",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Claw",
+        "Method": "__init__",
+        "LOC": 15,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Claw",
+        "Method": "reset",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Claw",
+        "Method": "start_grab",
+        "LOC": 3,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Claw",
+        "Method": "hook_position",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Claw",
+        "Method": "_attach",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Claw",
+        "Method": "_release",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "Claw",
+        "Method": "update",
+        "LOC": 62,
+        "CC": 16,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "",
+        "Method": "clamp",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "models",
+        "Class": "",
+        "Method": "distance",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 4
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "level",
+        "Class": "LevelManager",
+        "Method": "__init__",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "level",
+        "Class": "LevelManager",
+        "Method": "get_config",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 4
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "level",
+        "Class": "LevelManager",
+        "Method": "spawn_objects",
+        "LOC": 56,
+        "CC": 10,
+        "PC": 4
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "__init__",
+        "LOC": 33,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "start",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "start_level",
+        "LOC": 12,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "end_level",
+        "LOC": 25,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "hide_overlay",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "on_next",
+        "LOC": 17,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "on_retry",
+        "LOC": 16,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "on_keydown",
+        "LOC": 9,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "on_click",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "_loop",
+        "LOC": 13,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "update",
+        "LOC": 19,
+        "CC": 9,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "Game",
+        "Method": "draw",
+        "LOC": 61,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    }
+]

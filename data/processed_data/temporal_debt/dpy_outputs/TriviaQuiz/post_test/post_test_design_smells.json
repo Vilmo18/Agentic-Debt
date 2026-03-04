@@ -1,0 +1,12 @@
+[
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "main",
+        "Smell": "Deficient encapsulation",
+        "Class": "QuizApp",
+        "Line no": "32",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_test/main.py",
+        "Description": "Class 'QuizApp' accesses non-public code elements __name__ from __init__"
+    }
+]

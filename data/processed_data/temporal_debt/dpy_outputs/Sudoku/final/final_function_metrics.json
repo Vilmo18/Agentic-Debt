@@ -1,0 +1,212 @@
+[
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "__init__",
+        "LOC": 10,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "copy",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "to_list",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "_in_box",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 4
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "is_valid",
+        "LOC": 20,
+        "CC": 9,
+        "PC": 4
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "set_value",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "clear_value",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "is_complete",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "is_solved",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "find_empty",
+        "LOC": 7,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "solve",
+        "LOC": 16,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "count_solutions",
+        "LOC": 24,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "generate_full",
+        "LOC": 21,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "Method": "generate_puzzle",
+        "LOC": 37,
+        "CC": 9,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "",
+        "Method": "get_sample_puzzle",
+        "LOC": 26,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "sudoku",
+        "Class": "",
+        "Method": "generate_puzzle",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "_ensure_puzzle_in_session",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "index",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "api_puzzle",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "api_new",
+        "LOC": 11,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "api_verify",
+        "LOC": 60,
+        "CC": 19,
+        "PC": 0
+    }
+]

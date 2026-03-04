@@ -1,0 +1,262 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Player",
+        "Method": "move",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ui",
+        "Class": "UI",
+        "Method": "__init__",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ui",
+        "Class": "UI",
+        "Method": "_draw_text",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 4
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ui",
+        "Class": "UI",
+        "Method": "draw",
+        "LOC": 57,
+        "CC": 6,
+        "PC": 5
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "__init__",
+        "LOC": 13,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_load_level",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "run",
+        "LOC": 18,
+        "CC": 7,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_restart_game",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "handle_input",
+        "LOC": 13,
+        "CC": 7,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_in_bounds",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "try_move",
+        "LOC": 28,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "fight_monster_at",
+        "LOC": 19,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "open_chest_at",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "next_level",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "draw",
+        "LOC": 14,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_draw_grid",
+        "LOC": 33,
+        "CC": 12,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_draw_entities",
+        "LOC": 9,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_draw_player",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "_draw_game_over_overlay",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "mapgen",
+        "Class": "MapData",
+        "Method": "__init__",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 5
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "_neighbors",
+        "LOC": 9,
+        "CC": 5,
+        "PC": 4
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "_bfs_has_path",
+        "LOC": 17,
+        "CC": 5,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "_carve_path",
+        "LOC": 39,
+        "CC": 15,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "_add_random_open_areas",
+        "LOC": 10,
+        "CC": 5,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "mapgen",
+        "Class": "",
+        "Method": "generate_map",
+        "LOC": 44,
+        "CC": 12,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    }
+]

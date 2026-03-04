@@ -1,0 +1,232 @@
+[
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "__init__",
+        "LOC": 48,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_build_ui",
+        "LOC": 29,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_color_symbols",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_digit_symbols",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_symbols_from_setting",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_parse_seed",
+        "LOC": 11,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_new_game_init",
+        "LOC": 40,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_set_submit_enabled",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_update_attempts_label",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_on_new_game_click",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_on_new_game_event",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_on_submit_guess_event",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "MastermindGUI",
+        "Method": "_on_submit_guess",
+        "LOC": 33,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "__init__",
+        "LOC": 23,
+        "CC": 7,
+        "PC": 5
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "new_game",
+        "LOC": 10,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "remaining_attempts",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "attempts_made",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "is_over",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "has_won",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "reveal_secret",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "get_history",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game_logic",
+        "Class": "MastermindGame",
+        "Method": "evaluate_guess",
+        "LOC": 32,
+        "CC": 7,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    }
+]

@@ -1,0 +1,222 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "Segment",
+        "Method": "to_dict",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "StrandPuzzle",
+        "Method": "__post_init__",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "StrandPuzzle",
+        "Method": "build_segments",
+        "LOC": 18,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "StrandPuzzle",
+        "Method": "_split_into_segments",
+        "LOC": 32,
+        "CC": 8,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "StrandPuzzle",
+        "Method": "to_dict",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "PuzzleBank",
+        "Method": "__init__",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "PuzzleBank",
+        "Method": "_load",
+        "LOC": 28,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "PuzzleBank",
+        "Method": "all_ids",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "PuzzleBank",
+        "Method": "get_by_id",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "PuzzleBank",
+        "Method": "random_puzzle",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "normalize",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "verify_merge",
+        "LOC": 78,
+        "CC": 9,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "_segment_from_any",
+        "LOC": 21,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "_nearest_phrase",
+        "LOC": 13,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "_are_same_phrase",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "get_or_init_state",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "index",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "api_puzzle",
+        "LOC": 31,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "api_state",
+        "LOC": 21,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "api_submit",
+        "LOC": 52,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "api_reset",
+        "LOC": 14,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "api_new",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 0
+    }
+]

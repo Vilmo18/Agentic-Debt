@@ -1,0 +1,32 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Smell": "Feature envy",
+        "Class": "main",
+        "Line no": "28",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/Chess/post_review/main.py",
+        "Description": "Function 'main' in module 'main' seems to access code elements that are outside of the module more than its internal to module members. It seems the method is more suitable in `board`."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.engine",
+        "Module": "board",
+        "Smell": "Insufficient modularization",
+        "Class": "Board",
+        "Line no": "10",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/Chess/post_review/engine/board.py",
+        "Description": "Class 'Board' is insufficiently modularized with NOPM: 12, WMC: 145, NOM: 15."
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.engine",
+        "Module": "board",
+        "Smell": "Insufficient modularization",
+        "Class": "board",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/Chess/post_review/engine/board.py",
+        "Description": "Module 'board' is insufficiently modularized with NOPM: 0, WMC: 145, NOM: 0."
+    }
+]

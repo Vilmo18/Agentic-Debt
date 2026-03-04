@@ -1,0 +1,302 @@
+[
+    {
+        "Project": "post_review",
+        "Package": "post_review",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "controller",
+        "Class": "GameController",
+        "Method": "__init__",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "controller",
+        "Class": "GameController",
+        "Method": "attach_view",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "controller",
+        "Class": "GameController",
+        "Method": "start_new_game",
+        "LOC": 8,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "controller",
+        "Class": "GameController",
+        "Method": "handle_board_click",
+        "LOC": 27,
+        "CC": 5,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "controller",
+        "Class": "GameController",
+        "Method": "undo_move",
+        "LOC": 13,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "controller",
+        "Class": "GameController",
+        "Method": "redo_move",
+        "LOC": 23,
+        "CC": 7,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "controller",
+        "Class": "GameController",
+        "Method": "get_status_text",
+        "LOC": 12,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "__init__",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "reset",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "in_bounds",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "get_cell",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "place_stone",
+        "LOC": 13,
+        "CC": 2,
+        "PC": 3
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "undo",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "redo",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "is_full",
+        "LOC": 6,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "last_move",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "_gather_in_direction",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 5
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "model",
+        "Class": "Board",
+        "Method": "check_win_from",
+        "LOC": 25,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "BoardCanvas",
+        "Method": "__init__",
+        "LOC": 10,
+        "CC": 1,
+        "PC": 5
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "BoardCanvas",
+        "Method": "redraw",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "BoardCanvas",
+        "Method": "draw_grid",
+        "LOC": 16,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "BoardCanvas",
+        "Method": "draw_stones",
+        "LOC": 29,
+        "CC": 7,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "BoardCanvas",
+        "Method": "draw_winning_highlight",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "BoardCanvas",
+        "Method": "pixel_to_cell",
+        "LOC": 18,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "BoardCanvas",
+        "Method": "cell_center",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "BoardCanvas",
+        "Method": "on_click",
+        "LOC": 8,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "GomokuApp",
+        "Method": "__init__",
+        "LOC": 30,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "GomokuApp",
+        "Method": "refresh",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_review",
+        "Package": "post_review.gomoku",
+        "Module": "view",
+        "Class": "GomokuApp",
+        "Method": "show_winner",
+        "LOC": 11,
+        "CC": 3,
+        "PC": 2
+    }
+]

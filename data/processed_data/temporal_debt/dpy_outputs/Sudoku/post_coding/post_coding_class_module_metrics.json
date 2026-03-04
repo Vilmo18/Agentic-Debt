@@ -1,0 +1,53 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "app",
+        "Class": "",
+        "LOC": 91,
+        "WMC": 26,
+        "NOM": 5,
+        "NOPM": 4,
+        "NOF": 2,
+        "NOPF": 2,
+        "LCOM": 0.4,
+        "Fan-In": 0,
+        "Fan-Out": 0,
+        "DIT": 0,
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/Sudoku/post_coding/app.py"
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "sudoku",
+        "Class": "",
+        "LOC": 187,
+        "WMC": 44,
+        "NOM": 2,
+        "NOPM": 2,
+        "NOF": 1,
+        "NOPF": 1,
+        "LCOM": 1,
+        "Fan-In": 1,
+        "Fan-Out": 1,
+        "DIT": 0,
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/Sudoku/post_coding/sudoku.py"
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "sudoku",
+        "Class": "SudokuBoard",
+        "LOC": 156,
+        "WMC": 42,
+        "NOM": 14,
+        "NOPM": 12,
+        "NOF": 1,
+        "NOPF": 1,
+        "LCOM": 0.07,
+        "Fan-In": 0,
+        "Fan-Out": 0,
+        "DIT": 0,
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/Sudoku/post_coding/sudoku.py"
+    }
+]

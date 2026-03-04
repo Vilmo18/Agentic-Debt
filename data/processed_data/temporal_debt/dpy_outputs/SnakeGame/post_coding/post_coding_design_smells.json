@@ -1,0 +1,12 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Smell": "Feature envy",
+        "Class": "main",
+        "Line no": "15",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/SnakeGame/post_coding/main.py",
+        "Description": "Function 'choose_difficulty' in module 'main' seems to access code elements that are outside of the module more than its internal to module members. It seems the method is more suitable in `ui`."
+    }
+]

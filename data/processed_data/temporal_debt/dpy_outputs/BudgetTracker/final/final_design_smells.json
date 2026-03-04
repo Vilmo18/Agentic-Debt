@@ -1,0 +1,12 @@
+[
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "utils",
+        "Smell": "Multifaceted abstraction",
+        "Class": "utils",
+        "Line no": "1",
+        "File": "/home/kira/ChatDev_GPT-5_Reasoning/data/processed_data/temporal_debt/snapshots/BudgetTracker/final/utils.py",
+        "Description": "Class 'utils' has a high LCOM value of 1, indicating it may have multiple responsibilities."
+    }
+]

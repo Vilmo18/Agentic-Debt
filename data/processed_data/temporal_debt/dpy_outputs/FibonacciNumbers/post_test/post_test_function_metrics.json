@@ -1,0 +1,132 @@
+[
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Method": "__init__",
+        "LOC": 58,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Method": "on_generate",
+        "LOC": 15,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Method": "on_clear",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Method": "on_copy",
+        "LOC": 12,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Method": "on_save",
+        "LOC": 35,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Method": "_update_output",
+        "LOC": 4,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Method": "_set_status",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "gui",
+        "Class": "FibonacciApp",
+        "Method": "_on_copy_hotkey",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "fibonacci",
+        "Class": "",
+        "Method": "parse_limit",
+        "LOC": 13,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "fibonacci",
+        "Class": "",
+        "Method": "generate_fibonacci_up_to",
+        "LOC": 11,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "fibonacci",
+        "Class": "",
+        "Method": "format_sequence",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "fibonacci",
+        "Class": "",
+        "Method": "sequence_stats",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    }
+]

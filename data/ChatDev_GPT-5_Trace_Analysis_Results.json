@@ -1,0 +1,5110 @@
+{
+  "projects": [
+    {
+      "project_name": "2048",
+      "task_prompt": "Design a standard 2048 game using a 4x4 grid. Players combine tiles by pressing arrow keys to slide them in one direction. Tiles with the same number merge into one, doubling the value. After each move, a new tile appears in a random empty cell. The game ends when no moves are possible. Track and display the current score and highest tile reached.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 492,
+              "completion_tokens": 398,
+              "total_tokens": 890,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 604,
+              "completion_tokens": 333,
+              "total_tokens": 937,
+              "reasoning_tokens": 320
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 505,
+              "completion_tokens": 525,
+              "total_tokens": 1030,
+              "reasoning_tokens": 512
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 691,
+              "completion_tokens": 8576,
+              "total_tokens": 9267,
+              "reasoning_tokens": 3136
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5423,
+              "completion_tokens": 2021,
+              "total_tokens": 7444,
+              "reasoning_tokens": 1664
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5790,
+              "completion_tokens": 7825,
+              "total_tokens": 13615,
+              "reasoning_tokens": 2880
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5463,
+              "completion_tokens": 2163,
+              "total_tokens": 7626,
+              "reasoning_tokens": 1792
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5843,
+              "completion_tokens": 7293,
+              "total_tokens": 13136,
+              "reasoning_tokens": 2432
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5379,
+              "completion_tokens": 5453,
+              "total_tokens": 10832,
+              "reasoning_tokens": 5440
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5399,
+              "completion_tokens": 7486,
+              "total_tokens": 12885,
+              "reasoning_tokens": 2624
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 5330,
+              "completion_tokens": 600,
+              "total_tokens": 5930,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 5651,
+              "completion_tokens": 977,
+              "total_tokens": 6628,
+              "reasoning_tokens": 960
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 5554,
+              "completion_tokens": 2693,
+              "total_tokens": 8247,
+              "reasoning_tokens": 704
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.528585,
+        "num_code_files": 2,
+        "code_lines": 260,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 52124,
+        "num_completion_tokens": 46343,
+        "num_total_tokens": 98467,
+        "num_reasoning_tokens": 23360,
+        "duration": "745.00s"
+      }
+    },
+    {
+      "project_name": "ConnectionsNYT",
+      "task_prompt": "Develop a puzzle game where the player must group 16 words into four sets of four, based on hidden categories. The words are presented in a 4x4 grid, and players select four at a time to form a group. Correct groups are removed and revealed with a category and a color-coded difficulty (yellow, green, blue, purple). Incorrect guesses count as mistakes, with a maximum of four allowed. Only one correct solution exists, though words may appear to fit multiple categories. Include shuffle functionality and provide immediate feedback after each guess. A new puzzle is generated daily.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 532,
+              "completion_tokens": 894,
+              "total_tokens": 1426,
+              "reasoning_tokens": 832
+            },
+            {
+              "prompt_tokens": 628,
+              "completion_tokens": 141,
+              "total_tokens": 769,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 585,
+              "completion_tokens": 397,
+              "total_tokens": 982,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 771,
+              "completion_tokens": 11494,
+              "total_tokens": 12265,
+              "reasoning_tokens": 5376
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6253,
+              "completion_tokens": 2496,
+              "total_tokens": 8749,
+              "reasoning_tokens": 2048
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6710,
+              "completion_tokens": 8727,
+              "total_tokens": 15437,
+              "reasoning_tokens": 3968
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3206,
+              "completion_tokens": 5002,
+              "total_tokens": 8208,
+              "reasoning_tokens": 2944
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5273,
+              "completion_tokens": 7816,
+              "total_tokens": 13089,
+              "reasoning_tokens": 3264
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5069,
+              "completion_tokens": 4943,
+              "total_tokens": 10012,
+              "reasoning_tokens": 4544
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5476,
+              "completion_tokens": 6052,
+              "total_tokens": 11528,
+              "reasoning_tokens": 1600
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5026,
+              "completion_tokens": 4768,
+              "total_tokens": 9794,
+              "reasoning_tokens": 1984
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 5859,
+              "completion_tokens": 657,
+              "total_tokens": 6516,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 6213,
+              "completion_tokens": 984,
+              "total_tokens": 7197,
+              "reasoning_tokens": 960
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 6099,
+              "completion_tokens": 3146,
+              "total_tokens": 9245,
+              "reasoning_tokens": 1408
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.647295,
+        "num_code_files": 4,
+        "code_lines": 478,
+        "num_utterances": 27,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 57700,
+        "num_completion_tokens": 57517,
+        "num_total_tokens": 115217,
+        "num_reasoning_tokens": 30080,
+        "duration": "1153.00s"
+      }
+    },
+    {
+      "project_name": "Tiny Rouge",
+      "task_prompt": "Design a roguelike game inspired by Tower of the Sorcerer. Use a fixed 80x80 grid map. The player character is controlled using W/A/S/D keys for movement (up, left, down, right). The character can move only on floor tiles and cannot pass through walls. The goal is to reach the door to proceed to the next level. The player encounters monsters; combat is resolved by subtracting the monster's HP from the player's HP. HP is restored by 20\u201330 points when the player touches a treasure chest. Ensure there is always at least one valid path from the starting position to the door. Include a minimal UI to display the player's current HP and encountered monster stats.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 560,
+              "completion_tokens": 470,
+              "total_tokens": 1030,
+              "reasoning_tokens": 384
+            },
+            {
+              "prompt_tokens": 680,
+              "completion_tokens": 397,
+              "total_tokens": 1077,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 641,
+              "completion_tokens": 269,
+              "total_tokens": 910,
+              "reasoning_tokens": 256
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 827,
+              "completion_tokens": 9575,
+              "total_tokens": 10402,
+              "reasoning_tokens": 3648
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5942,
+              "completion_tokens": 5052,
+              "total_tokens": 10994,
+              "reasoning_tokens": 4544
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6459,
+              "completion_tokens": 6896,
+              "total_tokens": 13355,
+              "reasoning_tokens": 1600
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5950,
+              "completion_tokens": 4405,
+              "total_tokens": 10355,
+              "reasoning_tokens": 4032
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6333,
+              "completion_tokens": 6915,
+              "total_tokens": 13248,
+              "reasoning_tokens": 1472
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6097,
+              "completion_tokens": 6489,
+              "total_tokens": 12586,
+              "reasoning_tokens": 6080
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6515,
+              "completion_tokens": 6723,
+              "total_tokens": 13238,
+              "reasoning_tokens": 1216
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 6111,
+              "completion_tokens": 720,
+              "total_tokens": 6831,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 6492,
+              "completion_tokens": 592,
+              "total_tokens": 7084,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 6335,
+              "completion_tokens": 3125,
+              "total_tokens": 9460,
+              "reasoning_tokens": 1600
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.589957,
+        "num_code_files": 6,
+        "code_lines": 528,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 58942,
+        "num_completion_tokens": 51628,
+        "num_total_tokens": 110570,
+        "num_reasoning_tokens": 26496,
+        "duration": "830.00s"
+      }
+    },
+    {
+      "project_name": "Tetris",
+      "task_prompt": "Create a Tetris game. Tetrominoes fall from the top, and the player can move or rotate them before they land. Completed lines are cleared, and scoring increases accordingly. The game ends when no more pieces can be placed. The board updates after each move or drop. Include all seven standard Tetromino shapes and consider increasing drop speed as the game progresses.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 491,
+              "completion_tokens": 451,
+              "total_tokens": 942,
+              "reasoning_tokens": 384
+            },
+            {
+              "prompt_tokens": 592,
+              "completion_tokens": 436,
+              "total_tokens": 1028,
+              "reasoning_tokens": 384
+            },
+            {
+              "prompt_tokens": 602,
+              "completion_tokens": 205,
+              "total_tokens": 807,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 503,
+              "completion_tokens": 590,
+              "total_tokens": 1093,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 691,
+              "completion_tokens": 11790,
+              "total_tokens": 12481,
+              "reasoning_tokens": 2176
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 9650,
+              "completion_tokens": 2465,
+              "total_tokens": 12115,
+              "reasoning_tokens": 2304
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9820,
+              "completion_tokens": 10927,
+              "total_tokens": 20747,
+              "reasoning_tokens": 1792
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 9650,
+              "completion_tokens": 4184,
+              "total_tokens": 13834,
+              "reasoning_tokens": 3776
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 10066,
+              "completion_tokens": 10543,
+              "total_tokens": 20609,
+              "reasoning_tokens": 1408
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 9652,
+              "completion_tokens": 4351,
+              "total_tokens": 14003,
+              "reasoning_tokens": 3712
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 10300,
+              "completion_tokens": 10405,
+              "total_tokens": 20705,
+              "reasoning_tokens": 1280
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 9592,
+              "completion_tokens": 748,
+              "total_tokens": 10340,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 9932,
+              "completion_tokens": 553,
+              "total_tokens": 10485,
+              "reasoning_tokens": 512
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 9816,
+              "completion_tokens": 3167,
+              "total_tokens": 12983,
+              "reasoning_tokens": 1280
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.722346,
+        "num_code_files": 0,
+        "code_lines": 0,
+        "num_utterances": 26,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 91357,
+        "num_completion_tokens": 60815,
+        "num_total_tokens": 152172,
+        "num_reasoning_tokens": 20480,
+        "duration": "2468.00s"
+      }
+    },
+    {
+      "project_name": "EpisodeChooseYourStory",
+      "task_prompt": "Develop an interactive storytelling game. Present narrative segments and branching choices. Player decisions influence subsequent story events. Track variables such as relationships or items that alter possible endings. Provide users with different paths based on choices. Store branches in a structured way and use conditional checks to shape the storyline.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 472,
+              "completion_tokens": 607,
+              "total_tokens": 1079,
+              "reasoning_tokens": 512
+            },
+            {
+              "prompt_tokens": 601,
+              "completion_tokens": 589,
+              "total_tokens": 1190,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 465,
+              "completion_tokens": 205,
+              "total_tokens": 670,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 651,
+              "completion_tokens": 10439,
+              "total_tokens": 11090,
+              "reasoning_tokens": 3328
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 7026,
+              "completion_tokens": 7375,
+              "total_tokens": 14401,
+              "reasoning_tokens": 832
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 7026,
+              "completion_tokens": 7377,
+              "total_tokens": 14403,
+              "reasoning_tokens": 832
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 7022,
+              "completion_tokens": 7953,
+              "total_tokens": 14975,
+              "reasoning_tokens": 1408
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7021,
+              "completion_tokens": 2651,
+              "total_tokens": 9672,
+              "reasoning_tokens": 2432
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 7249,
+              "completion_tokens": 7718,
+              "total_tokens": 14967,
+              "reasoning_tokens": 1088
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7105,
+              "completion_tokens": 2235,
+              "total_tokens": 9340,
+              "reasoning_tokens": 1984
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 7365,
+              "completion_tokens": 7397,
+              "total_tokens": 14762,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7105,
+              "completion_tokens": 2473,
+              "total_tokens": 9578,
+              "reasoning_tokens": 2112
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 7475,
+              "completion_tokens": 7446,
+              "total_tokens": 14921,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 7169,
+              "completion_tokens": 1272,
+              "total_tokens": 8441,
+              "reasoning_tokens": 1216
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 7502,
+              "completion_tokens": 948,
+              "total_tokens": 8450,
+              "reasoning_tokens": 896
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 7393,
+              "completion_tokens": 3419,
+              "total_tokens": 10812,
+              "reasoning_tokens": 1152
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.811849,
+        "num_code_files": 5,
+        "code_lines": 778,
+        "num_utterances": 31,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 88647,
+        "num_completion_tokens": 70104,
+        "num_total_tokens": 158751,
+        "num_reasoning_tokens": 20032,
+        "duration": "1025.00s"
+      }
+    },
+    {
+      "project_name": "BudgetTracker",
+      "task_prompt": "Create a budget tracker to monitor expenses and savings",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 426,
+              "completion_tokens": 684,
+              "total_tokens": 1110,
+              "reasoning_tokens": 576
+            },
+            {
+              "prompt_tokens": 568,
+              "completion_tokens": 781,
+              "total_tokens": 1349,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 372,
+              "completion_tokens": 205,
+              "total_tokens": 577,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 558,
+              "completion_tokens": 10159,
+              "total_tokens": 10717,
+              "reasoning_tokens": 2432
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 7919,
+              "completion_tokens": 9065,
+              "total_tokens": 16984,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 7919,
+              "completion_tokens": 9004,
+              "total_tokens": 16923,
+              "reasoning_tokens": 1472
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 7915,
+              "completion_tokens": 8681,
+              "total_tokens": 16596,
+              "reasoning_tokens": 1152
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7914,
+              "completion_tokens": 3048,
+              "total_tokens": 10962,
+              "reasoning_tokens": 2560
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 8412,
+              "completion_tokens": 9194,
+              "total_tokens": 17606,
+              "reasoning_tokens": 1600
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7976,
+              "completion_tokens": 3401,
+              "total_tokens": 11377,
+              "reasoning_tokens": 2816
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 8570,
+              "completion_tokens": 8295,
+              "total_tokens": 16865,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 8102,
+              "completion_tokens": 2982,
+              "total_tokens": 11084,
+              "reasoning_tokens": 2816
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 8277,
+              "completion_tokens": 8828,
+              "total_tokens": 17105,
+              "reasoning_tokens": 1088
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 8073,
+              "completion_tokens": 1044,
+              "total_tokens": 9117,
+              "reasoning_tokens": 1024
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 8324,
+              "completion_tokens": 1047,
+              "total_tokens": 9371,
+              "reasoning_tokens": 1024
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 8297,
+              "completion_tokens": 3354,
+              "total_tokens": 11651,
+              "reasoning_tokens": 1344
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.922247,
+        "num_code_files": 5,
+        "code_lines": 734,
+        "num_utterances": 31,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 99622,
+        "num_completion_tokens": 79772,
+        "num_total_tokens": 179394,
+        "num_reasoning_tokens": 22976,
+        "duration": "1491.00s"
+      }
+    },
+    {
+      "project_name": "Gomoku",
+      "task_prompt": "Develop a standard Gomoku game. Implement it on a typical 15x15 board, where two players alternate placing black or white stones. A player wins by forming an unbroken row of five stones horizontally, vertically, or diagonally.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 464,
+              "completion_tokens": 385,
+              "total_tokens": 849,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 563,
+              "completion_tokens": 397,
+              "total_tokens": 960,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 449,
+              "completion_tokens": 205,
+              "total_tokens": 654,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 635,
+              "completion_tokens": 8269,
+              "total_tokens": 8904,
+              "reasoning_tokens": 3072
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5047,
+              "completion_tokens": 5645,
+              "total_tokens": 10692,
+              "reasoning_tokens": 5632
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5067,
+              "completion_tokens": 7729,
+              "total_tokens": 12796,
+              "reasoning_tokens": 3136
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5047,
+              "completion_tokens": 3117,
+              "total_tokens": 8164,
+              "reasoning_tokens": 2944
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5230,
+              "completion_tokens": 6321,
+              "total_tokens": 11551,
+              "reasoning_tokens": 1728
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5046,
+              "completion_tokens": 7394,
+              "total_tokens": 12440,
+              "reasoning_tokens": 7168
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5282,
+              "completion_tokens": 6001,
+              "total_tokens": 11283,
+              "reasoning_tokens": 1408
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5096,
+              "completion_tokens": 3337,
+              "total_tokens": 8433,
+              "reasoning_tokens": 2112
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 5070,
+              "completion_tokens": 700,
+              "total_tokens": 5770,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 5399,
+              "completion_tokens": 638,
+              "total_tokens": 6037,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 5294,
+              "completion_tokens": 2669,
+              "total_tokens": 7963,
+              "reasoning_tokens": 1344
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.595181,
+        "num_code_files": 5,
+        "code_lines": 478,
+        "num_utterances": 27,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 53689,
+        "num_completion_tokens": 52807,
+        "num_total_tokens": 106496,
+        "num_reasoning_tokens": 30656,
+        "duration": "943.00s"
+      }
+    },
+    {
+      "project_name": "GoldMiner",
+      "task_prompt": "Design a Gold Miner game. A claw moves back and forth, and the player times a grab to collect gold or other objects. Each object has a value and takes time to reel in. The level ends when time runs out or the minimum gold value is met. Display the position of the claw and objects, updating after each grab. Introduce ascending difficulty with more obstacles or tighter time limits.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 495,
+              "completion_tokens": 322,
+              "total_tokens": 817,
+              "reasoning_tokens": 256
+            },
+            {
+              "prompt_tokens": 595,
+              "completion_tokens": 374,
+              "total_tokens": 969,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 607,
+              "completion_tokens": 77,
+              "total_tokens": 684,
+              "reasoning_tokens": 64
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 511,
+              "completion_tokens": 397,
+              "total_tokens": 908,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 697,
+              "completion_tokens": 9679,
+              "total_tokens": 10376,
+              "reasoning_tokens": 4544
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5498,
+              "completion_tokens": 4132,
+              "total_tokens": 9630,
+              "reasoning_tokens": 3904
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5734,
+              "completion_tokens": 7011,
+              "total_tokens": 12745,
+              "reasoning_tokens": 1920
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5614,
+              "completion_tokens": 2312,
+              "total_tokens": 7926,
+              "reasoning_tokens": 2112
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5823,
+              "completion_tokens": 7476,
+              "total_tokens": 13299,
+              "reasoning_tokens": 2304
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5696,
+              "completion_tokens": 4903,
+              "total_tokens": 10599,
+              "reasoning_tokens": 4416
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6192,
+              "completion_tokens": 9147,
+              "total_tokens": 15339,
+              "reasoning_tokens": 3520
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6167,
+              "completion_tokens": 4768,
+              "total_tokens": 10935,
+              "reasoning_tokens": 2048
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 6298,
+              "completion_tokens": 681,
+              "total_tokens": 6979,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 6639,
+              "completion_tokens": 621,
+              "total_tokens": 7260,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 6559,
+              "completion_tokens": 2815,
+              "total_tokens": 9374,
+              "reasoning_tokens": 960
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.626056,
+        "num_code_files": 3,
+        "code_lines": 505,
+        "num_utterances": 28,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 63125,
+        "num_completion_tokens": 54715,
+        "num_total_tokens": 117840,
+        "num_reasoning_tokens": 27968,
+        "duration": "931.00s"
+      }
+    },
+    {
+      "project_name": "FibonacciNumbers",
+      "task_prompt": "write a program that generates Fibonacci numbers up to a given number",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 429,
+              "completion_tokens": 429,
+              "total_tokens": 858,
+              "reasoning_tokens": 384
+            },
+            {
+              "prompt_tokens": 508,
+              "completion_tokens": 461,
+              "total_tokens": 969,
+              "reasoning_tokens": 448
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 378,
+              "completion_tokens": 141,
+              "total_tokens": 519,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 564,
+              "completion_tokens": 4737,
+              "total_tokens": 5301,
+              "reasoning_tokens": 2048
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 2847,
+              "completion_tokens": 3603,
+              "total_tokens": 6450,
+              "reasoning_tokens": 1152
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 5503,
+              "completion_tokens": 3219,
+              "total_tokens": 8722,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 2843,
+              "completion_tokens": 3411,
+              "total_tokens": 6254,
+              "reasoning_tokens": 960
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 2842,
+              "completion_tokens": 2488,
+              "total_tokens": 5330,
+              "reasoning_tokens": 2304
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 3036,
+              "completion_tokens": 3481,
+              "total_tokens": 6517,
+              "reasoning_tokens": 1024
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 2847,
+              "completion_tokens": 2607,
+              "total_tokens": 5454,
+              "reasoning_tokens": 2432
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 3031,
+              "completion_tokens": 3471,
+              "total_tokens": 6502,
+              "reasoning_tokens": 960
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 2902,
+              "completion_tokens": 2893,
+              "total_tokens": 5795,
+              "reasoning_tokens": 2880
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 2922,
+              "completion_tokens": 3727,
+              "total_tokens": 6649,
+              "reasoning_tokens": 1216
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 2852,
+              "completion_tokens": 953,
+              "total_tokens": 3805,
+              "reasoning_tokens": 896
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 3143,
+              "completion_tokens": 1081,
+              "total_tokens": 4224,
+              "reasoning_tokens": 1024
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 3125,
+              "completion_tokens": 2644,
+              "total_tokens": 5769,
+              "reasoning_tokens": 832
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.443175,
+        "num_code_files": 3,
+        "code_lines": 251,
+        "num_utterances": 31,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 39772,
+        "num_completion_tokens": 39346,
+        "num_total_tokens": 79118,
+        "num_reasoning_tokens": 19456,
+        "duration": "781.00s"
+      }
+    },
+    {
+      "project_name": "DouDizhuPoker",
+      "task_prompt": "Implement Dou Dizhu (Chinese Poker) game for three players, one of whom is the 'landlord.' Cards must be played in valid combinations (singles, pairs, straights, etc.). The objective is to be the first to run out of cards or prevent the landlord from doing so, following standard Dou Dizhu rules. Include the bidding phase to determine the landlord, and enforce the pass-or-beat logic for played combinations.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 504,
+              "completion_tokens": 386,
+              "total_tokens": 890,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 604,
+              "completion_tokens": 461,
+              "total_tokens": 1065,
+              "reasoning_tokens": 448
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 529,
+              "completion_tokens": 141,
+              "total_tokens": 670,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 715,
+              "completion_tokens": 18181,
+              "total_tokens": 18896,
+              "reasoning_tokens": 5248
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 13019,
+              "completion_tokens": 5057,
+              "total_tokens": 18076,
+              "reasoning_tokens": 4736
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 13349,
+              "completion_tokens": 15942,
+              "total_tokens": 29291,
+              "reasoning_tokens": 3072
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 13410,
+              "completion_tokens": 5163,
+              "total_tokens": 18573,
+              "reasoning_tokens": 4800
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 13782,
+              "completion_tokens": 14801,
+              "total_tokens": 28583,
+              "reasoning_tokens": 1920
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 13421,
+              "completion_tokens": 8719,
+              "total_tokens": 22140,
+              "reasoning_tokens": 8256
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 13892,
+              "completion_tokens": 14477,
+              "total_tokens": 28369,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 13431,
+              "completion_tokens": 821,
+              "total_tokens": 14252,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 13793,
+              "completion_tokens": 624,
+              "total_tokens": 14417,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 13695,
+              "completion_tokens": 3566,
+              "total_tokens": 17261,
+              "reasoning_tokens": 1088
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 1.03857,
+        "num_code_files": 6,
+        "code_lines": 1173,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 124144,
+        "num_completion_tokens": 88339,
+        "num_total_tokens": 212483,
+        "num_reasoning_tokens": 32896,
+        "duration": "1687.00s"
+      }
+    },
+    {
+      "project_name": "TriviaQuiz",
+      "task_prompt": "Design a trivia quiz program that presents multiple-choice or short-answer questions on various topics. The user enters answers, and the game tracks the score. After answering all questions, the quiz displays the total correct answers. Allow configurable question banks and an option to display correct answers after the quiz.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 473,
+              "completion_tokens": 503,
+              "total_tokens": 976,
+              "reasoning_tokens": 448
+            },
+            {
+              "prompt_tokens": 562,
+              "completion_tokens": 512,
+              "total_tokens": 1074,
+              "reasoning_tokens": 448
+            },
+            {
+              "prompt_tokens": 584,
+              "completion_tokens": 397,
+              "total_tokens": 981,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 467,
+              "completion_tokens": 141,
+              "total_tokens": 608,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 653,
+              "completion_tokens": 9852,
+              "total_tokens": 10505,
+              "reasoning_tokens": 2880
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7040,
+              "completion_tokens": 3765,
+              "total_tokens": 10805,
+              "reasoning_tokens": 3264
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 7550,
+              "completion_tokens": 8739,
+              "total_tokens": 16289,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7682,
+              "completion_tokens": 4518,
+              "total_tokens": 12200,
+              "reasoning_tokens": 4224
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 7984,
+              "completion_tokens": 9508,
+              "total_tokens": 17492,
+              "reasoning_tokens": 2304
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7683,
+              "completion_tokens": 4213,
+              "total_tokens": 11896,
+              "reasoning_tokens": 3840
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 8065,
+              "completion_tokens": 8741,
+              "total_tokens": 16806,
+              "reasoning_tokens": 1472
+            }
+          ]
+        },
+        {
+          "phase_name": "TestErrorSummary",
+          "token_usage": [
+            {
+              "prompt_tokens": 7679,
+              "completion_tokens": 2565,
+              "total_tokens": 10244,
+              "reasoning_tokens": 2368
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 8060,
+              "completion_tokens": 4865,
+              "total_tokens": 12925,
+              "reasoning_tokens": 832
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 7698,
+              "completion_tokens": 904,
+              "total_tokens": 8602,
+              "reasoning_tokens": 832
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 8048,
+              "completion_tokens": 1011,
+              "total_tokens": 9059,
+              "reasoning_tokens": 960
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 7965,
+              "completion_tokens": 3447,
+              "total_tokens": 11412,
+              "reasoning_tokens": 1088
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.747051,
+        "num_code_files": 4,
+        "code_lines": 784,
+        "num_utterances": 30,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 88193,
+        "num_completion_tokens": 63681,
+        "num_total_tokens": 151874,
+        "num_reasoning_tokens": 27008,
+        "duration": "930.00s"
+      }
+    },
+    {
+      "project_name": "Mastermind",
+      "task_prompt": "Implement the classic Mastermind code-breaking game. The computer selects a hidden sequence of colors (or digits), and the player attempts to guess it within a set number of tries. After each guess, show feedback regarding correct color and correct position. Distinguish between exact matches and partial color matches, and provide a clear win/lose outcome.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 484,
+              "completion_tokens": 366,
+              "total_tokens": 850,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 564,
+              "completion_tokens": 525,
+              "total_tokens": 1089,
+              "reasoning_tokens": 512
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 489,
+              "completion_tokens": 205,
+              "total_tokens": 694,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 675,
+              "completion_tokens": 7931,
+              "total_tokens": 8606,
+              "reasoning_tokens": 2944
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 1776,
+              "completion_tokens": 3255,
+              "total_tokens": 5031,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 3505,
+              "completion_tokens": 4242,
+              "total_tokens": 7747,
+              "reasoning_tokens": 1344
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3400,
+              "completion_tokens": 2584,
+              "total_tokens": 5984,
+              "reasoning_tokens": 2368
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 3625,
+              "completion_tokens": 4180,
+              "total_tokens": 7805,
+              "reasoning_tokens": 1216
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3466,
+              "completion_tokens": 2317,
+              "total_tokens": 5783,
+              "reasoning_tokens": 2304
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 3486,
+              "completion_tokens": 7447,
+              "total_tokens": 10933,
+              "reasoning_tokens": 3264
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 4634,
+              "completion_tokens": 883,
+              "total_tokens": 5517,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 5038,
+              "completion_tokens": 1011,
+              "total_tokens": 6049,
+              "reasoning_tokens": 896
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 4965,
+              "completion_tokens": 3047,
+              "total_tokens": 8012,
+              "reasoning_tokens": 1280
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.425064,
+        "num_code_files": 3,
+        "code_lines": 409,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 36107,
+        "num_completion_tokens": 37993,
+        "num_total_tokens": 74100,
+        "num_reasoning_tokens": 18944,
+        "duration": "666.00s"
+      }
+    },
+    {
+      "project_name": "Minesweeper",
+      "task_prompt": "Design a classic Minesweeper game with 3 levels of difficulty (beginner, intermediate, expert). The player uncovers cells by clicking on them. Numbers on uncovered cells indicate how many mines are adjacent. If a mine is uncovered, the player loses. The game displays the board with updated markings after each move. Include a flagging mechanism for suspected mines and a distinct visual for flagged cells.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 496,
+              "completion_tokens": 379,
+              "total_tokens": 875,
+              "reasoning_tokens": 256
+            },
+            {
+              "prompt_tokens": 653,
+              "completion_tokens": 525,
+              "total_tokens": 1178,
+              "reasoning_tokens": 512
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 513,
+              "completion_tokens": 141,
+              "total_tokens": 654,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 699,
+              "completion_tokens": 6407,
+              "total_tokens": 7106,
+              "reasoning_tokens": 2048
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4681,
+              "completion_tokens": 3356,
+              "total_tokens": 8037,
+              "reasoning_tokens": 2880
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5166,
+              "completion_tokens": 5951,
+              "total_tokens": 11117,
+              "reasoning_tokens": 1792
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4685,
+              "completion_tokens": 4174,
+              "total_tokens": 8859,
+              "reasoning_tokens": 3840
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5029,
+              "completion_tokens": 4962,
+              "total_tokens": 9991,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4784,
+              "completion_tokens": 7410,
+              "total_tokens": 12194,
+              "reasoning_tokens": 6976
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5227,
+              "completion_tokens": 6157,
+              "total_tokens": 11384,
+              "reasoning_tokens": 1792
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 4841,
+              "completion_tokens": 769,
+              "total_tokens": 5610,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 5207,
+              "completion_tokens": 1217,
+              "total_tokens": 6424,
+              "reasoning_tokens": 1152
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 5122,
+              "completion_tokens": 2653,
+              "total_tokens": 7775,
+              "reasoning_tokens": 1088
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.499889,
+        "num_code_files": 3,
+        "code_lines": 429,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 47103,
+        "num_completion_tokens": 44101,
+        "num_total_tokens": 91204,
+        "num_reasoning_tokens": 23872,
+        "duration": "854.00s"
+      }
+    },
+    {
+      "project_name": "Chess",
+      "task_prompt": "Design a chess game, allowing two players to take turns and determining the winner. It should be playable from Linux Terminal, and does not require me to access a dedicated UX or GUI platform, i.e. print the results on terminal at each stage and let me play it there by entering inputs (formal chess notation such as Ke8). Include standard chess features like castling, en passant, and pawn promotion. Enforce check and checkmate rules.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 506,
+              "completion_tokens": 300,
+              "total_tokens": 806,
+              "reasoning_tokens": 256
+            },
+            {
+              "prompt_tokens": 584,
+              "completion_tokens": 525,
+              "total_tokens": 1109,
+              "reasoning_tokens": 512
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 533,
+              "completion_tokens": 205,
+              "total_tokens": 738,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 719,
+              "completion_tokens": 15524,
+              "total_tokens": 16243,
+              "reasoning_tokens": 5760
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 8660,
+              "completion_tokens": 4203,
+              "total_tokens": 12863,
+              "reasoning_tokens": 3648
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9224,
+              "completion_tokens": 12644,
+              "total_tokens": 21868,
+              "reasoning_tokens": 3200
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 9081,
+              "completion_tokens": 2525,
+              "total_tokens": 11606,
+              "reasoning_tokens": 1792
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9823,
+              "completion_tokens": 11153,
+              "total_tokens": 20976,
+              "reasoning_tokens": 1984
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 17941,
+              "completion_tokens": 3463,
+              "total_tokens": 21404,
+              "reasoning_tokens": 2688
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9874,
+              "completion_tokens": 12062,
+              "total_tokens": 21936,
+              "reasoning_tokens": 2816
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9150,
+              "completion_tokens": 10506,
+              "total_tokens": 19656,
+              "reasoning_tokens": 3392
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 8255,
+              "completion_tokens": 805,
+              "total_tokens": 9060,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 8603,
+              "completion_tokens": 945,
+              "total_tokens": 9548,
+              "reasoning_tokens": 896
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 8520,
+              "completion_tokens": 3472,
+              "total_tokens": 11992,
+              "reasoning_tokens": 1216
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.910161,
+        "num_code_files": 6,
+        "code_lines": 684,
+        "num_utterances": 27,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 101473,
+        "num_completion_tokens": 78332,
+        "num_total_tokens": 179805,
+        "num_reasoning_tokens": 29120,
+        "duration": "1794.00s"
+      }
+    },
+    {
+      "project_name": "Checkers",
+      "task_prompt": "Develop a Checkers (Draughts) game. Use an 8x8 board, alternate turns between two players, and apply standard capture and kinging rules. Prompt for moves in notation (e.g., from-to positions) and update the board state accordingly.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 735,
+              "completion_tokens": 317,
+              "total_tokens": 1052,
+              "reasoning_tokens": 256
+            },
+            {
+              "prompt_tokens": 566,
+              "completion_tokens": 269,
+              "total_tokens": 835,
+              "reasoning_tokens": 256
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 463,
+              "completion_tokens": 205,
+              "total_tokens": 668,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 649,
+              "completion_tokens": 10454,
+              "total_tokens": 11103,
+              "reasoning_tokens": 4288
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 5980,
+              "completion_tokens": 6992,
+              "total_tokens": 12972,
+              "reasoning_tokens": 1344
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 6131,
+              "completion_tokens": 7183,
+              "total_tokens": 13314,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 6124,
+              "completion_tokens": 6834,
+              "total_tokens": 12958,
+              "reasoning_tokens": 1216
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6094,
+              "completion_tokens": 6477,
+              "total_tokens": 12571,
+              "reasoning_tokens": 6464
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6114,
+              "completion_tokens": 8828,
+              "total_tokens": 14942,
+              "reasoning_tokens": 3200
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 12004,
+              "completion_tokens": 5581,
+              "total_tokens": 17585,
+              "reasoning_tokens": 5568
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6124,
+              "completion_tokens": 8171,
+              "total_tokens": 14295,
+              "reasoning_tokens": 2496
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6151,
+              "completion_tokens": 3911,
+              "total_tokens": 10062,
+              "reasoning_tokens": 3520
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6550,
+              "completion_tokens": 7913,
+              "total_tokens": 14463,
+              "reasoning_tokens": 2240
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6186,
+              "completion_tokens": 4524,
+              "total_tokens": 10710,
+              "reasoning_tokens": 2304
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 7247,
+              "completion_tokens": 853,
+              "total_tokens": 8100,
+              "reasoning_tokens": 832
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 7544,
+              "completion_tokens": 661,
+              "total_tokens": 8205,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 7484,
+              "completion_tokens": 3434,
+              "total_tokens": 10918,
+              "reasoning_tokens": 1600
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.941253,
+        "num_code_files": 7,
+        "code_lines": 654,
+        "num_utterances": 33,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 92146,
+        "num_completion_tokens": 82607,
+        "num_total_tokens": 174753,
+        "num_reasoning_tokens": 37952,
+        "duration": "1942.00s"
+      }
+    },
+    {
+      "project_name": "TicTacToe",
+      "task_prompt": "Design a tic-tac-toe game with a user-friendly interface, allowing two players to take turns and determining the winner. Use a standard 3x3 grid, track each player's moves. Players alternate placing X or O, and the game ends when a player wins or the board is full.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 476,
+              "completion_tokens": 379,
+              "total_tokens": 855,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 569,
+              "completion_tokens": 397,
+              "total_tokens": 966,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 473,
+              "completion_tokens": 141,
+              "total_tokens": 614,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 659,
+              "completion_tokens": 6101,
+              "total_tokens": 6760,
+              "reasoning_tokens": 2752
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3495,
+              "completion_tokens": 1805,
+              "total_tokens": 5300,
+              "reasoning_tokens": 1792
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 3515,
+              "completion_tokens": 4545,
+              "total_tokens": 8060,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3495,
+              "completion_tokens": 2573,
+              "total_tokens": 6068,
+              "reasoning_tokens": 2560
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 3515,
+              "completion_tokens": 4545,
+              "total_tokens": 8060,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3495,
+              "completion_tokens": 3341,
+              "total_tokens": 6836,
+              "reasoning_tokens": 3328
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 3515,
+              "completion_tokens": 7197,
+              "total_tokens": 10712,
+              "reasoning_tokens": 3584
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 4049,
+              "completion_tokens": 704,
+              "total_tokens": 4753,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 4394,
+              "completion_tokens": 899,
+              "total_tokens": 5293,
+              "reasoning_tokens": 832
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 4273,
+              "completion_tokens": 2488,
+              "total_tokens": 6761,
+              "reasoning_tokens": 960
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.396054,
+        "num_code_files": 4,
+        "code_lines": 361,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 35923,
+        "num_completion_tokens": 35115,
+        "num_total_tokens": 71038,
+        "num_reasoning_tokens": 20352,
+        "duration": "537.00s"
+      }
+    },
+    {
+      "project_name": "TextBasedSpaceInvaders",
+      "task_prompt": "Program a simplified Space Invaders game. The player controls a ship at the bottom of the screen and can move horizontally and fire shots to destroy descending alien rows. The game ends if aliens reach the bottom or the player defeats all aliens. Add multiple alien rows, a limited number of lives, and score tracking.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 478,
+              "completion_tokens": 436,
+              "total_tokens": 914,
+              "reasoning_tokens": 384
+            },
+            {
+              "prompt_tokens": 564,
+              "completion_tokens": 397,
+              "total_tokens": 961,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 477,
+              "completion_tokens": 333,
+              "total_tokens": 810,
+              "reasoning_tokens": 320
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 663,
+              "completion_tokens": 7882,
+              "total_tokens": 8545,
+              "reasoning_tokens": 3136
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4515,
+              "completion_tokens": 3296,
+              "total_tokens": 7811,
+              "reasoning_tokens": 3136
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4685,
+              "completion_tokens": 5043,
+              "total_tokens": 9728,
+              "reasoning_tokens": 1024
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4509,
+              "completion_tokens": 4098,
+              "total_tokens": 8607,
+              "reasoning_tokens": 3904
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4712,
+              "completion_tokens": 4706,
+              "total_tokens": 9418,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4492,
+              "completion_tokens": 4381,
+              "total_tokens": 8873,
+              "reasoning_tokens": 3968
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4915,
+              "completion_tokens": 7050,
+              "total_tokens": 11965,
+              "reasoning_tokens": 3008
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4562,
+              "completion_tokens": 1837,
+              "total_tokens": 6399,
+              "reasoning_tokens": 1664
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 4566,
+              "completion_tokens": 600,
+              "total_tokens": 5166,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 4873,
+              "completion_tokens": 728,
+              "total_tokens": 5601,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 4790,
+              "completion_tokens": 2471,
+              "total_tokens": 7261,
+              "reasoning_tokens": 960
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.493581,
+        "num_code_files": 4,
+        "code_lines": 403,
+        "num_utterances": 27,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 48801,
+        "num_completion_tokens": 43258,
+        "num_total_tokens": 92059,
+        "num_reasoning_tokens": 23872,
+        "duration": "715.00s"
+      }
+    },
+    {
+      "project_name": "SnakeGame",
+      "task_prompt": "Design a classic Snake game. The player controls a snake using directional inputs to move around the board and eat 'food' items. Each time the snake eats, it grows in length. The game ends if the snake collides with itself or the boundary. The board updates after each move. Show the current score based on food eaten, and consider offering multiple difficulty levels.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 490,
+              "completion_tokens": 317,
+              "total_tokens": 807,
+              "reasoning_tokens": 256
+            },
+            {
+              "prompt_tokens": 585,
+              "completion_tokens": 461,
+              "total_tokens": 1046,
+              "reasoning_tokens": 448
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 501,
+              "completion_tokens": 141,
+              "total_tokens": 642,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 687,
+              "completion_tokens": 6563,
+              "total_tokens": 7250,
+              "reasoning_tokens": 2176
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4385,
+              "completion_tokens": 6668,
+              "total_tokens": 11053,
+              "reasoning_tokens": 6336
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4726,
+              "completion_tokens": 5173,
+              "total_tokens": 9899,
+              "reasoning_tokens": 1216
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4470,
+              "completion_tokens": 4757,
+              "total_tokens": 9227,
+              "reasoning_tokens": 4416
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4820,
+              "completion_tokens": 5189,
+              "total_tokens": 10009,
+              "reasoning_tokens": 1152
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4551,
+              "completion_tokens": 5133,
+              "total_tokens": 9684,
+              "reasoning_tokens": 5120
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4571,
+              "completion_tokens": 7212,
+              "total_tokens": 11783,
+              "reasoning_tokens": 2688
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5056,
+              "completion_tokens": 653,
+              "total_tokens": 5709,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5056,
+              "completion_tokens": 205,
+              "total_tokens": 5261,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5056,
+              "completion_tokens": 333,
+              "total_tokens": 5389,
+              "reasoning_tokens": 320
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 4988,
+              "completion_tokens": 599,
+              "total_tokens": 5587,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 5306,
+              "completion_tokens": 663,
+              "total_tokens": 5969,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 5227,
+              "completion_tokens": 2235,
+              "total_tokens": 7462,
+              "reasoning_tokens": 832
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.538614,
+        "num_code_files": 6,
+        "code_lines": 497,
+        "num_utterances": 31,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 60475,
+        "num_completion_tokens": 46302,
+        "num_total_tokens": 106777,
+        "num_reasoning_tokens": 27136,
+        "duration": "1273.00s"
+      }
+    },
+    {
+      "project_name": "StrandsGame",
+      "task_prompt": "Design a word-segmentation puzzle named 'Strands.' Provide multiple strands of text that the player must combine to form meaningful words or phrases. The program verifies valid strand formations and confirms completion once all strands are correctly merged. Similar to NYT Strands, offer feedback on valid merges.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 474,
+              "completion_tokens": 452,
+              "total_tokens": 926,
+              "reasoning_tokens": 384
+            },
+            {
+              "prompt_tokens": 576,
+              "completion_tokens": 141,
+              "total_tokens": 717,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 469,
+              "completion_tokens": 205,
+              "total_tokens": 674,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 655,
+              "completion_tokens": 12456,
+              "total_tokens": 13111,
+              "reasoning_tokens": 3840
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 9090,
+              "completion_tokens": 2387,
+              "total_tokens": 11477,
+              "reasoning_tokens": 2176
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9311,
+              "completion_tokens": 10573,
+              "total_tokens": 19884,
+              "reasoning_tokens": 1984
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 9064,
+              "completion_tokens": 3063,
+              "total_tokens": 12127,
+              "reasoning_tokens": 2688
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9448,
+              "completion_tokens": 10920,
+              "total_tokens": 20368,
+              "reasoning_tokens": 2240
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 9160,
+              "completion_tokens": 3766,
+              "total_tokens": 12926,
+              "reasoning_tokens": 3520
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9415,
+              "completion_tokens": 12089,
+              "total_tokens": 21504,
+              "reasoning_tokens": 3456
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 9058,
+              "completion_tokens": 1317,
+              "total_tokens": 10375,
+              "reasoning_tokens": 1280
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 9374,
+              "completion_tokens": 741,
+              "total_tokens": 10115,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 9311,
+              "completion_tokens": 3191,
+              "total_tokens": 12502,
+              "reasoning_tokens": 1152
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.719766,
+        "num_code_files": 2,
+        "code_lines": 490,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 85405,
+        "num_completion_tokens": 61301,
+        "num_total_tokens": 146706,
+        "num_reasoning_tokens": 23744,
+        "duration": "1479.00s"
+      }
+    },
+    {
+      "project_name": "StrandsNYT",
+      "task_prompt": "Implement a version of the NYT Strands puzzle. Strands is a word search game within a 6x8 grid of letters which players use to uncover words falling under a theme. The board must be filled entirely to complete the puzzle - no words will overlap. Each game includes a challenge word called the \"spangram\" that touches two opposite sides of the board. Themed words will highlight blue; the spangram will highlight yellow. Words can be formed by connecting adjacent letters in any direction (vertically, horizontally, diagonally) and can change direction mid-word. Players can find non-theme words to earn hints. Every 3 non-theme words will unlock a hint! The puzzle must be fully completed by finding all theme words and filling the board.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 571,
+              "completion_tokens": 510,
+              "total_tokens": 1081,
+              "reasoning_tokens": 448
+            },
+            {
+              "prompt_tokens": 667,
+              "completion_tokens": 397,
+              "total_tokens": 1064,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 663,
+              "completion_tokens": 397,
+              "total_tokens": 1060,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 849,
+              "completion_tokens": 17789,
+              "total_tokens": 18638,
+              "reasoning_tokens": 11264
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6665,
+              "completion_tokens": 3338,
+              "total_tokens": 10003,
+              "reasoning_tokens": 2944
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 7068,
+              "completion_tokens": 7574,
+              "total_tokens": 14642,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6705,
+              "completion_tokens": 3689,
+              "total_tokens": 10394,
+              "reasoning_tokens": 3072
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 7332,
+              "completion_tokens": 11073,
+              "total_tokens": 18405,
+              "reasoning_tokens": 3136
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 10842,
+              "completion_tokens": 7018,
+              "total_tokens": 17860,
+              "reasoning_tokens": 6784
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 11084,
+              "completion_tokens": 12875,
+              "total_tokens": 23959,
+              "reasoning_tokens": 2624
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 10844,
+              "completion_tokens": 1849,
+              "total_tokens": 12693,
+              "reasoning_tokens": 832
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 10993,
+              "completion_tokens": 4875,
+              "total_tokens": 15868,
+              "reasoning_tokens": 1344
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 10985,
+              "completion_tokens": 1107,
+              "total_tokens": 12092,
+              "reasoning_tokens": 1088
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 11379,
+              "completion_tokens": 794,
+              "total_tokens": 12173,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 11227,
+              "completion_tokens": 3279,
+              "total_tokens": 14506,
+              "reasoning_tokens": 1088
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.900482,
+        "num_code_files": 6,
+        "code_lines": 580,
+        "num_utterances": 29,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 107874,
+        "num_completion_tokens": 76564,
+        "num_total_tokens": 184438,
+        "num_reasoning_tokens": 37696,
+        "duration": "1210.00s"
+      }
+    },
+    {
+      "project_name": "ReversiOthello",
+      "task_prompt": "Develop a Reversi (Othello) board game. Two players alternate placing discs on an 8x8 grid, flipping the opponent's discs that lie between the newly placed piece and existing pieces of the same color. The game ends when the board is full or no valid moves remain. The program should automatically identify valid moves, flip discs, and display the current score.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 493,
+              "completion_tokens": 361,
+              "total_tokens": 854,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 568,
+              "completion_tokens": 461,
+              "total_tokens": 1029,
+              "reasoning_tokens": 448
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 507,
+              "completion_tokens": 77,
+              "total_tokens": 584,
+              "reasoning_tokens": 64
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 693,
+              "completion_tokens": 7661,
+              "total_tokens": 8354,
+              "reasoning_tokens": 2624
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4907,
+              "completion_tokens": 4669,
+              "total_tokens": 9576,
+              "reasoning_tokens": 4352
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5233,
+              "completion_tokens": 5748,
+              "total_tokens": 10981,
+              "reasoning_tokens": 1344
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4914,
+              "completion_tokens": 4693,
+              "total_tokens": 9607,
+              "reasoning_tokens": 4480
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5137,
+              "completion_tokens": 5987,
+              "total_tokens": 11124,
+              "reasoning_tokens": 1600
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4897,
+              "completion_tokens": 2982,
+              "total_tokens": 7879,
+              "reasoning_tokens": 2688
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5201,
+              "completion_tokens": 6368,
+              "total_tokens": 11569,
+              "reasoning_tokens": 1984
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4918,
+              "completion_tokens": 3712,
+              "total_tokens": 8630,
+              "reasoning_tokens": 1344
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 4841,
+              "completion_tokens": 975,
+              "total_tokens": 5816,
+              "reasoning_tokens": 896
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 5218,
+              "completion_tokens": 975,
+              "total_tokens": 6193,
+              "reasoning_tokens": 896
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 5065,
+              "completion_tokens": 3036,
+              "total_tokens": 8101,
+              "reasoning_tokens": 1024
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.54279,
+        "num_code_files": 4,
+        "code_lines": 397,
+        "num_utterances": 27,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 52592,
+        "num_completion_tokens": 47705,
+        "num_total_tokens": 100297,
+        "num_reasoning_tokens": 24064,
+        "duration": "664.00s"
+      }
+    },
+    {
+      "project_name": "Pong",
+      "task_prompt": "Develop a two-player Pong game. Each player controls a vertical paddle, moving up and down to bounce a ball back. The ball bounces between the two paddles and off the top and bottom edges. Players score a point when the opponent misses the ball. Incorporate a winning score threshold and reset the ball after each point.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 482,
+              "completion_tokens": 396,
+              "total_tokens": 878,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 592,
+              "completion_tokens": 269,
+              "total_tokens": 861,
+              "reasoning_tokens": 256
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 485,
+              "completion_tokens": 205,
+              "total_tokens": 690,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 671,
+              "completion_tokens": 7669,
+              "total_tokens": 8340,
+              "reasoning_tokens": 2496
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5196,
+              "completion_tokens": 2021,
+              "total_tokens": 7217,
+              "reasoning_tokens": 1664
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5563,
+              "completion_tokens": 5896,
+              "total_tokens": 11459,
+              "reasoning_tokens": 1280
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5113,
+              "completion_tokens": 1585,
+              "total_tokens": 6698,
+              "reasoning_tokens": 1344
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5364,
+              "completion_tokens": 6087,
+              "total_tokens": 11451,
+              "reasoning_tokens": 1472
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5113,
+              "completion_tokens": 2944,
+              "total_tokens": 8057,
+              "reasoning_tokens": 2752
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5314,
+              "completion_tokens": 5256,
+              "total_tokens": 10570,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5139,
+              "completion_tokens": 4230,
+              "total_tokens": 9369,
+              "reasoning_tokens": 1856
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 5132,
+              "completion_tokens": 659,
+              "total_tokens": 5791,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 5438,
+              "completion_tokens": 787,
+              "total_tokens": 6225,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 5356,
+              "completion_tokens": 3390,
+              "total_tokens": 8746,
+              "reasoning_tokens": 1600
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.482637,
+        "num_code_files": 4,
+        "code_lines": 491,
+        "num_utterances": 27,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 54958,
+        "num_completion_tokens": 41394,
+        "num_total_tokens": 96352,
+        "num_reasoning_tokens": 17280,
+        "duration": "826.00s"
+      }
+    },
+    {
+      "project_name": "MonopolyGo",
+      "task_prompt": "Create a simplified version of Monopoly Go! with basic board mechanics: rolling dice, moving around properties, buying them, collecting rent, and handling chance events. Track player money and property ownership. Display relevant game information and prompt each player for decisions. Implement essential rules for jail, free parking, and simplified chance cards.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 479,
+              "completion_tokens": 331,
+              "total_tokens": 810,
+              "reasoning_tokens": 256
+            },
+            {
+              "prompt_tokens": 588,
+              "completion_tokens": 397,
+              "total_tokens": 985,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 479,
+              "completion_tokens": 205,
+              "total_tokens": 684,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 665,
+              "completion_tokens": 12567,
+              "total_tokens": 13232,
+              "reasoning_tokens": 4288
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 8762,
+              "completion_tokens": 3310,
+              "total_tokens": 12072,
+              "reasoning_tokens": 3136
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 8945,
+              "completion_tokens": 10238,
+              "total_tokens": 19183,
+              "reasoning_tokens": 1984
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 8738,
+              "completion_tokens": 6063,
+              "total_tokens": 14801,
+              "reasoning_tokens": 5568
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9242,
+              "completion_tokens": 9904,
+              "total_tokens": 19146,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 8844,
+              "completion_tokens": 6261,
+              "total_tokens": 15105,
+              "reasoning_tokens": 5696
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 9418,
+              "completion_tokens": 13157,
+              "total_tokens": 22575,
+              "reasoning_tokens": 4096
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 9487,
+              "completion_tokens": 973,
+              "total_tokens": 10460,
+              "reasoning_tokens": 896
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 9848,
+              "completion_tokens": 653,
+              "total_tokens": 10501,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 9780,
+              "completion_tokens": 3767,
+              "total_tokens": 13547,
+              "reasoning_tokens": 1088
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.784854,
+        "num_code_files": 4,
+        "code_lines": 813,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 85275,
+        "num_completion_tokens": 67826,
+        "num_total_tokens": 153101,
+        "num_reasoning_tokens": 29696,
+        "duration": "1623.00s"
+      }
+    },
+    {
+      "project_name": "Wordle",
+      "task_prompt": "Design a standard wordle game by providing a daily 5-letter English language word. The game should allow a player to take 6 turns to guess the word. Correct guess for each letter is colored by green (correct letter in correct position), grey for invalid letter, or yellow for correct letter in wrong position. It should be playable from Linux Terminal, and does not require me to access a dedicated UX or GUI platform, i.e. print the results on terminal at each stage and let me play it there by entering inputs. If the player guesses the word within the allowed number of attempts, they win. If not, the solution is revealed. Validate each guess for proper feedback.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 553,
+              "completion_tokens": 232,
+              "total_tokens": 785,
+              "reasoning_tokens": 192
+            },
+            {
+              "prompt_tokens": 627,
+              "completion_tokens": 141,
+              "total_tokens": 768,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 627,
+              "completion_tokens": 205,
+              "total_tokens": 832,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 813,
+              "completion_tokens": 8480,
+              "total_tokens": 9293,
+              "reasoning_tokens": 3264
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5266,
+              "completion_tokens": 3936,
+              "total_tokens": 9202,
+              "reasoning_tokens": 3648
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5563,
+              "completion_tokens": 6499,
+              "total_tokens": 12062,
+              "reasoning_tokens": 1664
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5472,
+              "completion_tokens": 4429,
+              "total_tokens": 9901,
+              "reasoning_tokens": 4416
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5492,
+              "completion_tokens": 7550,
+              "total_tokens": 13042,
+              "reasoning_tokens": 2688
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5499,
+              "completion_tokens": 4050,
+              "total_tokens": 9549,
+              "reasoning_tokens": 3648
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5910,
+              "completion_tokens": 7400,
+              "total_tokens": 13310,
+              "reasoning_tokens": 2048
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 5939,
+              "completion_tokens": 514,
+              "total_tokens": 6453,
+              "reasoning_tokens": 448
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 6363,
+              "completion_tokens": 835,
+              "total_tokens": 7198,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 6222,
+              "completion_tokens": 2648,
+              "total_tokens": 8870,
+              "reasoning_tokens": 1088
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.537122,
+        "num_code_files": 5,
+        "code_lines": 486,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 54346,
+        "num_completion_tokens": 46919,
+        "num_total_tokens": 101265,
+        "num_reasoning_tokens": 24192,
+        "duration": "1536.00s"
+      }
+    },
+    {
+      "project_name": "Sudoku",
+      "task_prompt": "Develop a classic Sudoku puzzle game that uses a 9x9 grid. Each row, column, and 3x3 subgrid must contain the digits 1 through 9 exactly once. The program should allow the player to input values for specific cells, check for mistakes, and confirm when the puzzle is completed.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 480,
+              "completion_tokens": 249,
+              "total_tokens": 729,
+              "reasoning_tokens": 192
+            },
+            {
+              "prompt_tokens": 571,
+              "completion_tokens": 355,
+              "total_tokens": 926,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 564,
+              "completion_tokens": 141,
+              "total_tokens": 705,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 481,
+              "completion_tokens": 525,
+              "total_tokens": 1006,
+              "reasoning_tokens": 512
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 667,
+              "completion_tokens": 11030,
+              "total_tokens": 11697,
+              "reasoning_tokens": 3008
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7855,
+              "completion_tokens": 2490,
+              "total_tokens": 10345,
+              "reasoning_tokens": 2112
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 8242,
+              "completion_tokens": 9967,
+              "total_tokens": 18209,
+              "reasoning_tokens": 2560
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7893,
+              "completion_tokens": 2941,
+              "total_tokens": 10834,
+              "reasoning_tokens": 2560
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 8283,
+              "completion_tokens": 10322,
+              "total_tokens": 18605,
+              "reasoning_tokens": 2880
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 7934,
+              "completion_tokens": 2534,
+              "total_tokens": 10468,
+              "reasoning_tokens": 2176
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 8302,
+              "completion_tokens": 10386,
+              "total_tokens": 18688,
+              "reasoning_tokens": 2944
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 7884,
+              "completion_tokens": 728,
+              "total_tokens": 8612,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 8193,
+              "completion_tokens": 984,
+              "total_tokens": 9177,
+              "reasoning_tokens": 960
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 8124,
+              "completion_tokens": 2926,
+              "total_tokens": 11050,
+              "reasoning_tokens": 1088
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.650121,
+        "num_code_files": 2,
+        "code_lines": 362,
+        "num_utterances": 26,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 75473,
+        "num_completion_tokens": 55578,
+        "num_total_tokens": 131051,
+        "num_reasoning_tokens": 22144,
+        "duration": "1071.00s"
+      }
+    },
+    {
+      "project_name": "TheCrossword",
+      "task_prompt": "Implement a crossword puzzle. Provide a grid of squares with clues for across and down entries. The user can enter words by specifying the clue number and direction. The application validates if letters match and confirms completion when all correct words are filled in.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 464,
+              "completion_tokens": 375,
+              "total_tokens": 839,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 553,
+              "completion_tokens": 397,
+              "total_tokens": 950,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 449,
+              "completion_tokens": 141,
+              "total_tokens": 590,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 635,
+              "completion_tokens": 13873,
+              "total_tokens": 14508,
+              "reasoning_tokens": 8832
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 5511,
+              "completion_tokens": 6832,
+              "total_tokens": 12343,
+              "reasoning_tokens": 1792
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 5511,
+              "completion_tokens": 6595,
+              "total_tokens": 12106,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 5528,
+              "completion_tokens": 6018,
+              "total_tokens": 11546,
+              "reasoning_tokens": 960
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 5528,
+              "completion_tokens": 7041,
+              "total_tokens": 12569,
+              "reasoning_tokens": 1984
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 5528,
+              "completion_tokens": 6850,
+              "total_tokens": 12378,
+              "reasoning_tokens": 1792
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 5519,
+              "completion_tokens": 6115,
+              "total_tokens": 11634,
+              "reasoning_tokens": 5632
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6011,
+              "completion_tokens": 7107,
+              "total_tokens": 13118,
+              "reasoning_tokens": 1408
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6160,
+              "completion_tokens": 3213,
+              "total_tokens": 9373,
+              "reasoning_tokens": 3200
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6180,
+              "completion_tokens": 8134,
+              "total_tokens": 14314,
+              "reasoning_tokens": 2432
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6163,
+              "completion_tokens": 5768,
+              "total_tokens": 11931,
+              "reasoning_tokens": 5376
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6563,
+              "completion_tokens": 7325,
+              "total_tokens": 13888,
+              "reasoning_tokens": 1344
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 6392,
+              "completion_tokens": 853,
+              "total_tokens": 7245,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 6746,
+              "completion_tokens": 589,
+              "total_tokens": 7335,
+              "reasoning_tokens": 512
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 6616,
+              "completion_tokens": 3354,
+              "total_tokens": 9970,
+              "reasoning_tokens": 1600
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 1.013371,
+        "num_code_files": 5,
+        "code_lines": 601,
+        "num_utterances": 35,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 86057,
+        "num_completion_tokens": 90580,
+        "num_total_tokens": 176637,
+        "num_reasoning_tokens": 40000,
+        "duration": "1664.00s"
+      }
+    },
+    {
+      "project_name": "DetectPalindromes",
+      "task_prompt": "develop a program that detects palindromes in a given text file",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 430,
+              "completion_tokens": 471,
+              "total_tokens": 901,
+              "reasoning_tokens": 384
+            },
+            {
+              "prompt_tokens": 551,
+              "completion_tokens": 397,
+              "total_tokens": 948,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 380,
+              "completion_tokens": 205,
+              "total_tokens": 585,
+              "reasoning_tokens": 192
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 566,
+              "completion_tokens": 8685,
+              "total_tokens": 9251,
+              "reasoning_tokens": 3456
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3529,
+              "completion_tokens": 4901,
+              "total_tokens": 8430,
+              "reasoning_tokens": 3520
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4920,
+              "completion_tokens": 5830,
+              "total_tokens": 10750,
+              "reasoning_tokens": 1536
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4687,
+              "completion_tokens": 3454,
+              "total_tokens": 8141,
+              "reasoning_tokens": 3136
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5014,
+              "completion_tokens": 5452,
+              "total_tokens": 10466,
+              "reasoning_tokens": 1088
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4757,
+              "completion_tokens": 6793,
+              "total_tokens": 11550,
+              "reasoning_tokens": 6400
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 5159,
+              "completion_tokens": 7613,
+              "total_tokens": 12772,
+              "reasoning_tokens": 2752
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 5204,
+              "completion_tokens": 960,
+              "total_tokens": 6164,
+              "reasoning_tokens": 896
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 5503,
+              "completion_tokens": 820,
+              "total_tokens": 6323,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 5472,
+              "completion_tokens": 2985,
+              "total_tokens": 8457,
+              "reasoning_tokens": 832
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.543375,
+        "num_code_files": 5,
+        "code_lines": 486,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 46172,
+        "num_completion_tokens": 48566,
+        "num_total_tokens": 94738,
+        "num_reasoning_tokens": 25344,
+        "duration": "974.00s"
+      }
+    },
+    {
+      "project_name": "ConnectFour",
+      "task_prompt": "Implement a standard Connect Four game. Two players alternate placing discs into a seven-column, six-row grid. The objective is to form a horizontal, vertical, or diagonal line of four discs. Players choose columns by typing a number, and the board updates after each move until a win or draw. Validate column choices and end the game when a winning line is detected or the grid is full.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 494,
+              "completion_tokens": 383,
+              "total_tokens": 877,
+              "reasoning_tokens": 320
+            },
+            {
+              "prompt_tokens": 591,
+              "completion_tokens": 525,
+              "total_tokens": 1116,
+              "reasoning_tokens": 512
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 509,
+              "completion_tokens": 141,
+              "total_tokens": 650,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 695,
+              "completion_tokens": 6629,
+              "total_tokens": 7324,
+              "reasoning_tokens": 3008
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3779,
+              "completion_tokens": 3186,
+              "total_tokens": 6965,
+              "reasoning_tokens": 2816
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4158,
+              "completion_tokens": 4652,
+              "total_tokens": 8810,
+              "reasoning_tokens": 1216
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3957,
+              "completion_tokens": 3754,
+              "total_tokens": 7711,
+              "reasoning_tokens": 3456
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4264,
+              "completion_tokens": 5137,
+              "total_tokens": 9401,
+              "reasoning_tokens": 1664
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 3994,
+              "completion_tokens": 2637,
+              "total_tokens": 6631,
+              "reasoning_tokens": 2624
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4014,
+              "completion_tokens": 4560,
+              "total_tokens": 8574,
+              "reasoning_tokens": 1088
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 3944,
+              "completion_tokens": 823,
+              "total_tokens": 4767,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 4298,
+              "completion_tokens": 702,
+              "total_tokens": 5000,
+              "reasoning_tokens": 640
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 4221,
+              "completion_tokens": 2771,
+              "total_tokens": 6992,
+              "reasoning_tokens": 1088
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.407647,
+        "num_code_files": 3,
+        "code_lines": 362,
+        "num_utterances": 25,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 38918,
+        "num_completion_tokens": 35900,
+        "num_total_tokens": 74818,
+        "num_reasoning_tokens": 19328,
+        "duration": "664.00s"
+      }
+    },
+    {
+      "project_name": "FlappyBird",
+      "task_prompt": "Build a Flappy Bird clone. The player presses a key to 'flap' and keep the bird from falling. Randomly generated vertical gaps in 'pipes' appear. Each successful pass increases the score. The game ends if the bird collides with a pipe or the ground. Gradually adjust difficulty by varying gap sizes and pipe speeds.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 485,
+              "completion_tokens": 262,
+              "total_tokens": 747,
+              "reasoning_tokens": 192
+            },
+            {
+              "prompt_tokens": 589,
+              "completion_tokens": 717,
+              "total_tokens": 1306,
+              "reasoning_tokens": 704
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 491,
+              "completion_tokens": 141,
+              "total_tokens": 632,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 677,
+              "completion_tokens": 6786,
+              "total_tokens": 7463,
+              "reasoning_tokens": 2496
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 4396,
+              "completion_tokens": 4919,
+              "total_tokens": 9315,
+              "reasoning_tokens": 1024
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 4403,
+              "completion_tokens": 4983,
+              "total_tokens": 9386,
+              "reasoning_tokens": 1088
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeComplete",
+          "token_usage": [
+            {
+              "prompt_tokens": 4399,
+              "completion_tokens": 4791,
+              "total_tokens": 9190,
+              "reasoning_tokens": 896
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 8578,
+              "completion_tokens": 4237,
+              "total_tokens": 12815,
+              "reasoning_tokens": 4224
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4418,
+              "completion_tokens": 5175,
+              "total_tokens": 9593,
+              "reasoning_tokens": 1280
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4398,
+              "completion_tokens": 4514,
+              "total_tokens": 8912,
+              "reasoning_tokens": 4160
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4761,
+              "completion_tokens": 5246,
+              "total_tokens": 10007,
+              "reasoning_tokens": 1280
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 4469,
+              "completion_tokens": 5728,
+              "total_tokens": 10197,
+              "reasoning_tokens": 5440
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4767,
+              "completion_tokens": 5585,
+              "total_tokens": 10352,
+              "reasoning_tokens": 1600
+            }
+          ]
+        },
+        {
+          "phase_name": "TestModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 4531,
+              "completion_tokens": 7614,
+              "total_tokens": 12145,
+              "reasoning_tokens": 3456
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 4774,
+              "completion_tokens": 854,
+              "total_tokens": 5628,
+              "reasoning_tokens": 832
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 5086,
+              "completion_tokens": 598,
+              "total_tokens": 5684,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 4998,
+              "completion_tokens": 2536,
+              "total_tokens": 7534,
+              "reasoning_tokens": 960
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.729635,
+        "num_code_files": 4,
+        "code_lines": 454,
+        "num_utterances": 33,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 66220,
+        "num_completion_tokens": 64686,
+        "num_total_tokens": 130906,
+        "num_reasoning_tokens": 30336,
+        "duration": "1537.00s"
+      }
+    },
+    {
+      "project_name": "CandyCrush",
+      "task_prompt": "Implement a match-3 puzzle game reminiscent of Candy Crush. Represent the board and let users swap adjacent candies to form matches of three or more. Matches are cleared, new candies appear, and scoring is tracked. The board updates after each valid move. Incorporate chain reactions when candies fall and possibly track moves or time-based constraints.",
+      "phases": [
+        {
+          "phase_name": "DemandAnalysis",
+          "token_usage": [
+            {
+              "prompt_tokens": 482,
+              "completion_tokens": 641,
+              "total_tokens": 1123,
+              "reasoning_tokens": 576
+            },
+            {
+              "prompt_tokens": 581,
+              "completion_tokens": 183,
+              "total_tokens": 764,
+              "reasoning_tokens": 128
+            },
+            {
+              "prompt_tokens": 594,
+              "completion_tokens": 141,
+              "total_tokens": 735,
+              "reasoning_tokens": 128
+            }
+          ]
+        },
+        {
+          "phase_name": "LanguageChoose",
+          "token_usage": [
+            {
+              "prompt_tokens": 485,
+              "completion_tokens": 398,
+              "total_tokens": 883,
+              "reasoning_tokens": 384
+            }
+          ]
+        },
+        {
+          "phase_name": "Coding",
+          "token_usage": [
+            {
+              "prompt_tokens": 673,
+              "completion_tokens": 10852,
+              "total_tokens": 11525,
+              "reasoning_tokens": 4096
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6738,
+              "completion_tokens": 2236,
+              "total_tokens": 8974,
+              "reasoning_tokens": 1984
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6998,
+              "completion_tokens": 7946,
+              "total_tokens": 14944,
+              "reasoning_tokens": 1728
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6717,
+              "completion_tokens": 2244,
+              "total_tokens": 8961,
+              "reasoning_tokens": 1984
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 6986,
+              "completion_tokens": 8657,
+              "total_tokens": 15643,
+              "reasoning_tokens": 2304
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewComment",
+          "token_usage": [
+            {
+              "prompt_tokens": 6852,
+              "completion_tokens": 6641,
+              "total_tokens": 13493,
+              "reasoning_tokens": 5952
+            }
+          ]
+        },
+        {
+          "phase_name": "CodeReviewModification",
+          "token_usage": [
+            {
+              "prompt_tokens": 7549,
+              "completion_tokens": 8267,
+              "total_tokens": 15816,
+              "reasoning_tokens": 1664
+            }
+          ]
+        },
+        {
+          "phase_name": "EnvironmentDoc",
+          "token_usage": [
+            {
+              "prompt_tokens": 7052,
+              "completion_tokens": 798,
+              "total_tokens": 7850,
+              "reasoning_tokens": 768
+            }
+          ]
+        },
+        {
+          "phase_name": "Reflection",
+          "token_usage": [
+            {
+              "prompt_tokens": 7368,
+              "completion_tokens": 603,
+              "total_tokens": 7971,
+              "reasoning_tokens": 576
+            }
+          ]
+        },
+        {
+          "phase_name": "Manual",
+          "token_usage": [
+            {
+              "prompt_tokens": 7276,
+              "completion_tokens": 3113,
+              "total_tokens": 10389,
+              "reasoning_tokens": 1024
+            }
+          ]
+        }
+      ],
+      "software_info": {
+        "cost": 0.610139,
+        "num_code_files": 0,
+        "code_lines": 0,
+        "num_utterances": 26,
+        "num_self_reflections": 1,
+        "num_prompt_tokens": 66351,
+        "num_completion_tokens": 52720,
+        "num_total_tokens": 119071,
+        "num_reasoning_tokens": 23296,
+        "duration": "1264.00s"
+      }
+    }
+  ]
+}

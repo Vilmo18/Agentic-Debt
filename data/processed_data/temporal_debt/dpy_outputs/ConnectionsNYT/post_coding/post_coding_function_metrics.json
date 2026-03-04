@@ -1,0 +1,222 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "get_color_for_difficulty",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "puzzle",
+        "Class": "",
+        "Method": "generate_daily_puzzle",
+        "LOC": 62,
+        "CC": 15,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "category_bank",
+        "Class": "",
+        "Method": "get_category_bank",
+        "LOC": 71,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "utils",
+        "Class": "",
+        "Method": "today_date_str",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "utils",
+        "Class": "",
+        "Method": "days_since_epoch",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "utils",
+        "Class": "",
+        "Method": "get_seeded_random",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "__init__",
+        "LOC": 27,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "build_ui",
+        "LOC": 33,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "load_puzzle",
+        "LOC": 20,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "update_grid",
+        "LOC": 26,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "on_word_click",
+        "LOC": 24,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "submit_guess",
+        "LOC": 19,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "handle_correct_group",
+        "LOC": 19,
+        "CC": 6,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "handle_incorrect_guess",
+        "LOC": 14,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "_revert_selected_highlight",
+        "LOC": 5,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "add_solved_panel",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "game_over",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "shuffle_words",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "deselect_all",
+        "LOC": 7,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "show_how_to_play",
+        "LOC": 11,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "reset_today",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "GameApp",
+        "Method": "feedback",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 2
+    }
+]

@@ -1,0 +1,272 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Paddle",
+        "Method": "__init__",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 6
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Paddle",
+        "Method": "rect",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Paddle",
+        "Method": "center_y",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Paddle",
+        "Method": "move",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Paddle",
+        "Method": "update",
+        "LOC": 11,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Paddle",
+        "Method": "draw",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Ball",
+        "Method": "__init__",
+        "LOC": 14,
+        "CC": 1,
+        "PC": 8
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Ball",
+        "Method": "get_rect",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Ball",
+        "Method": "reset",
+        "LOC": 13,
+        "CC": 2,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Ball",
+        "Method": "_normalize_velocity",
+        "LOC": 11,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Ball",
+        "Method": "_increase_speed",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Ball",
+        "Method": "_bounce_vertical",
+        "LOC": 8,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Ball",
+        "Method": "_handle_paddle_collision",
+        "LOC": 15,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Ball",
+        "Method": "update",
+        "LOC": 13,
+        "CC": 7,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "Ball",
+        "Method": "draw",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "entities",
+        "Class": "",
+        "Method": "_clamp",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "__init__",
+        "LOC": 25,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "process_input",
+        "LOC": 21,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "reset_round",
+        "LOC": 15,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "reset_match",
+        "LOC": 11,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "update",
+        "LOC": 21,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "render_center_line",
+        "LOC": 12,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "render_scores",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "render_status",
+        "LOC": 27,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "render",
+        "LOC": 13,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Game",
+        "Method": "run",
+        "LOC": 11,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    }
+]

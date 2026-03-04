@@ -1,0 +1,292 @@
+[
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "__init__",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "setup_start_position",
+        "LOC": 15,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "print_board",
+        "LOC": 14,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "get_king_square",
+        "LOC": 6,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "is_square_attacked",
+        "LOC": 43,
+        "CC": 20,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "in_check",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "_add_move",
+        "LOC": 8,
+        "CC": 2,
+        "PC": 6
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "generate_pseudo_legal_moves",
+        "LOC": 148,
+        "CC": 76,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "generate_legal_moves",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "_update_castling_rights_on_move",
+        "LOC": 28,
+        "CC": 16,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "make_move",
+        "LOC": 57,
+        "CC": 11,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "undo_move",
+        "LOC": 21,
+        "CC": 5,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "is_checkmate",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "is_stalemate",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "board",
+        "Class": "Board",
+        "Method": "get_legal_moves_for_square",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "san",
+        "Class": "",
+        "Method": "_piece_letter",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "san",
+        "Class": "",
+        "Method": "_is_capture",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "san",
+        "Class": "",
+        "Method": "generate_san_for_move",
+        "LOC": 46,
+        "CC": 16,
+        "PC": 3
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "san",
+        "Class": "",
+        "Method": "_normalize_castle",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "san",
+        "Class": "",
+        "Method": "legal_moves_san_map",
+        "LOC": 19,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "san",
+        "Class": "",
+        "Method": "parse_user_input",
+        "LOC": 39,
+        "CC": 8,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "move",
+        "Class": "Move",
+        "Method": "__repr__",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "utils",
+        "Class": "",
+        "Method": "is_white",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "utils",
+        "Class": "",
+        "Method": "index_to_coord",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "utils",
+        "Class": "",
+        "Method": "coord_to_index",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "utils",
+        "Class": "",
+        "Method": "index_to_square",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "utils",
+        "Class": "",
+        "Method": "square_to_index",
+        "LOC": 12,
+        "CC": 6,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "utils",
+        "Class": "",
+        "Method": "piece_unicode",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 54,
+        "CC": 12,
+        "PC": 0
+    }
+]

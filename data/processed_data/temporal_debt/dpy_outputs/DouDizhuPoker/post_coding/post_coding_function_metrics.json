@@ -1,0 +1,772 @@
+[
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Card",
+        "Method": "__init__",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Card",
+        "Method": "is_joker",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Card",
+        "Method": "__repr__",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Card",
+        "Method": "display",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Card",
+        "Method": "sort_key",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Deck",
+        "Method": "__init__",
+        "LOC": 7,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Deck",
+        "Method": "shuffle",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "Deck",
+        "Method": "deal",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "models",
+        "Class": "",
+        "Method": "sort_cards",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "decide_bid",
+        "LOC": 14,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_hand_strength_score",
+        "LOC": 14,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_longest_run",
+        "LOC": 11,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "choose_play",
+        "LOC": 41,
+        "CC": 5,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_low_single_start",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_low_pair_start",
+        "LOC": 9,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_triple_with_attachment_start",
+        "LOC": 16,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_low_straight_start",
+        "LOC": 17,
+        "CC": 8,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_low_pair_sequence_start",
+        "LOC": 12,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_low_triple_sequence_start",
+        "LOC": 12,
+        "CC": 5,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_bomb_if_small",
+        "LOC": 7,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_rocket",
+        "LOC": 6,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_to_beat",
+        "LOC": 31,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_beat_single",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_beat_pair",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_beat_triple",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_beat_triple_single",
+        "LOC": 12,
+        "CC": 4,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_beat_triple_pair",
+        "LOC": 13,
+        "CC": 5,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_beat_straight",
+        "LOC": 12,
+        "CC": 4,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_beat_pair_sequence",
+        "LOC": 12,
+        "CC": 5,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_beat_triple_sequence",
+        "LOC": 12,
+        "CC": 5,
+        "PC": 3
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_beat_triple_sequence_with_wings",
+        "LOC": 32,
+        "CC": 13,
+        "PC": 4
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "ai",
+        "Class": "SimpleAI",
+        "Method": "_find_bomb_to_beat",
+        "LOC": 14,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "__init__",
+        "LOC": 40,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "run",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "new_round",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "process_ai_bidding_loop",
+        "LOC": 21,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "enable_bidding_controls_if_needed",
+        "LOC": 9,
+        "CC": 6,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "on_bid",
+        "LOC": 12,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "after_bidding_to_play",
+        "LOC": 14,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "ai_play_loop",
+        "LOC": 10,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "enable_play_controls_if_needed",
+        "LOC": 12,
+        "CC": 4,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "on_play",
+        "LOC": 17,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "on_pass",
+        "LOC": 14,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "end_round_actions",
+        "LOC": 11,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "update_all",
+        "LOC": 30,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "render_hand",
+        "LOC": 11,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "toggle_card",
+        "LOC": 7,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "get_selected_cards",
+        "LOC": 7,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "gui",
+        "Class": "GameUI",
+        "Method": "clear_selection",
+        "LOC": 5,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "rules",
+        "Class": "",
+        "Method": "_ranks",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "rules",
+        "Class": "",
+        "Method": "_is_consecutive",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "rules",
+        "Class": "",
+        "Method": "_valid_seq_ranks",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "rules",
+        "Class": "",
+        "Method": "_group_by_rank",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "rules",
+        "Class": "",
+        "Method": "identify_combination",
+        "LOC": 91,
+        "CC": 30,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "rules",
+        "Class": "",
+        "Method": "_find_consecutive_run_with_min_length",
+        "LOC": 10,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "rules",
+        "Class": "",
+        "Method": "can_beat",
+        "LOC": 37,
+        "CC": 5,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Player",
+        "Method": "__init__",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Player",
+        "Method": "add_cards",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Player",
+        "Method": "sort_hand",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Player",
+        "Method": "remove_cards",
+        "LOC": 3,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "Player",
+        "Method": "has_cards",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "__init__",
+        "LOC": 17,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "log",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "start_new_round",
+        "LOC": 16,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "get_state",
+        "LOC": 12,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "next_bidder",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "process_ai_bid_if_needed",
+        "LOC": 11,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "apply_bid",
+        "LOC": 31,
+        "CC": 8,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "finish_bidding",
+        "LOC": 5,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "assign_landlord",
+        "LOC": 11,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "current_player",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "next_turn",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "is_start_of_trick",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "try_play",
+        "LOC": 28,
+        "CC": 5,
+        "PC": 2
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "try_pass",
+        "LOC": 10,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "ai_take_turn_if_needed",
+        "LOC": 22,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "post_coding",
+        "Package": "post_coding",
+        "Module": "game",
+        "Class": "DouDizhuGame",
+        "Method": "format_cards",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 1
+    }
+]

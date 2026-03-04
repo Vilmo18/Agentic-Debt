@@ -1,0 +1,302 @@
+[
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "words",
+        "Class": "",
+        "Method": "_validate_answers",
+        "LOC": 10,
+        "CC": 3,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "words",
+        "Class": "",
+        "Method": "is_valid_guess",
+        "LOC": 4,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "words",
+        "Class": "",
+        "Method": "_utc_today",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "words",
+        "Class": "",
+        "Method": "get_daily_word",
+        "LOC": 14,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "words",
+        "Class": "",
+        "Method": "get_random_word",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "WordleGUI",
+        "Method": "__init__",
+        "LOC": 15,
+        "CC": 2,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "WordleGUI",
+        "Method": "_build_board",
+        "LOC": 14,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "WordleGUI",
+        "Method": "_build_input",
+        "LOC": 8,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "WordleGUI",
+        "Method": "_build_keyboard",
+        "LOC": 12,
+        "CC": 3,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "WordleGUI",
+        "Method": "_apply_colors_to_row",
+        "LOC": 12,
+        "CC": 4,
+        "PC": 3
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "WordleGUI",
+        "Method": "_update_keyboard",
+        "LOC": 10,
+        "CC": 5,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "WordleGUI",
+        "Method": "_on_submit",
+        "LOC": 25,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "gui",
+        "Class": "",
+        "Method": "run_gui",
+        "LOC": 3,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "terminal_ui",
+        "Class": "",
+        "Method": "status_to_colors",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "terminal_ui",
+        "Class": "",
+        "Method": "colorize_letter",
+        "LOC": 6,
+        "CC": 1,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "terminal_ui",
+        "Class": "",
+        "Method": "render_row",
+        "LOC": 13,
+        "CC": 5,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "terminal_ui",
+        "Class": "",
+        "Method": "print_board",
+        "LOC": 7,
+        "CC": 3,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "terminal_ui",
+        "Class": "",
+        "Method": "print_keyboard",
+        "LOC": 16,
+        "CC": 4,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "terminal_ui",
+        "Class": "",
+        "Method": "run_terminal_game",
+        "LOC": 52,
+        "CC": 7,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game",
+        "Class": "WordleGame",
+        "Method": "__init__",
+        "LOC": 9,
+        "CC": 3,
+        "PC": 3
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game",
+        "Class": "WordleGame",
+        "Method": "reset_with_date",
+        "LOC": 5,
+        "CC": 1,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game",
+        "Class": "WordleGame",
+        "Method": "attempts_used",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game",
+        "Class": "WordleGame",
+        "Method": "is_won",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game",
+        "Class": "WordleGame",
+        "Method": "is_over",
+        "LOC": 2,
+        "CC": 2,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game",
+        "Class": "WordleGame",
+        "Method": "validate_guess",
+        "LOC": 13,
+        "CC": 2,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game",
+        "Class": "WordleGame",
+        "Method": "submit_guess",
+        "LOC": 19,
+        "CC": 7,
+        "PC": 1
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game",
+        "Class": "WordleGame",
+        "Method": "get_keyboard_status",
+        "LOC": 2,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "game",
+        "Class": "",
+        "Method": "evaluate_guess",
+        "LOC": 24,
+        "CC": 7,
+        "PC": 2
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "parse_args",
+        "LOC": 9,
+        "CC": 1,
+        "PC": 0
+    },
+    {
+        "Project": "final",
+        "Package": "final",
+        "Module": "main",
+        "Class": "",
+        "Method": "main",
+        "LOC": 15,
+        "CC": 4,
+        "PC": 0
+    }
+]

@@ -1,0 +1,8 @@
+[
+    {
+        "Project": "post_test",
+        "Package": "post_test",
+        "Smell": "Feature concentration",
+        "Description": "The component realizes more than one architectural concern/feature. Independent sets of related modules within this component are: [board; main]; [san]; [move]; [utils]. LCC (Lack of Component Cohesion) = 0.8"
+    }
+]
