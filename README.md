@@ -1,4 +1,6 @@
-# Temporal Technical Debt Accumulation in LLM Multi‑Agent Workflows (ChatDev Traces)
+# Report — Temporal Technical Debt Accumulation in LLM Multi‑Agent Workflows (ChatDev Traces)
+
+Generated: 2026-03-04
 
 ## Research Question (Q1)
 **How does technical debt accumulate in LLM‑MA workflows for software development tasks?**
@@ -287,19 +289,19 @@ Interpretation:
 - More code‑review activity tends to coincide with slightly more fine‑grained debt introduced during review (possibly because more review time leads to more incremental patches).
 - More testing activity weakly coincides with slightly less fine‑grained debt introduced during final, but the testing signal is sparse (median testing tokens = 0), so this should be treated as a weak indicator.
 
-<!-- ### 5) What “accumulation” looks like in LLM‑MA pipelines (mechanistic summary)
+### 5) What “accumulation” looks like in LLM‑MA pipelines (mechanistic summary)
 In these traces, technical debt accumulation is best described as:
 - **Front‑loaded** by the initial coding step (large baseline smell volume),
 - **Mutated** during verification (review introduces or removes fine smells),
 - **Often not structurally addressed** (coarse smells stay constant; architecture smells absent),
-- **Heavy‑tailed** across projects (a few traces become extreme outliers by smell count). -->
+- **Heavy‑tailed** across projects (a few traces become extreme outliers by smell count).
 
-<!-- ## Limitations / Threats to Validity
+## Limitations / Threats to Validity
 - **Detector scope**: DPy may under-detect architectural issues in small projects; architecture smells are 0 here, which could reflect tool sensitivity rather than true absence.
 - **Smell meaning**: some “magic numbers” are expected in games (screen sizes, colors). Counts still reflect maintainability risk, but not every instance is equally harmful.
 - **Snapshot reconstruction**: code is reconstructed from chat logs and a heuristic replacement threshold; missing/partial code blocks could affect counts.
 - **No size normalization**: because “density” is treated as **smell count**, cross-project comparisons may partially reflect differences in codebase size.
-- **Testing sparsity**: most traces have 0 test cycles and median testing tokens = 0, limiting inference about the Testing phase’s role. -->
+- **Testing sparsity**: most traces have 0 test cycles and median testing tokens = 0, limiting inference about the Testing phase’s role.
 
 ## Conclusion
 In this ChatDev trace dataset (28 Python projects), technical debt accumulation is **not uniform across phases**:
@@ -339,3 +341,41 @@ In this ChatDev trace dataset (28 Python projects), technical debt accumulation 
 | ConnectionsNYT | 26 | 19 | 10 | 0 | 10 | -7 | -9 | -16 | 4 | 67023 | 9794 |
 | FibonacciNumbers | 9 | 9 | 9 | 1 | 10 | 0 | 0 | 0 | 3 | 36247 | 0 |
 | Minesweeper | 8 | 10 | 10 | 0 | 10 | 2 | 0 | 2 | 2 | 61582 | 0 |
+
+## Appendix B — How many times does the code change?
+Definition used here (matches your colleague’s idea): a “code change” is counted when the reconstructed Python snapshot **actually differs** from the previous snapshot.
+
+- **EffectiveReviewChanges** counts CodeReviewModification steps that really changed the code snapshot (ignores no-op patches).
+- **FinalDiffers** is `1` if the on-disk final snapshot differs from the post-review reconstruction.
+- **CodeChangeEvents** = `EffectiveReviewChanges + FinalDiffers`; **CodeVersions** = `CodeChangeEvents + 1` (the initial post-coding version).
+
+| Project | ReviewModMsgs | EffectiveReviewChanges | FinalDiffers | CodeChangeEvents | CodeVersions | ReviewTokens | TestTokens |
+| :-- | --: | --: | --: | --: | --: | --: | --: |
+| 2048 | 3 | 3 | 1 | 4 | 5 | 65538 | 0 |
+| BudgetTracker | 3 | 3 | 1 | 4 | 5 | 84999 | 0 |
+| Checkers | 3 | 3 | 1 | 4 | 5 | 83918 | 10710 |
+| Chess | 3 | 3 | 1 | 4 | 5 | 110653 | 19656 |
+| ConnectionsNYT | 3 | 3 | 1 | 4 | 5 | 67023 | 9794 |
+| DetectPalindromes | 3 | 3 | 1 | 4 | 5 | 62109 | 0 |
+| DouDizhuPoker | 3 | 3 | 1 | 4 | 5 | 145032 | 0 |
+| EpisodeChooseYourStory | 3 | 3 | 1 | 4 | 5 | 73240 | 0 |
+| FibonacciNumbers | 3 | 3 | 1 | 4 | 5 | 36247 | 0 |
+| FlappyBird | 3 | 3 | 1 | 4 | 5 | 61876 | 12145 |
+| GoldMiner | 3 | 3 | 1 | 4 | 5 | 69538 | 10935 |
+| Gomoku | 3 | 3 | 1 | 4 | 5 | 66926 | 8433 |
+| Mastermind | 3 | 3 | 1 | 4 | 5 | 43283 | 0 |
+| Minesweeper | 3 | 3 | 1 | 4 | 5 | 61582 | 0 |
+| MonopolyGo | 3 | 3 | 1 | 4 | 5 | 102882 | 0 |
+| Pong | 3 | 3 | 1 | 4 | 5 | 55452 | 9369 |
+| ReversiOthello | 3 | 3 | 1 | 4 | 5 | 60736 | 8630 |
+| SnakeGame | 3 | 3 | 1 | 4 | 5 | 61655 | 16359 |
+| StrandsGame | 3 | 3 | 1 | 4 | 5 | 98286 | 0 |
+| StrandsNYT | 3 | 3 | 1 | 4 | 5 | 95263 | 28561 |
+| Sudoku | 3 | 3 | 1 | 4 | 5 | 87149 | 0 |
+| TextBasedSpaceInvaders | 3 | 3 | 1 | 4 | 5 | 56402 | 6399 |
+| TheCrossword | 3 | 3 | 1 | 4 | 5 | 74258 | 0 |
+| TicTacToe | 3 | 3 | 1 | 4 | 5 | 45036 | 0 |
+| Tiny Rouge | 3 | 3 | 1 | 4 | 5 | 73776 | 0 |
+| TriviaQuiz | 3 | 3 | 1 | 4 | 5 | 85488 | 23169 |
+| Wordle | 3 | 3 | 1 | 4 | 5 | 67066 | 0 |
+| ConnectFour | 3 | 3 | 0 | 3 | 4 | 48092 | 0 |
