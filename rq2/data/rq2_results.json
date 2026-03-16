@@ -1,0 +1,1723 @@
+{
+  "summary": {
+    "n_projects_python": 28,
+    "primary_complexity_proxy": "total_reasoning_tokens",
+    "proxy_definition": {
+      "total_reasoning_tokens": "sum of reasoning_tokens across all available phases"
+    },
+    "tiering_method": {
+      "method": "tertiles on total_reasoning_tokens",
+      "low_upper_threshold": 23744.0,
+      "medium_upper_threshold": 27968.0
+    },
+    "proxy_distributions": {
+      "total_reasoning_tokens": {
+        "n": 28.0,
+        "mean": 26285.714285714286,
+        "median": 24768.0,
+        "stdev": 5903.9232584163765,
+        "min": 17280.0,
+        "q1": 22768.0,
+        "q3": 29792.0,
+        "max": 40000.0
+      }
+    },
+    "correlations": {
+      "total_reasoning_tokens": {
+        "final_total_smells": {
+          "pearson": 0.22808664226013217,
+          "spearman": 0.418059993572831,
+          "spearman_permutation_p": 0.027997200279972004
+        },
+        "final_fine_smells": {
+          "pearson": 0.2261577996383836,
+          "spearman": 0.4337762967629069,
+          "spearman_permutation_p": 0.022297770222977704
+        },
+        "final_coarse_smells": {
+          "pearson": 0.17304849979803272,
+          "spearman": 0.19437859779679248,
+          "spearman_permutation_p": 0.3187681231876812
+        },
+        "final_diversity": {
+          "pearson": 0.5499410406454226,
+          "spearman": 0.5435793364236284,
+          "spearman_permutation_p": 0.0035996400359964
+        },
+        "delta_total_smells": {
+          "pearson": 0.29050075911568624,
+          "spearman": 0.4387909636662158,
+          "spearman_permutation_p": 0.018198180181981802
+        },
+        "delta_fine_smells": {
+          "pearson": 0.29050075911568624,
+          "spearman": 0.4387909636662158,
+          "spearman_permutation_p": 0.018198180181981802
+        },
+        "code_change_events": {
+          "pearson": 0.23096232275714995,
+          "spearman": 0.27402181316733315,
+          "spearman_permutation_p": 0.21277872212778723
+        }
+      }
+    },
+    "inferential_statistics": {
+      "permutations": 10000,
+      "seed": 0,
+      "kruskal_wallis": {
+        "final_total_smells": {
+          "h_statistic": 3.8171193415637696,
+          "epsilon_squared": 0.07268477366255079,
+          "permutation_p": 0.14828517148285172
+        },
+        "final_diversity": {
+          "h_statistic": 5.730180309101311,
+          "epsilon_squared": 0.14920721236405243,
+          "permutation_p": 0.0524947505249475
+        },
+        "delta_total_smells": {
+          "h_statistic": 2.6988359201773706,
+          "epsilon_squared": 0.027953436807094823,
+          "permutation_p": 0.27087291270872915
+        }
+      },
+      "high_vs_low": {
+        "final_total_smells": {
+          "median_low": 18.5,
+          "median_high": 46.0,
+          "median_difference": 27.5,
+          "median_difference_permutation_p": 0.05699430056994301,
+          "mean_difference": 15.37777777777778,
+          "mean_difference_permutation_p": 0.38176182381761825,
+          "cliffs_delta": 0.4111111111111111,
+          "cliffs_delta_magnitude": "medium"
+        },
+        "final_diversity": {
+          "median_low": 3.5,
+          "median_high": 6.0,
+          "median_difference": 2.5,
+          "median_difference_permutation_p": 0.10738926107389261,
+          "mean_difference": 1.766666666666667,
+          "mean_difference_permutation_p": 0.03519648035196481,
+          "cliffs_delta": 0.5777777777777777,
+          "cliffs_delta_magnitude": "large"
+        },
+        "delta_total_smells": {
+          "median_low": 0.5,
+          "median_high": 5.0,
+          "median_difference": 4.5,
+          "median_difference_permutation_p": 0.0098990100989901,
+          "mean_difference": 1.0555555555555556,
+          "mean_difference_permutation_p": 0.7833216678332167,
+          "cliffs_delta": 0.3,
+          "cliffs_delta_magnitude": "small"
+        }
+      },
+      "coarse_presence_high_vs_low": {
+        "rate_low": 0.3,
+        "rate_high": 0.4444444444444444,
+        "rate_difference": 0.14444444444444443,
+        "rate_difference_permutation_p": 0.6544345565443456
+      }
+    },
+    "tiers": {
+      "Low": {
+        "n_projects": 10,
+        "reasoning_tokens": {
+          "n": 10.0,
+          "mean": 20761.6,
+          "median": 20192.0,
+          "stdev": 2169.129021315033,
+          "min": 17280.0,
+          "q1": 19360.0,
+          "q3": 22768.0,
+          "max": 23744.0
+        },
+        "debt_metrics": {
+          "final_total_smells": {
+            "n": 10.0,
+            "mean": 34.4,
+            "median": 18.5,
+            "stdev": 39.13566148667989,
+            "min": 10.0,
+            "q1": 13.0,
+            "q3": 40.75,
+            "max": 139.0
+          },
+          "final_fine_smells": {
+            "n": 10.0,
+            "mean": 34.1,
+            "median": 18.0,
+            "stdev": 39.21011774189582,
+            "min": 9.0,
+            "q1": 13.0,
+            "q3": 40.75,
+            "max": 139.0
+          },
+          "final_coarse_smells": {
+            "n": 10.0,
+            "mean": 0.3,
+            "median": 0.0,
+            "stdev": 0.48304589153964794,
+            "min": 0.0,
+            "q1": 0.0,
+            "q3": 0.75,
+            "max": 1.0
+          },
+          "final_diversity": {
+            "n": 10.0,
+            "mean": 3.9,
+            "median": 3.5,
+            "stdev": 1.3703203194062976,
+            "min": 2.0,
+            "q1": 3.0,
+            "q3": 4.75,
+            "max": 6.0
+          },
+          "delta_total_smells": {
+            "n": 10.0,
+            "mean": -0.5,
+            "median": 0.5,
+            "stdev": 5.948856099191582,
+            "min": -17.0,
+            "q1": 0.0,
+            "q3": 2.75,
+            "max": 3.0
+          },
+          "code_change_events": {
+            "n": 10.0,
+            "mean": 3.9,
+            "median": 4.0,
+            "stdev": 0.31622776601683794,
+            "min": 3.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "max": 4.0
+          }
+        },
+        "coarse_smell_presence_rate": 0.3,
+        "top_smell_counts": [
+          [
+            "Magic number",
+            203
+          ],
+          [
+            "Long statement",
+            107
+          ],
+          [
+            "Complex method",
+            17
+          ],
+          [
+            "Empty catch block",
+            8
+          ],
+          [
+            "Long parameter list",
+            3
+          ],
+          [
+            "Multifaceted abstraction",
+            2
+          ],
+          [
+            "Complex conditional",
+            2
+          ],
+          [
+            "Long method",
+            1
+          ],
+          [
+            "Deficient encapsulation",
+            1
+          ]
+        ],
+        "top_smell_project_prevalence": [
+          [
+            "Long statement",
+            10
+          ],
+          [
+            "Complex method",
+            9
+          ],
+          [
+            "Magic number",
+            7
+          ],
+          [
+            "Empty catch block",
+            6
+          ],
+          [
+            "Long parameter list",
+            2
+          ],
+          [
+            "Multifaceted abstraction",
+            2
+          ],
+          [
+            "Long method",
+            1
+          ],
+          [
+            "Deficient encapsulation",
+            1
+          ],
+          [
+            "Complex conditional",
+            1
+          ]
+        ],
+        "top_coarse_smell_counts": [
+          [
+            "Multifaceted abstraction",
+            2
+          ],
+          [
+            "Deficient encapsulation",
+            1
+          ]
+        ],
+        "top_coarse_smell_project_prevalence": [
+          [
+            "Multifaceted abstraction",
+            2
+          ],
+          [
+            "Deficient encapsulation",
+            1
+          ]
+        ],
+        "projects": [
+          "2048",
+          "BudgetTracker",
+          "ConnectFour",
+          "EpisodeChooseYourStory",
+          "FibonacciNumbers",
+          "Mastermind",
+          "Pong",
+          "StrandsGame",
+          "Sudoku",
+          "TicTacToe"
+        ]
+      },
+      "Medium": {
+        "n_projects": 9,
+        "reasoning_tokens": {
+          "n": 9.0,
+          "mean": 25550.222222222223,
+          "median": 25344.0,
+          "stdev": 1624.3830965768034,
+          "min": 23872.0,
+          "q1": 24064.0,
+          "q3": 27008.0,
+          "max": 27968.0
+        },
+        "debt_metrics": {
+          "final_total_smells": {
+            "n": 9.0,
+            "mean": 25.555555555555557,
+            "median": 22.0,
+            "stdev": 12.370439676009005,
+            "min": 10.0,
+            "q1": 18.0,
+            "q3": 30.0,
+            "max": 48.0
+          },
+          "final_fine_smells": {
+            "n": 9.0,
+            "mean": 25.22222222222222,
+            "median": 22.0,
+            "stdev": 12.18377792166471,
+            "min": 10.0,
+            "q1": 17.0,
+            "q3": 29.0,
+            "max": 47.0
+          },
+          "final_coarse_smells": {
+            "n": 9.0,
+            "mean": 0.3333333333333333,
+            "median": 0.0,
+            "stdev": 0.5,
+            "min": 0.0,
+            "q1": 0.0,
+            "q3": 1.0,
+            "max": 1.0
+          },
+          "final_diversity": {
+            "n": 9.0,
+            "mean": 4.0,
+            "median": 4.0,
+            "stdev": 1.5,
+            "min": 2.0,
+            "q1": 3.0,
+            "q3": 5.0,
+            "max": 7.0
+          },
+          "delta_total_smells": {
+            "n": 9.0,
+            "mean": 2.5555555555555554,
+            "median": 3.0,
+            "stdev": 3.1666666666666665,
+            "min": -4.0,
+            "q1": 2.0,
+            "q3": 4.0,
+            "max": 7.0
+          },
+          "code_change_events": {
+            "n": 9.0,
+            "mean": 4.0,
+            "median": 4.0,
+            "stdev": 0.0,
+            "min": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "max": 4.0
+          }
+        },
+        "coarse_smell_presence_rate": 0.3333333333333333,
+        "top_smell_counts": [
+          [
+            "Magic number",
+            104
+          ],
+          [
+            "Long statement",
+            80
+          ],
+          [
+            "Complex method",
+            27
+          ],
+          [
+            "Empty catch block",
+            11
+          ],
+          [
+            "Long parameter list",
+            2
+          ],
+          [
+            "Long method",
+            2
+          ],
+          [
+            "Broken modularization",
+            1
+          ],
+          [
+            "Deficient encapsulation",
+            1
+          ],
+          [
+            "Complex conditional",
+            1
+          ],
+          [
+            "Feature envy",
+            1
+          ]
+        ],
+        "top_smell_project_prevalence": [
+          [
+            "Complex method",
+            9
+          ],
+          [
+            "Long statement",
+            9
+          ],
+          [
+            "Magic number",
+            7
+          ],
+          [
+            "Empty catch block",
+            3
+          ],
+          [
+            "Long parameter list",
+            2
+          ],
+          [
+            "Long method",
+            2
+          ],
+          [
+            "Broken modularization",
+            1
+          ],
+          [
+            "Deficient encapsulation",
+            1
+          ],
+          [
+            "Complex conditional",
+            1
+          ],
+          [
+            "Feature envy",
+            1
+          ]
+        ],
+        "top_coarse_smell_counts": [
+          [
+            "Broken modularization",
+            1
+          ],
+          [
+            "Deficient encapsulation",
+            1
+          ],
+          [
+            "Feature envy",
+            1
+          ]
+        ],
+        "top_coarse_smell_project_prevalence": [
+          [
+            "Broken modularization",
+            1
+          ],
+          [
+            "Deficient encapsulation",
+            1
+          ],
+          [
+            "Feature envy",
+            1
+          ]
+        ],
+        "projects": [
+          "DetectPalindromes",
+          "GoldMiner",
+          "Minesweeper",
+          "ReversiOthello",
+          "SnakeGame",
+          "TextBasedSpaceInvaders",
+          "Tiny Rouge",
+          "TriviaQuiz",
+          "Wordle"
+        ]
+      },
+      "High": {
+        "n_projects": 9,
+        "reasoning_tokens": {
+          "n": 9.0,
+          "mean": 33159.11111111111,
+          "median": 30656.0,
+          "stdev": 4219.688034809104,
+          "min": 29120.0,
+          "q1": 30080.0,
+          "q3": 37696.0,
+          "max": 40000.0
+        },
+        "debt_metrics": {
+          "final_total_smells": {
+            "n": 9.0,
+            "mean": 49.77777777777778,
+            "median": 46.0,
+            "stdev": 34.86322481418557,
+            "min": 10.0,
+            "q1": 28.0,
+            "q3": 51.0,
+            "max": 114.0
+          },
+          "final_fine_smells": {
+            "n": 9.0,
+            "mean": 49.111111111111114,
+            "median": 46.0,
+            "stdev": 34.184954455302574,
+            "min": 10.0,
+            "q1": 27.0,
+            "q3": 50.0,
+            "max": 113.0
+          },
+          "final_coarse_smells": {
+            "n": 9.0,
+            "mean": 0.6666666666666666,
+            "median": 0.0,
+            "stdev": 1.0,
+            "min": 0.0,
+            "q1": 0.0,
+            "q3": 1.0,
+            "max": 3.0
+          },
+          "final_diversity": {
+            "n": 9.0,
+            "mean": 5.666666666666667,
+            "median": 6.0,
+            "stdev": 1.8027756377319946,
+            "min": 3.0,
+            "q1": 4.0,
+            "q3": 6.0,
+            "max": 9.0
+          },
+          "delta_total_smells": {
+            "n": 9.0,
+            "mean": 0.5555555555555556,
+            "median": 5.0,
+            "stdev": 8.125747828832605,
+            "min": -16.0,
+            "q1": -1.0,
+            "q3": 5.0,
+            "max": 9.0
+          },
+          "code_change_events": {
+            "n": 9.0,
+            "mean": 4.0,
+            "median": 4.0,
+            "stdev": 0.0,
+            "min": 4.0,
+            "q1": 4.0,
+            "q3": 4.0,
+            "max": 4.0
+          }
+        },
+        "coarse_smell_presence_rate": 0.4444444444444444,
+        "top_smell_counts": [
+          [
+            "Magic number",
+            293
+          ],
+          [
+            "Long statement",
+            94
+          ],
+          [
+            "Complex method",
+            31
+          ],
+          [
+            "Long identifier",
+            7
+          ],
+          [
+            "Long method",
+            6
+          ],
+          [
+            "Long parameter list",
+            4
+          ],
+          [
+            "Empty catch block",
+            4
+          ],
+          [
+            "Complex conditional",
+            3
+          ],
+          [
+            "Feature envy",
+            3
+          ],
+          [
+            "Insufficient modularization",
+            2
+          ]
+        ],
+        "top_smell_project_prevalence": [
+          [
+            "Long statement",
+            9
+          ],
+          [
+            "Complex method",
+            9
+          ],
+          [
+            "Magic number",
+            9
+          ],
+          [
+            "Long method",
+            6
+          ],
+          [
+            "Long parameter list",
+            4
+          ],
+          [
+            "Empty catch block",
+            4
+          ],
+          [
+            "Long identifier",
+            3
+          ],
+          [
+            "Feature envy",
+            3
+          ],
+          [
+            "Complex conditional",
+            2
+          ],
+          [
+            "Insufficient modularization",
+            1
+          ]
+        ],
+        "top_coarse_smell_counts": [
+          [
+            "Feature envy",
+            3
+          ],
+          [
+            "Insufficient modularization",
+            2
+          ],
+          [
+            "Wide hierarchy",
+            1
+          ]
+        ],
+        "top_coarse_smell_project_prevalence": [
+          [
+            "Feature envy",
+            3
+          ],
+          [
+            "Insufficient modularization",
+            1
+          ],
+          [
+            "Wide hierarchy",
+            1
+          ]
+        ],
+        "projects": [
+          "Checkers",
+          "Chess",
+          "ConnectionsNYT",
+          "DouDizhuPoker",
+          "FlappyBird",
+          "Gomoku",
+          "MonopolyGo",
+          "StrandsNYT",
+          "TheCrossword"
+        ]
+      }
+    },
+    "comparative": {
+      "high_minus_low_median_final_total_smells": 27.5,
+      "high_minus_low_mean_final_total_smells": 15.37777777777778,
+      "high_minus_low_median_final_diversity": 2.5,
+      "high_minus_low_coarse_presence_rate": 0.14444444444444443
+    },
+    "plots": {}
+  },
+  "projects": [
+    {
+      "project": "TheCrossword",
+      "complexity_tier": "High",
+      "total_reasoning_tokens": 40000,
+      "final_total_smells": 24,
+      "final_fine_smells": 24,
+      "final_coarse_smells": 0,
+      "final_diversity": 6,
+      "delta_total_smells": 9,
+      "delta_fine_smells": 9,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          11
+        ],
+        [
+          "Magic number",
+          8
+        ],
+        [
+          "Complex method",
+          2
+        ],
+        [
+          "Long parameter list",
+          1
+        ],
+        [
+          "Empty catch block",
+          1
+        ],
+        [
+          "Long method",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "Checkers",
+      "complexity_tier": "High",
+      "total_reasoning_tokens": 37952,
+      "final_total_smells": 47,
+      "final_fine_smells": 47,
+      "final_coarse_smells": 0,
+      "final_diversity": 6,
+      "delta_total_smells": 5,
+      "delta_fine_smells": 5,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          26
+        ],
+        [
+          "Complex method",
+          9
+        ],
+        [
+          "Long statement",
+          9
+        ],
+        [
+          "Long parameter list",
+          1
+        ],
+        [
+          "Empty catch block",
+          1
+        ],
+        [
+          "Long method",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "StrandsNYT",
+      "complexity_tier": "High",
+      "total_reasoning_tokens": 37696,
+      "final_total_smells": 51,
+      "final_fine_smells": 50,
+      "final_coarse_smells": 1,
+      "final_diversity": 6,
+      "delta_total_smells": 5,
+      "delta_fine_smells": 5,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          33
+        ],
+        [
+          "Long statement",
+          13
+        ],
+        [
+          "Complex method",
+          2
+        ],
+        [
+          "Long parameter list",
+          1
+        ],
+        [
+          "Empty catch block",
+          1
+        ],
+        [
+          "Feature envy",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Feature envy",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "DouDizhuPoker",
+      "complexity_tier": "High",
+      "total_reasoning_tokens": 32896,
+      "final_total_smells": 114,
+      "final_fine_smells": 113,
+      "final_coarse_smells": 1,
+      "final_diversity": 7,
+      "delta_total_smells": 6,
+      "delta_fine_smells": 6,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          90
+        ],
+        [
+          "Long statement",
+          12
+        ],
+        [
+          "Long identifier",
+          5
+        ],
+        [
+          "Complex method",
+          4
+        ],
+        [
+          "Complex conditional",
+          1
+        ],
+        [
+          "Long method",
+          1
+        ],
+        [
+          "Feature envy",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Feature envy",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "Gomoku",
+      "complexity_tier": "High",
+      "total_reasoning_tokens": 30656,
+      "final_total_smells": 46,
+      "final_fine_smells": 46,
+      "final_coarse_smells": 0,
+      "final_diversity": 3,
+      "delta_total_smells": 1,
+      "delta_fine_smells": 1,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          31
+        ],
+        [
+          "Long statement",
+          13
+        ],
+        [
+          "Complex method",
+          2
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "FlappyBird",
+      "complexity_tier": "High",
+      "total_reasoning_tokens": 30336,
+      "final_total_smells": 29,
+      "final_fine_smells": 29,
+      "final_coarse_smells": 0,
+      "final_diversity": 4,
+      "delta_total_smells": 5,
+      "delta_fine_smells": 5,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          15
+        ],
+        [
+          "Long statement",
+          11
+        ],
+        [
+          "Complex method",
+          2
+        ],
+        [
+          "Empty catch block",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "ConnectionsNYT",
+      "complexity_tier": "High",
+      "total_reasoning_tokens": 30080,
+      "final_total_smells": 10,
+      "final_fine_smells": 10,
+      "final_coarse_smells": 0,
+      "final_diversity": 4,
+      "delta_total_smells": -16,
+      "delta_fine_smells": -16,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          7
+        ],
+        [
+          "Complex method",
+          1
+        ],
+        [
+          "Magic number",
+          1
+        ],
+        [
+          "Long method",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "MonopolyGo",
+      "complexity_tier": "High",
+      "total_reasoning_tokens": 29696,
+      "final_total_smells": 28,
+      "final_fine_smells": 27,
+      "final_coarse_smells": 1,
+      "final_diversity": 6,
+      "delta_total_smells": -1,
+      "delta_fine_smells": -1,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          13
+        ],
+        [
+          "Long statement",
+          10
+        ],
+        [
+          "Complex method",
+          2
+        ],
+        [
+          "Long method",
+          1
+        ],
+        [
+          "Long identifier",
+          1
+        ],
+        [
+          "Wide hierarchy",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Wide hierarchy",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "Chess",
+      "complexity_tier": "High",
+      "total_reasoning_tokens": 29120,
+      "final_total_smells": 99,
+      "final_fine_smells": 96,
+      "final_coarse_smells": 3,
+      "final_diversity": 9,
+      "delta_total_smells": -9,
+      "delta_fine_smells": -9,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          76
+        ],
+        [
+          "Long statement",
+          8
+        ],
+        [
+          "Complex method",
+          7
+        ],
+        [
+          "Complex conditional",
+          2
+        ],
+        [
+          "Insufficient modularization",
+          2
+        ],
+        [
+          "Long identifier",
+          1
+        ],
+        [
+          "Long method",
+          1
+        ],
+        [
+          "Long parameter list",
+          1
+        ],
+        [
+          "Feature envy",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Insufficient modularization",
+          2
+        ],
+        [
+          "Feature envy",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "GoldMiner",
+      "complexity_tier": "Medium",
+      "total_reasoning_tokens": 27968,
+      "final_total_smells": 42,
+      "final_fine_smells": 42,
+      "final_coarse_smells": 0,
+      "final_diversity": 5,
+      "delta_total_smells": 7,
+      "delta_fine_smells": 7,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          28
+        ],
+        [
+          "Empty catch block",
+          7
+        ],
+        [
+          "Complex method",
+          3
+        ],
+        [
+          "Long statement",
+          3
+        ],
+        [
+          "Long parameter list",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "SnakeGame",
+      "complexity_tier": "Medium",
+      "total_reasoning_tokens": 27136,
+      "final_total_smells": 30,
+      "final_fine_smells": 29,
+      "final_coarse_smells": 1,
+      "final_diversity": 7,
+      "delta_total_smells": 4,
+      "delta_fine_smells": 4,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          13
+        ],
+        [
+          "Magic number",
+          12
+        ],
+        [
+          "Long parameter list",
+          1
+        ],
+        [
+          "Complex conditional",
+          1
+        ],
+        [
+          "Complex method",
+          1
+        ],
+        [
+          "Long method",
+          1
+        ],
+        [
+          "Feature envy",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Feature envy",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "TriviaQuiz",
+      "complexity_tier": "Medium",
+      "total_reasoning_tokens": 27008,
+      "final_total_smells": 18,
+      "final_fine_smells": 17,
+      "final_coarse_smells": 1,
+      "final_diversity": 5,
+      "delta_total_smells": 2,
+      "delta_fine_smells": 2,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          12
+        ],
+        [
+          "Complex method",
+          2
+        ],
+        [
+          "Empty catch block",
+          2
+        ],
+        [
+          "Long method",
+          1
+        ],
+        [
+          "Deficient encapsulation",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Deficient encapsulation",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "Tiny Rouge",
+      "complexity_tier": "Medium",
+      "total_reasoning_tokens": 26496,
+      "final_total_smells": 48,
+      "final_fine_smells": 47,
+      "final_coarse_smells": 1,
+      "final_diversity": 4,
+      "delta_total_smells": 3,
+      "delta_fine_smells": 3,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          39
+        ],
+        [
+          "Complex method",
+          6
+        ],
+        [
+          "Long statement",
+          2
+        ],
+        [
+          "Broken modularization",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Broken modularization",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "DetectPalindromes",
+      "complexity_tier": "Medium",
+      "total_reasoning_tokens": 25344,
+      "final_total_smells": 22,
+      "final_fine_smells": 22,
+      "final_coarse_smells": 0,
+      "final_diversity": 4,
+      "delta_total_smells": 5,
+      "delta_fine_smells": 5,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          15
+        ],
+        [
+          "Complex method",
+          4
+        ],
+        [
+          "Empty catch block",
+          2
+        ],
+        [
+          "Magic number",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "Wordle",
+      "complexity_tier": "Medium",
+      "total_reasoning_tokens": 24192,
+      "final_total_smells": 23,
+      "final_fine_smells": 23,
+      "final_coarse_smells": 0,
+      "final_diversity": 3,
+      "delta_total_smells": 4,
+      "delta_fine_smells": 4,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          15
+        ],
+        [
+          "Magic number",
+          5
+        ],
+        [
+          "Complex method",
+          3
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "ReversiOthello",
+      "complexity_tier": "Medium",
+      "total_reasoning_tokens": 24064,
+      "final_total_smells": 16,
+      "final_fine_smells": 16,
+      "final_coarse_smells": 0,
+      "final_diversity": 3,
+      "delta_total_smells": 0,
+      "delta_fine_smells": 0,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          8
+        ],
+        [
+          "Magic number",
+          6
+        ],
+        [
+          "Complex method",
+          2
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "Minesweeper",
+      "complexity_tier": "Medium",
+      "total_reasoning_tokens": 23872,
+      "final_total_smells": 10,
+      "final_fine_smells": 10,
+      "final_coarse_smells": 0,
+      "final_diversity": 2,
+      "delta_total_smells": 2,
+      "delta_fine_smells": 2,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          7
+        ],
+        [
+          "Complex method",
+          3
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "TextBasedSpaceInvaders",
+      "complexity_tier": "Medium",
+      "total_reasoning_tokens": 23872,
+      "final_total_smells": 21,
+      "final_fine_smells": 21,
+      "final_coarse_smells": 0,
+      "final_diversity": 3,
+      "delta_total_smells": -4,
+      "delta_fine_smells": -4,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          13
+        ],
+        [
+          "Long statement",
+          5
+        ],
+        [
+          "Complex method",
+          3
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "StrandsGame",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 23744,
+      "final_total_smells": 47,
+      "final_fine_smells": 46,
+      "final_coarse_smells": 1,
+      "final_diversity": 6,
+      "delta_total_smells": 0,
+      "delta_fine_smells": 0,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          23
+        ],
+        [
+          "Long statement",
+          19
+        ],
+        [
+          "Complex method",
+          2
+        ],
+        [
+          "Empty catch block",
+          1
+        ],
+        [
+          "Long method",
+          1
+        ],
+        [
+          "Deficient encapsulation",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Deficient encapsulation",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "2048",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 23360,
+      "final_total_smells": 16,
+      "final_fine_smells": 16,
+      "final_coarse_smells": 0,
+      "final_diversity": 4,
+      "delta_total_smells": 0,
+      "delta_fine_smells": 0,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          7
+        ],
+        [
+          "Magic number",
+          6
+        ],
+        [
+          "Complex method",
+          2
+        ],
+        [
+          "Empty catch block",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "BudgetTracker",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 22976,
+      "final_total_smells": 21,
+      "final_fine_smells": 20,
+      "final_coarse_smells": 1,
+      "final_diversity": 6,
+      "delta_total_smells": 3,
+      "delta_fine_smells": 3,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          9
+        ],
+        [
+          "Magic number",
+          4
+        ],
+        [
+          "Complex method",
+          3
+        ],
+        [
+          "Empty catch block",
+          3
+        ],
+        [
+          "Long parameter list",
+          1
+        ],
+        [
+          "Multifaceted abstraction",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Multifaceted abstraction",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "Sudoku",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 22144,
+      "final_total_smells": 139,
+      "final_fine_smells": 139,
+      "final_coarse_smells": 0,
+      "final_diversity": 5,
+      "delta_total_smells": 0,
+      "delta_fine_smells": 0,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          123
+        ],
+        [
+          "Long statement",
+          10
+        ],
+        [
+          "Complex method",
+          3
+        ],
+        [
+          "Complex conditional",
+          2
+        ],
+        [
+          "Empty catch block",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "TicTacToe",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 20352,
+      "final_total_smells": 13,
+      "final_fine_smells": 13,
+      "final_coarse_smells": 0,
+      "final_diversity": 2,
+      "delta_total_smells": 3,
+      "delta_fine_smells": 3,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          12
+        ],
+        [
+          "Complex method",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "EpisodeChooseYourStory",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 20032,
+      "final_total_smells": 13,
+      "final_fine_smells": 13,
+      "final_coarse_smells": 0,
+      "final_diversity": 3,
+      "delta_total_smells": 3,
+      "delta_fine_smells": 3,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          10
+        ],
+        [
+          "Complex method",
+          2
+        ],
+        [
+          "Empty catch block",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "FibonacciNumbers",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 19456,
+      "final_total_smells": 10,
+      "final_fine_smells": 9,
+      "final_coarse_smells": 1,
+      "final_diversity": 3,
+      "delta_total_smells": 0,
+      "delta_fine_smells": 0,
+      "coarse_smell_present": 1,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          8
+        ],
+        [
+          "Empty catch block",
+          1
+        ],
+        [
+          "Multifaceted abstraction",
+          1
+        ]
+      ],
+      "top_coarse_smells": [
+        [
+          "Multifaceted abstraction",
+          1
+        ]
+      ]
+    },
+    {
+      "project": "ConnectFour",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 19328,
+      "final_total_smells": 28,
+      "final_fine_smells": 28,
+      "final_coarse_smells": 0,
+      "final_diversity": 3,
+      "delta_total_smells": 2,
+      "delta_fine_smells": 2,
+      "coarse_smell_present": 0,
+      "code_change_events": 3,
+      "top_all_smells": [
+        [
+          "Magic number",
+          17
+        ],
+        [
+          "Long statement",
+          10
+        ],
+        [
+          "Complex method",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "Mastermind",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 18944,
+      "final_total_smells": 12,
+      "final_fine_smells": 12,
+      "final_coarse_smells": 0,
+      "final_diversity": 3,
+      "delta_total_smells": -17,
+      "delta_fine_smells": -17,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Long statement",
+          8
+        ],
+        [
+          "Complex method",
+          2
+        ],
+        [
+          "Magic number",
+          2
+        ]
+      ],
+      "top_coarse_smells": []
+    },
+    {
+      "project": "Pong",
+      "complexity_tier": "Low",
+      "total_reasoning_tokens": 17280,
+      "final_total_smells": 45,
+      "final_fine_smells": 45,
+      "final_coarse_smells": 0,
+      "final_diversity": 4,
+      "delta_total_smells": 1,
+      "delta_fine_smells": 1,
+      "coarse_smell_present": 0,
+      "code_change_events": 4,
+      "top_all_smells": [
+        [
+          "Magic number",
+          28
+        ],
+        [
+          "Long statement",
+          14
+        ],
+        [
+          "Long parameter list",
+          2
+        ],
+        [
+          "Complex method",
+          1
+        ]
+      ],
+      "top_coarse_smells": []
+    }
+  ]
+}

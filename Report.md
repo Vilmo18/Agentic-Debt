@@ -341,3 +341,41 @@ In this ChatDev trace dataset (28 Python projects), technical debt accumulation 
 | ConnectionsNYT | 26 | 19 | 10 | 0 | 10 | -7 | -9 | -16 | 4 | 67023 | 9794 |
 | FibonacciNumbers | 9 | 9 | 9 | 1 | 10 | 0 | 0 | 0 | 3 | 36247 | 0 |
 | Minesweeper | 8 | 10 | 10 | 0 | 10 | 2 | 0 | 2 | 2 | 61582 | 0 |
+
+## Appendix B — How many times does the code change?
+Definition used here (matches your colleague’s idea): a “code change” is counted when the reconstructed Python snapshot **actually differs** from the previous snapshot.
+
+- **EffectiveReviewChanges** counts CodeReviewModification steps that really changed the code snapshot (ignores no-op patches).
+- **FinalDiffers** is `1` if the on-disk final snapshot differs from the post-review reconstruction.
+- **CodeChangeEvents** = `EffectiveReviewChanges + FinalDiffers`; **CodeVersions** = `CodeChangeEvents + 1` (the initial post-coding version).
+
+| Project | ReviewModMsgs | EffectiveReviewChanges | FinalDiffers | CodeChangeEvents | CodeVersions | ReviewTokens | TestTokens |
+| :-- | --: | --: | --: | --: | --: | --: | --: |
+| 2048 | 3 | 3 | 1 | 4 | 5 | 65538 | 0 |
+| BudgetTracker | 3 | 3 | 1 | 4 | 5 | 84999 | 0 |
+| Checkers | 3 | 3 | 1 | 4 | 5 | 83918 | 10710 |
+| Chess | 3 | 3 | 1 | 4 | 5 | 110653 | 19656 |
+| ConnectionsNYT | 3 | 3 | 1 | 4 | 5 | 67023 | 9794 |
+| DetectPalindromes | 3 | 3 | 1 | 4 | 5 | 62109 | 0 |
+| DouDizhuPoker | 3 | 3 | 1 | 4 | 5 | 145032 | 0 |
+| EpisodeChooseYourStory | 3 | 3 | 1 | 4 | 5 | 73240 | 0 |
+| FibonacciNumbers | 3 | 3 | 1 | 4 | 5 | 36247 | 0 |
+| FlappyBird | 3 | 3 | 1 | 4 | 5 | 61876 | 12145 |
+| GoldMiner | 3 | 3 | 1 | 4 | 5 | 69538 | 10935 |
+| Gomoku | 3 | 3 | 1 | 4 | 5 | 66926 | 8433 |
+| Mastermind | 3 | 3 | 1 | 4 | 5 | 43283 | 0 |
+| Minesweeper | 3 | 3 | 1 | 4 | 5 | 61582 | 0 |
+| MonopolyGo | 3 | 3 | 1 | 4 | 5 | 102882 | 0 |
+| Pong | 3 | 3 | 1 | 4 | 5 | 55452 | 9369 |
+| ReversiOthello | 3 | 3 | 1 | 4 | 5 | 60736 | 8630 |
+| SnakeGame | 3 | 3 | 1 | 4 | 5 | 61655 | 16359 |
+| StrandsGame | 3 | 3 | 1 | 4 | 5 | 98286 | 0 |
+| StrandsNYT | 3 | 3 | 1 | 4 | 5 | 95263 | 28561 |
+| Sudoku | 3 | 3 | 1 | 4 | 5 | 87149 | 0 |
+| TextBasedSpaceInvaders | 3 | 3 | 1 | 4 | 5 | 56402 | 6399 |
+| TheCrossword | 3 | 3 | 1 | 4 | 5 | 74258 | 0 |
+| TicTacToe | 3 | 3 | 1 | 4 | 5 | 45036 | 0 |
+| Tiny Rouge | 3 | 3 | 1 | 4 | 5 | 73776 | 0 |
+| TriviaQuiz | 3 | 3 | 1 | 4 | 5 | 85488 | 23169 |
+| Wordle | 3 | 3 | 1 | 4 | 5 | 67066 | 0 |
+| ConnectFour | 3 | 3 | 0 | 3 | 4 | 48092 | 0 |

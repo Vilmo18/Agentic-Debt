@@ -137,6 +137,40 @@ def apply_updates(
     return state
 
 
+def apply_updates_with_change_count(
+    base_state: dict[str, str],
+    updates: Iterable[dict[str, str]],
+    *,
+    replace_threshold: float,
+) -> tuple[dict[str, str], int, int]:
+    """
+    Apply sequential updates and count how many steps actually change the code state.
+
+    Returns:
+      (final_state, n_updates_with_python, n_effective_changes)
+    """
+    state = dict(base_state)
+    n_updates_with_python = 0
+    n_effective_changes = 0
+
+    for files in updates:
+        if not files:
+            continue
+        n_updates_with_python += 1
+        before = state
+        ratio = len(files) / max(1, len(state))
+        if ratio >= replace_threshold:
+            after = dict(files)
+        else:
+            after = dict(state)
+            after.update(files)
+        if after != before:
+            n_effective_changes += 1
+        state = after
+
+    return state, n_updates_with_python, n_effective_changes
+
+
 def find_dpy_binary(explicit: Optional[str]) -> Path:
     if explicit:
         return Path(explicit).expanduser()
@@ -416,6 +450,7 @@ def main() -> int:
                 "code_review_total_tokens": 0,
                 "testing_total_tokens": 0,
             }
+
         verification_tokens = token_totals_by_project[project_name]
 
         review_cycles = sum(1 for m in messages if "on : CodeReviewModification" in m.header)
@@ -461,6 +496,7 @@ def main() -> int:
                 "review_cycles": review_cycles,
                 "test_cycles": test_cycles,
                 "verification_tokens": verification_tokens,
+                "code_change": None,
                 "counts": counts,
                 "deltas": deltas,
             }
@@ -477,14 +513,24 @@ def main() -> int:
 
         review_mod_msgs = [m for m in messages if "on : CodeReviewModification" in m.header]
         review_updates = [extract_python_files_from_message(m) for m in review_mod_msgs]
-        post_review_files = apply_updates(
+        post_review_files, n_review_updates_with_python, n_review_effective_changes = (
+        apply_updates_with_change_count(
             post_coding_files,
             review_updates,
             replace_threshold=args.replace_threshold,
         )
+        )
 
         # Final snapshot comes from the on-disk trace directory by default.
         final_snapshot_files = final_files if final_files else post_review_files
+        final_differs_from_post_review = final_snapshot_files != post_review_files
+
+        # "How many times did the code change?" proxy:
+        # - count review modification steps that actually changed the reconstructed Python snapshot
+        # - count a final change if the on-disk final snapshot differs from post-review reconstruction
+        # Note: post_coding is the initial version (not counted as a "change event").
+        code_change_events = n_review_effective_changes + (1 if final_differs_from_post_review else 0)
+        code_versions = code_change_events + 1
 
         # Persist snapshots to disk (reproducibility).
         project_snap_root = snapshots_dir / project_name
@@ -497,22 +543,22 @@ def main() -> int:
 
         # Run DPy.
         smells_coding = run_dpy(
-            dpy_path,
-            post_coding_dir,
-            dpy_dir / project_name / "post_coding",
-            force=bool(args.force_dpy),
+        dpy_path,
+        post_coding_dir,
+        dpy_dir / project_name / "post_coding",
+        force=bool(args.force_dpy),
         )
         smells_review = run_dpy(
-            dpy_path,
-            post_review_dir,
-            dpy_dir / project_name / "post_review",
-            force=bool(args.force_dpy),
+        dpy_path,
+        post_review_dir,
+        dpy_dir / project_name / "post_review",
+        force=bool(args.force_dpy),
         )
         smells_final = run_dpy(
-            dpy_path,
-            final_dir,
-            dpy_dir / project_name / "final",
-            force=bool(args.force_dpy),
+        dpy_path,
+        final_dir,
+        dpy_dir / project_name / "final",
+        force=bool(args.force_dpy),
         )
         coding_arch = smell_type_counts(smells_coding["architecture_smells"])
         coding_design = smell_type_counts(smells_coding["design_smells"])
@@ -539,52 +585,52 @@ def main() -> int:
         final_files_n = len(final_snapshot_files)
 
         counts = {
-            "post_coding": {
-                # Raw category counts (DPy buckets)
-                "arch": sum(coding_arch.values()),
-                "design": sum(coding_design.values()),
-                "impl": sum(coding_impl.values()),
-                # Granularity (coarse vs fine)
-                "coarse": sum(coding_coarse.values()),  # architecture + design
-                "fine": sum(coding_fine.values()),  # implementation
-                "total": sum(coding_total.values()),
-                # Diversity (distinct smell types)
-                "coarse_unique": len(coding_coarse),
-                "fine_unique": len(coding_fine),
-                "total_unique": len(coding_total),
-                # Representative smell types
-                "impl_top": coding_impl.most_common(10),
-                "coarse_top": coding_coarse.most_common(10),
-                "n_files": coding_files_n,
-            },
-            "post_review": {
-                "arch": sum(review_arch.values()),
-                "design": sum(review_design.values()),
-                "impl": sum(review_impl.values()),
-                "coarse": sum(review_coarse.values()),
-                "fine": sum(review_fine.values()),
-                "total": sum(review_total.values()),
-                "coarse_unique": len(review_coarse),
-                "fine_unique": len(review_fine),
-                "total_unique": len(review_total),
-                "impl_top": review_impl.most_common(10),
-                "coarse_top": review_coarse.most_common(10),
-                "n_files": review_files_n,
-            },
-            "final": {
-                "arch": sum(final_arch.values()),
-                "design": sum(final_design.values()),
-                "impl": sum(final_impl.values()),
-                "coarse": sum(final_coarse.values()),
-                "fine": sum(final_fine.values()),
-                "total": sum(final_total.values()),
-                "coarse_unique": len(final_coarse),
-                "fine_unique": len(final_fine),
-                "total_unique": len(final_total),
-                "impl_top": final_impl.most_common(10),
-                "coarse_top": final_coarse.most_common(10),
-                "n_files": final_files_n,
-            },
+        "post_coding": {
+            # Raw category counts (DPy buckets)
+            "arch": sum(coding_arch.values()),
+            "design": sum(coding_design.values()),
+            "impl": sum(coding_impl.values()),
+            # Granularity (coarse vs fine)
+            "coarse": sum(coding_coarse.values()),  # architecture + design
+            "fine": sum(coding_fine.values()),  # implementation
+            "total": sum(coding_total.values()),
+            # Diversity (distinct smell types)
+            "coarse_unique": len(coding_coarse),
+            "fine_unique": len(coding_fine),
+            "total_unique": len(coding_total),
+            # Representative smell types
+            "impl_top": coding_impl.most_common(10),
+            "coarse_top": coding_coarse.most_common(10),
+            "n_files": coding_files_n,
+        },
+        "post_review": {
+            "arch": sum(review_arch.values()),
+            "design": sum(review_design.values()),
+            "impl": sum(review_impl.values()),
+            "coarse": sum(review_coarse.values()),
+            "fine": sum(review_fine.values()),
+            "total": sum(review_total.values()),
+            "coarse_unique": len(review_coarse),
+            "fine_unique": len(review_fine),
+            "total_unique": len(review_total),
+            "impl_top": review_impl.most_common(10),
+            "coarse_top": review_coarse.most_common(10),
+            "n_files": review_files_n,
+        },
+        "final": {
+            "arch": sum(final_arch.values()),
+            "design": sum(final_design.values()),
+            "impl": sum(final_impl.values()),
+            "coarse": sum(final_coarse.values()),
+            "fine": sum(final_fine.values()),
+            "total": sum(final_total.values()),
+            "coarse_unique": len(final_coarse),
+            "fine_unique": len(final_fine),
+            "total_unique": len(final_total),
+            "impl_top": final_impl.most_common(10),
+            "coarse_top": final_coarse.most_common(10),
+            "n_files": final_files_n,
+        },
         }
 
         agg_impl_smells["post_coding"].update(coding_impl)
@@ -624,6 +670,14 @@ def main() -> int:
                 "review_cycles": review_cycles,
                 "test_cycles": test_cycles,
                 "verification_tokens": verification_tokens,
+                "code_change": {
+                    "review_mod_messages": int(len(review_mod_msgs)),
+                    "review_updates_with_python": int(n_review_updates_with_python),
+                    "review_effective_changes": int(n_review_effective_changes),
+                    "final_differs_from_post_review": bool(final_differs_from_post_review),
+                    "events": int(code_change_events),
+                    "versions": int(code_versions),
+                },
                 "counts": counts,
                 "deltas": {
                     "impl_post_review_minus_post_coding": delta_review,
