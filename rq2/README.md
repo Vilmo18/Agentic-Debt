@@ -19,7 +19,6 @@ This folder contains the standalone analysis for:
 - `scripts/task_complexity_debt_analysis.py`: computes the metrics, statistics, and optional plots
 - `data/rq2_results.json`: machine-readable results
 - `Report.md`: narrative report with tables and interpretation
-- `plots/final_total_smells_heavy_tail.svg`: ranked final-smell plot showing the heavy-tailed distribution
 
 ## Run
 
@@ -151,7 +150,11 @@ Interpretation:
 - The continuous correlation view remains more stable than the three-bin tier view.
 - `Final diversity` is now the strongest tier-level result (`p = 0.032`).
 - `Final architectural smells` is close to tier-level significance (`p = 0.057`) and shows a large High-vs-Low effect size.
-- Implementation smells still matter, but their tier split is noisier because counts are heavy-tailed.
+- Implementation smells still matter, but their tier split is noisier because counts are heavy-tailed. The ranked distribution in `agent_debt/rq2/plots/final_total_smells_heavy_tail.svg` makes this visible: a few projects sit far above the rest, followed by a long low-count tail.
+
+![Heavy-tailed distribution of final total smells](plots/final_total_smells_heavy_tail.svg)
+
+Figure interpretation: the first few ranked projects account for a disproportionate share of final smells, while most projects cluster in a much lower range. This is why medians and rank-based statistics are more reliable than means alone for RQ2.
 
 ### 4. Smell-type profiles by tier
 
