@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560">
+<style>
+.title { font: 700 22px sans-serif; fill: #111827; }
+.subtitle { font: 12px sans-serif; fill: #4b5563; }
+.axis { stroke: #111827; stroke-width: 1.2; }
+.grid { stroke: #e5e7eb; stroke-width: 1; }
+.bar { fill: #7ba6d8; }
+.bar-top { fill: #f58518; }
+.rank-line { fill: none; stroke: #1d4ed8; stroke-width: 2; opacity: 0.9; }
+.head-region { fill: #fff7ed; stroke: #fed7aa; stroke-width: 1; }
+.summary-box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; rx: 10; }
+.summary-title { font: 700 12px sans-serif; fill: #111827; }
+.summary-text { font: 12px sans-serif; fill: #334155; }
+.outlier-box { fill: #fff7ed; stroke: #fed7aa; stroke-width: 1; rx: 10; }
+.outlier-title { font: 700 12px sans-serif; fill: #9a3412; }
+.outlier-text { font: 12px sans-serif; fill: #7c2d12; }
+.marker-circle { fill: #1d4ed8; stroke: white; stroke-width: 1.5; }
+.marker-text { font: 10px sans-serif; font-weight: 700; fill: white; }
+.tick { font: 11px sans-serif; fill: #374151; }
+.label { font: 12px sans-serif; fill: #111827; }
+.note { font: 12px sans-serif; fill: #374151; }
+.median-line { stroke: #ef4444; stroke-width: 1.5; stroke-dasharray: 6 4; }
+.q3-line { stroke: #10b981; stroke-width: 1.5; stroke-dasharray: 4 4; }
+.quartile-label { font: 11px sans-serif; fill: #9a3412; font-weight: 700; }
+</style>
+<rect x="0" y="0" width="1120" height="560" fill="#ffffff"/>
+<rect x="72" y="84" width="184.00" height="388" class="head-region"/>
+<text x="24" y="30" class="title">Final total smells by project (sorted descending)</text>
+<text x="24" y="50" class="subtitle">Projects are ranked from highest to lowest final total smells. A steep head plus a long flat tail indicates a heavy-tailed distribution.</text>
+<text x="164.00" y="74" text-anchor="middle" class="quartile-label">Shaded area = top quartile of projects</text>
+<line x1="72" y1="472.00" x2="808" y2="472.00" class="grid"/>
+<text x="62" y="476.00" text-anchor="end" class="tick">0.0</text>
+<line x1="72" y1="393.57" x2="808" y2="393.57" class="grid"/>
+<text x="62" y="397.57" text-anchor="end" class="tick">28.5</text>
+<line x1="72" y1="334.41" x2="808" y2="334.41" class="grid"/>
+<text x="62" y="338.41" text-anchor="end" class="tick">50.0</text>
+<line x1="72" y1="84.00" x2="808" y2="84.00" class="grid"/>
+<text x="62" y="88.00" text-anchor="end" class="tick">141.0</text>
+<line x1="72" y1="84" x2="72" y2="472" class="axis"/>
+<line x1="72" y1="472" x2="808" y2="472" class="axis"/>
+<line x1="72" y1="393.57" x2="808" y2="393.57" class="median-line"/>
+<line x1="72" y1="334.41" x2="808" y2="334.41" class="q3-line"/>
+<text x="806" y="387.57" text-anchor="end" class="tick">median = 28.5</text>
+<text x="806" y="328.41" text-anchor="end" class="tick">Q3 = 50.0</text>
+<rect x="75.68" y="84.00" width="18.93" height="388.00" class="bar-top"/>
+<rect x="101.97" y="147.29" width="18.93" height="324.71" class="bar-top"/>
+<rect x="128.25" y="191.32" width="18.93" height="280.68" class="bar-top"/>
+<rect x="154.54" y="317.90" width="18.93" height="154.10" class="bar"/>
+<rect x="180.82" y="320.65" width="18.93" height="151.35" class="bar"/>
+<rect x="207.11" y="326.16" width="18.93" height="145.84" class="bar"/>
+<rect x="233.39" y="334.41" width="18.93" height="137.59" class="bar"/>
+<rect x="259.68" y="334.41" width="18.93" height="137.59" class="bar"/>
+<rect x="285.97" y="339.91" width="18.93" height="132.09" class="bar"/>
+<rect x="312.25" y="345.42" width="18.93" height="126.58" class="bar"/>
+<rect x="338.54" y="378.44" width="18.93" height="93.56" class="bar"/>
+<rect x="364.82" y="378.44" width="18.93" height="93.56" class="bar"/>
+<rect x="391.11" y="389.45" width="18.93" height="82.55" class="bar"/>
+<rect x="417.39" y="392.20" width="18.93" height="79.80" class="bar"/>
+<rect x="443.68" y="394.95" width="18.93" height="77.05" class="bar"/>
+<rect x="469.97" y="394.95" width="18.93" height="77.05" class="bar"/>
+<rect x="496.25" y="400.45" width="18.93" height="71.55" class="bar"/>
+<rect x="522.54" y="403.21" width="18.93" height="68.79" class="bar"/>
+<rect x="548.82" y="405.96" width="18.93" height="66.04" class="bar"/>
+<rect x="575.11" y="414.21" width="18.93" height="57.79" class="bar"/>
+<rect x="601.39" y="422.47" width="18.93" height="49.53" class="bar"/>
+<rect x="627.68" y="422.47" width="18.93" height="49.53" class="bar"/>
+<rect x="653.97" y="422.47" width="18.93" height="49.53" class="bar"/>
+<rect x="680.25" y="430.72" width="18.93" height="41.28" class="bar"/>
+<rect x="706.54" y="430.72" width="18.93" height="41.28" class="bar"/>
+<rect x="732.82" y="436.23" width="18.93" height="35.77" class="bar"/>
+<rect x="759.11" y="438.98" width="18.93" height="33.02" class="bar"/>
+<rect x="785.39" y="441.73" width="18.93" height="30.27" class="bar"/>
+<polyline points="85.14,84.00 111.43,147.29 137.71,191.32 164.00,317.90 190.29,320.65 216.57,326.16 242.86,334.41 269.14,334.41 295.43,339.91 321.71,345.42 348.00,378.44 374.29,378.44 400.57,389.45 426.86,392.20 453.14,394.95 479.43,394.95 505.71,400.45 532.00,403.21 558.29,405.96 584.57,414.21 610.86,422.47 637.14,422.47 663.43,422.47 689.71,430.72 716.00,430.72 742.29,436.23 768.57,438.98 794.86,441.73" class="rank-line"/>
+<circle cx="85.14" cy="98.00" r="10" class="marker-circle"/>
+<text x="85.14" y="101.00" text-anchor="middle" class="marker-text">1</text>
+<circle cx="111.43" cy="161.29" r="10" class="marker-circle"/>
+<text x="111.43" y="164.29" text-anchor="middle" class="marker-text">2</text>
+<circle cx="137.71" cy="205.32" r="10" class="marker-circle"/>
+<text x="137.71" y="208.32" text-anchor="middle" class="marker-text">3</text>
+<line x1="85.14" y1="472" x2="85.14" y2="478" class="axis"/>
+<text x="85.14" y="494" text-anchor="middle" class="tick">1</text>
+<line x1="269.14" y1="472" x2="269.14" y2="478" class="axis"/>
+<text x="269.14" y="494" text-anchor="middle" class="tick">8</text>
+<line x1="453.14" y1="472" x2="453.14" y2="478" class="axis"/>
+<text x="453.14" y="494" text-anchor="middle" class="tick">15</text>
+<line x1="637.14" y1="472" x2="637.14" y2="478" class="axis"/>
+<text x="637.14" y="494" text-anchor="middle" class="tick">22</text>
+<line x1="794.86" y1="472" x2="794.86" y2="478" class="axis"/>
+<text x="794.86" y="494" text-anchor="middle" class="tick">28</text>
+<text x="440.00" y="540" text-anchor="middle" class="label">Project rank by final total smells</text>
+<text x="18" y="278.00" transform="rotate(-90 18 278.00)" text-anchor="middle" class="label">Final total smells</text>
+<line x1="817.00" y1="84" x2="817.00" y2="472" class="grid"/>
+<rect x="826" y="96" width="270" height="114" class="summary-box"/>
+<text x="840" y="118" class="summary-title">Heavy-tail cues</text>
+<text x="840" y="140" class="summary-text">max / median = 4.95x</text>
+<text x="840" y="158" class="summary-text">top 3 projects = 32.3% of all final smells</text>
+<text x="840" y="176" class="summary-text">top quartile (7 projects) = 51.4%</text>
+<text x="840" y="194" class="summary-text">median = 28.5, Q3 = 50.0, min = 11.0</text>
+<rect x="826" y="228" width="270" height="112" class="outlier-box"/>
+<text x="840" y="250" class="outlier-title">Top outliers</text>
+<text x="840" y="272" class="outlier-text">1. Sudoku = 141</text>
+<text x="840" y="290" class="outlier-text">2. DouDizhuPoker = 118</text>
+<text x="840" y="308" class="outlier-text">3. Chess = 102</text>
+<text x="840" y="326" class="outlier-text">Orange bars mark the top 3 projects.</text>
+<text x="24" y="508" class="note">top outlier: Sudoku = 141 | 3rd highest = Chess = 102 | min = 11</text>
+<text x="24" y="528" class="note">Interpretation: a few projects concentrate very high smell counts, while many projects remain near the low end.</text>
+</svg>

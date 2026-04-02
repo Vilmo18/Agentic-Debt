@@ -1016,7 +1016,9 @@
       "high_minus_low_structural_presence_rate": 0.14444444444444443,
       "high_minus_low_architecture_presence_rate": 0.0
     },
-    "plots": {}
+    "plots": {
+      "final_total_smells_heavy_tail": "agent_debt/rq2/plots/final_total_smells_heavy_tail.svg"
+    }
   },
   "projects": [
     {

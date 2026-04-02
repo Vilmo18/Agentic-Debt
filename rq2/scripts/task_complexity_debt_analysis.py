@@ -10,6 +10,7 @@ import statistics
 import sys
 import types
 from collections import Counter
+from html import escape
 from pathlib import Path
 from typing import Any
 
@@ -369,17 +370,211 @@ def assign_tier(value: float, low_high_thresholds: tuple[float, float]) -> str:
     return "High"
 
 
+def write_heavy_tail_rank_svg(rows: list[dict[str, Any]], output_path: Path) -> str:
+    ranked_rows = sorted(rows, key=lambda row: (-float(row["final_total_smells"]), row["project"].lower()))
+    values = [float(row["final_total_smells"]) for row in ranked_rows]
+    if not values:
+        return ""
+
+    width = 1120
+    height = 560
+    left_margin = 72
+    right_margin = 24
+    top_margin = 84
+    bottom_margin = 88
+    side_panel_gap = 18
+    side_panel_width = 270
+    plot_right = width - right_margin - side_panel_width - side_panel_gap
+    plot_width = plot_right - left_margin
+    plot_height = height - top_margin - bottom_margin
+    max_value = max(values)
+    median_value = statistics.median(values)
+    q3_value = percentile(values, 0.75)
+    min_value = min(values)
+    total_sum = sum(values)
+    n = len(values)
+    step = plot_width / max(n, 1)
+    bar_width = max(3.0, step * 0.72)
+    top_quartile_count = max(1, math.ceil(n * 0.25))
+    top_3_share = sum(values[: min(3, n)]) / total_sum if total_sum else 0.0
+    top_quartile_share = sum(values[:top_quartile_count]) / total_sum if total_sum else 0.0
+    max_to_median_ratio = max_value / median_value if median_value else 0.0
+
+    def x_pos(index: int) -> float:
+        return left_margin + index * step + (step - bar_width) / 2.0
+
+    def y_pos(value: float) -> float:
+        if max_value <= 0:
+            return top_margin + plot_height
+        return top_margin + plot_height - (value / max_value) * plot_height
+
+    y_ticks = sorted({0.0, median_value, q3_value, max_value})
+    line_points: list[str] = []
+    head_region_width = min(plot_width, top_quartile_count * step)
+    summary_box_x = plot_right + side_panel_gap
+    summary_box_y = 96
+    summary_box_width = side_panel_width
+    summary_box_height = 114
+    outlier_box_x = summary_box_x
+    outlier_box_y = summary_box_y + summary_box_height + 18
+    outlier_box_width = summary_box_width
+    outlier_box_height = 112
+    svg_parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+        '<style>',
+        '.title { font: 700 22px sans-serif; fill: #111827; }',
+        '.subtitle { font: 12px sans-serif; fill: #4b5563; }',
+        '.axis { stroke: #111827; stroke-width: 1.2; }',
+        '.grid { stroke: #e5e7eb; stroke-width: 1; }',
+        '.bar { fill: #7ba6d8; }',
+        '.bar-top { fill: #f58518; }',
+        '.rank-line { fill: none; stroke: #1d4ed8; stroke-width: 2; opacity: 0.9; }',
+        '.head-region { fill: #fff7ed; stroke: #fed7aa; stroke-width: 1; }',
+        '.summary-box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; rx: 10; }',
+        '.summary-title { font: 700 12px sans-serif; fill: #111827; }',
+        '.summary-text { font: 12px sans-serif; fill: #334155; }',
+        '.outlier-box { fill: #fff7ed; stroke: #fed7aa; stroke-width: 1; rx: 10; }',
+        '.outlier-title { font: 700 12px sans-serif; fill: #9a3412; }',
+        '.outlier-text { font: 12px sans-serif; fill: #7c2d12; }',
+        '.marker-circle { fill: #1d4ed8; stroke: white; stroke-width: 1.5; }',
+        '.marker-text { font: 10px sans-serif; font-weight: 700; fill: white; }',
+        '.tick { font: 11px sans-serif; fill: #374151; }',
+        '.label { font: 12px sans-serif; fill: #111827; }',
+        '.note { font: 12px sans-serif; fill: #374151; }',
+        '.median-line { stroke: #ef4444; stroke-width: 1.5; stroke-dasharray: 6 4; }',
+        '.q3-line { stroke: #10b981; stroke-width: 1.5; stroke-dasharray: 4 4; }',
+        '.quartile-label { font: 11px sans-serif; fill: #9a3412; font-weight: 700; }',
+        '</style>',
+        f'<rect x="0" y="0" width="{width}" height="{height}" fill="#ffffff"/>',
+        f'<rect x="{left_margin}" y="{top_margin}" width="{head_region_width:.2f}" height="{plot_height}" class="head-region"/>',
+        '<text x="24" y="30" class="title">Final total smells by project (sorted descending)</text>',
+        '<text x="24" y="50" class="subtitle">Projects are ranked from highest to lowest final total smells. A steep head plus a long flat tail indicates a heavy-tailed distribution.</text>',
+        f'<text x="{left_margin + head_region_width / 2:.2f}" y="{top_margin - 10}" text-anchor="middle" class="quartile-label">Shaded area = top quartile of projects</text>',
+    ]
+
+    for tick in y_ticks:
+        y = y_pos(tick)
+        svg_parts.append(f'<line x1="{left_margin}" y1="{y:.2f}" x2="{plot_right}" y2="{y:.2f}" class="grid"/>')
+        svg_parts.append(f'<text x="{left_margin - 10}" y="{y + 4:.2f}" text-anchor="end" class="tick">{tick:.1f}</text>')
+
+    svg_parts.append(f'<line x1="{left_margin}" y1="{top_margin}" x2="{left_margin}" y2="{top_margin + plot_height}" class="axis"/>')
+    svg_parts.append(
+        f'<line x1="{left_margin}" y1="{top_margin + plot_height}" x2="{plot_right}" y2="{top_margin + plot_height}" class="axis"/>'
+    )
+
+    median_y = y_pos(median_value)
+    q3_y = y_pos(q3_value)
+    svg_parts.append(
+        f'<line x1="{left_margin}" y1="{median_y:.2f}" x2="{plot_right}" y2="{median_y:.2f}" class="median-line"/>'
+    )
+    svg_parts.append(
+        f'<line x1="{left_margin}" y1="{q3_y:.2f}" x2="{plot_right}" y2="{q3_y:.2f}" class="q3-line"/>'
+    )
+    svg_parts.append(
+        f'<text x="{plot_right - 2}" y="{median_y - 6:.2f}" text-anchor="end" class="tick">median = {median_value:.1f}</text>'
+    )
+    svg_parts.append(
+        f'<text x="{plot_right - 2}" y="{q3_y - 6:.2f}" text-anchor="end" class="tick">Q3 = {q3_value:.1f}</text>'
+    )
+
+    for index, row in enumerate(ranked_rows):
+        value = float(row["final_total_smells"])
+        x = x_pos(index)
+        y = y_pos(value)
+        bar_height = top_margin + plot_height - y
+        css_class = "bar-top" if index < 3 else "bar"
+        svg_parts.append(f'<rect x="{x:.2f}" y="{y:.2f}" width="{bar_width:.2f}" height="{bar_height:.2f}" class="{css_class}"/>')
+        line_points.append(f"{x + bar_width / 2.0:.2f},{y:.2f}")
+
+    svg_parts.append(f'<polyline points="{" ".join(line_points)}" class="rank-line"/>')
+
+    for index in range(min(3, n)):
+        value = values[index]
+        x = x_pos(index) + bar_width / 2.0
+        y = y_pos(value)
+        circle_y = max(top_margin + 12, y + 14)
+        svg_parts.append(f'<circle cx="{x:.2f}" cy="{circle_y:.2f}" r="10" class="marker-circle"/>')
+        svg_parts.append(
+            f'<text x="{x:.2f}" y="{circle_y + 3:.2f}" text-anchor="middle" class="marker-text">{index + 1}</text>'
+        )
+
+    x_tick_indices = sorted({0, max(0, n // 4), max(0, n // 2), max(0, (3 * n) // 4), n - 1})
+    for idx in x_tick_indices:
+        tick_x = x_pos(idx) + bar_width / 2.0
+        svg_parts.append(
+            f'<line x1="{tick_x:.2f}" y1="{top_margin + plot_height}" x2="{tick_x:.2f}" y2="{top_margin + plot_height + 6}" class="axis"/>'
+        )
+        svg_parts.append(
+            f'<text x="{tick_x:.2f}" y="{top_margin + plot_height + 22}" text-anchor="middle" class="tick">{idx + 1}</text>'
+        )
+
+    svg_parts.append(
+        f'<text x="{left_margin + plot_width / 2:.2f}" y="{height - 20}" text-anchor="middle" class="label">Project rank by final total smells</text>'
+    )
+    svg_parts.append(
+        f'<text x="18" y="{top_margin + plot_height / 2:.2f}" transform="rotate(-90 18 {top_margin + plot_height / 2:.2f})" text-anchor="middle" class="label">Final total smells</text>'
+    )
+    svg_parts.append(
+        f'<line x1="{plot_right + side_panel_gap / 2:.2f}" y1="{top_margin}" x2="{plot_right + side_panel_gap / 2:.2f}" y2="{top_margin + plot_height}" class="grid"/>'
+    )
+    svg_parts.append(
+        f'<rect x="{summary_box_x}" y="{summary_box_y}" width="{summary_box_width}" height="{summary_box_height}" class="summary-box"/>'
+    )
+    svg_parts.append(f'<text x="{summary_box_x + 14}" y="{summary_box_y + 22}" class="summary-title">Heavy-tail cues</text>')
+    summary_lines = [
+        f'max / median = {max_to_median_ratio:.2f}x',
+        f'top 3 projects = {top_3_share * 100:.1f}% of all final smells',
+        f'top quartile ({top_quartile_count} projects) = {top_quartile_share * 100:.1f}%',
+        f'median = {median_value:.1f}, Q3 = {q3_value:.1f}, min = {min_value:.1f}',
+    ]
+    for idx, line in enumerate(summary_lines):
+        svg_parts.append(
+            f'<text x="{summary_box_x + 14}" y="{summary_box_y + 44 + idx * 18}" class="summary-text">{escape(line)}</text>'
+        )
+    svg_parts.append(
+        f'<rect x="{outlier_box_x}" y="{outlier_box_y}" width="{outlier_box_width}" height="{outlier_box_height}" class="outlier-box"/>'
+    )
+    svg_parts.append(f'<text x="{outlier_box_x + 14}" y="{outlier_box_y + 22}" class="outlier-title">Top outliers</text>')
+    for idx in range(min(3, n)):
+        row = ranked_rows[idx]
+        value = int(values[idx])
+        svg_parts.append(
+            f'<text x="{outlier_box_x + 14}" y="{outlier_box_y + 44 + idx * 18}" class="outlier-text">{idx + 1}. {escape(row["project"])} = {value}</text>'
+        )
+    svg_parts.append(
+        f'<text x="{outlier_box_x + 14}" y="{outlier_box_y + 98}" class="outlier-text">Orange bars mark the top 3 projects.</text>'
+    )
+
+    head_notes = [
+        f'top outlier: {ranked_rows[0]["project"]} = {int(values[0])}',
+        f'3rd highest = {ranked_rows[min(2, n - 1)]["project"]} = {int(values[min(2, n - 1)])}',
+        f'min = {int(min_value)}',
+    ]
+    svg_parts.append(f'<text x="24" y="{height - 52}" class="note">{escape(" | ".join(head_notes))}</text>')
+    svg_parts.append(
+        f'<text x="24" y="{height - 32}" class="note">Interpretation: a few projects concentrate very high smell counts, while many projects remain near the low end.</text>'
+    )
+    svg_parts.append('</svg>')
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text("\n".join(svg_parts), encoding="utf-8")
+    return str(output_path)
+
+
 def maybe_make_plots(rows: list[dict[str, Any]], plots_dir: Path) -> dict[str, str]:
+    plots_dir.mkdir(parents=True, exist_ok=True)
+    plot_paths: dict[str, str] = {}
+    heavy_tail_path = plots_dir / "final_total_smells_heavy_tail.svg"
+    plot_paths["final_total_smells_heavy_tail"] = write_heavy_tail_rank_svg(rows, heavy_tail_path)
+
     try:
         import matplotlib.pyplot as plt
     except ImportError:
-        return {}
+        return plot_paths
 
-    plots_dir.mkdir(parents=True, exist_ok=True)
     colors = {"Low": "#4C78A8", "Medium": "#F58518", "High": "#54A24B"}
     tier_order = ["Low", "Medium", "High"]
     tier_groups = {tier: [row for row in rows if row["complexity_tier"] == tier] for tier in tier_order}
-    plot_paths: dict[str, str] = {}
 
     plt.figure(figsize=(8, 5))
     for tier in tier_order:

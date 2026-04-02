@@ -19,6 +19,7 @@ This folder contains the standalone analysis for:
 - `scripts/task_complexity_debt_analysis.py`: computes the metrics, statistics, and optional plots
 - `data/rq2_results.json`: machine-readable results
 - `Report.md`: narrative report with tables and interpretation
+- `plots/final_total_smells_heavy_tail.svg`: ranked final-smell plot showing the heavy-tailed distribution
 
 ## Run
 
