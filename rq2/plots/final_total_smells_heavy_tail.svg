@@ -102,6 +102,5 @@
 <text x="840" y="290" class="outlier-text">2. DouDizhuPoker = 118</text>
 <text x="840" y="308" class="outlier-text">3. Chess = 102</text>
 <text x="840" y="326" class="outlier-text">Orange bars mark the top 3 projects.</text>
-<text x="24" y="508" class="note">top outlier: Sudoku = 141 | 3rd highest = Chess = 102 | min = 11</text>
-<text x="24" y="528" class="note">Interpretation: a few projects concentrate very high smell counts, while many projects remain near the low end.</text>
+<text x="24" y="528" class="note">top outlier: Sudoku = 141 | 3rd highest = Chess = 102 | min = 11</text>
 </svg>

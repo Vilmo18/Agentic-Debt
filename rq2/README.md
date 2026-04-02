@@ -112,6 +112,8 @@ Interpretation:
 
 ### 2. Tier summaries: the clearest separation is in implementation, architecture, and diversity
 
+![Heavy-tailed distribution of final total smells](plots/final_total_smells_heavy_tail.svg)
+
 | Tier | n | Impl median | Structural median | Architectural median | Total median | Diversity median |
 | :-- | --: | --: | --: | --: | --: | --: |
 | Low | 10 | 18.0 | 0.0 | 2.0 | 23.0 | 5.5 |
@@ -152,9 +154,9 @@ Interpretation:
 - `Final architectural smells` is close to tier-level significance (`p = 0.057`) and shows a large High-vs-Low effect size.
 - Implementation smells still matter, but their tier split is noisier because counts are heavy-tailed. The ranked distribution in `agent_debt/rq2/plots/final_total_smells_heavy_tail.svg` makes this visible: a few projects sit far above the rest, followed by a long low-count tail.
 
-![Heavy-tailed distribution of final total smells](plots/final_total_smells_heavy_tail.svg)
 
-Figure interpretation: the first few ranked projects account for a disproportionate share of final smells, while most projects cluster in a much lower range. This is why medians and rank-based statistics are more reliable than means alone for RQ2.
+<!-- 
+Figure interpretation: the first few ranked projects account for a disproportionate share of final smells, while most projects cluster in a much lower range. This is why medians and rank-based statistics are more reliable than means alone for RQ2. -->
 
 ### 4. Smell-type profiles by tier
 

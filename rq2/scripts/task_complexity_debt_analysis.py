@@ -550,10 +550,7 @@ def write_heavy_tail_rank_svg(rows: list[dict[str, Any]], output_path: Path) -> 
         f'3rd highest = {ranked_rows[min(2, n - 1)]["project"]} = {int(values[min(2, n - 1)])}',
         f'min = {int(min_value)}',
     ]
-    svg_parts.append(f'<text x="24" y="{height - 52}" class="note">{escape(" | ".join(head_notes))}</text>')
-    svg_parts.append(
-        f'<text x="24" y="{height - 32}" class="note">Interpretation: a few projects concentrate very high smell counts, while many projects remain near the low end.</text>'
-    )
+    svg_parts.append(f'<text x="24" y="{height - 32}" class="note">{escape(" | ".join(head_notes))}</text>')
     svg_parts.append('</svg>')
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
