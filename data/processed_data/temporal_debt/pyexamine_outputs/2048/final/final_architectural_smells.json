@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.game' has repetitive API calls: add_random_tile(4x), get(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/2048/final/game.py",
+    "ModuleClass": "final.game",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.main' has repetitive API calls: get(3x), route(4x), can_move(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/2048/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

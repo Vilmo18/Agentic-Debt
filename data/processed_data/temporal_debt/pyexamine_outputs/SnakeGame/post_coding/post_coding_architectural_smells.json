@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "Scattered Functionality",
+    "Description": "Function 'draw' appears in 3 modules: post_coding.food, post_coding.ui, post_coding.game",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/SnakeGame/post_coding/food.py",
+    "ModuleClass": "post_coding.food",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'post_coding.settings' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/SnakeGame/post_coding/settings.py",
+    "ModuleClass": "post_coding.settings",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.main' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/SnakeGame/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

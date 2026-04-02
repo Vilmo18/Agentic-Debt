@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.app' has repetitive API calls: get(3x), route(4x), append(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Sudoku/post_coding/app.py",
+    "ModuleClass": "post_coding.app",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.sudoku' has repetitive API calls: find_empty(3x), is_valid(3x), randint(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Sudoku/post_coding/sudoku.py",
+    "ModuleClass": "post_coding.sudoku",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

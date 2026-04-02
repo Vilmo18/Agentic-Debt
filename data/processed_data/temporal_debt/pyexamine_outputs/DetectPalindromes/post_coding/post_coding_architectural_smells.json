@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.palindrome_detector' has repetitive API calls: extend(3x), pos_to_line_col(4x), append(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DetectPalindromes/post_coding/palindrome_detector.py",
+    "ModuleClass": "post_coding.palindrome_detector",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui_app' has repetitive API calls: BooleanVar(5x), Menu(3x), add_command(5x), config(8x), LabelFrame(3x), pack(9x), Frame(5x), grid(15x), Button(3x), heading(6x), column(6x), Scrollbar(3x), configure(4x), showinfo(4x), set(3x), get(7x), Checkbutton(5x), showerror(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DetectPalindromes/post_coding/gui_app.py",
+    "ModuleClass": "post_coding.gui_app",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.gui_app' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DetectPalindromes/post_coding/gui_app.py",
+    "ModuleClass": "post_coding.gui_app",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

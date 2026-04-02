@@ -1,0 +1,10 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'strands.ui' has repetitive API calls: update_status(4x), configure(5x), Label(4x), pack(9x), Frame(3x), Button(3x), bind(4x), apply_claim(3x), clear(4x), showinfo(5x), _color_cell(5x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/StrandsNYT/post_coding/strands/ui.py",
+    "ModuleClass": "strands.ui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

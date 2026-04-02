@@ -2,16 +2,20 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import math
 import random
 import statistics
+import sys
+import types
 from collections import Counter
 from pathlib import Path
 from typing import Any
 
 
 PRIMARY_PROXY = "total_reasoning_tokens"
+PYEXAMINE_PACKAGE_NAME = "_rq2_pyexamine"
 
 
 def read_json(path: Path) -> Any:
@@ -230,6 +234,132 @@ def safe_top_counter(items: list[Any]) -> Counter[str]:
     return counter
 
 
+def counter_total(counter: Counter[str]) -> int:
+    return int(sum(counter.values()))
+
+
+def load_dpy_smell_counter(
+    dpy_root: Path,
+    *,
+    project: str,
+    snapshot: str,
+    suffix: str | list[str],
+) -> Counter[str]:
+    counter: Counter[str] = Counter()
+    output_dir = dpy_root / project / snapshot
+    suffixes = [suffix] if isinstance(suffix, str) else list(suffix)
+    for suffix_name in suffixes:
+        for path in sorted(output_dir.glob(f"*_{suffix_name}.json")):
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                continue
+            if not isinstance(payload, list):
+                continue
+            for item in payload:
+                if not isinstance(item, dict):
+                    continue
+                smell = item.get("Smell")
+                if isinstance(smell, str) and smell:
+                    counter[smell] += 1
+    return counter
+
+
+def load_pyexamine_architecture_classes(pyexamine_root: Path) -> tuple[type[Any], type[Any]]:
+    package_dir = pyexamine_root / "src" / "code_quality_analyzer"
+    if not package_dir.exists():
+        raise FileNotFoundError(f"PyExamine package directory not found: {package_dir}")
+
+    package = sys.modules.get(PYEXAMINE_PACKAGE_NAME)
+    if package is None:
+        package = types.ModuleType(PYEXAMINE_PACKAGE_NAME)
+        package.__path__ = [str(package_dir)]
+        sys.modules[PYEXAMINE_PACKAGE_NAME] = package
+
+    for module_name in ["exceptions", "config_handler", "architectural_smell_detector"]:
+        qualified_name = f"{PYEXAMINE_PACKAGE_NAME}.{module_name}"
+        if qualified_name in sys.modules:
+            continue
+        module_path = package_dir / f"{module_name}.py"
+        spec = importlib.util.spec_from_file_location(qualified_name, module_path)
+        if spec is None or spec.loader is None:
+            raise ImportError(f"Could not load PyExamine module: {qualified_name}")
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[qualified_name] = module
+        spec.loader.exec_module(module)
+
+    config_module = sys.modules[f"{PYEXAMINE_PACKAGE_NAME}.config_handler"]
+    architecture_module = sys.modules[f"{PYEXAMINE_PACKAGE_NAME}.architectural_smell_detector"]
+    return config_module.ConfigHandler, architecture_module.ArchitecturalSmellDetector
+
+
+def run_pyexamine_architectural_smells(
+    snapshot_dir: Path,
+    *,
+    pyexamine_root: Path,
+    pyexamine_config: Path,
+) -> list[dict[str, Any]]:
+    if not snapshot_dir.exists():
+        return []
+
+    ConfigHandler, ArchitecturalSmellDetector = load_pyexamine_architecture_classes(pyexamine_root)
+    config_handler = ConfigHandler(str(pyexamine_config))
+    detector = ArchitecturalSmellDetector(config_handler.get_thresholds("architectural_smells"))
+    detector.detect_smells(str(snapshot_dir))
+
+    payload: list[dict[str, Any]] = []
+    for smell in detector.architectural_smells:
+        payload.append(
+            {
+                "Smell": str(getattr(smell, "name", "")),
+                "Description": str(getattr(smell, "description", "")),
+                "File": str(getattr(smell, "file_path", "")),
+                "ModuleClass": str(getattr(smell, "module_class", "")),
+                "Line": int(getattr(smell, "line_number", 0) or 0),
+                "Severity": str(getattr(smell, "severity", "")),
+            }
+        )
+    return payload
+
+
+def load_pyexamine_architecture_counter(
+    *,
+    pyexamine_root: Path,
+    pyexamine_config: Path,
+    snapshots_root: Path,
+    cache_root: Path,
+    project: str,
+    snapshot: str,
+    force: bool,
+) -> Counter[str]:
+    counter: Counter[str] = Counter()
+    cache_file = cache_root / project / snapshot / f"{snapshot}_architectural_smells.json"
+    payload: list[dict[str, Any]] = []
+
+    if cache_file.exists() and not force:
+        try:
+            cached = json.loads(cache_file.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            cached = []
+        if isinstance(cached, list):
+            payload = [item for item in cached if isinstance(item, dict)]
+    else:
+        snapshot_dir = snapshots_root / project / snapshot
+        payload = run_pyexamine_architectural_smells(
+            snapshot_dir,
+            pyexamine_root=pyexamine_root,
+            pyexamine_config=pyexamine_config,
+        )
+        cache_file.parent.mkdir(parents=True, exist_ok=True)
+        cache_file.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    for item in payload:
+        smell = item.get("Smell")
+        if isinstance(smell, str) and smell:
+            counter[smell] += 1
+    return counter
+
+
 def assign_tier(value: float, low_high_thresholds: tuple[float, float]) -> str:
     low_upper, medium_upper = low_high_thresholds
     if value <= low_upper:
@@ -256,69 +386,63 @@ def maybe_make_plots(rows: list[dict[str, Any]], plots_dir: Path) -> dict[str, s
         group = tier_groups[tier]
         plt.scatter(
             [row[PRIMARY_PROXY] for row in group],
-            [row["final_total_smells"] for row in group],
+            [row["final_implementation_smells"] for row in group],
             label=tier,
             color=colors[tier],
             s=45,
             alpha=0.8,
         )
     plt.xlabel("Total reasoning tokens")
-    plt.ylabel("Final total smells")
-    plt.title("Task complexity proxy vs final debt")
+    plt.ylabel("Final implementation smells")
+    plt.title("Task complexity proxy vs implementation smells")
     plt.legend()
-    scatter_path = plots_dir / "complexity_vs_total_smells.png"
+    scatter_path = plots_dir / "complexity_vs_implementation_smells.png"
     plt.tight_layout()
     plt.savefig(scatter_path, dpi=160)
     plt.close()
-    plot_paths["complexity_vs_total_smells"] = str(scatter_path)
+    plot_paths["complexity_vs_implementation_smells"] = str(scatter_path)
 
     plt.figure(figsize=(8, 5))
     plt.boxplot(
-        [[row["final_total_smells"] for row in tier_groups[tier]] for tier in tier_order],
+        [[row["final_implementation_smells"] for row in tier_groups[tier]] for tier in tier_order],
         tick_labels=tier_order,
     )
     plt.xlabel("Complexity tier")
-    plt.ylabel("Final total smells")
-    plt.title("Final smell count by complexity tier")
-    box_smells_path = plots_dir / "tier_boxplot_total_smells.png"
+    plt.ylabel("Final implementation smells")
+    plt.title("Implementation smells by complexity tier")
+    box_smells_path = plots_dir / "tier_boxplot_implementation_smells.png"
     plt.tight_layout()
     plt.savefig(box_smells_path, dpi=160)
     plt.close()
-    plot_paths["tier_boxplot_total_smells"] = str(box_smells_path)
+    plot_paths["tier_boxplot_implementation_smells"] = str(box_smells_path)
 
     plt.figure(figsize=(8, 5))
     plt.boxplot(
-        [[row["final_diversity"] for row in tier_groups[tier]] for tier in tier_order],
+        [[row["final_structural_smells"] for row in tier_groups[tier]] for tier in tier_order],
         tick_labels=tier_order,
     )
     plt.xlabel("Complexity tier")
-    plt.ylabel("Final unique smell types")
-    plt.title("Debt diversity by complexity tier")
-    box_diversity_path = plots_dir / "tier_boxplot_diversity.png"
+    plt.ylabel("Final structural smells")
+    plt.title("Structural smells by complexity tier")
+    structural_boxplot_path = plots_dir / "tier_boxplot_structural_smells.png"
     plt.tight_layout()
-    plt.savefig(box_diversity_path, dpi=160)
+    plt.savefig(structural_boxplot_path, dpi=160)
     plt.close()
-    plot_paths["tier_boxplot_diversity"] = str(box_diversity_path)
+    plot_paths["tier_boxplot_structural_smells"] = str(structural_boxplot_path)
 
     plt.figure(figsize=(8, 5))
-    rates = [
-        (
-            sum(row["coarse_smell_present"] for row in tier_groups[tier]) / len(tier_groups[tier])
-            if tier_groups[tier]
-            else 0.0
-        )
-        for tier in tier_order
-    ]
-    plt.bar(tier_order, rates, color=[colors[tier] for tier in tier_order])
-    plt.ylim(0, 1)
+    plt.boxplot(
+        [[row["final_architecture_smells"] for row in tier_groups[tier]] for tier in tier_order],
+        tick_labels=tier_order,
+    )
     plt.xlabel("Complexity tier")
-    plt.ylabel("Share of projects with coarse smells")
-    plt.title("Structural debt prevalence by complexity tier")
-    coarse_rate_path = plots_dir / "tier_coarse_smell_rate.png"
+    plt.ylabel("Final architecture smells")
+    plt.title("Architectural smells by complexity tier")
+    architecture_boxplot_path = plots_dir / "tier_boxplot_architecture_smells.png"
     plt.tight_layout()
-    plt.savefig(coarse_rate_path, dpi=160)
+    plt.savefig(architecture_boxplot_path, dpi=160)
     plt.close()
-    plot_paths["tier_coarse_smell_rate"] = str(coarse_rate_path)
+    plot_paths["tier_boxplot_architecture_smells"] = str(architecture_boxplot_path)
 
     return plot_paths
 
@@ -337,6 +461,41 @@ def main() -> int:
         "--debt-json",
         type=Path,
         default=Path("agent_debt/data/temporal_debt_results.json"),
+    )
+    parser.add_argument(
+        "--dpy-root",
+        type=Path,
+        default=Path("agent_debt/data/processed_data/temporal_debt/dpy_outputs"),
+        help="Root directory containing cached DPy outputs from the temporal debt pipeline.",
+    )
+    parser.add_argument(
+        "--snapshots-root",
+        type=Path,
+        default=Path("agent_debt/data/processed_data/temporal_debt/snapshots"),
+        help="Root directory containing reconstructed Python snapshots per project and phase.",
+    )
+    parser.add_argument(
+        "--pyexamine-root",
+        type=Path,
+        default=Path("python_smells_detector"),
+        help="Path to the local PyExamine/code_quality_analyzer checkout used for architectural smells.",
+    )
+    parser.add_argument(
+        "--pyexamine-config",
+        type=Path,
+        default=Path("python_smells_detector/code_quality_config.yaml"),
+        help="Configuration file for the local PyExamine/code_quality_analyzer detector.",
+    )
+    parser.add_argument(
+        "--pyexamine-cache-dir",
+        type=Path,
+        default=Path("agent_debt/data/processed_data/temporal_debt/pyexamine_outputs"),
+        help="Cache directory for architectural smell outputs generated via PyExamine.",
+    )
+    parser.add_argument(
+        "--force-pyexamine",
+        action="store_true",
+        help="Recompute PyExamine architectural smells instead of reusing cached outputs.",
     )
     parser.add_argument(
         "--out-json",
@@ -382,12 +541,64 @@ def main() -> int:
             continue
 
         debt_row = debt_by_project[name]
-        final_counts = debt_row["counts"]["final"]
         total_reasoning_tokens = sum_reasoning_tokens(project.get("phases", []))
-        impl_counter = safe_top_counter(final_counts.get("impl_top", []))
-        coarse_counter = safe_top_counter(final_counts.get("coarse_top", []))
-        all_smell_counter = Counter(impl_counter)
-        all_smell_counter.update(coarse_counter)
+        coding_impl_counter = load_dpy_smell_counter(
+            args.dpy_root,
+            project=name,
+            snapshot="post_coding",
+            suffix="implementation_smells",
+        )
+        final_impl_counter = load_dpy_smell_counter(
+            args.dpy_root,
+            project=name,
+            snapshot="final",
+            suffix="implementation_smells",
+        )
+        coding_structural_counter = load_dpy_smell_counter(
+            args.dpy_root,
+            project=name,
+            snapshot="post_coding",
+            suffix="design_smells",
+        )
+        final_structural_counter = load_dpy_smell_counter(
+            args.dpy_root,
+            project=name,
+            snapshot="final",
+            suffix="design_smells",
+        )
+        coding_architecture_counter = load_pyexamine_architecture_counter(
+            pyexamine_root=args.pyexamine_root,
+            pyexamine_config=args.pyexamine_config,
+            snapshots_root=args.snapshots_root,
+            cache_root=args.pyexamine_cache_dir,
+            project=name,
+            snapshot="post_coding",
+            force=bool(args.force_pyexamine),
+        )
+        final_architecture_counter = load_pyexamine_architecture_counter(
+            pyexamine_root=args.pyexamine_root,
+            pyexamine_config=args.pyexamine_config,
+            snapshots_root=args.snapshots_root,
+            cache_root=args.pyexamine_cache_dir,
+            project=name,
+            snapshot="final",
+            force=bool(args.force_pyexamine),
+        )
+        final_implementation_smells = counter_total(final_impl_counter)
+        final_structural_smells = counter_total(final_structural_counter)
+        final_architecture_smells = counter_total(final_architecture_counter)
+        final_total_smells = (
+            final_implementation_smells + final_structural_smells + final_architecture_smells
+        )
+        final_diversity = len(
+            set(final_impl_counter) | set(final_structural_counter) | set(final_architecture_counter)
+        )
+        delta_implementation_smells = final_implementation_smells - counter_total(coding_impl_counter)
+        delta_structural_smells = final_structural_smells - counter_total(coding_structural_counter)
+        delta_architecture_smells = final_architecture_smells - counter_total(coding_architecture_counter)
+        delta_total_smells = (
+            delta_implementation_smells + delta_structural_smells + delta_architecture_smells
+        )
 
         rows.append(
             {
@@ -395,17 +606,21 @@ def main() -> int:
                 "task_prompt": project.get("task_prompt", ""),
                 "software_info": project.get("software_info", {}),
                 "total_reasoning_tokens": int(total_reasoning_tokens),
-                "final_fine_smells": int(final_counts["fine"]),
-                "final_coarse_smells": int(final_counts["coarse"]),
-                "final_total_smells": int(final_counts["total"]),
-                "final_diversity": int(final_counts["total_unique"]),
-                "delta_total_smells": int(debt_row["deltas"]["total_final_minus_post_coding"]),
-                "delta_fine_smells": int(debt_row["deltas"]["fine_final_minus_post_coding"]),
-                "coarse_smell_present": 1 if int(final_counts["coarse"]) > 0 else 0,
+                "final_implementation_smells": final_implementation_smells,
+                "final_structural_smells": final_structural_smells,
+                "final_architecture_smells": final_architecture_smells,
+                "final_total_smells": final_total_smells,
+                "final_diversity": final_diversity,
+                "delta_implementation_smells": delta_implementation_smells,
+                "delta_structural_smells": delta_structural_smells,
+                "delta_architecture_smells": delta_architecture_smells,
+                "delta_total_smells": delta_total_smells,
+                "structural_smell_present": 1 if final_structural_smells > 0 else 0,
+                "architecture_smell_present": 1 if final_architecture_smells > 0 else 0,
                 "code_change_events": int((debt_row.get("code_change") or {}).get("events", 0)),
-                "impl_smell_counts": dict(impl_counter),
-                "coarse_smell_counts": dict(coarse_counter),
-                "all_smell_counts": dict(all_smell_counter),
+                "impl_smell_counts": dict(final_impl_counter),
+                "structural_smell_counts": dict(final_structural_counter),
+                "architecture_smell_counts": dict(final_architecture_counter),
             }
         )
 
@@ -425,50 +640,81 @@ def main() -> int:
     tier_summaries: dict[str, dict[str, Any]] = {}
     for tier in tier_order:
         group = [row for row in rows if row["complexity_tier"] == tier]
-        all_counts: Counter[str] = Counter()
-        all_prevalence: Counter[str] = Counter()
-        coarse_counts: Counter[str] = Counter()
-        coarse_prevalence: Counter[str] = Counter()
+        implementation_counts: Counter[str] = Counter()
+        implementation_prevalence: Counter[str] = Counter()
+        structural_counts: Counter[str] = Counter()
+        structural_prevalence: Counter[str] = Counter()
+        architecture_counts: Counter[str] = Counter()
+        architecture_prevalence: Counter[str] = Counter()
 
         for row in group:
-            smell_counter = Counter(row["all_smell_counts"])
-            all_counts.update(smell_counter)
-            for smell in smell_counter:
-                all_prevalence[smell] += 1
+            implementation_counter = Counter(row["impl_smell_counts"])
+            implementation_counts.update(implementation_counter)
+            for smell in implementation_counter:
+                implementation_prevalence[smell] += 1
 
-            coarse_counter = Counter(row["coarse_smell_counts"])
-            coarse_counts.update(coarse_counter)
-            for smell in coarse_counter:
-                coarse_prevalence[smell] += 1
+            structural_counter = Counter(row["structural_smell_counts"])
+            structural_counts.update(structural_counter)
+            for smell in structural_counter:
+                structural_prevalence[smell] += 1
+
+            architecture_counter = Counter(row["architecture_smell_counts"])
+            architecture_counts.update(architecture_counter)
+            for smell in architecture_counter:
+                architecture_prevalence[smell] += 1
 
         tier_summaries[tier] = {
             "n_projects": len(group),
             "reasoning_tokens": describe_distribution([float(row[PRIMARY_PROXY]) for row in group]),
             "debt_metrics": {
                 "final_total_smells": describe_distribution([float(row["final_total_smells"]) for row in group]),
-                "final_fine_smells": describe_distribution([float(row["final_fine_smells"]) for row in group]),
-                "final_coarse_smells": describe_distribution([float(row["final_coarse_smells"]) for row in group]),
+                "final_implementation_smells": describe_distribution(
+                    [float(row["final_implementation_smells"]) for row in group]
+                ),
+                "final_structural_smells": describe_distribution(
+                    [float(row["final_structural_smells"]) for row in group]
+                ),
+                "final_architecture_smells": describe_distribution(
+                    [float(row["final_architecture_smells"]) for row in group]
+                ),
                 "final_diversity": describe_distribution([float(row["final_diversity"]) for row in group]),
+                "delta_implementation_smells": describe_distribution(
+                    [float(row["delta_implementation_smells"]) for row in group]
+                ),
+                "delta_structural_smells": describe_distribution(
+                    [float(row["delta_structural_smells"]) for row in group]
+                ),
+                "delta_architecture_smells": describe_distribution(
+                    [float(row["delta_architecture_smells"]) for row in group]
+                ),
                 "delta_total_smells": describe_distribution([float(row["delta_total_smells"]) for row in group]),
                 "code_change_events": describe_distribution([float(row["code_change_events"]) for row in group]),
             },
-            "coarse_smell_presence_rate": (
-                float(sum(row["coarse_smell_present"] for row in group) / len(group)) if group else 0.0
+            "structural_smell_presence_rate": (
+                float(sum(row["structural_smell_present"] for row in group) / len(group)) if group else 0.0
             ),
-            "top_smell_counts": all_counts.most_common(10),
-            "top_smell_project_prevalence": all_prevalence.most_common(10),
-            "top_coarse_smell_counts": coarse_counts.most_common(10),
-            "top_coarse_smell_project_prevalence": coarse_prevalence.most_common(10),
+            "architecture_smell_presence_rate": (
+                float(sum(row["architecture_smell_present"] for row in group) / len(group)) if group else 0.0
+            ),
+            "top_implementation_smell_counts": implementation_counts.most_common(10),
+            "top_implementation_smell_project_prevalence": implementation_prevalence.most_common(10),
+            "top_structural_smell_counts": structural_counts.most_common(10),
+            "top_structural_smell_project_prevalence": structural_prevalence.most_common(10),
+            "top_architecture_smell_counts": architecture_counts.most_common(10),
+            "top_architecture_smell_project_prevalence": architecture_prevalence.most_common(10),
             "projects": sorted(row["project"] for row in group),
         }
 
     debt_metrics = [
         "final_total_smells",
-        "final_fine_smells",
-        "final_coarse_smells",
+        "final_implementation_smells",
+        "final_structural_smells",
+        "final_architecture_smells",
         "final_diversity",
+        "delta_implementation_smells",
+        "delta_structural_smells",
+        "delta_architecture_smells",
         "delta_total_smells",
-        "delta_fine_smells",
         "code_change_events",
     ]
     correlations: dict[str, dict[str, dict[str, float]]] = {}
@@ -494,10 +740,18 @@ def main() -> int:
         "seed": int(args.seed),
         "kruskal_wallis": {},
         "high_vs_low": {},
-        "coarse_presence_high_vs_low": {},
+        "layer_presence_high_vs_low": {},
     }
 
-    selected_tier_metrics = ["final_total_smells", "final_diversity", "delta_total_smells"]
+    selected_tier_metrics = [
+        "final_implementation_smells",
+        "final_structural_smells",
+        "final_architecture_smells",
+        "final_diversity",
+        "delta_implementation_smells",
+        "delta_structural_smells",
+        "delta_architecture_smells",
+    ]
     for metric in selected_tier_metrics:
         metric_groups = [[float(row[metric]) for row in rows if row["complexity_tier"] == tier] for tier in tier_order]
         h_stat = kruskal_wallis(metric_groups)
@@ -540,22 +794,26 @@ def main() -> int:
             "cliffs_delta_magnitude": cliffs_delta_magnitude(delta),
         }
 
-    low_high_coarse = [
-        [float(row["coarse_smell_present"]) for row in rows if row["complexity_tier"] == "Low"],
-        [float(row["coarse_smell_present"]) for row in rows if row["complexity_tier"] == "High"],
-    ]
-    inferential_statistics["coarse_presence_high_vs_low"] = {
-        "rate_low": sum(low_high_coarse[0]) / len(low_high_coarse[0]) if low_high_coarse[0] else 0.0,
-        "rate_high": sum(low_high_coarse[1]) / len(low_high_coarse[1]) if low_high_coarse[1] else 0.0,
-        "rate_difference": rate_difference(low_high_coarse),
-        "rate_difference_permutation_p": permutation_p_value_groups(
-            low_high_coarse,
-            rate_difference,
-            n_permutations=args.permutations,
-            seed=args.seed,
-            absolute=True,
-        ),
-    }
+    for layer_name, presence_key in [
+        ("structural", "structural_smell_present"),
+        ("architecture", "architecture_smell_present"),
+    ]:
+        low_high_layer = [
+            [float(row[presence_key]) for row in rows if row["complexity_tier"] == "Low"],
+            [float(row[presence_key]) for row in rows if row["complexity_tier"] == "High"],
+        ]
+        inferential_statistics["layer_presence_high_vs_low"][layer_name] = {
+            "rate_low": sum(low_high_layer[0]) / len(low_high_layer[0]) if low_high_layer[0] else 0.0,
+            "rate_high": sum(low_high_layer[1]) / len(low_high_layer[1]) if low_high_layer[1] else 0.0,
+            "rate_difference": rate_difference(low_high_layer),
+            "rate_difference_permutation_p": permutation_p_value_groups(
+                low_high_layer,
+                rate_difference,
+                n_permutations=args.permutations,
+                seed=args.seed,
+                absolute=True,
+            ),
+        }
 
     low_summary = tier_summaries["Low"]["debt_metrics"]
     high_summary = tier_summaries["High"]["debt_metrics"]
@@ -563,15 +821,27 @@ def main() -> int:
         "high_minus_low_median_final_total_smells": (
             high_summary["final_total_smells"]["median"] - low_summary["final_total_smells"]["median"]
         ),
-        "high_minus_low_mean_final_total_smells": (
-            high_summary["final_total_smells"]["mean"] - low_summary["final_total_smells"]["mean"]
+        "high_minus_low_median_final_implementation_smells": (
+            high_summary["final_implementation_smells"]["median"]
+            - low_summary["final_implementation_smells"]["median"]
+        ),
+        "high_minus_low_median_final_structural_smells": (
+            high_summary["final_structural_smells"]["median"] - low_summary["final_structural_smells"]["median"]
+        ),
+        "high_minus_low_median_final_architecture_smells": (
+            high_summary["final_architecture_smells"]["median"]
+            - low_summary["final_architecture_smells"]["median"]
         ),
         "high_minus_low_median_final_diversity": (
             high_summary["final_diversity"]["median"] - low_summary["final_diversity"]["median"]
         ),
-        "high_minus_low_coarse_presence_rate": (
-            tier_summaries["High"]["coarse_smell_presence_rate"]
-            - tier_summaries["Low"]["coarse_smell_presence_rate"]
+        "high_minus_low_structural_presence_rate": (
+            tier_summaries["High"]["structural_smell_presence_rate"]
+            - tier_summaries["Low"]["structural_smell_presence_rate"]
+        ),
+        "high_minus_low_architecture_presence_rate": (
+            tier_summaries["High"]["architecture_smell_presence_rate"]
+            - tier_summaries["Low"]["architecture_smell_presence_rate"]
         ),
     }
 
@@ -584,6 +854,11 @@ def main() -> int:
         "primary_complexity_proxy": PRIMARY_PROXY,
         "proxy_definition": {
             PRIMARY_PROXY: "sum of reasoning_tokens across all available phases",
+        },
+        "smell_detector_mapping": {
+            "implementation_smells": "DPy implementation_smells",
+            "structural_smells": "DPy design_smells",
+            "architectural_smells": "PyExamine architectural_smells",
         },
         "tiering_method": {
             "method": "tertiles on total_reasoning_tokens",
@@ -608,15 +883,20 @@ def main() -> int:
                 "complexity_tier": row["complexity_tier"],
                 "total_reasoning_tokens": row["total_reasoning_tokens"],
                 "final_total_smells": row["final_total_smells"],
-                "final_fine_smells": row["final_fine_smells"],
-                "final_coarse_smells": row["final_coarse_smells"],
+                "final_implementation_smells": row["final_implementation_smells"],
+                "final_structural_smells": row["final_structural_smells"],
+                "final_architecture_smells": row["final_architecture_smells"],
                 "final_diversity": row["final_diversity"],
+                "delta_implementation_smells": row["delta_implementation_smells"],
+                "delta_structural_smells": row["delta_structural_smells"],
+                "delta_architecture_smells": row["delta_architecture_smells"],
                 "delta_total_smells": row["delta_total_smells"],
-                "delta_fine_smells": row["delta_fine_smells"],
-                "coarse_smell_present": row["coarse_smell_present"],
+                "structural_smell_present": row["structural_smell_present"],
+                "architecture_smell_present": row["architecture_smell_present"],
                 "code_change_events": row["code_change_events"],
-                "top_all_smells": Counter(row["all_smell_counts"]).most_common(10),
-                "top_coarse_smells": Counter(row["coarse_smell_counts"]).most_common(10),
+                "top_implementation_smells": Counter(row["impl_smell_counts"]).most_common(10),
+                "top_structural_smells": Counter(row["structural_smell_counts"]).most_common(10),
+                "top_architecture_smells": Counter(row["architecture_smell_counts"]).most_common(10),
             }
         )
 

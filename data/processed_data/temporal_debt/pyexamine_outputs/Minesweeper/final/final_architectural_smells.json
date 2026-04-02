@@ -1,0 +1,10 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.gui' has repetitive API calls: pack(12x), Frame(3x), config(11x), Label(6x), _update_mines_label(3x), _update_timer_label(3x), _refresh_cells(3x), bind(4x), _on_right_click(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Minesweeper/final/gui.py",
+    "ModuleClass": "final.gui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

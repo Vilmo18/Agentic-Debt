@@ -1,0 +1,58 @@
+[
+  {
+    "Smell": "Scattered Functionality",
+    "Description": "Function 'draw' appears in 3 modules: post_coding.board, post_coding.app, post_coding.ui",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/post_coding/board.py",
+    "ModuleClass": "post_coding.board",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "God Object",
+    "Description": "Module 'constants' has too many public functions (23)",
+    "File": "Unknown",
+    "ModuleClass": "constants",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.board' has repetitive API calls: set(3x), Rect(3x), rect(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/post_coding/board.py",
+    "ModuleClass": "post_coding.board",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.app' has repetitive API calls: SysFont(3x), draw(3x), render(3x), blit(3x), _set_status(5x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/post_coding/app.py",
+    "ModuleClass": "post_coding.app",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.rules' has repetitive API calls: get(8x), _opponent(3x), remove_piece(3x), in_bounds(3x), append(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/post_coding/rules.py",
+    "ModuleClass": "post_coding.rules",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'post_coding.constants' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/post_coding/constants.py",
+    "ModuleClass": "post_coding.constants",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.app' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/post_coding/app.py",
+    "ModuleClass": "post_coding.app",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.sudoku' has repetitive API calls: find_empty(3x), is_valid(3x), randint(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Sudoku/final/sudoku.py",
+    "ModuleClass": "final.sudoku",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.main' has repetitive API calls: get(3x), route(4x), append(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Sudoku/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

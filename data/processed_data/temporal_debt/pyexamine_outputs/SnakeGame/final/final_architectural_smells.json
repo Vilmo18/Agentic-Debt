@@ -1,0 +1,34 @@
+[
+  {
+    "Smell": "Scattered Functionality",
+    "Description": "Function 'draw' appears in 3 modules: final.food, final.ui, final.game",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/SnakeGame/final/food.py",
+    "ModuleClass": "final.food",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.game' has repetitive API calls: SysFont(3x), spawn(3x), fill(3x), render(7x), blit(9x), get_rect(6x), get_width(4x), get_height(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/SnakeGame/final/game.py",
+    "ModuleClass": "final.game",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'final.settings' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/SnakeGame/final/settings.py",
+    "ModuleClass": "final.settings",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.main' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/SnakeGame/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

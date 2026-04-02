@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Redundant Abstractions",
+    "Description": "Modules fibonacci and post_coding.fibonacci have 100.0% similar functionalities",
+    "File": "Unknown",
+    "ModuleClass": "fibonacci",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui' has repetitive API calls: columnconfigure(4x), Frame(4x), grid(13x), Button(4x), bind(3x), get(4x), _set_status(9x), append(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/FibonacciNumbers/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

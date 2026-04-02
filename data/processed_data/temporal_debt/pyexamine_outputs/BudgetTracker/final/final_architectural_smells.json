@@ -1,0 +1,58 @@
+[
+  {
+    "Smell": "Potential Redundant Abstractions",
+    "Description": "Modules utils and final.utils have 100.0% similar functionalities",
+    "File": "Unknown",
+    "ModuleClass": "utils",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.models' has repetitive API calls: strip(9x), append(4x), lower(5x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/final/models.py",
+    "ModuleClass": "final.models",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.storage' has repetitive API calls: create_sheet(4x), append(12x), _autosize_columns(6x), save(3x), iter_rows(4x), exists(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/final/storage.py",
+    "ModuleClass": "final.storage",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.ui' has repetitive API calls: StringVar(11x), _refresh_summary(4x), _refresh_filters(3x), _refresh_table(5x), Frame(5x), pack(10x), grid(40x), Entry(6x), insert(8x), Button(8x), Combobox(5x), set(21x), column(6x), configure(3x), columnconfigure(4x), strip(4x), delete(8x), get(18x), save_model(5x), showinfo(5x), showerror(9x), Label(18x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/final/ui.py",
+    "ModuleClass": "final.ui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.storage' has high instability (1.00) with 7 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/final/storage.py",
+    "ModuleClass": "final.storage",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.ui' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/final/ui.py",
+    "ModuleClass": "final.ui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.main' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

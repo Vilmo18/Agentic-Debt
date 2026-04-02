@@ -1,0 +1,42 @@
+[
+  {
+    "Smell": "God Object",
+    "Description": "Module 'post_coding.engine' has too many public functions (22)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_coding/engine.py",
+    "ModuleClass": "post_coding.engine",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.engine' has repetitive API calls: get(34x), items(9x), mark_visited(3x), from_dict(3x), get_var(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_coding/engine.py",
+    "ModuleClass": "post_coding.engine",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui' has repetitive API calls: __init__(3x), Label(8x), Button(7x), grid(10x), columnconfigure(6x), Frame(5x), pack(17x), Listbox(3x), update_ui(5x), delete(4x), insert(4x), bind(3x), switch_to_game(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'post_coding.story_data' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_coding/story_data.py",
+    "ModuleClass": "post_coding.story_data",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.gui' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/EpisodeChooseYourStory/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

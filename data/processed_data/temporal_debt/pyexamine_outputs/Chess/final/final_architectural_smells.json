@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.board' has repetitive API calls: is_square_attacked(9x), generate_legal_moves(3x), in_check(7x), isupper(3x), upper(8x), _add_move(18x), get(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Chess/final/board.py",
+    "ModuleClass": "final.board",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.san' has repetitive API calls: upper(8x), replace(3x), generate_legal_moves(3x), lower(6x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Chess/final/san.py",
+    "ModuleClass": "final.san",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.san' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Chess/final/san.py",
+    "ModuleClass": "final.san",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

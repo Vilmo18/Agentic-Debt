@@ -1,0 +1,34 @@
+[
+  {
+    "Smell": "Hub-like Dependency",
+    "Description": "Module 'post_coding.main' is a potential hub with 6 connections (in: 0, out: 6, external: 0)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/GoldMiner/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.level' has repetitive API calls: randint(10x), uniform(9x), append(5x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/GoldMiner/post_coding/level.py",
+    "ModuleClass": "post_coding.level",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.main' has repetitive API calls: start(3x), getElementById(5x), addEventListener(4x), start_level(3x), start_grab(3x), beginPath(5x), stroke(4x), arc(3x), fill(3x), fillText(8x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/GoldMiner/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.main' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/GoldMiner/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

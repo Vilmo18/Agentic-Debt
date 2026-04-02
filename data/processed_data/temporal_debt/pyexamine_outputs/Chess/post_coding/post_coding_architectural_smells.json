@@ -1,0 +1,42 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui' has repetitive API calls: pack(7x), Frame(3x), set(4x), _refresh(7x), Button(3x), get_legal_moves_for_square(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Chess/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'engine.board' has repetitive API calls: is_square_attacked(9x), generate_legal_moves(3x), in_check(7x), isupper(3x), upper(8x), _add_move(18x), get(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Chess/post_coding/engine/board.py",
+    "ModuleClass": "engine.board",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'engine.san' has repetitive API calls: upper(8x), replace(3x), generate_legal_moves(3x), lower(6x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Chess/post_coding/engine/san.py",
+    "ModuleClass": "engine.san",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.gui' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Chess/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'engine.san' has high instability (0.83) with 5 outgoing and 1 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Chess/post_coding/engine/san.py",
+    "ModuleClass": "engine.san",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.ui' has repetitive API calls: _draw_text(14x), line(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/post_coding/ui.py",
+    "ModuleClass": "post_coding.ui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.mapgen' has repetitive API calls: append(8x), choice(3x), random(4x), randint(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/post_coding/mapgen.py",
+    "ModuleClass": "post_coding.mapgen",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'post_coding.constants' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/post_coding/constants.py",
+    "ModuleClass": "post_coding.constants",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.game' has high instability (1.00) with 8 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/post_coding/game.py",
+    "ModuleClass": "post_coding.game",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.mapgen' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/post_coding/mapgen.py",
+    "ModuleClass": "post_coding.mapgen",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

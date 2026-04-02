@@ -1,0 +1,42 @@
+[
+  {
+    "Smell": "God Object",
+    "Description": "Module 'settings' has too many public functions (23)",
+    "File": "Unknown",
+    "ModuleClass": "settings",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.sprites' has repetitive API calls: circle(4x), Rect(3x), rect(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/FlappyBird/post_coding/sprites.py",
+    "ModuleClass": "post_coding.sprites",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.game' has repetitive API calls: SysFont(3x), update(4x), draw(3x), render(6x), blit(6x), start_game(5x), flap(4x), get_width(6x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/FlappyBird/post_coding/game.py",
+    "ModuleClass": "post_coding.game",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'post_coding.settings' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/FlappyBird/post_coding/settings.py",
+    "ModuleClass": "post_coding.settings",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.game' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/FlappyBird/post_coding/game.py",
+    "ModuleClass": "post_coding.game",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

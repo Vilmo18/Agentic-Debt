@@ -5,6 +5,11 @@
     "proxy_definition": {
       "total_reasoning_tokens": "sum of reasoning_tokens across all available phases"
     },
+    "smell_detector_mapping": {
+      "implementation_smells": "DPy implementation_smells",
+      "structural_smells": "DPy design_smells",
+      "architectural_smells": "PyExamine architectural_smells"
+    },
     "tiering_method": {
       "method": "tertiles on total_reasoning_tokens",
       "low_upper_threshold": 23744.0,
@@ -25,34 +30,49 @@
     "correlations": {
       "total_reasoning_tokens": {
         "final_total_smells": {
-          "pearson": 0.22808664226013217,
-          "spearman": 0.418059993572831,
-          "spearman_permutation_p": 0.027997200279972004
+          "pearson": 0.25653153987981375,
+          "spearman": 0.4433486077757235,
+          "spearman_permutation_p": 0.0197980201979802
         },
-        "final_fine_smells": {
+        "final_implementation_smells": {
           "pearson": 0.2261577996383836,
           "spearman": 0.4337762967629069,
           "spearman_permutation_p": 0.022297770222977704
         },
-        "final_coarse_smells": {
+        "final_structural_smells": {
           "pearson": 0.17304849979803272,
           "spearman": 0.19437859779679248,
           "spearman_permutation_p": 0.3187681231876812
         },
+        "final_architecture_smells": {
+          "pearson": 0.5508803763785158,
+          "spearman": 0.5600531431648758,
+          "spearman_permutation_p": 0.0023997600239976003
+        },
         "final_diversity": {
-          "pearson": 0.5499410406454226,
-          "spearman": 0.5435793364236284,
-          "spearman_permutation_p": 0.0035996400359964
+          "pearson": 0.5969932474379335,
+          "spearman": 0.5642068562884781,
+          "spearman_permutation_p": 0.0024997500249975004
+        },
+        "delta_implementation_smells": {
+          "pearson": 0.29050075911568624,
+          "spearman": 0.4387909636662158,
+          "spearman_permutation_p": 0.018198180181981802
+        },
+        "delta_structural_smells": {
+          "pearson": 0.0,
+          "spearman": 0.0,
+          "spearman_permutation_p": 1.0
+        },
+        "delta_architecture_smells": {
+          "pearson": 0.4036710026048929,
+          "spearman": 0.4042300811233774,
+          "spearman_permutation_p": 0.031596840315968405
         },
         "delta_total_smells": {
-          "pearson": 0.29050075911568624,
-          "spearman": 0.4387909636662158,
-          "spearman_permutation_p": 0.018198180181981802
-        },
-        "delta_fine_smells": {
-          "pearson": 0.29050075911568624,
-          "spearman": 0.4387909636662158,
-          "spearman_permutation_p": 0.018198180181981802
+          "pearson": 0.33832263507214816,
+          "spearman": 0.4601382955457712,
+          "spearman_permutation_p": 0.013598640135986401
         },
         "code_change_events": {
           "pearson": 0.23096232275714995,
@@ -65,44 +85,84 @@
       "permutations": 10000,
       "seed": 0,
       "kruskal_wallis": {
-        "final_total_smells": {
-          "h_statistic": 3.8171193415637696,
-          "epsilon_squared": 0.07268477366255079,
-          "permutation_p": 0.14828517148285172
+        "final_implementation_smells": {
+          "h_statistic": 4.228453947368413,
+          "epsilon_squared": 0.08913815789473652,
+          "permutation_p": 0.11918808119188082
+        },
+        "final_structural_smells": {
+          "h_statistic": 0.6958479532163754,
+          "epsilon_squared": 0.0,
+          "permutation_p": 0.7423257674232576
+        },
+        "final_architecture_smells": {
+          "h_statistic": 5.579539641943738,
+          "epsilon_squared": 0.14318158567774952,
+          "permutation_p": 0.05749425057494251
         },
         "final_diversity": {
-          "h_statistic": 5.730180309101311,
-          "epsilon_squared": 0.14920721236405243,
-          "permutation_p": 0.0524947505249475
+          "h_statistic": 6.582444569183267,
+          "epsilon_squared": 0.1832977827673307,
+          "permutation_p": 0.032396760323967606
         },
-        "delta_total_smells": {
+        "delta_implementation_smells": {
           "h_statistic": 2.6988359201773706,
           "epsilon_squared": 0.027953436807094823,
           "permutation_p": 0.27087291270872915
+        },
+        "delta_structural_smells": {
+          "h_statistic": 0.0,
+          "epsilon_squared": 0.0,
+          "permutation_p": 1.0
+        },
+        "delta_architecture_smells": {
+          "h_statistic": 2.9713467048710527,
+          "epsilon_squared": 0.03885386819484211,
+          "permutation_p": 0.2094790520947905
         }
       },
       "high_vs_low": {
-        "final_total_smells": {
-          "median_low": 18.5,
+        "final_implementation_smells": {
+          "median_low": 18.0,
           "median_high": 46.0,
-          "median_difference": 27.5,
-          "median_difference_permutation_p": 0.05699430056994301,
-          "mean_difference": 15.37777777777778,
-          "mean_difference_permutation_p": 0.38176182381761825,
-          "cliffs_delta": 0.4111111111111111,
+          "median_difference": 28.0,
+          "median_difference_permutation_p": 0.0552944705529447,
+          "mean_difference": 15.011111111111113,
+          "mean_difference_permutation_p": 0.3895610438956104,
+          "cliffs_delta": 0.43333333333333335,
           "cliffs_delta_magnitude": "medium"
         },
-        "final_diversity": {
-          "median_low": 3.5,
-          "median_high": 6.0,
-          "median_difference": 2.5,
-          "median_difference_permutation_p": 0.10738926107389261,
-          "mean_difference": 1.766666666666667,
-          "mean_difference_permutation_p": 0.03519648035196481,
-          "cliffs_delta": 0.5777777777777777,
+        "final_structural_smells": {
+          "median_low": 0.0,
+          "median_high": 0.0,
+          "median_difference": 0.0,
+          "median_difference_permutation_p": 1.0,
+          "mean_difference": 0.36666666666666664,
+          "mean_difference_permutation_p": 0.4313568643135686,
+          "cliffs_delta": 0.17777777777777778,
+          "cliffs_delta_magnitude": "small"
+        },
+        "final_architecture_smells": {
+          "median_low": 2.0,
+          "median_high": 4.0,
+          "median_difference": 2.0,
+          "median_difference_permutation_p": 0.1882811718828117,
+          "mean_difference": 1.6444444444444448,
+          "mean_difference_permutation_p": 0.07029297070292971,
+          "cliffs_delta": 0.5666666666666667,
           "cliffs_delta_magnitude": "large"
         },
-        "delta_total_smells": {
+        "final_diversity": {
+          "median_low": 5.5,
+          "median_high": 9.0,
+          "median_difference": 3.5,
+          "median_difference_permutation_p": 0.049795020497950204,
+          "mean_difference": 2.4444444444444446,
+          "mean_difference_permutation_p": 0.018598140185981403,
+          "cliffs_delta": 0.6222222222222222,
+          "cliffs_delta_magnitude": "large"
+        },
+        "delta_implementation_smells": {
           "median_low": 0.5,
           "median_high": 5.0,
           "median_difference": 4.5,
@@ -111,13 +171,41 @@
           "mean_difference_permutation_p": 0.7833216678332167,
           "cliffs_delta": 0.3,
           "cliffs_delta_magnitude": "small"
+        },
+        "delta_structural_smells": {
+          "median_low": 0.0,
+          "median_high": 0.0,
+          "median_difference": 0.0,
+          "median_difference_permutation_p": 1.0,
+          "mean_difference": 0.0,
+          "mean_difference_permutation_p": 1.0,
+          "cliffs_delta": 0.0,
+          "cliffs_delta_magnitude": "negligible"
+        },
+        "delta_architecture_smells": {
+          "median_low": 0.0,
+          "median_high": 0.0,
+          "median_difference": 0.0,
+          "median_difference_permutation_p": 1.0,
+          "mean_difference": 0.5555555555555556,
+          "mean_difference_permutation_p": 0.38476152384761525,
+          "cliffs_delta": 0.3333333333333333,
+          "cliffs_delta_magnitude": "medium"
         }
       },
-      "coarse_presence_high_vs_low": {
-        "rate_low": 0.3,
-        "rate_high": 0.4444444444444444,
-        "rate_difference": 0.14444444444444443,
-        "rate_difference_permutation_p": 0.6544345565443456
+      "layer_presence_high_vs_low": {
+        "structural": {
+          "rate_low": 0.3,
+          "rate_high": 0.4444444444444444,
+          "rate_difference": 0.14444444444444443,
+          "rate_difference_permutation_p": 0.6544345565443456
+        },
+        "architecture": {
+          "rate_low": 1.0,
+          "rate_high": 1.0,
+          "rate_difference": 0.0,
+          "rate_difference_permutation_p": 1.0
+        }
       }
     },
     "tiers": {
@@ -136,15 +224,15 @@
         "debt_metrics": {
           "final_total_smells": {
             "n": 10.0,
-            "mean": 34.4,
-            "median": 18.5,
-            "stdev": 39.13566148667989,
-            "min": 10.0,
-            "q1": 13.0,
-            "q3": 40.75,
-            "max": 139.0
+            "mean": 37.2,
+            "median": 23.0,
+            "stdev": 38.95524497562698,
+            "min": 12.0,
+            "q1": 15.75,
+            "q3": 43.25,
+            "max": 141.0
           },
-          "final_fine_smells": {
+          "final_implementation_smells": {
             "n": 10.0,
             "mean": 34.1,
             "median": 18.0,
@@ -154,7 +242,7 @@
             "q3": 40.75,
             "max": 139.0
           },
-          "final_coarse_smells": {
+          "final_structural_smells": {
             "n": 10.0,
             "mean": 0.3,
             "median": 0.0,
@@ -164,15 +252,55 @@
             "q3": 0.75,
             "max": 1.0
           },
+          "final_architecture_smells": {
+            "n": 10.0,
+            "mean": 2.8,
+            "median": 2.0,
+            "stdev": 1.8737959096740262,
+            "min": 1.0,
+            "q1": 2.0,
+            "q3": 3.0,
+            "max": 7.0
+          },
           "final_diversity": {
             "n": 10.0,
-            "mean": 3.9,
-            "median": 3.5,
-            "stdev": 1.3703203194062976,
-            "min": 2.0,
-            "q1": 3.0,
-            "q3": 4.75,
-            "max": 6.0
+            "mean": 6.0,
+            "median": 5.5,
+            "stdev": 1.9436506316151,
+            "min": 4.0,
+            "q1": 4.25,
+            "q3": 7.0,
+            "max": 9.0
+          },
+          "delta_implementation_smells": {
+            "n": 10.0,
+            "mean": -0.5,
+            "median": 0.5,
+            "stdev": 5.948856099191582,
+            "min": -17.0,
+            "q1": 0.0,
+            "q3": 2.75,
+            "max": 3.0
+          },
+          "delta_structural_smells": {
+            "n": 10.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "stdev": 0.0,
+            "min": 0.0,
+            "q1": 0.0,
+            "q3": 0.0,
+            "max": 0.0
+          },
+          "delta_architecture_smells": {
+            "n": 10.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "stdev": 0.0,
+            "min": 0.0,
+            "q1": 0.0,
+            "q3": 0.0,
+            "max": 0.0
           },
           "delta_total_smells": {
             "n": 10.0,
@@ -195,8 +323,9 @@
             "max": 4.0
           }
         },
-        "coarse_smell_presence_rate": 0.3,
-        "top_smell_counts": [
+        "structural_smell_presence_rate": 0.3,
+        "architecture_smell_presence_rate": 1.0,
+        "top_implementation_smell_counts": [
           [
             "Magic number",
             203
@@ -218,23 +347,15 @@
             3
           ],
           [
-            "Multifaceted abstraction",
-            2
-          ],
-          [
             "Complex conditional",
             2
           ],
           [
             "Long method",
             1
-          ],
-          [
-            "Deficient encapsulation",
-            1
           ]
         ],
-        "top_smell_project_prevalence": [
+        "top_implementation_smell_project_prevalence": [
           [
             "Long statement",
             10
@@ -256,15 +377,7 @@
             2
           ],
           [
-            "Multifaceted abstraction",
-            2
-          ],
-          [
             "Long method",
-            1
-          ],
-          [
-            "Deficient encapsulation",
             1
           ],
           [
@@ -272,7 +385,7 @@
             1
           ]
         ],
-        "top_coarse_smell_counts": [
+        "top_structural_smell_counts": [
           [
             "Multifaceted abstraction",
             2
@@ -282,13 +395,65 @@
             1
           ]
         ],
-        "top_coarse_smell_project_prevalence": [
+        "top_structural_smell_project_prevalence": [
           [
             "Multifaceted abstraction",
             2
           ],
           [
             "Deficient encapsulation",
+            1
+          ]
+        ],
+        "top_architecture_smell_counts": [
+          [
+            "Potential Improper API Usage",
+            15
+          ],
+          [
+            "Unstable Dependency",
+            5
+          ],
+          [
+            "Orphan Module",
+            3
+          ],
+          [
+            "God Object",
+            2
+          ],
+          [
+            "Potential Redundant Abstractions",
+            2
+          ],
+          [
+            "Hub-like Dependency",
+            1
+          ]
+        ],
+        "top_architecture_smell_project_prevalence": [
+          [
+            "Potential Improper API Usage",
+            10
+          ],
+          [
+            "Orphan Module",
+            3
+          ],
+          [
+            "Unstable Dependency",
+            3
+          ],
+          [
+            "God Object",
+            2
+          ],
+          [
+            "Potential Redundant Abstractions",
+            2
+          ],
+          [
+            "Hub-like Dependency",
             1
           ]
         ],
@@ -320,15 +485,15 @@
         "debt_metrics": {
           "final_total_smells": {
             "n": 9.0,
-            "mean": 25.555555555555557,
-            "median": 22.0,
-            "stdev": 12.370439676009005,
-            "min": 10.0,
-            "q1": 18.0,
-            "q3": 30.0,
-            "max": 48.0
+            "mean": 28.666666666666668,
+            "median": 25.0,
+            "stdev": 13.45362404707371,
+            "min": 11.0,
+            "q1": 21.0,
+            "q3": 34.0,
+            "max": 53.0
           },
-          "final_fine_smells": {
+          "final_implementation_smells": {
             "n": 9.0,
             "mean": 25.22222222222222,
             "median": 22.0,
@@ -338,7 +503,7 @@
             "q3": 29.0,
             "max": 47.0
           },
-          "final_coarse_smells": {
+          "final_structural_smells": {
             "n": 9.0,
             "mean": 0.3333333333333333,
             "median": 0.0,
@@ -348,17 +513,27 @@
             "q3": 1.0,
             "max": 1.0
           },
+          "final_architecture_smells": {
+            "n": 9.0,
+            "mean": 3.111111111111111,
+            "median": 3.0,
+            "stdev": 1.2692955176439846,
+            "min": 1.0,
+            "q1": 2.0,
+            "q3": 4.0,
+            "max": 5.0
+          },
           "final_diversity": {
             "n": 9.0,
-            "mean": 4.0,
-            "median": 4.0,
-            "stdev": 1.5,
-            "min": 2.0,
-            "q1": 3.0,
-            "q3": 5.0,
-            "max": 7.0
+            "mean": 6.111111111111111,
+            "median": 6.0,
+            "stdev": 2.472066162365221,
+            "min": 3.0,
+            "q1": 4.0,
+            "q3": 7.0,
+            "max": 11.0
           },
-          "delta_total_smells": {
+          "delta_implementation_smells": {
             "n": 9.0,
             "mean": 2.5555555555555554,
             "median": 3.0,
@@ -366,6 +541,36 @@
             "min": -4.0,
             "q1": 2.0,
             "q3": 4.0,
+            "max": 7.0
+          },
+          "delta_structural_smells": {
+            "n": 9.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "stdev": 0.0,
+            "min": 0.0,
+            "q1": 0.0,
+            "q3": 0.0,
+            "max": 0.0
+          },
+          "delta_architecture_smells": {
+            "n": 9.0,
+            "mean": 0.2222222222222222,
+            "median": 0.0,
+            "stdev": 0.44095855184409843,
+            "min": 0.0,
+            "q1": 0.0,
+            "q3": 0.0,
+            "max": 1.0
+          },
+          "delta_total_smells": {
+            "n": 9.0,
+            "mean": 2.7777777777777777,
+            "median": 3.0,
+            "stdev": 3.3458099833141217,
+            "min": -4.0,
+            "q1": 2.0,
+            "q3": 5.0,
             "max": 7.0
           },
           "code_change_events": {
@@ -379,8 +584,9 @@
             "max": 4.0
           }
         },
-        "coarse_smell_presence_rate": 0.3333333333333333,
-        "top_smell_counts": [
+        "structural_smell_presence_rate": 0.3333333333333333,
+        "architecture_smell_presence_rate": 1.0,
+        "top_implementation_smell_counts": [
           [
             "Magic number",
             104
@@ -406,23 +612,11 @@
             2
           ],
           [
-            "Broken modularization",
-            1
-          ],
-          [
-            "Deficient encapsulation",
-            1
-          ],
-          [
             "Complex conditional",
-            1
-          ],
-          [
-            "Feature envy",
             1
           ]
         ],
-        "top_smell_project_prevalence": [
+        "top_implementation_smell_project_prevalence": [
           [
             "Complex method",
             9
@@ -448,23 +642,11 @@
             2
           ],
           [
-            "Broken modularization",
-            1
-          ],
-          [
-            "Deficient encapsulation",
-            1
-          ],
-          [
             "Complex conditional",
             1
-          ],
-          [
-            "Feature envy",
-            1
           ]
         ],
-        "top_coarse_smell_counts": [
+        "top_structural_smell_counts": [
           [
             "Broken modularization",
             1
@@ -478,7 +660,7 @@
             1
           ]
         ],
-        "top_coarse_smell_project_prevalence": [
+        "top_structural_smell_project_prevalence": [
           [
             "Broken modularization",
             1
@@ -489,6 +671,50 @@
           ],
           [
             "Feature envy",
+            1
+          ]
+        ],
+        "top_architecture_smell_counts": [
+          [
+            "Potential Improper API Usage",
+            17
+          ],
+          [
+            "Unstable Dependency",
+            6
+          ],
+          [
+            "Orphan Module",
+            3
+          ],
+          [
+            "Hub-like Dependency",
+            1
+          ],
+          [
+            "Scattered Functionality",
+            1
+          ]
+        ],
+        "top_architecture_smell_project_prevalence": [
+          [
+            "Potential Improper API Usage",
+            9
+          ],
+          [
+            "Unstable Dependency",
+            5
+          ],
+          [
+            "Orphan Module",
+            3
+          ],
+          [
+            "Hub-like Dependency",
+            1
+          ],
+          [
+            "Scattered Functionality",
             1
           ]
         ],
@@ -519,15 +745,15 @@
         "debt_metrics": {
           "final_total_smells": {
             "n": 9.0,
-            "mean": 49.77777777777778,
-            "median": 46.0,
-            "stdev": 34.86322481418557,
-            "min": 10.0,
-            "q1": 28.0,
-            "q3": 51.0,
-            "max": 114.0
+            "mean": 54.22222222222222,
+            "median": 50.0,
+            "stdev": 34.62938700647825,
+            "min": 15.0,
+            "q1": 30.0,
+            "q3": 56.0,
+            "max": 118.0
           },
-          "final_fine_smells": {
+          "final_implementation_smells": {
             "n": 9.0,
             "mean": 49.111111111111114,
             "median": 46.0,
@@ -537,7 +763,7 @@
             "q3": 50.0,
             "max": 113.0
           },
-          "final_coarse_smells": {
+          "final_structural_smells": {
             "n": 9.0,
             "mean": 0.6666666666666666,
             "median": 0.0,
@@ -547,17 +773,27 @@
             "q3": 1.0,
             "max": 3.0
           },
+          "final_architecture_smells": {
+            "n": 9.0,
+            "mean": 4.444444444444445,
+            "median": 4.0,
+            "stdev": 1.6666666666666667,
+            "min": 2.0,
+            "q1": 4.0,
+            "q3": 5.0,
+            "max": 8.0
+          },
           "final_diversity": {
             "n": 9.0,
-            "mean": 5.666666666666667,
-            "median": 6.0,
-            "stdev": 1.8027756377319946,
-            "min": 3.0,
-            "q1": 4.0,
-            "q3": 6.0,
-            "max": 9.0
+            "mean": 8.444444444444445,
+            "median": 9.0,
+            "stdev": 1.9436506316151,
+            "min": 5.0,
+            "q1": 7.0,
+            "q3": 9.0,
+            "max": 11.0
           },
-          "delta_total_smells": {
+          "delta_implementation_smells": {
             "n": 9.0,
             "mean": 0.5555555555555556,
             "median": 5.0,
@@ -565,6 +801,36 @@
             "min": -16.0,
             "q1": -1.0,
             "q3": 5.0,
+            "max": 9.0
+          },
+          "delta_structural_smells": {
+            "n": 9.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "stdev": 0.0,
+            "min": 0.0,
+            "q1": 0.0,
+            "q3": 0.0,
+            "max": 0.0
+          },
+          "delta_architecture_smells": {
+            "n": 9.0,
+            "mean": 0.5555555555555556,
+            "median": 0.0,
+            "stdev": 1.5898986690282428,
+            "min": -2.0,
+            "q1": 0.0,
+            "q3": 1.0,
+            "max": 4.0
+          },
+          "delta_total_smells": {
+            "n": 9.0,
+            "mean": 1.1111111111111112,
+            "median": 5.0,
+            "stdev": 8.652231568278273,
+            "min": -15.0,
+            "q1": -1.0,
+            "q3": 6.0,
             "max": 9.0
           },
           "code_change_events": {
@@ -578,8 +844,9 @@
             "max": 4.0
           }
         },
-        "coarse_smell_presence_rate": 0.4444444444444444,
-        "top_smell_counts": [
+        "structural_smell_presence_rate": 0.4444444444444444,
+        "architecture_smell_presence_rate": 1.0,
+        "top_implementation_smell_counts": [
           [
             "Magic number",
             293
@@ -611,23 +878,15 @@
           [
             "Complex conditional",
             3
-          ],
-          [
-            "Feature envy",
-            3
-          ],
-          [
-            "Insufficient modularization",
-            2
           ]
         ],
-        "top_smell_project_prevalence": [
+        "top_implementation_smell_project_prevalence": [
           [
-            "Long statement",
+            "Complex method",
             9
           ],
           [
-            "Complex method",
+            "Long statement",
             9
           ],
           [
@@ -651,19 +910,11 @@
             3
           ],
           [
-            "Feature envy",
-            3
-          ],
-          [
             "Complex conditional",
             2
-          ],
-          [
-            "Insufficient modularization",
-            1
           ]
         ],
-        "top_coarse_smell_counts": [
+        "top_structural_smell_counts": [
           [
             "Feature envy",
             3
@@ -677,7 +928,7 @@
             1
           ]
         ],
-        "top_coarse_smell_project_prevalence": [
+        "top_structural_smell_project_prevalence": [
           [
             "Feature envy",
             3
@@ -688,6 +939,58 @@
           ],
           [
             "Wide hierarchy",
+            1
+          ]
+        ],
+        "top_architecture_smell_counts": [
+          [
+            "Potential Improper API Usage",
+            21
+          ],
+          [
+            "Unstable Dependency",
+            10
+          ],
+          [
+            "Scattered Functionality",
+            3
+          ],
+          [
+            "Orphan Module",
+            3
+          ],
+          [
+            "God Object",
+            2
+          ],
+          [
+            "Hub-like Dependency",
+            1
+          ]
+        ],
+        "top_architecture_smell_project_prevalence": [
+          [
+            "Potential Improper API Usage",
+            9
+          ],
+          [
+            "Unstable Dependency",
+            8
+          ],
+          [
+            "Orphan Module",
+            3
+          ],
+          [
+            "Scattered Functionality",
+            2
+          ],
+          [
+            "God Object",
+            2
+          ],
+          [
+            "Hub-like Dependency",
             1
           ]
         ],
@@ -705,10 +1008,13 @@
       }
     },
     "comparative": {
-      "high_minus_low_median_final_total_smells": 27.5,
-      "high_minus_low_mean_final_total_smells": 15.37777777777778,
-      "high_minus_low_median_final_diversity": 2.5,
-      "high_minus_low_coarse_presence_rate": 0.14444444444444443
+      "high_minus_low_median_final_total_smells": 27.0,
+      "high_minus_low_median_final_implementation_smells": 28.0,
+      "high_minus_low_median_final_structural_smells": 0.0,
+      "high_minus_low_median_final_architecture_smells": 2.0,
+      "high_minus_low_median_final_diversity": 3.5,
+      "high_minus_low_structural_presence_rate": 0.14444444444444443,
+      "high_minus_low_architecture_presence_rate": 0.0
     },
     "plots": {}
   },
@@ -717,15 +1023,19 @@
       "project": "TheCrossword",
       "complexity_tier": "High",
       "total_reasoning_tokens": 40000,
-      "final_total_smells": 24,
-      "final_fine_smells": 24,
-      "final_coarse_smells": 0,
-      "final_diversity": 6,
+      "final_total_smells": 28,
+      "final_implementation_smells": 24,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 4,
+      "final_diversity": 9,
+      "delta_implementation_smells": 9,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 9,
-      "delta_fine_smells": 9,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           11
@@ -751,21 +1061,39 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "Orphan Module",
+          1
+        ],
+        [
+          "Unstable Dependency",
+          1
+        ]
+      ]
     },
     {
       "project": "Checkers",
       "complexity_tier": "High",
       "total_reasoning_tokens": 37952,
-      "final_total_smells": 47,
-      "final_fine_smells": 47,
-      "final_coarse_smells": 0,
-      "final_diversity": 6,
-      "delta_total_smells": 5,
-      "delta_fine_smells": 5,
-      "coarse_smell_present": 0,
+      "final_total_smells": 55,
+      "final_implementation_smells": 47,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 8,
+      "final_diversity": 11,
+      "delta_implementation_smells": 5,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 1,
+      "delta_total_smells": 6,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           26
@@ -791,21 +1119,47 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          3
+        ],
+        [
+          "Unstable Dependency",
+          2
+        ],
+        [
+          "Scattered Functionality",
+          1
+        ],
+        [
+          "God Object",
+          1
+        ],
+        [
+          "Orphan Module",
+          1
+        ]
+      ]
     },
     {
       "project": "StrandsNYT",
       "complexity_tier": "High",
       "total_reasoning_tokens": 37696,
-      "final_total_smells": 51,
-      "final_fine_smells": 50,
-      "final_coarse_smells": 1,
-      "final_diversity": 6,
-      "delta_total_smells": 5,
-      "delta_fine_smells": 5,
-      "coarse_smell_present": 1,
+      "final_total_smells": 56,
+      "final_implementation_smells": 50,
+      "final_structural_smells": 1,
+      "final_architecture_smells": 5,
+      "final_diversity": 9,
+      "delta_implementation_smells": 5,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 4,
+      "delta_total_smells": 9,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           33
@@ -825,15 +1179,25 @@
         [
           "Empty catch block",
           1
-        ],
+        ]
+      ],
+      "top_structural_smells": [
         [
           "Feature envy",
           1
         ]
       ],
-      "top_coarse_smells": [
+      "top_architecture_smells": [
         [
-          "Feature envy",
+          "Scattered Functionality",
+          2
+        ],
+        [
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "Unstable Dependency",
           1
         ]
       ]
@@ -842,15 +1206,19 @@
       "project": "DouDizhuPoker",
       "complexity_tier": "High",
       "total_reasoning_tokens": 32896,
-      "final_total_smells": 114,
-      "final_fine_smells": 113,
-      "final_coarse_smells": 1,
-      "final_diversity": 7,
+      "final_total_smells": 118,
+      "final_implementation_smells": 113,
+      "final_structural_smells": 1,
+      "final_architecture_smells": 4,
+      "final_diversity": 9,
+      "delta_implementation_smells": 6,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 6,
-      "delta_fine_smells": 6,
-      "coarse_smell_present": 1,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           90
@@ -874,15 +1242,21 @@
         [
           "Long method",
           1
-        ],
+        ]
+      ],
+      "top_structural_smells": [
         [
           "Feature envy",
           1
         ]
       ],
-      "top_coarse_smells": [
+      "top_architecture_smells": [
         [
-          "Feature envy",
+          "Potential Improper API Usage",
+          3
+        ],
+        [
+          "Unstable Dependency",
           1
         ]
       ]
@@ -891,15 +1265,19 @@
       "project": "Gomoku",
       "complexity_tier": "High",
       "total_reasoning_tokens": 30656,
-      "final_total_smells": 46,
-      "final_fine_smells": 46,
-      "final_coarse_smells": 0,
-      "final_diversity": 3,
-      "delta_total_smells": 1,
-      "delta_fine_smells": 1,
-      "coarse_smell_present": 0,
+      "final_total_smells": 50,
+      "final_implementation_smells": 46,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 4,
+      "final_diversity": 5,
+      "delta_implementation_smells": 1,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 1,
+      "delta_total_smells": 2,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           31
@@ -913,21 +1291,35 @@
           2
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          3
+        ],
+        [
+          "Unstable Dependency",
+          1
+        ]
+      ]
     },
     {
       "project": "FlappyBird",
       "complexity_tier": "High",
       "total_reasoning_tokens": 30336,
-      "final_total_smells": 29,
-      "final_fine_smells": 29,
-      "final_coarse_smells": 0,
-      "final_diversity": 4,
+      "final_total_smells": 34,
+      "final_implementation_smells": 29,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 5,
+      "final_diversity": 8,
+      "delta_implementation_smells": 5,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 5,
-      "delta_fine_smells": 5,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           15
@@ -945,21 +1337,43 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "God Object",
+          1
+        ],
+        [
+          "Orphan Module",
+          1
+        ],
+        [
+          "Unstable Dependency",
+          1
+        ]
+      ]
     },
     {
       "project": "ConnectionsNYT",
       "complexity_tier": "High",
       "total_reasoning_tokens": 30080,
-      "final_total_smells": 10,
-      "final_fine_smells": 10,
-      "final_coarse_smells": 0,
-      "final_diversity": 4,
-      "delta_total_smells": -16,
-      "delta_fine_smells": -16,
-      "coarse_smell_present": 0,
+      "final_total_smells": 15,
+      "final_implementation_smells": 10,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 5,
+      "final_diversity": 7,
+      "delta_implementation_smells": -16,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 1,
+      "delta_total_smells": -15,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           7
@@ -977,21 +1391,39 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "Unstable Dependency",
+          2
+        ],
+        [
+          "Hub-like Dependency",
+          1
+        ]
+      ]
     },
     {
       "project": "MonopolyGo",
       "complexity_tier": "High",
       "total_reasoning_tokens": 29696,
-      "final_total_smells": 28,
-      "final_fine_smells": 27,
-      "final_coarse_smells": 1,
-      "final_diversity": 6,
+      "final_total_smells": 30,
+      "final_implementation_smells": 27,
+      "final_structural_smells": 1,
+      "final_architecture_smells": 2,
+      "final_diversity": 7,
+      "delta_implementation_smells": -1,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": -1,
-      "delta_fine_smells": -1,
-      "coarse_smell_present": 1,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           13
@@ -1011,16 +1443,18 @@
         [
           "Long identifier",
           1
-        ],
+        ]
+      ],
+      "top_structural_smells": [
         [
           "Wide hierarchy",
           1
         ]
       ],
-      "top_coarse_smells": [
+      "top_architecture_smells": [
         [
-          "Wide hierarchy",
-          1
+          "Potential Improper API Usage",
+          2
         ]
       ]
     },
@@ -1028,15 +1462,19 @@
       "project": "Chess",
       "complexity_tier": "High",
       "total_reasoning_tokens": 29120,
-      "final_total_smells": 99,
-      "final_fine_smells": 96,
-      "final_coarse_smells": 3,
-      "final_diversity": 9,
-      "delta_total_smells": -9,
-      "delta_fine_smells": -9,
-      "coarse_smell_present": 1,
+      "final_total_smells": 102,
+      "final_implementation_smells": 96,
+      "final_structural_smells": 3,
+      "final_architecture_smells": 3,
+      "final_diversity": 11,
+      "delta_implementation_smells": -9,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": -2,
+      "delta_total_smells": -11,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           76
@@ -1054,10 +1492,6 @@
           2
         ],
         [
-          "Insufficient modularization",
-          2
-        ],
-        [
           "Long identifier",
           1
         ],
@@ -1068,13 +1502,9 @@
         [
           "Long parameter list",
           1
-        ],
-        [
-          "Feature envy",
-          1
         ]
       ],
-      "top_coarse_smells": [
+      "top_structural_smells": [
         [
           "Insufficient modularization",
           2
@@ -1083,21 +1513,35 @@
           "Feature envy",
           1
         ]
+      ],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "Unstable Dependency",
+          1
+        ]
       ]
     },
     {
       "project": "GoldMiner",
       "complexity_tier": "Medium",
       "total_reasoning_tokens": 27968,
-      "final_total_smells": 42,
-      "final_fine_smells": 42,
-      "final_coarse_smells": 0,
-      "final_diversity": 5,
+      "final_total_smells": 46,
+      "final_implementation_smells": 42,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 4,
+      "final_diversity": 8,
+      "delta_implementation_smells": 7,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 7,
-      "delta_fine_smells": 7,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           28
@@ -1119,21 +1563,39 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "Hub-like Dependency",
+          1
+        ],
+        [
+          "Unstable Dependency",
+          1
+        ]
+      ]
     },
     {
       "project": "SnakeGame",
       "complexity_tier": "Medium",
       "total_reasoning_tokens": 27136,
-      "final_total_smells": 30,
-      "final_fine_smells": 29,
-      "final_coarse_smells": 1,
-      "final_diversity": 7,
-      "delta_total_smells": 4,
-      "delta_fine_smells": 4,
-      "coarse_smell_present": 1,
+      "final_total_smells": 34,
+      "final_implementation_smells": 29,
+      "final_structural_smells": 1,
+      "final_architecture_smells": 4,
+      "final_diversity": 11,
+      "delta_implementation_smells": 4,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 1,
+      "delta_total_smells": 5,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           13
@@ -1157,15 +1619,29 @@
         [
           "Long method",
           1
-        ],
+        ]
+      ],
+      "top_structural_smells": [
         [
           "Feature envy",
           1
         ]
       ],
-      "top_coarse_smells": [
+      "top_architecture_smells": [
         [
-          "Feature envy",
+          "Scattered Functionality",
+          1
+        ],
+        [
+          "Potential Improper API Usage",
+          1
+        ],
+        [
+          "Orphan Module",
+          1
+        ],
+        [
+          "Unstable Dependency",
           1
         ]
       ]
@@ -1174,15 +1650,19 @@
       "project": "TriviaQuiz",
       "complexity_tier": "Medium",
       "total_reasoning_tokens": 27008,
-      "final_total_smells": 18,
-      "final_fine_smells": 17,
-      "final_coarse_smells": 1,
-      "final_diversity": 5,
+      "final_total_smells": 21,
+      "final_implementation_smells": 17,
+      "final_structural_smells": 1,
+      "final_architecture_smells": 3,
+      "final_diversity": 7,
+      "delta_implementation_smells": 2,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 2,
-      "delta_fine_smells": 2,
-      "coarse_smell_present": 1,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           12
@@ -1198,15 +1678,21 @@
         [
           "Long method",
           1
-        ],
+        ]
+      ],
+      "top_structural_smells": [
         [
           "Deficient encapsulation",
           1
         ]
       ],
-      "top_coarse_smells": [
+      "top_architecture_smells": [
         [
-          "Deficient encapsulation",
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "Unstable Dependency",
           1
         ]
       ]
@@ -1215,15 +1701,19 @@
       "project": "Tiny Rouge",
       "complexity_tier": "Medium",
       "total_reasoning_tokens": 26496,
-      "final_total_smells": 48,
-      "final_fine_smells": 47,
-      "final_coarse_smells": 1,
-      "final_diversity": 4,
+      "final_total_smells": 53,
+      "final_implementation_smells": 47,
+      "final_structural_smells": 1,
+      "final_architecture_smells": 5,
+      "final_diversity": 7,
+      "delta_implementation_smells": 3,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 3,
-      "delta_fine_smells": 3,
-      "coarse_smell_present": 1,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           39
@@ -1235,15 +1725,25 @@
         [
           "Long statement",
           2
-        ],
+        ]
+      ],
+      "top_structural_smells": [
         [
           "Broken modularization",
           1
         ]
       ],
-      "top_coarse_smells": [
+      "top_architecture_smells": [
         [
-          "Broken modularization",
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "Unstable Dependency",
+          2
+        ],
+        [
+          "Orphan Module",
           1
         ]
       ]
@@ -1252,15 +1752,19 @@
       "project": "DetectPalindromes",
       "complexity_tier": "Medium",
       "total_reasoning_tokens": 25344,
-      "final_total_smells": 22,
-      "final_fine_smells": 22,
-      "final_coarse_smells": 0,
-      "final_diversity": 4,
-      "delta_total_smells": 5,
-      "delta_fine_smells": 5,
-      "coarse_smell_present": 0,
+      "final_total_smells": 26,
+      "final_implementation_smells": 22,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 4,
+      "final_diversity": 6,
+      "delta_implementation_smells": 5,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 1,
+      "delta_total_smells": 6,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           15
@@ -1278,21 +1782,35 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          3
+        ],
+        [
+          "Unstable Dependency",
+          1
+        ]
+      ]
     },
     {
       "project": "Wordle",
       "complexity_tier": "Medium",
       "total_reasoning_tokens": 24192,
-      "final_total_smells": 23,
-      "final_fine_smells": 23,
-      "final_coarse_smells": 0,
-      "final_diversity": 3,
+      "final_total_smells": 25,
+      "final_implementation_smells": 23,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 2,
+      "final_diversity": 4,
+      "delta_implementation_smells": 4,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 4,
-      "delta_fine_smells": 4,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           15
@@ -1306,21 +1824,31 @@
           3
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ]
+      ]
     },
     {
       "project": "ReversiOthello",
       "complexity_tier": "Medium",
       "total_reasoning_tokens": 24064,
-      "final_total_smells": 16,
-      "final_fine_smells": 16,
-      "final_coarse_smells": 0,
-      "final_diversity": 3,
+      "final_total_smells": 18,
+      "final_implementation_smells": 16,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 2,
+      "final_diversity": 4,
+      "delta_implementation_smells": 0,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 0,
-      "delta_fine_smells": 0,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           8
@@ -1334,21 +1862,31 @@
           2
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ]
+      ]
     },
     {
       "project": "Minesweeper",
       "complexity_tier": "Medium",
       "total_reasoning_tokens": 23872,
-      "final_total_smells": 10,
-      "final_fine_smells": 10,
-      "final_coarse_smells": 0,
-      "final_diversity": 2,
+      "final_total_smells": 11,
+      "final_implementation_smells": 10,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 1,
+      "final_diversity": 3,
+      "delta_implementation_smells": 2,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 2,
-      "delta_fine_smells": 2,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           7
@@ -1358,21 +1896,31 @@
           3
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          1
+        ]
+      ]
     },
     {
       "project": "TextBasedSpaceInvaders",
       "complexity_tier": "Medium",
       "total_reasoning_tokens": 23872,
-      "final_total_smells": 21,
-      "final_fine_smells": 21,
-      "final_coarse_smells": 0,
-      "final_diversity": 3,
+      "final_total_smells": 24,
+      "final_implementation_smells": 21,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 3,
+      "final_diversity": 5,
+      "delta_implementation_smells": -4,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": -4,
-      "delta_fine_smells": -4,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           13
@@ -1386,21 +1934,35 @@
           3
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "Orphan Module",
+          1
+        ]
+      ]
     },
     {
       "project": "StrandsGame",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 23744,
-      "final_total_smells": 47,
-      "final_fine_smells": 46,
-      "final_coarse_smells": 1,
-      "final_diversity": 6,
+      "final_total_smells": 50,
+      "final_implementation_smells": 46,
+      "final_structural_smells": 1,
+      "final_architecture_smells": 3,
+      "final_diversity": 9,
+      "delta_implementation_smells": 0,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 0,
-      "delta_fine_smells": 0,
-      "coarse_smell_present": 1,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           23
@@ -1420,15 +1982,25 @@
         [
           "Long method",
           1
-        ],
+        ]
+      ],
+      "top_structural_smells": [
         [
           "Deficient encapsulation",
           1
         ]
       ],
-      "top_coarse_smells": [
+      "top_architecture_smells": [
         [
-          "Deficient encapsulation",
+          "Hub-like Dependency",
+          1
+        ],
+        [
+          "Potential Improper API Usage",
+          1
+        ],
+        [
+          "Unstable Dependency",
           1
         ]
       ]
@@ -1437,15 +2009,19 @@
       "project": "2048",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 23360,
-      "final_total_smells": 16,
-      "final_fine_smells": 16,
-      "final_coarse_smells": 0,
-      "final_diversity": 4,
+      "final_total_smells": 18,
+      "final_implementation_smells": 16,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 2,
+      "final_diversity": 5,
+      "delta_implementation_smells": 0,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 0,
-      "delta_fine_smells": 0,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           7
@@ -1463,21 +2039,31 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ]
+      ]
     },
     {
       "project": "BudgetTracker",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 22976,
-      "final_total_smells": 21,
-      "final_fine_smells": 20,
-      "final_coarse_smells": 1,
-      "final_diversity": 6,
+      "final_total_smells": 28,
+      "final_implementation_smells": 20,
+      "final_structural_smells": 1,
+      "final_architecture_smells": 7,
+      "final_diversity": 9,
+      "delta_implementation_smells": 3,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 3,
-      "delta_fine_smells": 3,
-      "coarse_smell_present": 1,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           9
@@ -1497,15 +2083,25 @@
         [
           "Long parameter list",
           1
-        ],
+        ]
+      ],
+      "top_structural_smells": [
         [
           "Multifaceted abstraction",
           1
         ]
       ],
-      "top_coarse_smells": [
+      "top_architecture_smells": [
         [
-          "Multifaceted abstraction",
+          "Potential Improper API Usage",
+          3
+        ],
+        [
+          "Unstable Dependency",
+          3
+        ],
+        [
+          "Potential Redundant Abstractions",
           1
         ]
       ]
@@ -1514,15 +2110,19 @@
       "project": "Sudoku",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 22144,
-      "final_total_smells": 139,
-      "final_fine_smells": 139,
-      "final_coarse_smells": 0,
-      "final_diversity": 5,
+      "final_total_smells": 141,
+      "final_implementation_smells": 139,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 2,
+      "final_diversity": 6,
+      "delta_implementation_smells": 0,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 0,
-      "delta_fine_smells": 0,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           123
@@ -1544,21 +2144,31 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ]
+      ]
     },
     {
       "project": "TicTacToe",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 20352,
-      "final_total_smells": 13,
-      "final_fine_smells": 13,
-      "final_coarse_smells": 0,
-      "final_diversity": 2,
+      "final_total_smells": 15,
+      "final_implementation_smells": 13,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 2,
+      "final_diversity": 4,
+      "delta_implementation_smells": 3,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 3,
-      "delta_fine_smells": 3,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           12
@@ -1568,21 +2178,35 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          1
+        ],
+        [
+          "Orphan Module",
+          1
+        ]
+      ]
     },
     {
       "project": "EpisodeChooseYourStory",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 20032,
-      "final_total_smells": 13,
-      "final_fine_smells": 13,
-      "final_coarse_smells": 0,
-      "final_diversity": 3,
+      "final_total_smells": 18,
+      "final_implementation_smells": 13,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 5,
+      "final_diversity": 7,
+      "delta_implementation_smells": 3,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 3,
-      "delta_fine_smells": 3,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           10
@@ -1596,21 +2220,43 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          2
+        ],
+        [
+          "God Object",
+          1
+        ],
+        [
+          "Orphan Module",
+          1
+        ],
+        [
+          "Unstable Dependency",
+          1
+        ]
+      ]
     },
     {
       "project": "FibonacciNumbers",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 19456,
-      "final_total_smells": 10,
-      "final_fine_smells": 9,
-      "final_coarse_smells": 1,
-      "final_diversity": 3,
+      "final_total_smells": 12,
+      "final_implementation_smells": 9,
+      "final_structural_smells": 1,
+      "final_architecture_smells": 2,
+      "final_diversity": 5,
+      "delta_implementation_smells": 0,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 0,
-      "delta_fine_smells": 0,
-      "coarse_smell_present": 1,
+      "structural_smell_present": 1,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           8
@@ -1618,15 +2264,21 @@
         [
           "Empty catch block",
           1
-        ],
+        ]
+      ],
+      "top_structural_smells": [
         [
           "Multifaceted abstraction",
           1
         ]
       ],
-      "top_coarse_smells": [
+      "top_architecture_smells": [
         [
-          "Multifaceted abstraction",
+          "Potential Redundant Abstractions",
+          1
+        ],
+        [
+          "Potential Improper API Usage",
           1
         ]
       ]
@@ -1635,15 +2287,19 @@
       "project": "ConnectFour",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 19328,
-      "final_total_smells": 28,
-      "final_fine_smells": 28,
-      "final_coarse_smells": 0,
-      "final_diversity": 3,
+      "final_total_smells": 29,
+      "final_implementation_smells": 28,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 1,
+      "final_diversity": 4,
+      "delta_implementation_smells": 2,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 2,
-      "delta_fine_smells": 2,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 3,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           17
@@ -1657,21 +2313,31 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          1
+        ]
+      ]
     },
     {
       "project": "Mastermind",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 18944,
-      "final_total_smells": 12,
-      "final_fine_smells": 12,
-      "final_coarse_smells": 0,
-      "final_diversity": 3,
+      "final_total_smells": 13,
+      "final_implementation_smells": 12,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 1,
+      "final_diversity": 4,
+      "delta_implementation_smells": -17,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": -17,
-      "delta_fine_smells": -17,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Long statement",
           8
@@ -1685,21 +2351,31 @@
           2
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "Potential Improper API Usage",
+          1
+        ]
+      ]
     },
     {
       "project": "Pong",
       "complexity_tier": "Low",
       "total_reasoning_tokens": 17280,
-      "final_total_smells": 45,
-      "final_fine_smells": 45,
-      "final_coarse_smells": 0,
-      "final_diversity": 4,
+      "final_total_smells": 48,
+      "final_implementation_smells": 45,
+      "final_structural_smells": 0,
+      "final_architecture_smells": 3,
+      "final_diversity": 7,
+      "delta_implementation_smells": 1,
+      "delta_structural_smells": 0,
+      "delta_architecture_smells": 0,
       "delta_total_smells": 1,
-      "delta_fine_smells": 1,
-      "coarse_smell_present": 0,
+      "structural_smell_present": 0,
+      "architecture_smell_present": 1,
       "code_change_events": 4,
-      "top_all_smells": [
+      "top_implementation_smells": [
         [
           "Magic number",
           28
@@ -1717,7 +2393,21 @@
           1
         ]
       ],
-      "top_coarse_smells": []
+      "top_structural_smells": [],
+      "top_architecture_smells": [
+        [
+          "God Object",
+          1
+        ],
+        [
+          "Potential Improper API Usage",
+          1
+        ],
+        [
+          "Orphan Module",
+          1
+        ]
+      ]
     }
   ]
 }

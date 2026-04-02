@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.gui' has repetitive API calls: __init__(5x), grid(14x), get(3x), update_board(8x), pack(6x), refresh(10x), config(15x), insert(8x), Button(6x), columnconfigure(4x), update_buttons(6x), log_message(7x), append(4x), Label(4x), showinfo(11x), showwarning(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/MonopolyGo/final/gui.py",
+    "ModuleClass": "final.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.game' has repetitive API calls: __init__(7x), check_bankruptcy(4x), append(27x), log_message(16x), move_player_steps(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/MonopolyGo/final/game.py",
+    "ModuleClass": "final.game",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.gui' has repetitive API calls: StringVar(3x), Frame(5x), config(3x), Label(11x), OptionMenu(4x), pack(10x), grid(16x), get(6x), _set_submit_enabled(4x), showerror(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Mastermind/final/gui.py",
+    "ModuleClass": "final.gui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

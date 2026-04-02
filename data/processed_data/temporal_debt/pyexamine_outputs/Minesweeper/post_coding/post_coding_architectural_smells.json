@@ -1,0 +1,10 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui' has repetitive API calls: pack(12x), Frame(3x), config(11x), Label(6x), _update_mines_label(3x), _refresh_cells(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Minesweeper/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

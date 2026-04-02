@@ -1,0 +1,34 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.crossword_model' has repetitive API calls: upper(4x), append(13x), join(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TheCrossword/final/crossword_model.py",
+    "ModuleClass": "final.crossword_model",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.crossword_view' has repetitive API calls: Frame(8x), pack(24x), StringVar(4x), Label(7x), configure(9x), append(4x), get(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TheCrossword/final/crossword_view.py",
+    "ModuleClass": "final.crossword_view",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'final.data' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TheCrossword/final/data.py",
+    "ModuleClass": "final.data",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.main' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TheCrossword/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

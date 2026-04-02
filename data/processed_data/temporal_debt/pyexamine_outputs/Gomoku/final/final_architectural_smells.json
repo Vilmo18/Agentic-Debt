@@ -1,0 +1,34 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.controller' has repetitive API calls: refresh(7x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Gomoku/final/controller.py",
+    "ModuleClass": "final.controller",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.model' has repetitive API calls: clear(3x), append(4x), in_bounds(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Gomoku/final/model.py",
+    "ModuleClass": "final.model",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.view' has repetitive API calls: create_line(4x), cell_center(4x), pack(7x), Button(3x), bind_all(3x), create_oval(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Gomoku/final/view.py",
+    "ModuleClass": "final.view",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.main' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Gomoku/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

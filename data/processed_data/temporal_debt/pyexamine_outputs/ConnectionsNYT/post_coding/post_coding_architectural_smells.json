@@ -1,0 +1,34 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.puzzle' has repetitive API calls: append(3x), choice(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectionsNYT/post_coding/puzzle.py",
+    "ModuleClass": "post_coding.puzzle",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.main' has repetitive API calls: Frame(6x), grid(16x), grid_columnconfigure(3x), Label(7x), Button(6x), clear(7x), config(24x), winfo_children(3x), after(3x), feedback(7x), pack(3x), destroy(3x), remove(3x), get(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectionsNYT/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.puzzle' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectionsNYT/post_coding/puzzle.py",
+    "ModuleClass": "post_coding.puzzle",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.main' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectionsNYT/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

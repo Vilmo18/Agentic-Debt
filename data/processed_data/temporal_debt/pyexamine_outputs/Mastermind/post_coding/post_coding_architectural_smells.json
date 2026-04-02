@@ -1,0 +1,10 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui' has repetitive API calls: config(10x), Frame(7x), grid(11x), grid_rowconfigure(4x), pack(9x), LabelFrame(3x), Button(4x), Canvas(4x), is_over(8x), refresh_ui(6x), set(3x), create_oval(3x), capitalize(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Mastermind/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

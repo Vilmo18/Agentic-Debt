@@ -1,0 +1,10 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui' has repetitive API calls: draw_board(3x), update_status(11x), pack(8x), bind(3x), configure(4x), set(6x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectFour/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

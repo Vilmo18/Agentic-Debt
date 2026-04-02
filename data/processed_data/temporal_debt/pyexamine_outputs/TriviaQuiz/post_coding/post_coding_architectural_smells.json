@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.models' has repetitive API calls: get(6x), append(5x), add(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_coding/models.py",
+    "ModuleClass": "post_coding.models",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.main' has repetitive API calls: __init__(4x), Frame(10x), pack(35x), show_frame(4x), Label(16x), bind(3x), Button(5x), grid(6x), refresh_banks(3x), update_bank_size(3x), get(10x), config(7x), set(7x), showerror(3x), showwarning(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.main' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TriviaQuiz/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

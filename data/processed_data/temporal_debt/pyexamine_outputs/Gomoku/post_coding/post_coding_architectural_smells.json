@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'gomoku.controller' has repetitive API calls: refresh(7x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Gomoku/post_coding/gomoku/controller.py",
+    "ModuleClass": "gomoku.controller",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'gomoku.model' has repetitive API calls: clear(3x), append(4x), in_bounds(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Gomoku/post_coding/gomoku/model.py",
+    "ModuleClass": "gomoku.model",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'gomoku.view' has repetitive API calls: create_line(4x), cell_center(4x), pack(7x), Button(3x), bind_all(3x), create_oval(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Gomoku/post_coding/gomoku/view.py",
+    "ModuleClass": "gomoku.view",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

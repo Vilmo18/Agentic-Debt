@@ -1,0 +1,34 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.ai' has repetitive API calls: get(3x), _find_rocket(3x), _find_bomb_to_beat(3x), items(15x), extend(7x), append(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DouDizhuPoker/final/ai.py",
+    "ModuleClass": "final.ai",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.gui' has repetitive API calls: Frame(6x), pack(15x), Label(4x), Button(5x), update_all(7x), config(31x), enable_bidding_controls_if_needed(5x), after(6x), enable_play_controls_if_needed(3x), after_bidding_to_play(3x), showinfo(3x), end_round_actions(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DouDizhuPoker/final/gui.py",
+    "ModuleClass": "final.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.rules' has repetitive API calls: keys(3x), items(9x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DouDizhuPoker/final/rules.py",
+    "ModuleClass": "final.rules",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.game' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DouDizhuPoker/final/game.py",
+    "ModuleClass": "final.game",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

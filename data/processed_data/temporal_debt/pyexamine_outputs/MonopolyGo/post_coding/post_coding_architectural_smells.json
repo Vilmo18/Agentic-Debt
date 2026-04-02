@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui' has repetitive API calls: __init__(5x), grid(14x), get(3x), update_board(8x), pack(6x), refresh(10x), config(10x), insert(7x), Button(6x), columnconfigure(4x), update_buttons(6x), log_message(7x), append(4x), Label(4x), showinfo(5x), showwarning(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/MonopolyGo/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.game' has repetitive API calls: __init__(7x), append(27x), log_message(15x), move_player_steps(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/MonopolyGo/post_coding/game.py",
+    "ModuleClass": "post_coding.game",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

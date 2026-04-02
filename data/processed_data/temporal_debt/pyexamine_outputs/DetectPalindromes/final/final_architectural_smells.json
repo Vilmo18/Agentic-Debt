@@ -1,0 +1,34 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.file_utils' has repetitive API calls: startswith(5x), decode(7x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DetectPalindromes/final/file_utils.py",
+    "ModuleClass": "final.file_utils",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.palindrome_detector' has repetitive API calls: isalnum(3x), append(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DetectPalindromes/final/palindrome_detector.py",
+    "ModuleClass": "final.palindrome_detector",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.gui_app' has repetitive API calls: BooleanVar(5x), Menu(3x), add_command(5x), config(8x), LabelFrame(3x), pack(9x), Frame(5x), grid(15x), Button(3x), heading(6x), column(6x), Scrollbar(3x), configure(4x), showinfo(4x), set(3x), get(7x), Checkbutton(5x), showerror(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DetectPalindromes/final/gui_app.py",
+    "ModuleClass": "final.gui_app",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.gui_app' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/DetectPalindromes/final/gui_app.py",
+    "ModuleClass": "final.gui_app",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

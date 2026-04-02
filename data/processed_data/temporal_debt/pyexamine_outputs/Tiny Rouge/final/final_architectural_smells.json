@@ -1,0 +1,42 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.ui' has repetitive API calls: _draw_text(14x), line(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/final/ui.py",
+    "ModuleClass": "final.ui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.mapgen' has repetitive API calls: append(8x), choice(3x), random(4x), randint(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/final/mapgen.py",
+    "ModuleClass": "final.mapgen",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'final.constants' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/final/constants.py",
+    "ModuleClass": "final.constants",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.game' has high instability (1.00) with 7 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/final/game.py",
+    "ModuleClass": "final.game",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.mapgen' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Tiny Rouge/final/mapgen.py",
+    "ModuleClass": "final.mapgen",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

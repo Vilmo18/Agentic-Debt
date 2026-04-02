@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.entities' has repetitive API calls: __init__(3x), Surface(3x), get_rect(4x), Rect(6x), rect(7x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TextBasedSpaceInvaders/final/entities.py",
+    "ModuleClass": "final.entities",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.game' has repetitive API calls: SysFont(3x), Group(3x), empty(6x), add(5x), get_ticks(3x), blit(5x), render(4x), update(4x), _draw_centered_message(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TextBasedSpaceInvaders/final/game.py",
+    "ModuleClass": "final.game",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'final.settings' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TextBasedSpaceInvaders/final/settings.py",
+    "ModuleClass": "final.settings",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

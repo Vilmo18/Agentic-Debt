@@ -1,0 +1,58 @@
+[
+  {
+    "Smell": "Potential Redundant Abstractions",
+    "Description": "Modules utils and post_coding.utils have 100.0% similar functionalities",
+    "File": "Unknown",
+    "ModuleClass": "utils",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.models' has repetitive API calls: strip(9x), append(4x), lower(5x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_coding/models.py",
+    "ModuleClass": "post_coding.models",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.storage' has repetitive API calls: create_sheet(4x), append(12x), _autosize_columns(6x), iter_rows(4x), exists(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_coding/storage.py",
+    "ModuleClass": "post_coding.storage",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.ui' has repetitive API calls: StringVar(11x), _refresh_summary(4x), _refresh_filters(3x), _refresh_table(5x), Frame(5x), pack(10x), grid(40x), Entry(6x), insert(8x), Button(8x), Combobox(5x), set(21x), column(6x), configure(3x), columnconfigure(4x), strip(4x), delete(8x), get(18x), save_model(6x), showinfo(5x), showerror(9x), Label(18x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_coding/ui.py",
+    "ModuleClass": "post_coding.ui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.storage' has high instability (1.00) with 7 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_coding/storage.py",
+    "ModuleClass": "post_coding.storage",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.ui' has high instability (1.00) with 7 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_coding/ui.py",
+    "ModuleClass": "post_coding.ui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.main' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/BudgetTracker/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

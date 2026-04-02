@@ -4,11 +4,21 @@ This folder contains the standalone analysis for:
 
 `RQ2: How does the complexity of software tasks correlate with the technical debt accumulated in LLM-MA workflows?`
 
+## What this version measures
+
+- Complexity proxy: `total_reasoning_tokens`
+- Complexity tiers: tertiles of `total_reasoning_tokens`
+- Smell categories:
+  - `Implementation` = DPy implementation smells
+  - `Structural` = DPy design smells
+  - `Architectural` = PyExamine architectural smells
+- Supporting metric: `Diversity` = number of unique smell types at the final snapshot
+
 ## Files
 
-- `scripts/task_complexity_debt_analysis.py`: computes complexity proxies, tertile-based tiers, and correlations against final debt outcomes.
-- `data/rq2_results.json`: structured output produced by the script.
-- `Report.md`: narrative report with interpretation and tables.
+- `scripts/task_complexity_debt_analysis.py`: computes the metrics, statistics, and optional plots
+- `data/rq2_results.json`: machine-readable results
+- `Report.md`: narrative report with tables and interpretation
 
 ## Run
 
@@ -16,17 +26,28 @@ This folder contains the standalone analysis for:
 python3 agent_debt/rq2/scripts/task_complexity_debt_analysis.py
 ```
 
+Skip plots if `matplotlib` is unavailable:
+
+```bash
+python3 agent_debt/rq2/scripts/task_complexity_debt_analysis.py --skip-plots
+```
+
 ## Inputs
 
 - `agent_debt/data/ChatDev_GPT-5_Trace_Analysis_Results.json`
 - `agent_debt/data/temporal_debt_results.json`
+- `agent_debt/data/processed_data/temporal_debt/dpy_outputs`
+- `agent_debt/data/processed_data/temporal_debt/snapshots`
+- `python_smells_detector`
 
-## Notes
+## Main takeaway
 
-- Primary complexity proxy: `total_reasoning_tokens`
-- Complexity tiers are defined by tertiles of `total_reasoning_tokens`
-- The final smell analysis covers the 28 Python projects with DPy output; `CandyCrush` and `Tetris` are excluded -->
-# RQ2: Task complexity vs accumulated technical debt
+- The strongest supported RQ2 results are: higher task complexity is associated with more `Implementation` smells, more `Architectural` smells, and higher smell `Diversity`.
+- `Structural` smells appear only sparsely, so their relationship with complexity is still weak in this dataset.
+- Architectural smells are now computed with PyExamine, cached under `agent_debt/data/processed_data/temporal_debt/pyexamine_outputs`, and included directly in `agent_debt/rq2/data/rq2_results.json`.
+
+See `Report.md` for the full statistical analysis and project-level appendix. -->
+# RQ2: Task complexity vs architectural, structural, and implementation smells
 
 ## Research question
 
@@ -34,15 +55,20 @@ How does the complexity of software tasks correlate with the technical debt accu
 
 ## Operationalization
 
-- Dataset scope: 30 ChatDev tasks in total, with 28 Python projects analyzable by DPy. `CandyCrush` and `Tetris` are excluded from smell-based analysis because the RQ1 debt pipeline operates on Python artifacts.
-- Primary complexity proxy: `total_reasoning_tokens`, defined as the sum of reasoning tokens across all available phases for a project.
-- Debt outcomes: final smell count (`FinalTotal`), final fine-grained smell count (`FinalFine`), final coarse smell count (`FinalCoarse`), final smell diversity (`Diversity` = number of unique smell types), and accumulated smell growth (`DeltaTotal` = `FinalTotal - PostCodingTotal`).
-- Tiering: tertiles on `total_reasoning_tokens`.
-- Inferential layer: permutation-tested Spearman correlations (`10000` permutations), Kruskal-Wallis tests across the three tiers, and High-vs-Low effect sizes with permutation tests.
+- Dataset scope: 30 ChatDev tasks in total, with 28 Python projects analyzable by the smell pipeline. `CandyCrush` and `Tetris` are excluded because the pipeline is Python-based.
+- Complexity proxy: `total_reasoning_tokens`, defined as the sum of reasoning tokens across all available phases for a project.
+- Complexity tiers: tertiles on `total_reasoning_tokens`.
+- Smell categories:
+  - `Implementation` = DPy implementation smells
+  - `Structural` = DPy design smells
+  - `Architectural` = PyExamine architectural smells
+- Important detector note: the analysis now uses a mixed detector setup on purpose. DPy remains the source for implementation and structural smells, while PyExamine is used to recover architectural smells.
+- Additional supporting metric: `Diversity`, defined as the number of unique smell types at the final snapshot across all three smell categories.
+- Inferential layer: permutation-tested Spearman correlations (`10000` permutations), Kruskal-Wallis tests across `Low / Medium / High`, and High-vs-Low effect sizes.
 
 ## Complexity tiers
 
-The primary proxy distribution for the 28 Python projects is:
+The complexity proxy distribution for the 28 Python projects is:
 
 | Metric | Value |
 | :-- | --: |
@@ -61,131 +87,170 @@ Tier thresholds:
 | Medium | `23744 < total_reasoning_tokens <= 27968` |
 | High | `total_reasoning_tokens > 27968` |
 
-## Main findings
+## Main results
 
-### 1. The clearest supported result is: higher complexity is associated with more diverse debt
+### 1. Complexity is associated with both implementation smells and architectural smells
 
-| Debt metric | Spearman rho | Permutation p | Reading |
+| Metric | Spearman rho | Permutation p | Reading |
 | :-- | --: | --: | :-- |
-| Diversity | 0.544 | 0.004 | strongest supported signal |
-| DeltaTotal | 0.439 | 0.018 | positive accumulated-debt signal |
-| FinalFine | 0.434 | 0.026 | positive fine-grained debt signal |
-| FinalTotal | 0.418 | 0.028 | positive overall debt signal |
-| FinalCoarse | 0.194 | 0.319 | not statistically supported |
+| Final implementation smells | 0.434 | 0.022 | positive, statistically supported |
+| Final structural smells | 0.194 | 0.319 | weak, not supported |
+| Final architectural smells | 0.560 | 0.002 | strong, statistically supported |
+| Final diversity | 0.564 | 0.002 | strongest overall signal |
+| Final total smells | 0.443 | 0.020 | positive, statistically supported |
+<!-- | Delta implementation smells | 0.439 | 0.018 | positive accumulated-smell signal |
+| Delta structural smells | 0.000 | 1.000 | no signal |
+| Delta architectural smells | 0.404 | 0.032 | positive accumulated-smell signal |
+| Delta total smells | 0.460 | 0.014 | positive accumulated-smell signal | -->
 
 Interpretation:
 
-- The strongest supported result is `Complexity -> Diversity`. More complex tasks do not just accumulate more smells; they accumulate a wider mix of smell types.
-- `FinalFine`, `FinalTotal`, and `DeltaTotal` are also positively associated with complexity, but those effects are weaker than the diversity result.
-- `FinalCoarse` is not statistically supported here. Its positive trend is descriptive only.
+- Once architectural smells are measured with PyExamine, the architecture category becomes one of the clearest RQ2 signals.
+- The strongest two continuous associations are `complexity -> diversity` and `complexity -> architectural smells`.
+- Implementation smells remain positively associated with complexity.
+- Structural smells are still too sparse to support a reliable complexity relationship in this dataset.
 
-### 2. High-complexity tasks end with substantially more debt in median terms
+### 2. Tier summaries: the clearest separation is in implementation, architecture, and diversity
 
-| Tier | n | Median reasoning | FinalTotal mean | FinalTotal median | Diversity mean | Diversity median | DeltaTotal mean | DeltaTotal median | Coarse smell presence |
-| :-- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
-| Low | 10 | 20192 | 34.40 | 18.50 | 3.90 | 3.50 | -0.50 | 0.50 | 30.0% |
-| Medium | 9 | 25344 | 25.56 | 22.00 | 4.00 | 4.00 | 2.56 | 3.00 | 33.3% |
-| High | 9 | 30656 | 49.78 | 46.00 | 5.67 | 6.00 | 0.56 | 5.00 | 44.4% |
+| Tier | n | Impl median | Structural median | Architectural median | Total median | Diversity median |
+| :-- | --: | --: | --: | --: | --: | --: |
+| Low | 10 | 18.0 | 0.0 | 2.0 | 23.0 | 5.5 |
+| Medium | 9 | 22.0 | 0.0 | 3.0 | 25.0 | 6.0 |
+| High | 9 | 46.0 | 0.0 | 4.0 | 50.0 | 9.0 |
+
+<!-- Accumulated smell deltas by tier:
+
+| Tier | Delta implementation median | Delta structural median | Delta architectural median | Delta total median |
+| :-- | --: | --: | --: | --: |
+| Low | 0.5 | 0.0 | 0.0 | 0.5 |
+| Medium | 3.0 | 0.0 | 0.0 | 3.0 |
+| High | 5.0 | 0.0 | 0.0 | 5.0 | -->
 
 Interpretation:
 
-- The median final debt burden rises from `18.5` in Low to `46.0` in High.
-- Median diversity rises from `3.5` unique smell types in Low to `6.0` in High. This is the easiest tier pattern to understand.
-- Coarse smell presence is still rare overall, but it is most common in the High tier (`44.4%` vs `30.0%` in Low).
-- Mean values are less stable because the dataset is heavy-tailed. For example, `Sudoku` is a low-tier outlier with `139` final smells, which inflates the Low-tier mean. For this reason, medians and rank correlations are more trustworthy than raw means here.
+- Median implementation-smell count rises sharply from `18.0` in Low to `46.0` in High.
+- Median architectural-smell count also increases monotonically from `2.0` to `4.0`.
+- Median total smell count rises from `23.0` in Low to `50.0` in High.
+- Diversity rises from `5.5` to `9.0`, meaning high-complexity tasks end with a much broader smell portfolio.
+- Binary architecture presence is not informative here because PyExamine detects at least one architectural smell in every analyzed Python project; the useful signal is the **count and type** of architectural smells, not mere presence.
 
-Inferential checks for the tier view:
+### 3. Inferential tests: diversity is the cleanest tier-level signal; architecture is close behind
 
-| Metric | Kruskal-Wallis H | Epsilon squared | Tier permutation p | High-vs-Low Cliff's delta | High-vs-Low median-diff p | High-vs-Low delta magnitude |
+| Metric | Kruskal-Wallis H | Epsilon squared | Tier permutation p | High-vs-Low Cliff's delta | High-vs-Low median-diff p | Reading |
 | :-- | --: | --: | --: | --: | --: | :-- |
-| FinalTotal | 3.817 | 0.073 | 0.148 | 0.411 | 0.057 | medium |
-| Diversity | 5.730 | 0.149 | 0.052 | 0.578 | 0.107 | large |
-| DeltaTotal | 2.699 | 0.028 | 0.271 | 0.300 | 0.010 | small |
+| Final implementation smells | 4.228 | 0.089 | 0.119 | 0.433 | 0.055 | positive direction, but noisy tier split |
+| Final structural smells | 0.696 | 0.000 | 0.742 | 0.178 | 1.000 | no tier signal |
+| Final architectural smells | 5.580 | 0.143 | 0.057 | 0.567 | 0.188 | strong direction, near-threshold tier separation |
+| Final diversity | 6.582 | 0.183 | 0.032 | 0.622 | 0.050 | strongest tier-level result |
+| Delta implementation smells | 2.699 | 0.028 | 0.271 | 0.300 | 0.010 | accumulated implementation growth differs most between Low and High |
+| Delta architectural smells | 2.971 | 0.039 | 0.209 | 0.333 | 1.000 | positive direction, but weak tier separation |
 
 Interpretation:
 
-- The three-bin tier test is not strong enough to claim clean separation for `FinalTotal` (`p = 0.148`). So we should not say "each tier is statistically different" for raw smell count.
-- `Diversity` is the closest to a clean tier-level separation (`p = 0.052`) and also shows a large High-vs-Low effect size (`Cliff's delta = 0.578`).
-- `DeltaTotal` is noisy across all three tiers, but the High-vs-Low median gap is statistically supported (`p = 0.010`).
+- The continuous correlation view remains more stable than the three-bin tier view.
+- `Final diversity` is now the strongest tier-level result (`p = 0.032`).
+- `Final architectural smells` is close to tier-level significance (`p = 0.057`) and shows a large High-vs-Low effect size.
+- Implementation smells still matter, but their tier split is noisier because counts are heavy-tailed.
 
-### 3. High-complexity tasks show a broader smell profile, including more structural debt signals
+### 4. Smell-type profiles by tier
 
-| Tier | Dominant smell profile | Coarse smell profile |
-| :-- | :-- | :-- |
-| Low | `Long statement` appears in 10/10 projects, `Complex method` in 9/10, `Magic number` in 7/10 | `Multifaceted abstraction` in 2/10, `Deficient encapsulation` in 1/10 |
-| Medium | `Long statement` in 9/9, `Complex method` in 9/9, `Magic number` in 7/9 | `Broken modularization`, `Deficient encapsulation`, and `Feature envy` each in 1/9 |
-| High | `Long statement`, `Complex method`, and `Magic number` each in 9/9; `Long method` rises to 6/9 | `Feature envy` in 3/9, plus `Insufficient modularization` and `Wide hierarchy` in 1/9 each |
+Implementation smell profile:
+
+| Tier | Dominant implementation smells |
+| :-- | :-- |
+| Low | `Long statement` in 10/10 projects, `Complex method` in 9/10, `Magic number` in 7/10 |
+| Medium | `Long statement` in 9/9, `Complex method` in 9/9, `Magic number` in 7/9 |
+| High | `Long statement`, `Complex method`, and `Magic number` each in 9/9; `Long method` rises to 6/9 |
+
+Structural smell profile:
+
+| Tier | Structural smells observed |
+| :-- | :-- |
+| Low | `Multifaceted abstraction` in 2/10, `Deficient encapsulation` in 1/10 |
+| Medium | `Broken modularization`, `Deficient encapsulation`, and `Feature envy` each in 1/9 |
+| High | `Feature envy` in 3/9, plus `Insufficient modularization` and `Wide hierarchy` in 1/9 each |
+
+Architectural smell profile:
+
+| Tier | Dominant architectural smells |
+| :-- | :-- |
+| Low | `Potential Improper API Usage` in 10/10, `Orphan Module` in 3/10, `Unstable Dependency` in 3/10 |
+| Medium | `Potential Improper API Usage` in 9/9, `Unstable Dependency` in 5/9, `Orphan Module` in 3/9 |
+| High | `Potential Improper API Usage` in 9/9, `Unstable Dependency` in 8/9, `Orphan Module` in 3/9, `Scattered Functionality` in 2/9 |
 
 Interpretation:
 
-- Fine-grained implementation debt dominates every tier. `Magic number`, `Long statement`, and `Complex method` are the recurring baseline smells across the dataset.
-- What changes with complexity is the breadth of that smell profile. High-complexity tasks not only preserve the baseline smells, they add more long-method and identifier-level issues, and they show more recurring coarse design signals.
-- The coarse-smell evidence is not strong enough to support a statistical conclusion. It is useful for qualitative interpretation, but not for a firm quantitative claim.
+- The implementation profile is stable across tiers, but it intensifies in the High tier.
+- The structural profile remains sparse and weak.
+- The architectural profile changes more meaningfully with complexity: `Unstable Dependency` becomes much more common in the High tier (`8/9` vs `3/10` in Low), which is exactly the kind of architecture-level degradation RQ2 was meant to test.
 
-### 4. Complexity predicts accumulated debt only weakly to moderately, not deterministically
+### 5. Exceptions still matter
 
-There are clear exceptions in both directions:
-
-- High-complexity but relatively cleaner outcomes: `TheCrossword` reaches the highest reasoning-token count (`40000`) but ends with only `24` total smells.
-- High-complexity with debt cleanup: `ConnectionsNYT` and `Chess` are both in the High tier, yet their `DeltaTotal` values are negative (`-16` and `-9`), meaning the final artifact contains fewer smells than the post-coding snapshot.
-- Low-complexity but debt-heavy outcomes: `Sudoku` sits in the Low tier but ends with `139` final smells.
+- `Sudoku` is in the Low tier but still ends with `139` implementation smells; it remains the major implementation outlier.
+- `Chess` is in the High tier and still reduces implementation smells by `9`, but it ends with `3` architectural smells and `11` total unique smell types.
+- `TheCrossword` is the most complex task by reasoning tokens (`40000`) and remains relatively clean on implementation (`24`), but it still ends with `4` architectural smells.
 
 Interpretation:
 
-- Complexity is informative, but not sufficient on its own. It works better as a risk signal than as a deterministic predictor.
-- The best reading of the data is: high task complexity increases the probability of larger and more diverse debt, but project-specific implementation choices still dominate individual outcomes.
+- Complexity is a probabilistic risk signal, not a deterministic rule.
+- The stronger conclusion is not “high complexity always means bad code,” but rather “high complexity shifts the distribution toward more implementation smells, more architectural smells, and higher smell diversity.”
 
 ## Answer to RQ2
 
-Task complexity, measured with `total_reasoning_tokens`, shows a positive but non-deterministic relationship with accumulated technical debt in ChatDev workflows.
+Using `total_reasoning_tokens` as the task-complexity proxy, task complexity is positively associated with accumulated smells in ChatDev workflows, but the relationship is category-dependent.
 
-- Strongest supported conclusion: more complex tasks accumulate more diverse debt.
-- Supported but weaker conclusion: more complex tasks also tend to end with more fine-grained debt and larger total debt increase.
-- Not supported as a firm conclusion: complexity alone predicts coarse or structural debt.
+- Supported conclusion: higher-complexity tasks accumulate more implementation smells.
+- Newly strengthened conclusion: higher-complexity tasks also accumulate more architectural smells when architecture is measured with PyExamine.
+- Strongest overall conclusion: higher-complexity tasks accumulate more diverse smell portfolios.
+- Weak / unsupported conclusion: structural smells do not show a reliable statistical relationship with complexity in this sample.
 
-For orchestration policy, this supports a pragmatic guardrail:
+The practical implication is stronger than before:
 
-- Treat high-reasoning tasks as higher-risk for broad and diverse debt.
-- Use that signal to trigger stronger review or refactoring policies, but do not assume that high complexity alone guarantees severe debt in every project.
-- If the goal is to predict structural debt specifically, this dataset is too weak to justify an automatic rule from complexity alone.
+- Complexity is not only a proxy for implementation-level maintainability risk.
+- It also predicts elevated architecture-level risk, especially through recurring patterns such as `Unstable Dependency` and `Potential Improper API Usage`.
+
+For orchestration policy, this supports a broader guardrail:
+
+- Use high reasoning-token tasks to trigger stronger implementation review.
+- Also use them to trigger architecture-oriented inspection or refactoring, because complexity now shows a measurable relationship with architectural smells too.
 
 ## Limitations
 
-- The debt analysis covers 28 Python tasks, not all 30 tasks.
-- DPy coarse smells are sparse in this dataset, so architecture/design conclusions should be treated cautiously.
-- Reasoning tokens are only a proxy for complexity. They are useful operationally, but they blend intrinsic task difficulty with workflow-level effort.
-- Because smell counts are heavy-tailed, mean-based comparisons alone can be misleading.
+- The smell analysis covers 28 Python tasks, not all 30 tasks.
+- The detector setup is mixed: DPy for implementation/structural smells and PyExamine for architectural smells.
+- Binary architecture presence is saturated at `100%`, so architecture conclusions depend on smell counts and smell types rather than presence/absence.
 - The p-values here are exploratory and are not corrected for multiple comparisons.
+- Because smell counts are heavy-tailed, medians and rank-based statistics are more reliable than means alone.
 
 ## Appendix A: Per-project table
 
-| Project | Tier | TotalReason | FinalTotal | FinalCoarse | Diversity | DeltaTotal | CodeChanges |
-| :-- | :-- | --: | --: | --: | --: | --: | --: |
-| TheCrossword | High | 40000 | 24 | 0 | 6 | 9 | 4 |
-| Checkers | High | 37952 | 47 | 0 | 6 | 5 | 4 |
-| StrandsNYT | High | 37696 | 51 | 1 | 6 | 5 | 4 |
-| DouDizhuPoker | High | 32896 | 114 | 1 | 7 | 6 | 4 |
-| Gomoku | High | 30656 | 46 | 0 | 3 | 1 | 4 |
-| FlappyBird | High | 30336 | 29 | 0 | 4 | 5 | 4 |
-| ConnectionsNYT | High | 30080 | 10 | 0 | 4 | -16 | 4 |
-| MonopolyGo | High | 29696 | 28 | 1 | 6 | -1 | 4 |
-| Chess | High | 29120 | 99 | 3 | 9 | -9 | 4 |
-| GoldMiner | Medium | 27968 | 42 | 0 | 5 | 7 | 4 |
-| SnakeGame | Medium | 27136 | 30 | 1 | 7 | 4 | 4 |
-| TriviaQuiz | Medium | 27008 | 18 | 1 | 5 | 2 | 4 |
-| Tiny Rouge | Medium | 26496 | 48 | 1 | 4 | 3 | 4 |
-| DetectPalindromes | Medium | 25344 | 22 | 0 | 4 | 5 | 4 |
-| Wordle | Medium | 24192 | 23 | 0 | 3 | 4 | 4 |
-| ReversiOthello | Medium | 24064 | 16 | 0 | 3 | 0 | 4 |
-| Minesweeper | Medium | 23872 | 10 | 0 | 2 | 2 | 4 |
-| TextBasedSpaceInvaders | Medium | 23872 | 21 | 0 | 3 | -4 | 4 |
-| StrandsGame | Low | 23744 | 47 | 1 | 6 | 0 | 4 |
-| 2048 | Low | 23360 | 16 | 0 | 4 | 0 | 4 |
-| BudgetTracker | Low | 22976 | 21 | 1 | 6 | 3 | 4 |
-| Sudoku | Low | 22144 | 139 | 0 | 5 | 0 | 4 |
-| TicTacToe | Low | 20352 | 13 | 0 | 2 | 3 | 4 |
-| EpisodeChooseYourStory | Low | 20032 | 13 | 0 | 3 | 3 | 4 |
-| FibonacciNumbers | Low | 19456 | 10 | 1 | 3 | 0 | 4 |
-| ConnectFour | Low | 19328 | 28 | 0 | 3 | 2 | 3 |
-| Mastermind | Low | 18944 | 12 | 0 | 3 | -17 | 4 |
-| Pong | Low | 17280 | 45 | 0 | 4 | 1 | 4 |
+| Project | Tier | TotalReason | FinalImpl | FinalStructural | FinalArchitecture | Diversity | DeltaImpl | DeltaStructural | DeltaArchitecture |
+| :-- | :-- | --: | --: | --: | --: | --: | --: | --: | --: |
+| TheCrossword | High | 40000 | 24 | 0 | 4 | 9 | 9 | 0 | 0 |
+| Checkers | High | 37952 | 47 | 0 | 8 | 11 | 5 | 0 | 1 |
+| StrandsNYT | High | 37696 | 50 | 1 | 5 | 9 | 5 | 0 | 4 |
+| DouDizhuPoker | High | 32896 | 113 | 1 | 4 | 9 | 6 | 0 | 0 |
+| Gomoku | High | 30656 | 46 | 0 | 4 | 5 | 1 | 0 | 1 |
+| FlappyBird | High | 30336 | 29 | 0 | 5 | 8 | 5 | 0 | 0 |
+| ConnectionsNYT | High | 30080 | 10 | 0 | 5 | 7 | -16 | 0 | 1 |
+| MonopolyGo | High | 29696 | 27 | 1 | 2 | 7 | -1 | 0 | 0 |
+| Chess | High | 29120 | 96 | 3 | 3 | 11 | -9 | 0 | -2 |
+| GoldMiner | Medium | 27968 | 42 | 0 | 4 | 8 | 7 | 0 | 0 |
+| SnakeGame | Medium | 27136 | 29 | 1 | 4 | 11 | 4 | 0 | 1 |
+| TriviaQuiz | Medium | 27008 | 17 | 1 | 3 | 7 | 2 | 0 | 0 |
+| Tiny Rouge | Medium | 26496 | 47 | 1 | 5 | 7 | 3 | 0 | 0 |
+| DetectPalindromes | Medium | 25344 | 22 | 0 | 4 | 6 | 5 | 0 | 1 |
+| Wordle | Medium | 24192 | 23 | 0 | 2 | 4 | 4 | 0 | 0 |
+| ReversiOthello | Medium | 24064 | 16 | 0 | 2 | 4 | 0 | 0 | 0 |
+| Minesweeper | Medium | 23872 | 10 | 0 | 1 | 3 | 2 | 0 | 0 |
+| TextBasedSpaceInvaders | Medium | 23872 | 21 | 0 | 3 | 5 | -4 | 0 | 0 |
+| StrandsGame | Low | 23744 | 46 | 1 | 3 | 9 | 0 | 0 | 0 |
+| 2048 | Low | 23360 | 16 | 0 | 2 | 5 | 0 | 0 | 0 |
+| BudgetTracker | Low | 22976 | 20 | 1 | 7 | 9 | 3 | 0 | 0 |
+| Sudoku | Low | 22144 | 139 | 0 | 2 | 6 | 0 | 0 | 0 |
+| TicTacToe | Low | 20352 | 13 | 0 | 2 | 4 | 3 | 0 | 0 |
+| EpisodeChooseYourStory | Low | 20032 | 13 | 0 | 5 | 7 | 3 | 0 | 0 |
+| FibonacciNumbers | Low | 19456 | 9 | 1 | 2 | 5 | 0 | 0 | 0 |
+| ConnectFour | Low | 19328 | 28 | 0 | 1 | 4 | 2 | 0 | 0 |
+| Mastermind | Low | 18944 | 12 | 0 | 1 | 4 | -17 | 0 | 0 |
+| Pong | Low | 17280 | 45 | 0 | 3 | 7 | 1 | 0 | 0 |

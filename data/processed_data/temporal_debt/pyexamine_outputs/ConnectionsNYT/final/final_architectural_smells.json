@@ -1,0 +1,42 @@
+[
+  {
+    "Smell": "Hub-like Dependency",
+    "Description": "Module 'final.main' is a potential hub with 7 connections (in: 0, out: 7, external: 0)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectionsNYT/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.puzzle' has repetitive API calls: append(3x), choice(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectionsNYT/final/puzzle.py",
+    "ModuleClass": "final.puzzle",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.main' has repetitive API calls: title(6x), button(3x), append(3x), join(3x), strip(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectionsNYT/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.puzzle' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectionsNYT/final/puzzle.py",
+    "ModuleClass": "final.puzzle",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.main' has high instability (1.00) with 7 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ConnectionsNYT/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

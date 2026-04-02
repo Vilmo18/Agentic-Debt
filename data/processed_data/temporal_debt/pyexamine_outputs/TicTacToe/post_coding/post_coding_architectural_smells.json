@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui' has repetitive API calls: Frame(3x), pack(6x), Button(3x), update_status(5x), config(13x), is_draw(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TicTacToe/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'post_coding.constants' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TicTacToe/post_coding/constants.py",
+    "ModuleClass": "post_coding.constants",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

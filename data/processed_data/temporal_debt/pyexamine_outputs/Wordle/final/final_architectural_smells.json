@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.gui' has repetitive API calls: Frame(4x), grid(8x), upper(4x), config(12x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Wordle/final/gui.py",
+    "ModuleClass": "final.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.terminal_ui' has repetitive API calls: get_keyboard_status(3x), upper(4x), append(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Wordle/final/terminal_ui.py",
+    "ModuleClass": "final.terminal_ui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

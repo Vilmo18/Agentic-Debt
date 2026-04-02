@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "God Object",
+    "Description": "Module 'settings' has too many public functions (22)",
+    "File": "Unknown",
+    "ModuleClass": "settings",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.game' has repetitive API calls: SysFont(3x), update(4x), render(7x), blit(6x), draw(3x), get_ticks(5x), get_width(6x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Pong/final/game.py",
+    "ModuleClass": "final.game",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'final.settings' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Pong/final/settings.py",
+    "ModuleClass": "final.settings",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.crossword_model' has repetitive API calls: get(3x), upper(4x), append(13x), join(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TheCrossword/post_coding/crossword_model.py",
+    "ModuleClass": "post_coding.crossword_model",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.crossword_view' has repetitive API calls: Frame(8x), pack(24x), StringVar(4x), Label(7x), configure(9x), append(4x), get(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TheCrossword/post_coding/crossword_view.py",
+    "ModuleClass": "post_coding.crossword_view",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'post_coding.data' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TheCrossword/post_coding/data.py",
+    "ModuleClass": "post_coding.data",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'post_coding.main' has high instability (1.00) with 5 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TheCrossword/post_coding/main.py",
+    "ModuleClass": "post_coding.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

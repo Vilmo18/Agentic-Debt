@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'reversi.gui' has repetitive API calls: pack(10x), StringVar(3x), Button(3x), bind(3x), update_all(4x), set(11x), board_to_canvas_coords(3x), Label(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_coding/reversi/gui.py",
+    "ModuleClass": "reversi.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'reversi.game' has repetitive API calls: append(3x), _discs_to_flip(3x), has_valid_move(4x), get_score(3x), in_bounds(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/ReversiOthello/post_coding/reversi/game.py",
+    "ModuleClass": "reversi.game",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.gui' has repetitive API calls: Frame(4x), grid(8x), upper(4x), config(12x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Wordle/post_coding/gui.py",
+    "ModuleClass": "post_coding.gui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.terminal_ui' has repetitive API calls: get_keyboard_status(3x), upper(4x), append(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Wordle/post_coding/terminal_ui.py",
+    "ModuleClass": "post_coding.terminal_ui",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

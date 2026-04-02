@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.entities' has repetitive API calls: __init__(3x), Surface(3x), get_rect(4x), Rect(6x), rect(7x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TextBasedSpaceInvaders/post_coding/entities.py",
+    "ModuleClass": "post_coding.entities",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'post_coding.game' has repetitive API calls: SysFont(3x), Group(3x), empty(6x), add(5x), get_ticks(3x), render(4x), blit(4x), update(4x), _draw_centered_message(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TextBasedSpaceInvaders/post_coding/game.py",
+    "ModuleClass": "post_coding.game",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'post_coding.settings' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TextBasedSpaceInvaders/post_coding/settings.py",
+    "ModuleClass": "post_coding.settings",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

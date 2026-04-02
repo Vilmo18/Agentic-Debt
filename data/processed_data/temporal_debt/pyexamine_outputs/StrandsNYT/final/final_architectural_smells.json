@@ -1,0 +1,42 @@
+[
+  {
+    "Smell": "Scattered Functionality",
+    "Description": "Function 'default_puzzle' appears in 3 modules: final.puzzle, strands.puzzle, puzzle",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/StrandsNYT/final/puzzle.py",
+    "ModuleClass": "final.puzzle",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Scattered Functionality",
+    "Description": "Function 'GameState' appears in 3 modules: final.game, game, strands.game",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/StrandsNYT/final/game.py",
+    "ModuleClass": "final.game",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.ui' has repetitive API calls: update_status(4x), configure(5x), Label(4x), pack(9x), Frame(3x), Button(3x), bind(4x), apply_claim(3x), clear(4x), showinfo(5x), _color_cell(5x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/StrandsNYT/final/ui.py",
+    "ModuleClass": "final.ui",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.main' has repetitive API calls: get(4x), post(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/StrandsNYT/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.main' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/StrandsNYT/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

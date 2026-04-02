@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "Hub-like Dependency",
+    "Description": "Module 'final.puzzle' is a potential hub with 6 connections (in: 0, out: 6, external: 0)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/StrandsGame/final/puzzle.py",
+    "ModuleClass": "final.puzzle",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.main' has repetitive API calls: get(9x), get_by_id(4x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/StrandsGame/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.puzzle' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/StrandsGame/final/puzzle.py",
+    "ModuleClass": "final.puzzle",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

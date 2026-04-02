@@ -1,0 +1,66 @@
+[
+  {
+    "Smell": "Scattered Functionality",
+    "Description": "Function 'draw' appears in 3 modules: final.board, final.app, final.ui",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/final/board.py",
+    "ModuleClass": "final.board",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "God Object",
+    "Description": "Module 'constants' has too many public functions (23)",
+    "File": "Unknown",
+    "ModuleClass": "constants",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.board' has repetitive API calls: set(3x), Rect(3x), rect(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/final/board.py",
+    "ModuleClass": "final.board",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.app' has repetitive API calls: SysFont(3x), draw(3x), render(3x), blit(3x), _set_status(5x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/final/app.py",
+    "ModuleClass": "final.app",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.rules' has repetitive API calls: get(8x), _opponent(3x), remove_piece(3x), in_bounds(3x), append(3x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/final/rules.py",
+    "ModuleClass": "final.rules",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Orphan Module",
+    "Description": "'final.constants' is isolated from other modules",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/final/constants.py",
+    "ModuleClass": "final.constants",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.app' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/final/app.py",
+    "ModuleClass": "final.app",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.main' has high instability (1.00) with 6 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/Checkers/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.models' has repetitive API calls: get(6x), _mcq_correct_indices(3x), join(3x), append(7x), add(5x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TriviaQuiz/final/models.py",
+    "ModuleClass": "final.models",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Potential Improper API Usage",
+    "Description": "Module 'final.main' has repetitive API calls: __init__(4x), Frame(10x), pack(37x), show_frame(4x), BooleanVar(3x), Label(17x), bind(3x), Button(5x), Checkbutton(3x), grid(6x), refresh_banks(3x), update_bank_size(3x), get(11x), config(7x), set(7x), showerror(3x), showwarning(5x)",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TriviaQuiz/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  },
+  {
+    "Smell": "Unstable Dependency",
+    "Description": "Module 'final.main' has high instability (1.00) with 7 outgoing and 0 incoming dependencies",
+    "File": "agent_debt/data/processed_data/temporal_debt/snapshots/TriviaQuiz/final/main.py",
+    "ModuleClass": "final.main",
+    "Line": 0,
+    "Severity": "medium"
+  }
+]
